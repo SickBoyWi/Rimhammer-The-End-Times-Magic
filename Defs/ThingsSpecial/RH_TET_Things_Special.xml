@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef>
+		<defName>RH_TET_ActiveMagicPod</defName>
+		<label>magic pod</label>
+		<category>Item</category>
+		<thingClass>TheEndTimes_Magic.ActiveMagicPod</thingClass>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_MagicPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.9</drawSize>
+			<shadowData>
+				<volume>(0.8, 0.6, 0.8)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<selectable>true</selectable>
+	</ThingDef>
+
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>RH_TET_MagicPodIncoming</defName>
+		<label>magic transport pod (incoming)</label>
+		<thingClass>TheEndTimes_Magic.MagicPodIncoming</thingClass>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_MagicPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutFlying</shaderType>
+			<drawSize>1.9</drawSize>
+		</graphicData>
+		<skyfaller>
+			<movementType>Decelerate</movementType>
+			<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+			<shadowSize>(2, 2)</shadowSize>
+			<anticipationSound>DropPod_Fall</anticipationSound>
+			<anticipationSoundTicks>100</anticipationSoundTicks>
+			<motesPerCell>0</motesPerCell>
+		</skyfaller>
+	</ThingDef>
+  
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>RH_TET_MagicPodLeaving</defName>
+		<label>magic transport pod (leaving)</label>
+		<thingClass>TheEndTimes_Magic.MagicPodLeaving</thingClass>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_MagicPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutFlying</shaderType>
+			<drawSize>1.9</drawSize>
+		</graphicData>
+		<skyfaller>
+			<movementType>Decelerate</movementType>
+			<reversed>true</reversed>
+			<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+			<shadowSize>(2, 2)</shadowSize>
+			<anticipationSound>DropPod_Leaving</anticipationSound>
+			<anticipationSoundTicks>-10</anticipationSoundTicks>
+			<ticksToImpactRange><min>-40</min><max>-15</max></ticksToImpactRange>
+		</skyfaller>
+	</ThingDef>
+  
+	<!-- NOTE: This idea was taken from the RemoteTech mod, and the effects of their sleeping gas. I'm trying to turn it into a kewl magic spell. Due to the tech level of Rimhammer being medieval, I need to reimplement the parts of their stuff that applies to the gas and gas effects. -->
+	<ThingDef Name="RH_TET_PoisonGas">
+		<defName>RH_TET_PoisonGas</defName>
+		<label>poison gas cloud</label>
+		<description>A cloud of poison gas. Will dissipate on its own over time.</description>
+		<thingClass>TheEndTimes_Magic.GasCloud_HediffGiver</thingClass>
+		<category>Ethereal</category>
+		<drawerType>RealtimeOnly</drawerType>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_GasCloud</texPath>
+			<graphicClass>TheEndTimes_Magic.Graphic_GasCloud</graphicClass>
+			<shaderType>Mote</shaderType>
+			<drawSize>(1.3,1.3)</drawSize>
+			<color>(64, 207, 64)</color>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote Class="TheEndTimes_Magic.MoteProperties_GasEffect">
+			<!-- game ticks between gas ticks -->
+			<GastickInterval>25</GastickInterval>
+			<!-- gas will attempt to multiply every x gas ticks -->
+			<SpreadInterval>2</SpreadInterval>
+			<!-- how much concentration a cloud passes to its neighbours. A value of 1 will equalize concentrations with adjacent clouds on each gas tick -->
+			<SpreadAmountMultiplier>1</SpreadAmountMultiplier>
+			<!-- when concentration is below this threshold, gas will not attempt to multiply -->
+			<SpreadMinConcentration>200</SpreadMinConcentration>
+			<!-- concentrations below this will make the sprite progressively transparent -->
+			<FullAlphaConcentration>1000</FullAlphaConcentration>
+			<!-- the amount of concentration lost on each gas tick when on a tile with a roof -->
+			<RoofedDissipation>1</RoofedDissipation>
+			<!-- the amount of concentration lost under the open sky -->
+			<UnroofedDissipation>1</UnroofedDissipation>
+			<!-- how much the sprite will deviate from its base position and scale while animating -->
+			<AnimationAmplitude>.225</AnimationAmplitude>
+			<!-- duration of an animation cycle in seconds -->
+			<AnimationPeriod>
+				<min>4</min>
+				<max>6</max>
+			</AnimationPeriod>
+			
+			<affectsFleshy>true</affectsFleshy>
+			<toxicSensitivityStatPower>.5</toxicSensitivityStatPower>
+			<hediffDef>RH_TET_PoisonGas</hediffDef>
+			<hediffSeverityPerGastick>
+				<min>0.008</min>
+				<max>0.014</max>
+			</hediffSeverityPerGastick>
+			<immunizingApparelDefs>
+				<li>Apparel_PowerArmorHelmet</li>
+			</immunizingApparelDefs>
+		</mote>
+		<isSaveable>true</isSaveable>
+		<tickerType>Never</tickerType>
+		<selectable>false</selectable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_DamageGas">
+		<defName>RH_TET_InsectCloud</defName>
+		<label>insect cloud</label>
+		<description>A cloud of insects that bites and stings. Will dissipate on its own over time.</description>
+		<thingClass>TheEndTimes_Magic.GasCloud_DamageDealer</thingClass>
+		<category>Ethereal</category>
+		<drawerType>RealtimeOnly</drawerType>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_InsectCloud</texPath>
+			<graphicClass>TheEndTimes_Magic.Graphic_GasCloud</graphicClass>
+			<shaderType>Mote</shaderType>
+			<drawSize>(1.3,1.3)</drawSize>
+			<color>(187, 187, 187)</color>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote Class="TheEndTimes_Magic.MoteProperties_GasEffect">
+			<!-- game ticks between gas ticks -->
+			<GastickInterval>60</GastickInterval>
+			<!-- gas will attempt to multiply every x gas ticks -->
+			<SpreadInterval>2</SpreadInterval>
+			<!-- how much concentration a cloud passes to its neighbours. A value of 1 will equalize concentrations with adjacent clouds on each gas tick -->
+			<SpreadAmountMultiplier>1</SpreadAmountMultiplier>
+			<!-- when concentration is below this threshold, gas will not attempt to multiply -->
+			<SpreadMinConcentration>200</SpreadMinConcentration>
+			<!-- concentrations below this will make the sprite progressively transparent -->
+			<FullAlphaConcentration>1000</FullAlphaConcentration>
+			<!-- the amount of concentration lost on each gas tick when on a tile with a roof -->
+			<RoofedDissipation>5</RoofedDissipation>
+			<!-- the amount of concentration lost under the open sky -->
+			<UnroofedDissipation>5</UnroofedDissipation>
+			<!-- how much the sprite will deviate from its base position and scale while animating -->
+			<AnimationAmplitude>.225</AnimationAmplitude>
+			<!-- duration of an animation cycle in seconds -->
+			<AnimationPeriod>
+				<min>4</min>
+				<max>6</max>
+			</AnimationPeriod>
+			
+			<affectsFleshy>true</affectsFleshy>
+			<damageArmorPenetration>.5</damageArmorPenetration>
+			<toxicSensitivityStatPower>0</toxicSensitivityStatPower>
+			<damageCanGlance>true</damageCanGlance>
+			<damageDef>Bite</damageDef>
+			<damageAmount>3</damageAmount>
+		</mote>
+		<isSaveable>true</isSaveable>
+		<tickerType>Never</tickerType>
+		<selectable>false</selectable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_CombatGas">
+		<defName>RH_TET_CombatGas</defName>
+		<label>combat boost gas cloud</label>
+		<description>A cloud of gas that boosts the combat skills of any pawn that breathes them in. Will dissipate on its own over time.</description>
+		<thingClass>TheEndTimes_Magic.GasCloud_HediffGiver</thingClass>
+		<category>Ethereal</category>
+		<drawerType>RealtimeOnly</drawerType>
+		<graphicData>
+			<texPath>Things/Special/RH_TET_GasCloud</texPath>
+			<graphicClass>TheEndTimes_Magic.Graphic_GasCloud</graphicClass>
+			<shaderType>Mote</shaderType>
+			<drawSize>(1.3,1.3)</drawSize>
+			<color>(150, 20, 20)</color>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote Class="TheEndTimes_Magic.MoteProperties_GasEffect">
+			<!-- game ticks between gas ticks -->
+			<GastickInterval>25</GastickInterval>
+			<!-- gas will attempt to multiply every x gas ticks -->
+			<SpreadInterval>1</SpreadInterval>
+			<!-- how much concentration a cloud passes to its neighbours. A value of 1 will equalize concentrations with adjacent clouds on each gas tick -->
+			<SpreadAmountMultiplier>1</SpreadAmountMultiplier>
+			<!-- when concentration is below this threshold, gas will not attempt to multiply -->
+			<SpreadMinConcentration>100</SpreadMinConcentration>
+			<!-- concentrations below this will make the sprite progressively transparent -->
+			<FullAlphaConcentration>100</FullAlphaConcentration>
+			<!-- the amount of concentration lost on each gas tick when on a tile with a roof -->
+			<RoofedDissipation>.5</RoofedDissipation>
+			<!-- the amount of concentration lost under the open sky -->
+			<UnroofedDissipation>.75</UnroofedDissipation>
+			<!-- how much the sprite will deviate from its base position and scale while animating -->
+			<AnimationAmplitude>.225</AnimationAmplitude>
+			<!-- duration of an animation cycle in seconds -->
+			<AnimationPeriod>
+				<min>4</min>
+				<max>6</max>
+			</AnimationPeriod>
+			
+			<affectsFleshy>true</affectsFleshy>
+			<toxicSensitivityStatPower>.2</toxicSensitivityStatPower>
+			<hediffDef>RH_TET_CombatGas</hediffDef>
+			<hediffSeverityPerGastick>
+				<min>0.01</min>
+				<max>0.025</max>
+			</hediffSeverityPerGastick>
+			<immunizingApparelDefs>
+				<li>Apparel_PowerArmorHelmet</li>
+			</immunizingApparelDefs>
+		</mote>
+		<isSaveable>true</isSaveable>
+		<tickerType>Never</tickerType>
+		<selectable>false</selectable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+	</ThingDef>
+	
+</Defs>

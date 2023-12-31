@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Abulla's Snare -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_LightAbullasSnareP</defName>
+		<label>Abulla's Snare</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_LightAbullasSnare</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightAbullasSnare_Mage</defName>
+		<label>Abulla's Snare I</label>
+		<uiIconPath>UI/Magic/RH_TET_LightAbullasSnare</uiIconPath>
+		<description>A snare of brilliant magical energy leaps from the caster's extended hand and wraps itself around a single person within 36 yards. The victim is held tight, and remains a prisoner for some time. Once ensnared, the victim may not move at all.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Snare</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightAbullasSnareP</defaultProjectile>
+			<abilityDef>RH_TET_LightAbullasSnare_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundChains</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_LightSnare</hediffDef>
+					<applyChance>1.0</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightAbullasSnare_Wizard</defName>
+		<label>Abulla's Snare II</label>
+		<uiIconPath>UI/Magic/RH_TET_LightAbullasSnare</uiIconPath>
+		<description>A snare of brilliant magical energy leaps from the caster's extended hand and wraps itself around a single person within 36 yards. The victim is held tight, and remains a prisoner for some time. Once ensnared, the victim may not move at all.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Snare</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightAbullasSnareP</defaultProjectile>
+			<abilityDef>RH_TET_LightAbullasSnare_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundChains</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_LightSnare</hediffDef>
+					<applyChance>1.0</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightAbullasSnare_Warlock</defName>
+		<label>Abulla's Snare III</label>
+		<uiIconPath>UI/Magic/RH_TET_LightAbullasSnare</uiIconPath>
+		<description>A snare of brilliant magical energy leaps from the caster's extended hand and wraps itself around a single person within 36 yards. The victim is held tight, and remains a prisoner for some time. Once ensnared, the victim may not move at all.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Snare</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightAbullasSnareP</defaultProjectile>
+			<abilityDef>RH_TET_LightAbullasSnare_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundChains</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_LightSnare</hediffDef>
+					<applyChance>1.0</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightAbullasSnare_Master</defName>
+		<label>Abulla's Snare IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LightAbullasSnare</uiIconPath>
+		<description>A snare of brilliant magical energy leaps from the caster's extended hand and wraps itself around a single person within 36 yards. The victim is held tight, and remains a prisoner for some time. Once ensnared, the victim may not move at all.</description>
+		<magicPoolCost>0.65</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Snare</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightAbullasSnareP</defaultProjectile>
+			<abilityDef>RH_TET_LightAbullasSnare_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundChains</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_LightSnare</hediffDef>
+					<applyChance>1.0</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Claw of Apek -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_LightClawOfApekP</defName>
+		<label>Claw of Apek</label>
+		<graphicData>
+			<texPath>Things/Projectile/Light/RH_TET_ClawOfApek</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightClawOfApek_Mage</defName>
+		<label>Claw of Apek I</label>
+		<uiIconPath>UI/Magic/RH_TET_LightClawOfApek</uiIconPath>
+		<description>A huge silvery talon appears in the air and instantly attacks an individual within range of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightClawOfApekP</defaultProjectile>
+			<abilityDef>RH_TET_LightClawOfApek_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Scratch</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightClawOfApek_Wizard</defName>
+		<label>Claw of Apek II</label>
+		<uiIconPath>UI/Magic/RH_TET_LightClawOfApek</uiIconPath>
+		<description>A huge silvery talon appears in the air and instantly attacks an individual within range of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightClawOfApekP</defaultProjectile>
+			<abilityDef>RH_TET_LightClawOfApek_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Scratch</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightClawOfApek_Warlock</defName>
+		<label>Claw of Apek III</label>
+		<uiIconPath>UI/Magic/RH_TET_LightClawOfApek</uiIconPath>
+		<description>A huge silvery talon appears in the air and instantly attacks an individual within range of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightClawOfApekP</defaultProjectile>
+			<abilityDef>RH_TET_LightClawOfApek_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Scratch</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightClawOfApek_Master</defName>
+		<label>Claw of Apek IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LightClawOfApek</uiIconPath>
+		<description>A huge silvery talon appears in the air and instantly attacks an individual within range of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightClawOfApekP</defaultProjectile>
+			<abilityDef>RH_TET_LightClawOfApek_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Scratch</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Healing Light -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_HealingLight</thingClass>
+		<defName>RH_TET_Life_HealingLightP</defName>
+		<label>Healing Light</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_LightHealingLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightHealingLight_Mage</defName>
+		<label>Healing Light I</label>
+		<uiIconPath>UI/Magic/RH_TET_LightHealingLight</uiIconPath>
+		<description>The target glows with a cleansing light. This light heals them of a current or old injury. May also cure a drug addiction. Will not regrow a missing body part.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_HealingLightP</defaultProjectile>
+			<abilityDef>RH_TET_LightHealingLight_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightHealingLight_Wizard</defName>
+		<label>Healing Light II</label>
+		<uiIconPath>UI/Magic/RH_TET_LightHealingLight</uiIconPath>
+		<description>The target glows with a cleansing light. This light heals them of a current or old injury. May also cure a drug addiction. Will not regrow a missing body part.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_HealingLightP</defaultProjectile>
+			<abilityDef>RH_TET_LightHealingLight_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>26000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightHealingLight_Warlock</defName>
+		<label>Healing Light III</label>
+		<uiIconPath>UI/Magic/RH_TET_LightHealingLight</uiIconPath>
+		<description>The target glows with a cleansing light. This light heals them of a current or old injury. May also cure a drug addiction. Will not regrow a missing body part.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_HealingLightP</defaultProjectile>
+			<abilityDef>RH_TET_LightHealingLight_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>23000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightHealingLight_Master</defName>
+		<label>Healing Light IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LightHealingLight</uiIconPath>
+		<description>The target glows with a cleansing light. This light heals them of a current or old injury. May also cure a drug addiction. Will not regrow a missing body part.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_HealingLightP</defaultProjectile>
+			<abilityDef>RH_TET_LightHealingLight_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Shem's Burning Gaze -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_LightBurningGazeP</defName>
+		<label>Shem's Burning Gaze</label>
+		<graphicData>
+			<texPath>Things/Projectile/Light/RH_TET_BurningGaze</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightBurningGaze_Mage</defName>
+		<label>Shem's Burning Gaze I</label>
+		<uiIconPath>UI/Magic/RH_TET_LightBurningGaze</uiIconPath>
+		<description>Balls of cleansing energy fly from the wizard's hands, searing evil wherever they strike.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightBurningGazeP</defaultProjectile>
+			<abilityDef>RH_TET_LightBurningGaze_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>11</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightBurningGaze_Wizard</defName>
+		<label>Shem's Burning Gaze II</label>
+		<uiIconPath>UI/Magic/RH_TET_LightBurningGaze</uiIconPath>
+		<description>Balls of cleansing energy fly from the wizard's hands, searing evil wherever they strike.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightBurningGazeP</defaultProjectile>
+			<abilityDef>RH_TET_LightBurningGaze_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>15</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightBurningGaze_Warlock</defName>
+		<label>Shem's Burning Gaze III</label>
+		<uiIconPath>UI/Magic/RH_TET_LightBurningGaze</uiIconPath>
+		<description>Balls of cleansing energy fly from the wizard's hands, searing evil wherever they strike.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightBurningGazeP</defaultProjectile>
+			<abilityDef>RH_TET_LightBurningGaze_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>7</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>18</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightBurningGaze_Master</defName>
+		<label>Shem's Burning Gaze IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LightBurningGaze</uiIconPath>
+		<description>Balls of cleansing energy fly from the wizard's hands, searing evil wherever they strike.</description>
+		<magicPoolCost>0.19</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LightBurningGazeP</defaultProjectile>
+			<abilityDef>RH_TET_LightBurningGaze_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>12</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>8</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>24</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Illuminate the Edifice -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_IlluminateTheEdifice</thingClass>
+		<defName>RH_TET_LightIlluminateTheEdificeP</defName>
+		<label>Illuminate the Edificie</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_LightIlluminate</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightIlluminateTheEdifice_Mage</defName>
+		<label>Illuminate the Edificie I</label>
+		<uiIconPath>UI/Magic/RH_TET_LightIlluminate</uiIconPath>
+		<description>Causes the interior spaces of any single building to shine with daylight for until the spell dissipates. The light shines in rooms, attics, closets, and any other spaces bounded by a man-made roof and walls on all sides. In addition to illuminating the interior of the building, light shines out through open doors, windows, and even the cracks between boards and shingles.\n\nThe magic light glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightIlluminateTheEdificeP</defaultProjectile>
+			<abilityDef>RH_TET_LightIlluminateTheEdifice_Mage</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>45000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightIlluminateTheEdifice_Wizard</defName>
+		<label>Illuminate the Edificie II</label>
+		<uiIconPath>UI/Magic/RH_TET_LightIlluminate</uiIconPath>
+		<description>Causes the interior spaces of any single building to shine with daylight for until the spell dissipates. The light shines in rooms, attics, closets, and any other spaces bounded by a man-made roof and walls on all sides. In addition to illuminating the interior of the building, light shines out through open doors, windows, and even the cracks between boards and shingles.\n\nThe magic light glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightIlluminateTheEdificeP</defaultProjectile>
+			<abilityDef>RH_TET_LightIlluminateTheEdifice_Wizard</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>40000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightIlluminateTheEdifice_Warlock</defName>
+		<label>Illuminate the Edificie III</label>
+		<uiIconPath>UI/Magic/RH_TET_LightIlluminate</uiIconPath>
+		<description>Causes the interior spaces of any single building to shine with daylight for until the spell dissipates. The light shines in rooms, attics, closets, and any other spaces bounded by a man-made roof and walls on all sides. In addition to illuminating the interior of the building, light shines out through open doors, windows, and even the cracks between boards and shingles.\n\nThe magic light glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightIlluminateTheEdificeP</defaultProjectile>
+			<abilityDef>RH_TET_LightIlluminateTheEdifice_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>35000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LightIlluminateTheEdifice_Master</defName>
+		<label>Illuminate the Edificie IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LightIlluminate</uiIconPath>
+		<description>Causes the interior spaces of any single building to shine with daylight for until the spell dissipates. The light shines in rooms, attics, closets, and any other spaces bounded by a man-made roof and walls on all sides. In addition to illuminating the interior of the building, light shines out through open doors, windows, and even the cracks between boards and shingles.\n\nThe magic light glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightIlluminateTheEdificeP</defaultProjectile>
+			<abilityDef>RH_TET_LightIlluminateTheEdifice_Master</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

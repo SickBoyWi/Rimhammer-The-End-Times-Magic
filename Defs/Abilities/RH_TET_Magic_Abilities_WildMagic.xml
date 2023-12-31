@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<!-- ===================== Bray Scream =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_WildBrayScreamP</defName>
+		<label>bray scream</label>
+		<graphicData>
+			<texPath>Things/Projectile/Wild/RH_TET_BrayScream</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicalInjury</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBrayScream_Mage</defName>
+		<label>Bray Scream I</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBrayScream</uiIconPath>
+		<description>This spell unleashes a howling roar of such intensity that mashes brains and bursts eyeballs.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBrayScreamP</defaultProjectile>
+			<abilityDef>RH_TET_WildBrayScream_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>55</damage>
+					<damageDef>RH_TET_MagicalInjury</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBrayScream_Wizard</defName>
+		<label>Bray Scream II</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBrayScream</uiIconPath>
+		<description>This spell unleashes a howling roar of such intensity that mashes brains and bursts eyeballs.</description>
+		<magicPoolCost>0.44</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBrayScreamP</defaultProjectile>
+			<abilityDef>RH_TET_WildBrayScream_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>60</damage>
+					<damageDef>RH_TET_MagicalInjury</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBrayScream_Warlock</defName>
+		<label>Bray Scream III</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBrayScream</uiIconPath>
+		<description>This spell unleashes a howling roar of such intensity that mashes brains and bursts eyeballs.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBrayScreamP</defaultProjectile>
+			<abilityDef>RH_TET_WildBrayScream_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>68</damage>
+					<damageDef>RH_TET_MagicalInjury</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBrayScream_Master</defName>
+		<label>Bray Scream IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBrayScream</uiIconPath>
+		<description>This spell unleashes a howling roar of such intensity that mashes brains and bursts eyeballs.</description>
+		<magicPoolCost>0.66</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBrayScreamP</defaultProjectile>
+			<abilityDef>RH_TET_WildBrayScream_Master</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>75</damage>
+					<damageDef>RH_TET_MagicalInjury</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- Savage Dominion  -->
+	
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_SavageDominion</thingClass>
+		<defName>RH_TET_WildSavageDominionP</defName>
+		<label>savage dominion</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WildSavageDominion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildSavageDominion_Mage</defName>
+		<label>Savage Dominion I</label>
+		<uiIconPath>UI/Magic/RH_TET_WildSavageDominion</uiIconPath>
+		<description>The shaman sends their mind winging into the wilds, and possesses the largest creature that can be found. The creature is pulled storming back onto the battlefield with a vengeance. Should the creature die, or be downed, it will disappear; returning from whence it came. Otherwise it will stay until the magic that conjured it dissipates. Don't cast this close to your allies, as it shows up very angry, and will attack any one nearby.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildSavageDominionP</defaultProjectile>
+			<abilityDef>RH_TET_WildSavageDominion_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1200</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildSavageDominion_Wizard</defName>
+		<label>Savage Dominion II</label>
+		<uiIconPath>UI/Magic/RH_TET_WildSavageDominion</uiIconPath>
+		<description>The shaman sends their mind winging into the wilds, and possesses the largest creature that can be found. The creature is pulled storming back onto the battlefield with a vengeance. Should the creature die, or be downed, it will disappear; returning from whence it came. Otherwise it will stay until the magic that conjured it dissipates. Don't cast this close to your allies, as it shows up very angry, and will attack any one nearby.</description>
+		<magicPoolCost>0.38</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildSavageDominionP</defaultProjectile>
+			<abilityDef>RH_TET_WildSavageDominion_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1150</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildSavageDominion_Warlock</defName>
+		<label>Savage Dominion III</label>
+		<uiIconPath>UI/Magic/RH_TET_WildSavageDominion</uiIconPath>
+		<description>The shaman sends their mind winging into the wilds, and possesses the largest creature that can be found. The creature is pulled storming back onto the battlefield with a vengeance. Should the creature die, or be downed, it will disappear; returning from whence it came. Otherwise it will stay until the magic that conjured it dissipates. Don't cast this close to your allies, as it shows up very angry, and will attack any one nearby.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildSavageDominionP</defaultProjectile>
+			<abilityDef>RH_TET_WildSavageDominion_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1100</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildSavageDominion_Master</defName>
+		<label>Savage Dominion IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WildSavageDominion</uiIconPath>
+		<description>The shaman sends their mind winging into the wilds, and possesses the largest creature that can be found. The creature is pulled storming back onto the battlefield with a vengeance. Should the creature die, or be downed, it will disappear; returning from whence it came. Otherwise it will stay until the magic that conjured it dissipates. Don't cast this close to your allies, as it shows up very angry, and will attack any one nearby.</description>
+		<magicPoolCost>0.42</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildSavageDominionP</defaultProjectile>
+			<abilityDef>RH_TET_WildSavageDominion_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1000</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Mantle of Ghorok =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_WildMantleGhorokP</defName>
+		<label>Mantle of Ghorok</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WildMantleGhorok</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>15</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildMantleGhorok_Mage</defName>
+		<label>Mantle of Ghorok I</label>
+		<uiIconPath>UI/Magic/RH_TET_WildMantleGhorok</uiIconPath>
+		<description>Ghorok was a legendary Minotaur, ferocious as a storm. His spirit mantle is terrible, but dangerous to the bearer.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildMantleGhorokP</defaultProjectile>
+			<abilityDef>RH_TET_WildMantleGhorok_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildMantleGhorokI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildMantleGhorok_Wizard</defName>
+		<label>Mantle of Ghorok II</label>
+		<uiIconPath>UI/Magic/RH_TET_WildMantleGhorok</uiIconPath>
+		<description>Ghorok was a legendary Minotaur, ferocious as a storm. His spirit mantle is terrible, but dangerous to the bearer.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildMantleGhorokP</defaultProjectile>
+			<abilityDef>RH_TET_WildMantleGhorok_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>105.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildMantleGhorokII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildMantleGhorok_Warlock</defName>
+		<label>Mantle of Ghorok III</label>
+		<uiIconPath>UI/Magic/RH_TET_WildMantleGhorok</uiIconPath>
+		<description>Ghorok was a legendary Minotaur, ferocious as a storm. His spirit mantle is terrible, but dangerous to the bearer.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildMantleGhorokP</defaultProjectile>
+			<abilityDef>RH_TET_WildMantleGhorok_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>50.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildMantleGhorokIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildMantleGhorok_Master</defName>
+		<label>Mantle of Ghorok IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WildMantleGhorok</uiIconPath>
+		<description>Ghorok was a legendary Minotaur, ferocious as a storm. His spirit mantle is terrible, but dangerous to the bearer.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildMantleGhorokP</defaultProjectile>
+			<abilityDef>RH_TET_WildMantleGhorok_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildMantleGhorokIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Devolve =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_WildDevolveP</defName>
+		<label>devolve</label>
+		<graphicData>
+			<texPath>Things/Projectile/Wild/RH_TET_Devolve</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_Lightning</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>45</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildDevolve_Mage</defName>
+		<label>Devolve I</label>
+		<uiIconPath>UI/Magic/RH_TET_WildDevolve</uiIconPath>
+		<description>Delving into his enemies' minds, the shaman magnifies the savage and animalistic parts of their psyche until they are no more than growling beasts.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildDevolveP</defaultProjectile>
+			<abilityDef>RH_TET_WildDevolve_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundDevolve</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.7</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildDevolve_Wizard</defName>
+		<label>Devolve II</label>
+		<uiIconPath>UI/Magic/RH_TET_WildDevolve</uiIconPath>
+		<description>Delving into his enemies' minds, the shaman magnifies the savage and animalistic parts of their psyche until they are no more than growling beasts.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildDevolveP</defaultProjectile>
+			<abilityDef>RH_TET_WildDevolve_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>42</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundDevolve</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.8</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildDevolve_Warlock</defName>
+		<label>Devolve III</label>
+		<uiIconPath>UI/Magic/RH_TET_WildDevolve</uiIconPath>
+		<description>Delving into his enemies' minds, the shaman magnifies the savage and animalistic parts of their psyche until they are no more than growling beasts.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildDevolveP</defaultProjectile>
+			<abilityDef>RH_TET_WildDevolve_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>50</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundDevolve</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.85</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildDevolve_Master</defName>
+		<label>Devolve IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WildDevolve</uiIconPath>
+		<description>Delving into his enemies' minds, the shaman magnifies the savage and animalistic parts of their psyche until they are no more than growling beasts.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WildDevolveP</defaultProjectile>
+			<abilityDef>RH_TET_WildDevolve_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>55</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundDevolve</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.9</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Bestial Surge =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_WildBestialSurgeP</defName>
+		<label>bestial surge</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WildBestialSurge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBestialSurge_Mage</defName>
+		<label>Bestial Surge I</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBestialSurge</uiIconPath>
+		<description>The shaman inflames the Beastmen's uncontrollable urge to rend the foe limb from limb, causing them to surge forward in a roaring, bellowing mass. This spell's effect starts from the chosen pawn, and effects nearby friendly pawns. Will not affect enemies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBestialSurgeP</defaultProjectile>
+			<abilityDef>RH_TET_WildBestialSurge_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildBestialSurge</hediffDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBestialSurge_Wizard</defName>
+		<label>Bestial Surge II</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBestialSurge</uiIconPath>
+		<description>The shaman inflames the Beastmen's uncontrollable urge to rend the foe limb from limb, causing them to surge forward in a roaring, bellowing mass. This spell's effect starts from the chosen pawn, and effects nearby friendly pawns. Will not affect enemies.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBestialSurgeP</defaultProjectile>
+			<abilityDef>RH_TET_WildBestialSurge_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildBestialSurge</hediffDef>
+					<applyChance>.88</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBestialSurge_Warlock</defName>
+		<label>Bestial Surge III</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBestialSurge</uiIconPath>
+		<description>The shaman inflames the Beastmen's uncontrollable urge to rend the foe limb from limb, causing them to surge forward in a roaring, bellowing mass. This spell's effect starts from the chosen pawn, and effects nearby friendly pawns. Will not affect enemies.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBestialSurgeP</defaultProjectile>
+			<abilityDef>RH_TET_WildBestialSurge_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildBestialSurge</hediffDef>
+					<applyChance>.95</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WildBestialSurge_Master</defName>
+		<label>Bestial Surge IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WildBestialSurge</uiIconPath>
+		<description>The shaman inflames the Beastmen's uncontrollable urge to rend the foe limb from limb, causing them to surge forward in a roaring, bellowing mass. This spell's effect starts from the chosen pawn, and effects nearby friendly pawns. Will not affect enemies.</description>
+		<magicPoolCost>0.39</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WildBestialSurgeP</defaultProjectile>
+			<abilityDef>RH_TET_WildBestialSurge_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>6</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WildBestialSurge</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

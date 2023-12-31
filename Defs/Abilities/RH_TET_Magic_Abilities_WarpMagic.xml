@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<!-- ===================== Warp Lightning =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_WarpLightningP</defName>
+		<label>warp lightning</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_GreenBoltOfTzeentch</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_Lightning</damageDef>
+			<damageAmountBase>32</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpLightning_Mage</defName>
+		<label>Warp Lightning I</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpLightning</uiIconPath>
+		<description>Lash out with warp lightning, and zzzzap a foe.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WarpLightningP</defaultProjectile>
+			<abilityDef>RH_TET_WarpLightning_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>20</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpLightning_Wizard</defName>
+		<label>Warp Lightning II</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpLightning</uiIconPath>
+		<description>Lash out with warp lightning, and zzzzap a foe.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WarpLightningP</defaultProjectile>
+			<abilityDef>RH_TET_WarpLightning_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpLightning_Warlock</defName>
+		<label>Warp Lightning III</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpLightning</uiIconPath>
+		<description>Lash out with warp lightning, and zzzzap a foe.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WarpLightningP</defaultProjectile>
+			<abilityDef>RH_TET_WarpLightning_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpLightning_Master</defName>
+		<label>Warp Lightning IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpLightning</uiIconPath>
+		<description>Lash out with warp lightning, and zzzzap a foe.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_WarpLightningP</defaultProjectile>
+			<abilityDef>RH_TET_WarpLightning_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Ghostly Flame =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_GhostlyFlame</thingClass>
+		<defName>RH_TET_WarpGhostlyFlameP</defName>
+		<label>Ghostly Flame</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WarpGhostlyFlame</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpGhostlyFlame_Mage</defName>
+		<label>Ghostly Flame I</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpGhostlyFlame</uiIconPath>
+		<description>The caster conjurea a small blob of glowing green fire out of thin air. This petty spell generates light enough to light a room, and remains for a long time before sputtering out.\n\nThe magic light glows under its own power in a sickly green light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpGhostlyFlameP</defaultProjectile>
+			<abilityDef>RH_TET_WarpGhostlyFlame_Mage</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>45000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpGhostlyFlame_Wizard</defName>
+		<label>Ghostly Flame II</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpGhostlyFlame</uiIconPath>
+		<description>The caster conjurea a small blob of glowing green fire out of thin air. This petty spell generates light enough to light a room, and remains for a long time before sputtering out.\n\nThe magic light glows under its own power in a sickly green light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpGhostlyFlameP</defaultProjectile>
+			<abilityDef>RH_TET_WarpGhostlyFlame_Wizard</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>40000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpGhostlyFlame_Warlock</defName>
+		<label>Ghostly Flame III</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpGhostlyFlame</uiIconPath>
+		<description>The caster conjurea a small blob of glowing green fire out of thin air. This petty spell generates light enough to light a room, and remains for a long time before sputtering out.\n\nThe magic light glows under its own power in a sickly green light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpGhostlyFlameP</defaultProjectile>
+			<abilityDef>RH_TET_WarpGhostlyFlame_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>35000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpGhostlyFlame_Master</defName>
+		<label>Ghostly Flame IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpGhostlyFlame</uiIconPath>
+		<description>The caster conjurea a small blob of glowing green fire out of thin air. This petty spell generates light enough to light a room, and remains for a long time before sputtering out.\n\nThe magic light glows under its own power in a sickly green light for a long time, then dies. Once created, cannot be moved or deconstructed. It hovers near the ceiling, so it can be placed over furnitue and such.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpGhostlyFlameP</defaultProjectile>
+			<abilityDef>RH_TET_WarpGhostlyFlame_Master</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Rat Thrall =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_RatThrall</thingClass>
+		<defName>RH_TET_Warp_RatThrallP</defName>
+		<label>Rat Thrall</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WarpRatThrall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>105</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpRatThrall_Mage</defName>
+		<label>Rat Thrall I</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpRatThrall</uiIconPath>
+		<description>The caster summons one to two rats. Rat thralls can gnaw through ropes, and other general tasks that an ordinary rat should be able to do, but such missions are limited by the rat’s animal intelligence. They're fully trained, and bonded to the caster.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_RatThrallP</defaultProjectile>
+			<abilityDef>RH_TET_WarpRatThrall_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>10000.0</SecondsToRecharge>
+			<range>10</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpRatThrall_Wizard</defName>
+		<label>Rat Thrall II</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpRatThrall</uiIconPath>
+		<description>The caster summons one to two rats. Rat thralls can gnaw through ropes, and other general tasks that an ordinary rat should be able to do, but such missions are limited by the rat’s animal intelligence. They're fully trained, and bonded to the caster.</description>
+		<magicPoolCost>0.29</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_RatThrallP</defaultProjectile>
+			<abilityDef>RH_TET_WarpRatThrall_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>8200.0</SecondsToRecharge>
+			<range>10</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpRatThrall_Warlock</defName>
+		<label>Rat Thrall III</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpRatThrall</uiIconPath>
+		<description>The caster summons one to two rats. Rat thralls can gnaw through ropes, and other general tasks that an ordinary rat should be able to do, but such missions are limited by the rat’s animal intelligence. They're fully trained, and bonded to the caster.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_RatThrallP</defaultProjectile>
+			<abilityDef>RH_TET_WarpRatThrall_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>6400.0</SecondsToRecharge>
+			<range>10</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpRatThrall_Master</defName>
+		<label>Rat Thrall IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpRatThrall</uiIconPath>
+		<description>The caster summons one to two rats. Rat thralls can gnaw through ropes, and other general tasks that an ordinary rat should be able to do, but such missions are limited by the rat’s animal intelligence. They're fully trained, and bonded to the caster.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_RatThrallP</defaultProjectile>
+			<abilityDef>RH_TET_WarpRatThrall_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>5000.0</SecondsToRecharge>
+			<range>10</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Curse of the Horned Rat =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_WarpHornedRatCurseP</defName>
+		<label>curse of the horned rat</label>
+		<graphicData>
+			<texPath>Things/Projectile/Warp/RH_TET_WarpCurse</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpCurseHornedRat_Mage</defName>
+		<label>Curse of the Horned Rat I</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpHornedRatCurse</uiIconPath>
+		<description>The Dreaded Thirteenth Spell. With a sickening lurch, the fabric of reality is torn by the twisting power of the Great Horned One, turning an opponent into a freindly to skaven. The skaven created is proportional to the power of the enemy destroyed.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurseOfHornedRat</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpHornedRatCurseP</defaultProjectile>
+			<abilityDef>RH_TET_WarpCurseHornedRat_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpCurseHornedRat_Wizard</defName>
+		<label>Curse of the Horned Rat II</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpHornedRatCurse</uiIconPath>
+		<description>The Dreaded Thirteenth Spell. With a sickening lurch, the fabric of reality is torn by the twisting power of the Great Horned One, turning an opponent into a freindly to skaven. The skaven created is proportional to the power of the enemy destroyed.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurseOfHornedRat</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpHornedRatCurseP</defaultProjectile>
+			<abilityDef>RH_TET_WarpCurseHornedRat_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>11000</SecondsToRecharge>
+			<range>35</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpCurseHornedRat_Warlock</defName>
+		<label>Curse of the Horned Rat III</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpHornedRatCurse</uiIconPath>
+		<description>The Dreaded Thirteenth Spell. With a sickening lurch, the fabric of reality is torn by the twisting power of the Great Horned One, turning an opponent into a freindly to skaven. The skaven created is proportional to the power of the enemy destroyed.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>27</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurseOfHornedRat</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpHornedRatCurseP</defaultProjectile>
+			<abilityDef>RH_TET_WarpCurseHornedRat_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>8000</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpCurseHornedRat_Master</defName>
+		<label>Curse of the Horned Rat IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpHornedRatCurse</uiIconPath>
+		<description>The Dreaded Thirteenth Spell. With a sickening lurch, the fabric of reality is torn by the twisting power of the Great Horned One, turning an opponent into a freindly to skaven. The skaven created is proportional to the power of the enemy destroyed.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>29</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurseOfHornedRat</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_WarpHornedRatCurseP</defaultProjectile>
+			<abilityDef>RH_TET_WarpCurseHornedRat_Master</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>5000</SecondsToRecharge>
+			<range>45</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Verminous Ruin =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_VerminousRuin</thingClass>
+		<defName>RH_TET_Warp_VerminousRuinP</defName>
+		<label>Flock of Doom</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_WarpVerminousRuin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpVerminousRuin_Mage</defName>
+		<label>Verminous Ruin I</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpVerminousRuin</uiIconPath>
+		<description>Summon a pack of mad rats to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_VerminousRuinP</defaultProjectile>
+			<abilityDef>RH_TET_WarpVerminousRuin_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>50</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpVerminousRuin_Wizard</defName>
+		<label>Verminous Ruin II</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpVerminousRuin</uiIconPath>
+		<description>Summon a pack of mad rats to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.29</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_VerminousRuinP</defaultProjectile>
+			<abilityDef>RH_TET_WarpVerminousRuin_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>115.0</SecondsToRecharge>
+			<range>51</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpVerminousRuin_Warlock</defName>
+		<label>Verminous Ruin III</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpVerminousRuin</uiIconPath>
+		<description>Summon a pack of mad rats to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_VerminousRuinP</defaultProjectile>
+			<abilityDef>RH_TET_WarpVerminousRuin_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>52</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_WarpVerminousRuin_Master</defName>
+		<label>Verminous Ruin IV</label>
+		<uiIconPath>UI/Magic/RH_TET_WarpVerminousRuin</uiIconPath>
+		<description>Summon a pack of mad rats to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Warp_VerminousRuinP</defaultProjectile>
+			<abilityDef>RH_TET_WarpVerminousRuin_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>53</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

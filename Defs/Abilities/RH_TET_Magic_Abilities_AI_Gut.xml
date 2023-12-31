@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Great Maw Magic =================== -->
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_GreatMawWizardAI">
+		<defName>RH_TET_Magic_GreatMawWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_MawBonecrusher_MageAI</li>
+			<li>RH_TET_MawBonecrusher_WizardAI</li>
+			<li>RH_TET_MawBonecrusher_WarlockAI</li>
+			<li>RH_TET_MawBonecrusher_MasterAI</li>
+
+			<li>RH_TET_MawBraingobbler_MageAI</li>
+			<li>RH_TET_MawBraingobbler_WizardAI</li>
+			<li>RH_TET_MawBraingobbler_WarlockAI</li>
+			<li>RH_TET_MawBraingobbler_MasterAI</li>
+			
+			<li>RH_TET_MawBullgorger_MageAI</li>
+			<li>RH_TET_MawBullgorger_WizardAI</li>
+			<li>RH_TET_MawBullgorger_WarlockAI</li>
+			<li>RH_TET_MawBullgorger_MasterAI</li>
+			
+			<li>RH_TET_MawTrollguts_MageAI</li>
+			<li>RH_TET_MawTrollguts_WizardAI</li>
+			<li>RH_TET_MawTrollguts_WarlockAI</li>
+			<li>RH_TET_MawTrollguts_MasterAI</li>
+			
+			<li>RH_TET_MawToothcracker_MageAI</li>
+			<li>RH_TET_MawToothcracker_WizardAI</li>
+			<li>RH_TET_MawToothcracker_WarlockAI</li>
+			<li>RH_TET_MawToothcracker_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBonecrusher_MageAI</defName>
+		<ability>RH_TET_MawBonecrusher_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<tags>
+			<li>BoneCrusher</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBonecrusher_WizardAI</defName>
+		<ability>RH_TET_MawBonecrusher_Wizard</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<tags>
+			<li>BoneCrusher</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBonecrusher_WarlockAI</defName>
+		<ability>RH_TET_MawBonecrusher_Warlock</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<tags>
+			<li>BoneCrusher</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBonecrusher_MasterAI</defName>
+		<ability>RH_TET_MawBonecrusher_Master</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<tags>
+			<li>BoneCrusher</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBraingobbler_MageAI</defName>
+		<ability>RH_TET_MawBraingobbler_Mage</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>5.0</minRange>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Braingobbler</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBraingobbler_WizardAI</defName>
+		<ability>RH_TET_MawBraingobbler_Wizard</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>5.0</minRange>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Braingobbler</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBraingobbler_WarlockAI</defName>
+		<ability>RH_TET_MawBraingobbler_Warlock</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>5.0</minRange>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Braingobbler</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBraingobbler_MasterAI</defName>
+		<ability>RH_TET_MawBraingobbler_Master</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>5.0</minRange>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Braingobbler</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBullgorger_MageAI</defName>
+		<ability>RH_TET_MawBullgorger_Mage</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Bullgorger</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBullgorger_WizardAI</defName>
+		<ability>RH_TET_MawBullgorger_Wizard</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Bullgorger</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBullgorger_WarlockAI</defName>
+		<ability>RH_TET_MawBullgorger_Warlock</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Bullgorger</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawBullgorger_MasterAI</defName>
+		<ability>RH_TET_MawBullgorger_Master</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Bullgorger</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawTrollguts_MageAI</defName>
+		<ability>RH_TET_MawTrollguts_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Trollguts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawTrollguts_WizardAI</defName>
+		<ability>RH_TET_MawTrollguts_Wizard</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Trollguts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawTrollguts_WarlockAI</defName>
+		<ability>RH_TET_MawTrollguts_Warlock</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Trollguts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawTrollguts_MasterAI</defName>
+		<ability>RH_TET_MawTrollguts_Master</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Trollguts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawToothcracker_MageAI</defName>
+		<ability>RH_TET_MawToothcracker_Mage</ability>
+		<power>45.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Toothcracker</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawToothcracker_WizardAI</defName>
+		<ability>RH_TET_MawToothcracker_Wizard</ability>
+		<power>45.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Toothcracker</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawToothcracker_WarlockAI</defName>
+		<ability>RH_TET_MawToothcracker_Warlock</ability>
+		<power>45.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Toothcracker</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_MawToothcracker_MasterAI</defName>
+		<ability>RH_TET_MawToothcracker_Master</ability>
+		<power>45.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Toothcracker</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_GreatMawWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- Not in combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<invert>true</invert>
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+							<maxHealth>.7</maxHealth>
+							<subNodes>
+								<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+									<tags>
+										<li>Trollguts</li>
+									</tags>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+							<tags>
+								<li>Toothcracker</li>
+								<li>Bullgorger</li>
+							</tags>
+						</li>
+					</subNodes>
+				</li>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BoneCrusher</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bullgorger</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Braingobbler</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Toothcracker</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bullgorger</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Braingobbler</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Toothcracker</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bullgorger</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BoneCrusher</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bullgorger</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+</Defs>

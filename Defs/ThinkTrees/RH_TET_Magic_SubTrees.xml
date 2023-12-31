@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThinkTreeDef>
+		<defName>RH_TET_Magic_MeditationThinkTreeMagic</defName>
+		<insertTag>Humanlike_PreMain</insertTag>
+		<insertPriority>90</insertPriority>
+		<thinkRoot Class="TheEndTimes_Magic.ThinkNode_ModNeedPercentageAbove">
+			<need>RH_TET_MagicPool</need>
+			<threshold>0.65</threshold>
+			<invert>true</invert>
+			<subNodes>
+				<li Class="TheEndTimes_Magic.JobGiver_MagicMeditation"/>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+  
+	<ThinkTreeDef>
+		<defName>RH_TET_Magic_MeditationThinkTreeFaith</defName>
+		<insertTag>Humanlike_PreMain</insertTag>
+		<insertPriority>90</insertPriority>
+		<thinkRoot Class="TheEndTimes_Magic.ThinkNode_ModNeedPercentageAbove">
+			<need>RH_TET_FaithPool</need>
+			<threshold>0.65</threshold>
+			<invert>true</invert>
+			<subNodes>
+				<li Class="TheEndTimes_Magic.JobGiver_FaithMeditation"/>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	
+	<ThinkTreeDef>
+		<defName>RH_TET_Magic_PrayAwayTaint</defName>
+		<insertTag>Humanlike_PreMain</insertTag>
+		<insertPriority>91</insertPriority>
+		<thinkRoot Class="TheEndTimes_Magic.ThinkNode_ModHediffPercentageAbove">
+			<hediff>RH_TET_ChaosTaintBuildup</hediff>
+			<threshold>0.10</threshold>
+			<subNodes>
+				<li Class="TheEndTimes_Magic.JobGiver_PrayAwayTaint"/>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	
+</Defs>

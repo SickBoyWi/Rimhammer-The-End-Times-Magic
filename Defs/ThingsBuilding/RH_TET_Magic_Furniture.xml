@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_MeditationSpot</defName>
+		<thingClass>TheEndTimes_Magic.Building_MagicMeditationSpot</thingClass>
+		<label>Meditation Spot</label>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_Magic_MeditationSpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2)</drawSize>
+			<shadowData>
+				<volume>(0.6, 0.6, 0.6)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<size>(1,1)</size>
+		<statBases>
+			<Comfort>0.1</Comfort>
+			<Flammability>0</Flammability>
+			<WorkToBuild>10</WorkToBuild>
+		</statBases>
+		<description>A designated spot for silent concentration, will restore magic, faith, and action ability.</description>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<pathCost>1</pathCost>
+		<fillPercent>0</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<rotatable>false</rotatable>
+		<designationCategory>Misc</designationCategory>
+		<passability>Standable</passability>
+		<drawGUIOverlay>True</drawGUIOverlay>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_IlluminateLight</defName>
+		<label>magic light (powerful)</label>
+		<description>A magic light produced by the Illuminate the Edifice Lore of Light spell. Glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. Hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill produce sufficient light to grow plants by.</description>
+		<thingClass>Building_SunLamp</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fillPercent>0</fillPercent>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<tradeability>None</tradeability>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>7.0</overlightRadius>
+				<glowRadius>10</glowRadius>
+				<glowColor>(370,370,370,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>2700000</lifespanTicks>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_IlluminateLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_LightCantrip</defName>
+		<label>magic light (regular)</label>
+		<description>A magic light produced by the Illuminate the Edifice Lore of Light spell. Glows under its own power in a pure white light for a long time, then dies. Once created, cannot be moved or deconstructed. Hovers near the ceiling, so it can be placed over furnitue and such.\n\nWill not produce sufficient light to grow plants by.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fillPercent>0</fillPercent>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<tradeability>None</tradeability>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(255,220,220,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>1800000</lifespanTicks>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_RegularLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_UlricVortex</defName>
+		<label>Ulric vortex</label>
+		<description>A magical vortext produced by the Winter of Ulric vortex faith ability. Sucks cold air from a distant freezing location, and brings it to this one for a long time, then dies. Once created, cannot be moved or deconstructed.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<tradeability>None</tradeability>
+		<clearBuildingArea>true</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusher</compClass>
+				<heatPerSecond>-30</heatPerSecond>
+				<heatPushMinTemperature>-18</heatPushMinTemperature>
+			</li>
+			<li Class="TheEndTimes_Magic.CompProperties_Puffs">
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(255,255,255,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>2700000</lifespanTicks><!-- 45 days. -->
+			</li>
+			<li Class="TheEndTimes_Magic.CompProperties_Puffs">
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_UlricVortex</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<building>
+			<isEdifice>true</isEdifice>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_LanternOfDays</defName>
+		<label>Lantern of days</label>
+		<description>A beautiful magic lantern crafted at a wizard's workbench. Will provide light indefinitely. Installed as a ceiling light.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_LanternOfDays</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>.75</drawSize>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fillPercent>0</fillPercent>
+		<passability>Standable</passability>
+		<uiIconPath>UI/Menu/RH_TET_LanternOfDays_MenuIcon</uiIconPath>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<MaxHitPoints>125</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>1</Mass>
+			<SellPriceFactor>1.2</SellPriceFactor>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(236,255,254,0)</glowColor>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<placeWorkers>
+			<li>TheEndTimes_Magic.PlaceWorker_UnderCeiling</li>
+		</placeWorkers>
+		<tradeTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_MagicBuildings</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_CleaningStatue</defName>
+		<label>Cleaning statue</label>
+		<description>A magical statue that is crafted by a wizard at a wizard's work bench. This magic statue is not only beautiful to look up, but it will keep the room that it is stood in clean of filth of all types. If a cleaning statue is not placed in a room, it will clean a large area around itself.</description>
+		<thingClass>TheEndTimes_Magic.Building_CleaningStatue</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_CleaningStatue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>35</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.35</fillPercent>
+		<thingCategories>
+			<li>RH_TET_MagicBuildings</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>1250</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>60</Beauty>
+			<Mass>3</Mass>
+			<SellPriceFactor>1.2</SellPriceFactor>
+		</statBases>
+		<tickerType>Never</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<placeWorkers>
+			<li>TheEndTimes_Magic.PlaceWorker_RadiusTwelve</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li><!-- awful -->
+								<li>(1,0.16)</li><!-- poor -->
+								<li>(2,0.20)</li><!-- normal -->
+								<li>(3,0.22)</li><!-- good -->
+								<li>(4,0.24)</li><!-- excellent -->
+								<li>(5,0.26)</li><!-- masterwork -->
+								<li>(6,0.28)</li><!-- legendary -->
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+						<defs>
+							<li>SculptureSmall</li>
+							<li>SculptureLarge</li>
+							<li>SculptureGrand</li>
+						</defs>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<focusPerQuality>
+							<points>
+								<li>(0,0.0)</li><!-- awful -->
+								<li>(1,0.0)</li><!-- poor -->
+								<li>(2,0.01)</li><!-- normal -->
+								<li>(3,0.01)</li><!-- good -->
+								<li>(4,0.01)</li><!-- excellent -->
+								<li>(5,0.02)</li><!-- masterwork -->
+								<li>(6,0.02)</li><!-- legendary -->
+							</points>
+						</focusPerQuality>
+						<explanationKey>MeditationFocusPerSculpture</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_FreezingStatue</defName>
+		<label>Freezing statue</label>
+		<description>A translucent magical statue built on a marble plinth, and crafted by a wizard at a wizard's work bench. This beautiful magic statue is translucent, and emits an aura of freezing air that will keep the room that it is in extremely cold. It's as if it's built of ice that never melts.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_FreezingStatue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>35</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.35</fillPercent>
+		<thingCategories>
+			<li>RH_TET_MagicBuildings</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>65</Beauty>
+			<Mass>3</Mass>
+			<SellPriceFactor>1.5</SellPriceFactor>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusher</compClass>
+				<heatPerSecond>-22</heatPerSecond>
+				<heatPushMinTemperature>-15</heatPushMinTemperature>
+			</li>
+			<li Class="TheEndTimes_Magic.CompProperties_Puffs">
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li><!-- awful -->
+								<li>(1,0.16)</li><!-- poor -->
+								<li>(2,0.20)</li><!-- normal -->
+								<li>(3,0.22)</li><!-- good -->
+								<li>(4,0.24)</li><!-- excellent -->
+								<li>(5,0.26)</li><!-- masterwork -->
+								<li>(6,0.28)</li><!-- legendary -->
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+						<defs>
+							<li>SculptureSmall</li>
+							<li>SculptureLarge</li>
+							<li>SculptureGrand</li>
+						</defs>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<focusPerQuality>
+							<points>
+								<li>(0,0.0)</li><!-- awful -->
+								<li>(1,0.0)</li><!-- poor -->
+								<li>(2,0.01)</li><!-- normal -->
+								<li>(3,0.01)</li><!-- good -->
+								<li>(4,0.01)</li><!-- excellent -->
+								<li>(5,0.02)</li><!-- masterwork -->
+								<li>(6,0.02)</li><!-- legendary -->
+							</points>
+						</focusPerQuality>
+						<explanationKey>MeditationFocusPerSculpture</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_HeatingStatue</defName>
+		<label>Dragon orb</label>
+		<description>A glowing red orb, embedded in a beautiful yet rough carved statue of a dragon. The orb glows red, and produces a significant amount of heat.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_HeatingStatue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>35</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.35</fillPercent>
+		<thingCategories>
+			<li>RH_TET_MagicBuildings</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>50</Beauty>
+			<Mass>3</Mass>
+			<SellPriceFactor>1.2</SellPriceFactor>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusher</compClass>
+				<heatPerSecond>21</heatPerSecond>
+				<heatPushMaxTemperature>25</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(250,0,0,0)</glowColor>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li><!-- awful -->
+								<li>(1,0.16)</li><!-- poor -->
+								<li>(2,0.20)</li><!-- normal -->
+								<li>(3,0.22)</li><!-- good -->
+								<li>(4,0.24)</li><!-- excellent -->
+								<li>(5,0.26)</li><!-- masterwork -->
+								<li>(6,0.28)</li><!-- legendary -->
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+						<defs>
+							<li>SculptureSmall</li>
+							<li>SculptureLarge</li>
+							<li>SculptureGrand</li>
+						</defs>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<focusPerQuality>
+							<points>
+								<li>(0,0.0)</li><!-- awful -->
+								<li>(1,0.0)</li><!-- poor -->
+								<li>(2,0.01)</li><!-- normal -->
+								<li>(3,0.01)</li><!-- good -->
+								<li>(4,0.01)</li><!-- excellent -->
+								<li>(5,0.02)</li><!-- masterwork -->
+								<li>(6,0.02)</li><!-- legendary -->
+							</points>
+						</focusPerQuality>
+						<explanationKey>MeditationFocusPerSculpture</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicBuilding</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>RH_TET_GhostlyLight</defName>
+		<label>ghostly light</label>
+		<description>A magic light produced by the Ghostly Light Warp Lore spell. Glows under its own power in a sickly green light for a long time, then dies. Once created, cannot be moved or deconstructed. Hovers near the ceiling, so it can be placed over furnitue and such.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fillPercent>0</fillPercent>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<tradeability>None</tradeability>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(173,255,132,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>2700000</lifespanTicks>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_GhostlyLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+  
+</Defs>

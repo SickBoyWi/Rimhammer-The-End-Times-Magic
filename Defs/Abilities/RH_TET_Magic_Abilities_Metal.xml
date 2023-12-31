@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Final Transmutation -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_FinalTransmutation</thingClass>
+		<defName>RH_TET_MetalFinalTransmutationP</defName>
+		<label>Final Transmutation</label>
+		<graphicData>
+			<texPath>Things/Projectile/Metal/RH_TET_FinalTransmutation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>45</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>45</postFiringDuration>
+		<StartFireChance>0.0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalFinalTransmutation_Mage</defName>
+		<label>Final Transmutation I</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutation</uiIconPath>
+		<description>The wizard unleashes a hail of magical energy, doing damage to an enemy, and potentially transmuting the flesh of the foe to unliving golden statues. Chance to turn an enemy to gold: 20%.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalFinalTransmutationP</defaultProjectile>
+			<abilityDef>RH_TET_MetalFinalTransmutation_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalFinalTransmutation_Wizard</defName>
+		<label>Final Transmutation II</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutation</uiIconPath>
+		<description>The wizard unleashes a hail of magical energy, doing damage to an enemy, and potentially transmuting the flesh of the foe to unliving golden statues. Chance to turn an enemy to gold: 30%.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalFinalTransmutationP</defaultProjectile>
+			<abilityDef>RH_TET_MetalFinalTransmutation_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16000</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalFinalTransmutation_Warlock</defName>
+		<label>Final Transmutation III</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutation</uiIconPath>
+		<description>The wizard unleashes a hail of magical energy, doing damage to an enemy, and potentially transmuting the flesh of the foe to unliving golden statues. Chance to turn an enemy to gold: 40%.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalFinalTransmutationP</defaultProjectile>
+			<abilityDef>RH_TET_MetalFinalTransmutation_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>13000</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalFinalTransmutation_Master</defName>
+		<label>Final Transmutation IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutation</uiIconPath>
+		<description>The wizard unleashes a hail of magical energy, doing damage to an enemy, and potentially transmuting the flesh of the foe to unliving golden statues. Chance to turn an enemy to gold: 50%.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalFinalTransmutationP</defaultProjectile>
+			<abilityDef>RH_TET_MetalFinalTransmutation_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>10000</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Magic_FinalTransmutationSculpture">
+		<defName>RH_TET_Magic_FinalTransmutationSculpture</defName>
+		<label>transmuted pawn</label>
+		<description>This was once a living breathing being, but now it is a golden statue. It was created via the Final Transmutation spell.</description>
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+		<castEdgeShadows>true</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/TransmutedPawn</texPath>
+			<drawSize>(2.5,2.5)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<Flammability>1.0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<!-- Forge of Chamon -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_ForgeOfChamon</thingClass>
+		<defName>RH_TET_HeavensForgeOfChamonP</defName>
+		<label>Forge of Chamon</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MetalForge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalForgeOfChamon_Mage</defName>
+		<label>Forge of Chamon I</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalForge</uiIconPath>
+		<description>The wizard increases the craftsmanship of a single object. They remove its flaws, or add new qualities to it. Will repair an item of apparel or a weapon to full hitpoints. If the item already has full hitpoints, it will increase the quality of the item.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensForgeOfChamonP</defaultProjectile>
+			<abilityDef>RH_TET_MetalForgeOfChamon_Mage</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>1</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalForgeOfChamon_Wizard</defName>
+		<label>Forge of Chamon II</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalForge</uiIconPath>
+		<description>The wizard increases the craftsmanship of a single object. They remove its flaws, or add new qualities to it. Will repair an item of apparel or a weapon to full hitpoints. If the item already has full hitpoints, it will increase the quality of the item.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>18</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensForgeOfChamonP</defaultProjectile>
+			<abilityDef>RH_TET_MetalForgeOfChamon_Wizard</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>26000</SecondsToRecharge>
+			<range>1</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalForgeOfChamon_Warlock</defName>
+		<label>Forge of Chamon III</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalForge</uiIconPath>
+		<description>The wizard increases the craftsmanship of a single object. They remove its flaws, or add new qualities to it. Will repair an item of apparel or a weapon to full hitpoints. If the item already has full hitpoints, it will increase the quality of the item.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensForgeOfChamonP</defaultProjectile>
+			<abilityDef>RH_TET_MetalForgeOfChamon_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>22000</SecondsToRecharge>
+			<range>1</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalForgeOfChamon_Master</defName>
+		<label>Forge of Chamon IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalForge</uiIconPath>
+		<description>The wizard increases the craftsmanship of a single object. They remove its flaws, or add new qualities to it. Will repair an item of apparel or a weapon to full hitpoints. If the item already has full hitpoints, it will increase the quality of the item.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensForgeOfChamonP</defaultProjectile>
+			<abilityDef>RH_TET_MetalForgeOfChamon_Master</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>18000</SecondsToRecharge>
+			<range>1</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Gleeaming Arrow -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_DirectDamagePawn</thingClass>
+		<defName>RH_TET_MetalGleamingArrowP</defName>
+		<label>Gleaming Arrow</label>
+		<graphicData>
+			<texPath>Things/Projectile/Metal/RH_TET_MetalArrow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicalSharp</damageDef>
+			<damageAmountBase>28</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGleamingArrow_Mage</defName>
+		<label>Gleaming Arrow I</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalArrow</uiIconPath>
+		<description>An arrow of pure golden power bursts from the caster's forehead, and flies toward the target. The arrow seeks out a single target, striking the victim. The target must be in line of sight, and armour protects as normal. The arrow disappears once it has struck. The more powerful the spell level, the further it has for range.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalGleamingArrowP</defaultProjectile>
+			<abilityDef>RH_TET_MetalGleamingArrow_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>42</range>
+			<isViolent>true</isViolent>
+			<isPrimary>true</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetThing</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGleamingArrow_Wizard</defName>
+		<label>Gleaming Arrow II</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalArrow</uiIconPath>
+		<description>An arrow of pure golden power bursts from the caster's forehead, and flies toward the target. The arrow seeks out a single target, striking the victim. The target must be in line of sight, and armour protects as normal. The arrow disappears once it has struck. The more powerful the spell level, the further it has for range.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalGleamingArrowP</defaultProjectile>
+			<abilityDef>RH_TET_MetalGleamingArrow_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>45</range>
+			<isViolent>true</isViolent>
+			<isPrimary>true</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetThing</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGleamingArrow_Warlock</defName>
+		<label>Gleaming Arrow III</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalArrow</uiIconPath>
+		<description>An arrow of pure golden power bursts from the caster's forehead, and flies toward the target. The arrow seeks out a single target, striking the victim. The target must be in line of sight, and armour protects as normal. The arrow disappears once it has struck. The more powerful the spell level, the further it has for range.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalGleamingArrowP</defaultProjectile>
+			<abilityDef>RH_TET_MetalGleamingArrow_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>48</range>
+			<isViolent>true</isViolent>
+			<isPrimary>true</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetThing</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGleamingArrow_Master</defName>
+		<label>Gleaming Arrow IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalArrow</uiIconPath>
+		<description>An arrow of pure golden power bursts from the caster's forehead, and flies toward the target. The arrow seeks out a single target, striking the victim. The target must be in line of sight, and armour protects as normal. The arrow disappears once it has struck. The more powerful the spell level, the further it has for range.</description>
+		<magicPoolCost>0.19</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MetalGleamingArrowP</defaultProjectile>
+			<abilityDef>RH_TET_MetalGleamingArrow_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>50</range>
+			<isViolent>true</isViolent>
+			<isPrimary>true</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetThing</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- Transmutation of the Unstable Mind -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_EnstableMind</thingClass>
+		<defName>RH_TET_Metal_TransmuteUnstableMindP</defName>
+		<label>Transmutation of the Unstable Mind</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MetalTransmutationMind</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalMindTransmute_Mage</defName>
+		<label>Transmutation of the Unstable Mind I</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutationMind</uiIconPath>
+		<description>Transmutes a sick mind into a healthy one, which can be quite a dangerous task. This is a short range spell. The caster cannot cast the spell on themselves. This spell does not work on animals.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Metal_TransmuteUnstableMindP</defaultProjectile>
+			<abilityDef>RH_TET_MetalMindTransmute_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>4</range>
+			<isViolent>false</isViolent>
+			<soundCast>Interact_BeatFire</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalMindTransmute_Wizard</defName>
+		<label>Transmutation of the Unstable Mind II</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutationMind</uiIconPath>
+		<description>Transmutes a sick mind into a healthy one, which can be quite a dangerous task. This is a short range spell. The caster cannot cast the spell on themselves. This spell does not work on animals.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Metal_TransmuteUnstableMindP</defaultProjectile>
+			<abilityDef>RH_TET_MetalMindTransmute_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>52</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>Interact_BeatFire</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalMindTransmute_Warlock</defName>
+		<label>Transmutation of the Unstable Mind III</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutationMind</uiIconPath>
+		<description>Transmutes a sick mind into a healthy one, which can be quite a dangerous task. This is a short range spell. The caster cannot cast the spell on themselves. This spell does not work on animals.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Metal_TransmuteUnstableMindP</defaultProjectile>
+			<abilityDef>RH_TET_MetalMindTransmute_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>48</SecondsToRecharge>
+			<range>6</range>
+			<isViolent>false</isViolent>
+			<soundCast>Interact_BeatFire</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalMindTransmute_Master</defName>
+		<label>Transmutation of the Unstable Mind IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalTransmutationMind</uiIconPath>
+		<description>Transmutes a sick mind into a healthy one, which can be quite a dangerous task. This is a short range spell. The caster cannot cast the spell on themselves. This spell does not work on animals.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Metal_TransmuteUnstableMindP</defaultProjectile>
+			<abilityDef>RH_TET_MetalMindTransmute_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>40</SecondsToRecharge>
+			<range>7</range>
+			<isViolent>false</isViolent>
+			<soundCast>Interact_BeatFire</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Glittering Robe -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_MetalGlitteringRobeP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Glittering Robe</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MetalGlitteringRobe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGlitteringRobe_Mage</defName>
+		<label>Glittering Robe I</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalGlitteringRobe</uiIconPath>
+		<description>Shaping a sigil of power, the wizard conjures a gaudy (but effective) cloak of shimmering scale for protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MetalGlitteringRobe_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MetalGlitteringRobeP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_GlitteringRobe</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGlitteringRobe_Wizard</defName>
+		<label>Glittering Robe II</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalGlitteringRobe</uiIconPath>
+		<description>Shaping a sigil of power, the wizard conjures a gaudy (but effective) cloak of shimmering scale for protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MetalGlitteringRobe_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MetalGlitteringRobeP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_GlitteringRobe</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGlitteringRobe_Warlock</defName>
+		<label>Glittering Robe III</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalGlitteringRobe</uiIconPath>
+		<description>Shaping a sigil of power, the wizard conjures a gaudy (but effective) cloak of shimmering scale for protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MetalGlitteringRobe_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MetalGlitteringRobeP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_GlitteringRobe</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.7</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MetalGlitteringRobe_Master</defName>
+		<label>Glittering Robe IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MetalGlitteringRobe</uiIconPath>
+		<description>Shaping a sigil of power, the wizard conjures a gaudy (but effective) cloak of shimmering scale for protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MetalGlitteringRobe_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MetalGlitteringRobeP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>90.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_GlitteringRobe</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.9</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

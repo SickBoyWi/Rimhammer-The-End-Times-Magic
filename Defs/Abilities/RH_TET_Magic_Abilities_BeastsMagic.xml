@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Flock of Doom =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_FlockOfDoom</thingClass>
+		<defName>RH_TET_Beasts_FlockOfDoomP</defName>
+		<label>Flock of Doom</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_BeastsFlockOfDoom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsFlockOfDoom_Mage</defName>
+		<label>Flock of Doom I</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsFlockOfDoom</uiIconPath>
+		<description>Summon a flock of mad ravens to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Beasts_FlockOfDoomP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsFlockOfDoom_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>50</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<!--<AbilityTargetCategory>TargetLocation</AbilityTargetCategory>-->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsFlockOfDoom_Wizard</defName>
+		<label>Flock of Doom II</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsFlockOfDoom</uiIconPath>
+		<description>Summon a flock of mad ravens to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.29</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Beasts_FlockOfDoomP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsFlockOfDoom_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>115.0</SecondsToRecharge>
+			<range>51</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<!--<AbilityTargetCategory>TargetLocation</AbilityTargetCategory>-->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsFlockOfDoom_Warlock</defName>
+		<label>Flock of Doom III</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsFlockOfDoom</uiIconPath>
+		<description>Summon a flock of mad ravens to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Beasts_FlockOfDoomP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsFlockOfDoom_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>52</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<!--<AbilityTargetCategory>TargetLocation</AbilityTargetCategory>-->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsFlockOfDoom_Master</defName>
+		<label>Flock of Doom IV</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsFlockOfDoom</uiIconPath>
+		<description>Summon a flock of mad ravens to attack your enemies. Be wary, they will attack you as well, so don't cast this spell too close to friendlies.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Beasts_FlockOfDoomP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsFlockOfDoom_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>53</range>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<!--<AbilityTargetCategory>TargetLocation</AbilityTargetCategory>-->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Amber Spear =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_BeastsAmberSpearP</defName>
+		<label>amber spear</label>
+		<graphicData>
+			<texPath>Things/Projectile/Beasts/RH_TET_AmberSpear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberSpear_Mage</defName>
+		<label>Amber Spear I</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberSpear</uiIconPath>
+		<description>Shoot a spear of amber magic to strike an opponent.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_BeastsAmberSpearP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsAmberSpear_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberSpear_Wizard</defName>
+		<label>Amber Spear II</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberSpear</uiIconPath>
+		<description>Shoot a spear of amber magic to strike an opponent.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_BeastsAmberSpearP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsAmberSpear_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>17</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberSpear_Warlock</defName>
+		<label>Amber Spear III</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberSpear</uiIconPath>
+		<description>Shoot a spear of amber magic to strike an opponent.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_BeastsAmberSpearP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsAmberSpear_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberSpear_Master</defName>
+		<label>Amber Spear IV</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberSpear</uiIconPath>
+		<description>Shoot a spear of amber magic to strike an opponent.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_BeastsAmberSpearP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsAmberSpear_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>40</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_EMP</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Amber Trance =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_BeastsAmberTranceP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>amber trance</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_BeastsAmberTrance</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberTrance_Mage</defName>
+		<label>Amber Trance I</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberTrance</uiIconPath>
+		<description>Puts a pawn into an deep sleep. They won't die while asleep, and will eventually awaken when the magic fades.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_AmberTrance</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_BeastsAmberTrance_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_BeastsAmberTranceP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>85.0</SecondsToRecharge>
+			<range>18</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_AmberTrance</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.75</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberTrance_Wizard</defName>
+		<label>Amber Trance II</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberTrance</uiIconPath>
+		<description>Puts a pawn into an deep sleep. They won't die while asleep, and will eventually awaken when the magic fades.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_AmberTrance</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_BeastsAmberTrance_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_BeastsAmberTranceP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>82.0</SecondsToRecharge>
+			<range>19</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_AmberTrance</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.85</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberTrance_Warlock</defName>
+		<label>Amber Trance III</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberTrance</uiIconPath>
+		<description>Puts a pawn into an deep sleep. They won't die while asleep, and will eventually awaken when the magic fades.</description>
+		<magicPoolCost>0.37</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_AmberTrance</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_BeastsAmberTrance_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_BeastsAmberTranceP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>81.0</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_AmberTrance</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.95</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsAmberTrance_Master</defName>
+		<label>Amber Trance IV</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsAmberTrance</uiIconPath>
+		<description>Puts a pawn into an deep sleep. They won't die while asleep, and will eventually awaken when the magic fades.</description>
+		<magicPoolCost>0.38</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_AmberTrance</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_BeastsAmberTrance_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_BeastsAmberTranceP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>80.0</SecondsToRecharge>
+			<range>21</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_AmberTrance</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>1.0</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Wysson's Wildform =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_BeastsWyssonsWildformP</defName>
+		<label>Wysson's Wildform</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_BeastsWyssonsWildform</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>15</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsWyssonsWildform_Mage</defName>
+		<label>Wysson's Wildform I</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsWyssonsWildform</uiIconPath>
+		<description>Makes a pawn turn into a killing machine statwise.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_WildForm</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsWyssonsWildformP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsWyssonsWildform_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_BeastsWyssonsWildformI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsWyssonsWildform_Wizard</defName>
+		<label>Wysson's Wildform II</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsWyssonsWildform</uiIconPath>
+		<description>Makes a pawn turn into a killing machine statwise.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_WildForm</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsWyssonsWildformP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsWyssonsWildform_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>105.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_BeastsWyssonsWildformII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsWyssonsWildform_Warlock</defName>
+		<label>Wysson's Wildform III</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsWyssonsWildform</uiIconPath>
+		<description>Makes a pawn turn into a killing machine statwise.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_WildForm</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsWyssonsWildformP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsWyssonsWildform_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>50.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_BeastsWyssonsWildformIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsWyssonsWildform_Master</defName>
+		<label>Wysson's Wildform IV</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsWyssonsWildform</uiIconPath>
+		<description>Makes a pawn turn into a killing machine statwise.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_WildForm</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsWyssonsWildformP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsWyssonsWildform_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_BeastsWyssonsWildformIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Beast Master =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_BeastsBeastMasterP</defName>
+		<label>beast master</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_BeastsBeastMaster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_Poison</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsBeastMaster_Mage</defName>
+		<label>Beast Master I</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsBeastMaster</uiIconPath>
+		<description>Immeditely tames an animal, and cures it of the manhunter state if it was manhunting. Be wary because if it fails, it will madden the animal. If cast on a manhunting animal that is already tame, it will cure them from the manhunter state.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TameAnimal</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsBeastMasterP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsBeastMaster_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsBeastMaster_Wizard</defName>
+		<label>Beast Master II</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsBeastMaster</uiIconPath>
+		<description>Immeditely tames multiple animals, and cures it of the manhunter state if it was manhunting. Be wary because if it fails, it will madden the animal. If cast on a manhunting animal that is already tame, it will cure them from the manhunter state.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TameAnimal</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsBeastMasterP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsBeastMaster_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsBeastMaster_Warlock</defName>
+		<label>Beast Master III</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsBeastMaster</uiIconPath>
+		<description>Immeditely tames multiple animals, and cures it of the manhunter state if it was manhunting. Be wary because if it fails, it will madden the animal. If cast on a manhunting animal that is already tame, it will cure them from the manhunter state.</description>
+		<magicPoolCost>0.65</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TameAnimal</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsBeastMasterP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsBeastMaster_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_BeastsBeastMaster_Master</defName>
+		<label>Beast Master IV</label>
+		<uiIconPath>UI/Magic/RH_TET_BeastsBeastMaster</uiIconPath>
+		<description>Immeditely tames multiple animals, and cures them of the manhunter state if any were manhunting. Be wary because if it fails, it will madden the animal. May also train the animals to varying degrees. If cast on a manhunting animal that is already tame, it will cure them from the manhunter state.</description>
+		<magicPoolCost>0.70</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TameAnimal</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_BeastsBeastMasterP</defaultProjectile>
+			<abilityDef>RH_TET_BeastsBeastMaster_Master</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

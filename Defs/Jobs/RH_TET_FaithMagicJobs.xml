@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RH_TET_Magic_DoBillIdol</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_DoBillIdol</driverClass>
+		<reportString>doing bill at TargetA.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Magic_DoBillMagicBench</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_DoBillMagicBench</driverClass>
+		<reportString>doing bill at TargetA.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_MagicMeditationJob</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_MagicMeditation</driverClass>
+		<reportString>performing magic meditation.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>RH_TET_FaithMeditationJob</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_MagicMeditation</driverClass>
+		<reportString>performing prayer meditation.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>RH_TET_AbilityMeditationJob</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_MagicMeditation</driverClass>
+		<reportString>performing ability meditation.</reportString>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Magic_PrayAwayTaint_Job</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_PrayAwayTaint</driverClass>
+		<reportString>praying to be cleansed.</reportString>
+	</JobDef>
+	
+</Defs>

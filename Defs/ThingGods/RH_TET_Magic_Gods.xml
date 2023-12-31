@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TheEndTimes_Magic.DarkGodDef>
+		<defName>RH_TET_Khorne</defName>
+		<thingClass>TheEndTimes_Magic.DarkGod</thingClass>
+		<label>Khorne</label>
+		<portrait>Portraits/RH_TET_Khorne</portrait>
+		<titles>The Blood God, Lord of Skulls, Lord of Rage, Taker of Skulls</titles>
+		<domains>Blood, War, Hatred, and Murder</domains>
+		<description>Blood for the Blood God! Skulls for the Skull Throne!</description>
+		<descriptionLong>Khorne, also called the Blood God and the Lord of Skulls, is the Chaos God of Blood, War and Murder. His domain covers the most basic and brutal of sentient emotions and actions, such as hate, anger, rage, war and killing. Every act of killing or murder in the material universe gives Khorne power; the more senseless and destructive, the better. However, though Khorne is the god of bloody slaughter, he is also the god of martial pride and honour, of those who set themselves against the most dangerous foes and earn victory against the odds.</descriptionLong>
+		<symbol>Mote/Symbols/RH_TET_Khorne</symbol>
+		<sacredNumber>8</sacredNumber>
+	</TheEndTimes_Magic.DarkGodDef>
+
+	<TheEndTimes_Magic.DarkGodDef>
+		<defName>RH_TET_Nurgle</defName>
+		<thingClass>TheEndTimes_Magic.DarkGod</thingClass>
+		<label>Nurgle</label>
+		<portrait>Portraits/RH_TET_Nurgle</portrait>
+		<titles>The Plague Lord, The Lord of Decay, Grandfather Nurgle</titles>
+		<domains>Disease, Decay, Death, Destruction</domains>
+		<description>Buboes, phlegm, blood and guts! Boils, bogeys, rot and pus! Blisters, fevers, weeping sores! From your wounds the fester pours.</description>
+		<descriptionLong>Nurgle, also known as the Plague Lord, is the Chaos God of Disease, Decay, Death and Destruction. In particular, the emotion of despair in mortals empowers him. He is known also as "Grandfather Nurgle," the "Lord of Pestilence" and the "Lord of Decay." Nurgle is the Chaos God most directly involved with the plights of mortals, particularly humans who suffer so acutely from a fear of death, perhaps the oldest fear of that species, or any other. While Nurgle is the God of Death and Decay, he is also the God of Rebirth. Decay is simply one part of the cycle of life, without which no new life could grow. In the same way, Nurgle is also the God of Perseverance and Survival.</descriptionLong>
+		<symbol>Mote/Symbols/RH_TET_Nurgle</symbol>
+		<sacredNumber>7</sacredNumber>
+	</TheEndTimes_Magic.DarkGodDef>
+
+	<TheEndTimes_Magic.DarkGodDef>
+		<defName>RH_TET_Slaanesh</defName>
+		<thingClass>TheEndTimes_Magic.DarkGod</thingClass>
+		<label>Slaanesh</label>
+		<portrait>Portraits/RH_TET_Slaanesh</portrait>
+		<titles>Dark Prince, Prince of Pleasure, Lord of Excess, Prince of Chaos, She Who Thirsts</titles>
+		<domains>Pleasure, Passion, Excess, Decadence</domains>
+		<description>Embrace your hunger, your lust, your desire. The universe is ours for the taking!</description>
+		<descriptionLong>Slaanesh, also known as the Dark Prince, the Prince of Pleasure, the Lord of Excess, the Perfect Prince, and even the Prince of Chaos in the Empire, is the Chaos God of pleasure, excess, and decadence. Lust, pride, and self-indulgence are the hallmarks of all who follow him. He is the youngest of the four major Chaos Gods. While generally referred to as a "he" by humans and as a female by the elfs, Slaanesh is actually neither gender, combining characteristics of both and perfecting them. Slaanesh typically appears in an androgynous form in which it is a woman on the right side and a man on the left with two sets of devilish horns growing from its head. Slaanesh can assume any form; male, female, hermaphrodite, or no gender at all, but it prefers male bodies. Its sacred number is six and the colours associated with Slaanesh are purple, pink and black. The name Slaanesh is a corruption of the high elven term Slaaneth (Slaa meaning "ecstasy" or "pleasure" and Neth meaning "lord" or "prince" in the elven lexicon; hence, the Prince of Pleasure), though ironically, the elfs refer to this foul entity only as Sai'lanthresh in the elfs Lexicon, "She Who Thirsts."</descriptionLong>
+		<symbol>Mote/Symbols/RH_TET_Slaanesh</symbol>
+		<sacredNumber>6</sacredNumber>
+	</TheEndTimes_Magic.DarkGodDef>
+
+	<TheEndTimes_Magic.DarkGodDef>
+		<defName>RH_TET_Tzeentch</defName>
+		<thingClass>TheEndTimes_Magic.DarkGod</thingClass>
+		<label>Tzeentch</label>
+		<portrait>Portraits/RH_TET_Tzeentch</portrait>
+		<titles>The Changer of Ways, The Lord of Change</titles>
+		<domains>Change, Evolution, Intrigue, Ambition, Knowledge, Sorcery</domains>
+		<description>Do not ask which creature screams in the night. Do not question who waits for you in the shadow. It is my cry that wakes you in the night, and my body that crouches in the shadow. I am Tzeentch and you are the puppet that dances to my tune...</description>
+		<descriptionLong>Tzeentch, also known as the Changer of Ways, is the Chaos God of Change, Evolution, Intrigue and Sorcery, he who weaves the threads that connect every action, plot and subtle intrigue in an incomprehendingly complex game of manipulation and subterfuge. At the end of each of these threads lays the ensnared soul of a human puppet; those of his servants and agents who believe they serve the Lord of Sorcery in mutually beneficial pacts. The truth is that Tzeentch's every action is planned with its ultimate goal as his own establishment as the pre-eminent Chaos power. Of course, the very nature of the Lord of Entropy is such that, were he to attain this triumph, he would still strive for turmoil and change. In many ways, Tzeentch is both the best and least understood of the Dark Gods. He is the God of Fate, plots, and schemes, as well as the God that exemplifies the ever-changing nature of chaos. Tzeentch does not plot towards some end (at least none that can be comprehended); he schemes simply to scheme. He is constantly building, even as his devices unravel under their own complexity. At the same time, he is the God of knowledge and comprehension, and his devotees may be those who seek a deeper understanding of an often enigmatic universe.</descriptionLong>
+		<symbol>Mote/Symbols/RH_TET_Tzeentch</symbol>
+		<sacredNumber>9</sacredNumber>
+	</TheEndTimes_Magic.DarkGodDef>
+
+</Defs>

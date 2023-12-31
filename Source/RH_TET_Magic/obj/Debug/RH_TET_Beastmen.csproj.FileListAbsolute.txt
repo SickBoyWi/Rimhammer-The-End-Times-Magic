@@ -1,0 +1,5 @@
+E:\Modding\RimWorld\Rimhammer-The-End-Times-Beastmen\Assemblies\RH_TET_Beastmen.dll
+E:\Modding\RimWorld\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.csproj.CoreCompileInputs.cache
+E:\Modding\RimWorld\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.csproj.CopyComplete
+E:\Modding\RimWorld\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.dll
+E:\Modding\RimWorld\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.csprojAssemblyReference.cache

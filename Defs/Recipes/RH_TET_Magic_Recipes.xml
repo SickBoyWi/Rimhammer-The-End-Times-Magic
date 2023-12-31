@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RH_TET_Magic_InstallMagicEye</defName>
+		<label>install magic eye</label>
+		<description>Install a magic eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RH_TET_Magic_MagicEye</ThingDef>
+			<HediffDef>RH_TET_Magic_MagicEye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing magic eye.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Magic_MagicEye</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Magic_MagicEye</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Magic_MagicEye</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RH_TET_Magic_InstallMagicArm</defName>
+		<label>install magic arm</label>
+		<description>Install a magic arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RH_TET_Magic_MagicArm</ThingDef>
+			<HediffDef>RH_TET_Magic_MagicArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing magic arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Magic_MagicArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Magic_MagicArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Magic_MagicArm</addsHediff>
+	</RecipeDef>
+ 
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>RH_TET_Magic_InstallMagicLeg</defName>
+		<label>install magic leg</label>
+		<description>Install a magic leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RH_TET_Magic_MagicLeg</ThingDef>
+			<HediffDef>RH_TET_Magic_MagicLeg</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing magic leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Magic_MagicLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Magic_MagicLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Magic_MagicLeg</addsHediff>
+	</RecipeDef>
+  
+</Defs>

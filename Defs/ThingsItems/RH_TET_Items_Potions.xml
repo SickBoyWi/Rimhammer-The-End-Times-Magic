@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RH_TET_MagicItemBase">
+		<defName>RH_TET_Potion_Healing</defName>
+		<label>potion of healing</label>
+		<description>A one-use magic potion. The magic in the potion will heal the single worst health condition affecting someone at any given time. Works even on health conditions that would otherwise be incurable. The magic can even build new organic matter, forming new limbs or organs as needed.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionHealing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use potion of healing</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>CompUseEffect_FixWorstHealthCondition</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_MagicItemBase">
+		<defName>RH_TET_Potion_Love</defName>
+		<label>love potion</label>
+		<description>A potion that can be drank by a pawn. Upon doing so, that pawn must indicate a second pawn in the area. The second pawn must be an appropriate pawn; it must be humanlike, and with the proper sexual orientation and gender.\n\nCan only be used by and on pawns that do not currently have relationship partners. Must also be used on partners of the appropriate gender for the user and target's sexual orientations. Not allowed on family members of the user.\n\nNote that if the user targets a pawn that inherently dislikes them, then this relationship may not last long as the magic faces.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLove</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Drink love potion</useLabel>
+				<useDuration>0</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>TheEndTimes_Magic.CompTargetable_SingleHumanlikePawn</compClass>
+			</li>
+			<li>
+				<compClass>TheEndTimes_Magic.CompTargetEffect_CreateRelationship</compClass>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+ 
+	<!-- Trainer potions -->
+
+	<ThingDef Name="RH_TET_MagicLearningPotionBase" ParentName="RH_TET_MagicItemBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>750</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_LearnSkill</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<thingCategories Inherit="false">
+			<li>RH_TET_MagicItems_Trainers</li>
+		</thingCategories>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+			<li>SkillNeurotrainer</li>
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Shooting</defName>
+		<label>learning potion: shooting</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn shooting</useLabel>
+				<skill>Shooting</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Melee</defName>
+		<label>learning potion: melee</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn melee</useLabel>
+				<skill>Melee</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Construction</defName>
+		<label>learning potion: construction</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn construction</useLabel>
+				<skill>Construction</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Mining</defName>
+		<label>learning potion: mining</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn mining</useLabel>
+				<skill>Mining</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Cooking</defName>
+		<label>learning potion: cooking</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn cooking</useLabel>
+				<skill>Cooking</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Plants</defName>
+		<label>learning potion: plants</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn plants</useLabel>
+				<skill>Plants</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Animals</defName>
+		<label>learning potion: animals</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn animals</useLabel>
+				<skill>Animals</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Crafting</defName>
+		<label>learning potion: crafting</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn crafting</useLabel>
+				<skill>Crafting</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Artistic</defName>
+		<label>learning potion: artistic</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn artistic</useLabel>
+				<skill>Artistic</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Medicine</defName>
+		<label>learning potion: medicine</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn medicine</useLabel>
+				<skill>Medicine</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Social</defName>
+		<label>learning potion: social</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn social</useLabel>
+				<skill>Social</skill>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicLearningPotionBase">
+		<defName>RH_TET_Magic_PotionTrainer_Intellectual</defName>
+		<label>learning potion: intellectual</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to instantly learn much of a specific skill.\n\nThe potion is consumed orally. Once consumed, the magic quickly improve the subject's skills in a specific area, transmuting neural tissue as needed and creating knowledge.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionLearning</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_LearningPotion">
+				<compClass>TheEndTimes_Magic.CompLearningPotion</compClass>
+				<useJob>RH_TET_Magic_UseNeurotrainer</useJob>
+				<useLabel>Use potion of learning to learn intellectual</useLabel>
+				<skill>Intellectual</skill>
+			</li>
+		</comps>
+	</ThingDef>
+ 
+	<!-- HEDiff giver potions -->
+
+	<ThingDef Name="RH_TET_MagicHeDiffPotionBase" ParentName="RH_TET_MagicItemBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_GiveHeDiff</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicHeDiffPotionBase">
+		<defName>RH_TET_Magic_PotionHeDiff_Charisma</defName>
+		<label>potion of charisma</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to be far better at social interactions, negotiations, trading, etc.\n\nThe potion is consumed orally. Once consumed, the magic will take effect immediately, and will last for 48 hours.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionCharisma</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_HeDiffPotion">
+				<compClass>TheEndTimes_Magic.CompHeDiffPotion</compClass>
+				<useJob>RH_TET_Magic_UsePotion</useJob>
+				<useLabel>Use potion of charisma</useLabel>
+				<hediff>RH_TET_CharismaEffect</hediff>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicHeDiffPotionBase">
+		<defName>RH_TET_Magic_PotionHeDiff_Movement</defName>
+		<label>potion of speed</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to move faster in terms of walking, and working.\n\nThe potion is consumed orally. Once consumed, the magic will take effect immediately, and will last for 48 hours.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionSpeed</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_HeDiffPotion">
+				<compClass>TheEndTimes_Magic.CompHeDiffPotion</compClass>
+				<useJob>RH_TET_Magic_UsePotion</useJob>
+				<useLabel>Use potion of speed</useLabel>
+				<hediff>RH_TET_MovementEffect</hediff>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

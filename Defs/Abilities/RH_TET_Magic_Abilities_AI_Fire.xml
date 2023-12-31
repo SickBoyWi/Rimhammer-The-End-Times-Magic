@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Fire Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_FireWizardAI">
+		<defName>RH_TET_Magic_FireWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfFireTrait</li>
+		</matchingTraits>
+		<abilities>
+
+			<li>RH_TET_FireBreatheFire_MageAI</li>
+			<li>RH_TET_FireBreatheFire_WizardAI</li>
+			<li>RH_TET_FireBreatheFire_WarlockAI</li>
+			<li>RH_TET_FireBreatheFire_MasterAI</li>
+			
+			<li>RH_TET_FireCascadingCloak_MageAI</li>
+			<li>RH_TET_FireCascadingCloak_WizardAI</li>
+			<li>RH_TET_FireCascadingCloak_WarlockAI</li>
+			<li>RH_TET_FireCascadingCloak_MasterAI</li>
+			
+			<li>RH_TET_FirePiercingBolts_MageAI</li>
+			<li>RH_TET_FirePiercingBolts_WizardAI</li>
+			<li>RH_TET_FirePiercingBolts_WarlockAI</li>
+			<li>RH_TET_FirePiercingBolts_MasterAI</li>
+			
+			<li>RH_TET_FireFlameStorm_MageAI</li>
+			<li>RH_TET_FireFlameStorm_WizardAI</li>
+			<li>RH_TET_FireFlameStorm_WarlockAI</li>
+			<li>RH_TET_FireFlameStorm_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_FireWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- Not in combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<invert>true</invert>
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+							<tags>
+								<li>FireCloak</li>
+							</tags>
+						</li>
+					</subNodes>
+				</li>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BreatheFire</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>23.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireStorm</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BreatheFire</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireCloak</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>25.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireStorm</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PiercingBolts</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireCloak</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>15.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PiercingBolts</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BreatheFire</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireCloak</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>15.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BreatheFire</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PiercingBolts</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireCloak</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>26.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PiercingBolts</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BreatheFire</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireCloak</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>FireStorm</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireBreatheFire_MageAI</defName>
+		<ability>RH_TET_FireBreatheFire_Mage</ability>
+		<power>20.0</power>
+		<maxRange>37.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BreatheFire</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireBreatheFire_WizardAI</defName>
+		<ability>RH_TET_FireBreatheFire_Wizard</ability>
+		<power>20.0</power>
+		<maxRange>37.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BreatheFire</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireBreatheFire_WarlockAI</defName>
+		<ability>RH_TET_FireBreatheFire_Warlock</ability>
+		<power>20.0</power>
+		<maxRange>37.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BreatheFire</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireBreatheFire_MasterAI</defName>
+		<ability>RH_TET_FireBreatheFire_Master</ability>
+		<power>20.0</power>
+		<maxRange>37.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BreatheFire</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireCascadingCloak_MageAI</defName>
+		<ability>RH_TET_FireCascadingCloak_Mage</ability>
+		<power>30.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>FireCloak</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireCascadingCloak_WizardAI</defName>
+		<ability>RH_TET_FireCascadingCloak_Wizard</ability>
+		<power>30.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>FireCloak</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireCascadingCloak_WarlockAI</defName>
+		<ability>RH_TET_FireCascadingCloak_Warlock</ability>
+		<power>30.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>FireCloak</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireCascadingCloak_MasterAI</defName>
+		<ability>RH_TET_FireCascadingCloak_Master</ability>
+		<power>30.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>FireCloak</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FirePiercingBolts_MageAI</defName>
+		<ability>RH_TET_FirePiercingBolts_Mage</ability>
+		<power>16.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PiercingBolts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FirePiercingBolts_WizardAI</defName>
+		<ability>RH_TET_FirePiercingBolts_Wizard</ability>
+		<power>17.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PiercingBolts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FirePiercingBolts_WarlockAI</defName>
+		<ability>RH_TET_FirePiercingBolts_Warlock</ability>
+		<power>18.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PiercingBolts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FirePiercingBolts_MasterAI</defName>
+		<ability>RH_TET_FirePiercingBolts_Master</ability>
+		<power>19.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PiercingBolts</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireFlameStorm_MageAI</defName>
+		<ability>RH_TET_FireFlameStorm_Mage</ability>
+		<power>90.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>FireStorm</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireFlameStorm_WizardAI</defName>
+		<ability>RH_TET_FireFlameStorm_Wizard</ability>
+		<power>85.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>FireStorm</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireFlameStorm_WarlockAI</defName>
+		<ability>RH_TET_FireFlameStorm_Warlock</ability>
+		<power>80.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>FireStorm</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_FireFlameStorm_MasterAI</defName>
+		<ability>RH_TET_FireFlameStorm_Master</ability>
+		<power>75.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>FireStorm</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

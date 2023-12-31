@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckBrownEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_BrownGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckPurpleEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_PurpleGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckPinkEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_PinkGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckRedEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_RedGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckBlueEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_BlueGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckYellowEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_YellowGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckGrayEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_GrayGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckGoldEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_GoldGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckGreenEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_GreenGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckGreenEffectFancy</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_GreenGlowMote2</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckWhiteEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_WhiteGlowMote</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_FleckWhiteLightEffect</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_WhiteGlowMoteSuperNova</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.025</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.025</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Amber</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Amber</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Wildform</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Wildform</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0.2, 0, 0.2)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Enfeebled</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Enfeebled</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Afflictions</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Afflictions</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.40</fadeInTime>
+		<solidTime>1.2</solidTime>
+		<fadeOutTime>1.5</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Mantle</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Mantle</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Surge</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Surge</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(-0.2, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Manacles</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Manacles</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Snare</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Snare</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Convergence</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Harmonic</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>1.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_ChaosStar</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_ChaosStar</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>2</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Maw</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Maw</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>2</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Teeth</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Teeth</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>2</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_Apotheosis</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_Apotheosis</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>2</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_Fleck_RedPox</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_RedPox</texPath>
+		</graphicData>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>2</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RH_TET_SkavenOutline_Fleck</defName>
+		<graphicData>
+			<texPath>Mote/Effects/RH_TET_SkavenOutline</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(0.0,.9,.0,1)</color>
+			<drawSize>(.4, .4)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.01</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>0.4</fadeOutTime>
+		<growthRate>10</growthRate>
+	</FleckDef>
+	
+</Defs>

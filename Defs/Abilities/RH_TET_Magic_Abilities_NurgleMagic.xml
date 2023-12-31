@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ===================== Afflictions =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_NurgleAfflictionsP</defName>
+		<label>Afflictions</label>
+		<graphicData>
+			<texPath>Things/Projectile/Nurgle/RH_TET_Afflictions</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleAfflictions_Mage</defName>
+		<label>Afflictions I</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleAfflictions</uiIconPath>
+		<description>The enemy is infected with an atrophying canker that twists their limbs and withers their muscles.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurgleAfflictionsP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleAfflictions_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_NurgleAfflictionsI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleAfflictions_Wizard</defName>
+		<label>Afflictions II</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleAfflictions</uiIconPath>
+		<description>The enemy is infected with an atrophying canker that twists their limbs and withers their muscles.</description>
+		<magicPoolCost>0.26</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurgleAfflictionsP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleAfflictions_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>115.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_NurgleAfflictionsII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleAfflictions_Warlock</defName>
+		<label>Afflictions III</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleAfflictions</uiIconPath>
+		<description>The enemy is infected with an atrophying canker that twists their limbs and withers their muscles.</description>
+		<magicPoolCost>0.27</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurgleAfflictionsP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleAfflictions_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_NurgleAfflictionsIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleAfflictions_Master</defName>
+		<label>Afflictions IV</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleAfflictions</uiIconPath>
+		<description>The enemy is infected with an atrophying canker that twists their limbs and withers their muscles.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurgleAfflictionsP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleAfflictions_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>105.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_NurgleAfflictionsIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Boon =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_NurgleBoon</thingClass>
+		<defName>RH_TET_Nurgle_BoonP</defName>
+		<label>Nurgle's Boon</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_NurgleBoon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleBoon_Mage</defName>
+		<label>Nurgle's Boon I</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleBoon</uiIconPath>
+		<description>The sorcerer calls on the power of Nurgle, and absorbs the worst disease from an afflicted pawn that they touch. The caster then dissipates the disease, suffering no negative consequences.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Nurgle_BoonP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleBoon_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleBoon_Wizard</defName>
+		<label>Nurgle's Boon II</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleBoon</uiIconPath>
+		<description>The sorcerer calls on the power of Nurgle, and absorbs the worst disease from an afflicted pawn that they touch. The caster then dissipates the disease, suffering no negative consequences.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Nurgle_BoonP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleBoon_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>10000</SecondsToRecharge>
+			<range>8</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleBoon_Warlock</defName>
+		<label>Nurgle's Boon III</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleBoon</uiIconPath>
+		<description>The sorcerer calls on the power of Nurgle, and absorbs the worst disease from an afflicted pawn that they touch. The caster then dissipates the disease, suffering no negative consequences.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Nurgle_BoonP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleBoon_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>8000</SecondsToRecharge>
+			<range>11</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleBoon_Master</defName>
+		<label>Nurgle's Boon IV</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleBoon</uiIconPath>
+		<description>The sorcerer calls on the power of Nurgle, and absorbs the worst disease from an afflicted pawn that they touch. The caster then dissipates the disease, suffering no negative consequences.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Nurgle_BoonP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleBoon_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>5000</SecondsToRecharge>
+			<range>14</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Stream of Corruption =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_StreamOfCorruption</thingClass>
+		<defName>RH_TET_NurgleStreamP</defName>
+		<label>Stream of Corruption</label>
+		<graphicData>
+			<texPath>Things/Projectile/Nurgle/RH_TET_Afflictions</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>15</postFiringDuration>
+		<StartFireChance>0.0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleStream_Mage</defName>
+		<label>Stream of Corruption I</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleStreamOfCorruption</uiIconPath>
+		<description>The caster spews a stinking jet of putrid blood, pus, maggots, and slime. The target suffers magic burns. In addition, those targeted are sickened for a short while thereafter.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleStreamP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleStream_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleStream_Wizard</defName>
+		<label>Stream of Corruption II</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleStreamOfCorruption</uiIconPath>
+		<description>The caster spews a stinking jet of putrid blood, pus, maggots, and slime. The target suffers magic burns. In addition, those targeted are sickened for a short while thereafter.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleStreamP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleStream_Wizard</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>29</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleStream_Warlock</defName>
+		<label>Stream of Corruption III</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleStreamOfCorruption</uiIconPath>
+		<description>The caster spews a stinking jet of putrid blood, pus, maggots, and slime. The target suffers magic burns. In addition, those targeted are sickened for a short while thereafter.</description>
+		<magicPoolCost>0.26</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleStreamP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleStream_Warlock</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>20</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleStream_Master</defName>
+		<label>Stream of Corruption IV</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleStreamOfCorruption</uiIconPath>
+		<description>The caster spews a stinking jet of putrid blood, pus, maggots, and slime. The target suffers magic burns. In addition, those targeted are sickened for a short while thereafter.</description>
+		<magicPoolCost>0.24</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleStreamP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleStream_Master</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>32</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Pestilence =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_NurglePestilenceP</defName>
+		<label>Sumptuous Pestilence</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_NurgleSumptuousPestilence</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurglePestilence_Mage</defName>
+		<label>Sumptuous Pestilence I</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleSumptuousPestilence</uiIconPath>
+		<description>Infects a number of living creatures within the radius with a terrible disease. Affected targets may recover (or not recover) from the diseases as normal. Affected pawns will vomit, and have stomach illness.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Pestilence</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurglePestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_NurglePestilence_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurglePestilence_Wizard</defName>
+		<label>Sumptuous Pestilence II</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleSumptuousPestilence</uiIconPath>
+		<description>Infects a number of living creatures within the radius with a terrible disease. Affected targets may recover (or not recover) from the diseases as normal. Affected pawns will vomit, and have stomach illness.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Pestilence</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurglePestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_NurglePestilence_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurglePestilence_Warlock</defName>
+		<label>Sumptuous Pestilence III</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleSumptuousPestilence</uiIconPath>
+		<description>Infects a number of living creatures within the radius with a terrible disease. Affected targets may recover (or not recover) from the diseases as normal. Affected pawns will vomit, and have stomach illness.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Pestilence</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurglePestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_NurglePestilence_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>7</maxTargets>
+				<range>8</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurglePestilence_Master</defName>
+		<label>Sumptuous Pestilence IV</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleSumptuousPestilence</uiIconPath>
+		<description>Infects a number of living creatures within the radius with a terrible disease. Affected targets may recover (or not recover) from the diseases as normal. Affected pawns will vomit, and have stomach illness.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Pestilence</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_NurglePestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_NurglePestilence_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>9</maxTargets>
+				<range>10</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Rotbomb =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_NurgleRotbomb</thingClass>
+		<defName>RH_TET_NurgleRotbombP</defName>
+		<label>Rotbomb</label>
+		<graphicData>
+			<texPath>Things/Projectile/Nurgle/RH_TET_GreenFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<explosionRadius>8</explosionRadius>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleRotbomb_Mage</defName>
+		<label>Rotbomb I</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleRotbomb</uiIconPath>
+		<description>A blast of Nurgle's energy bursts from the wizard's gaping mouth. It flies at the target, and explodes disgustingly.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleRotbombP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleRotbomb_Mage</abilityDef>
+			<warmupTime>3.5</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>25</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>6</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>5</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.5</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleRotbomb_Wizard</defName>
+		<label>Rotbomb II</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleRotbomb</uiIconPath>
+		<description>A blast of Nurgle's energy bursts from the wizard's gaping mouth. It flies at the target, and explodes disgustingly.</description>
+		<magicPoolCost>0.32</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleRotbombP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleRotbomb_Wizard</abilityDef>
+			<warmupTime>3.3</warmupTime>
+			<SecondsToRecharge>42</SecondsToRecharge>
+			<range>28</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.7</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>6</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.5</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleRotbomb_Warlock</defName>
+		<label>Rotbomb III</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleRotbomb</uiIconPath>
+		<description>A blast of Nurgle's energy bursts from the wizard's gaping mouth. It flies at the target, and explodes disgustingly.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleRotbombP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleRotbomb_Warlock</abilityDef>
+			<warmupTime>3.2</warmupTime>
+			<SecondsToRecharge>39</SecondsToRecharge>
+			<range>32</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.5</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>7</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.5</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_NurgleRotbomb_Master</defName>
+		<label>Rotbomb IV</label>
+		<uiIconPath>UI/Magic/RH_TET_NurgleRotbomb</uiIconPath>
+		<description>A blast of Nurgle's energy bursts from the wizard's gaping mouth. It flies at the target, and explodes disgustingly.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_NurgleRotbombP</defaultProjectile>
+			<abilityDef>RH_TET_NurgleRotbomb_Master</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>35</SecondsToRecharge>
+			<range>36</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.0</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>8</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.6</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

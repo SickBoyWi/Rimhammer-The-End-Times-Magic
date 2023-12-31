@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TheEndTimes_Magic.DefExtensions>
+		<defName>RH_TET_Magic_ModExtensions</defName>
+	</TheEndTimes_Magic.DefExtensions>
+
+	<ThingDef Name="RH_TET_BaseSteamBuilding" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<passability>PassThroughOnly</passability>
+		<altitudeLayer>Building</altitudeLayer>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+		<defaultStuff>Steel</defaultStuff>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_BaseSteamConsumerBuilding" ParentName="RH_TET_BaseSteamBuilding" Abstract="True">
+		<designationCategory>Misc</designationCategory>
+	</ThingDef>
+	
+	<ThingDef Name="RH_TET_BaseSteamHeatingBuilding" ParentName="RH_TET_BaseSteamBuilding" Abstract="True">
+		<designationCategory>Temperature</designationCategory>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_BaseSteamHeatingPipe" ParentName="RH_TET_BaseSteamConsumerBuilding" Abstract="True">
+		<label>steam pipe</label>
+		<thingClass>TheEndTimes_Magic.Building_SteamPipe</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Steam/SteamPipes_atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom7</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Steam/SteamPipesBlueprint_atlas</texPath>
+			</blueprintGraphicData>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<rotatable>false</rotatable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<placeWorkers>
+			<li>TheEndTimes_Magic.PlaceWorker_SteamPipe</li>
+		</placeWorkers>
+		<tickerType>Never</tickerType>
+		<drawerType>MapMeshOnly</drawerType>
+	</ThingDef>
+  	
+</Defs>

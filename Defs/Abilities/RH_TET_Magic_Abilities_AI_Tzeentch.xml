@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Tzeentch Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_TzeentchWizardAI">
+		<defName>RH_TET_Magic_TzeentchWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_TzeentchBolt_MageAI</li>
+			<li>RH_TET_TzeentchBolt_WizardAI</li>
+			<li>RH_TET_TzeentchBolt_WarlockAI</li>
+			<li>RH_TET_TzeentchBolt_MasterAI</li>
+
+			<li>RH_TET_TzeentchPinkFire_MageAI</li>
+			<li>RH_TET_TzeentchPinkFire_WizardAI</li>
+			<li>RH_TET_TzeentchPinkFire_WarlockAI</li>
+			<li>RH_TET_TzeentchPinkFire_MasterAI</li>
+			
+			<li>RH_TET_GreenTzeentchBolt_MageAI</li>
+			<li>RH_TET_GreenTzeentchBolt_WizardAI</li>
+			<li>RH_TET_GreenTzeentchBolt_WarlockAI</li>
+			<li>RH_TET_GreenTzeentchBolt_MasterAI</li>
+			
+			<li>RH_TET_TzeenchFireOrange_MageAI</li>
+			<li>RH_TET_TzeenchFireOrange_WizardAI</li>
+			<li>RH_TET_TzeenchFireOrange_WarlockAI</li>
+			<li>RH_TET_TzeenchFireOrange_MasterAI</li>
+			
+			<li>RH_TET_TzeentchIndigoFire_MageAI</li>
+			<li>RH_TET_TzeentchIndigoFire_WizardAI</li>
+			<li>RH_TET_TzeentchIndigoFire_WarlockAI</li>
+			<li>RH_TET_TzeentchIndigoFire_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_TzeentchWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- Not in combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<invert>true</invert>
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+							<tags>
+								<li>Orange</li>
+							</tags>
+						</li>
+					</subNodes>
+				</li>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>24.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Orange</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>14.0</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Orange</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>14.0</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Orange</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Orange</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pink</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Indigo</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Green</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Purple</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchBolt_MageAI</defName>
+		<ability>RH_TET_TzeentchBolt_Mage</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>32.0</maxRange>
+		<tags>
+			<li>Purple</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchBolt_WizardAI</defName>
+		<ability>RH_TET_TzeentchBolt_Wizard</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>32.0</maxRange>
+		<tags>
+			<li>Purple</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchBolt_WarlockAI</defName>
+		<ability>RH_TET_TzeentchBolt_Warlock</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>32.0</maxRange>
+		<tags>
+			<li>Purple</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchBolt_MasterAI</defName>
+		<ability>RH_TET_TzeentchBolt_Master</ability>
+		<power>15.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>32.0</maxRange>
+		<tags>
+			<li>Purple</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchPinkFire_MageAI</defName>
+		<ability>RH_TET_TzeentchPinkFire_Mage</ability>
+		<power>15.0</power>
+		<maxRange>26.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pink</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchPinkFire_WizardAI</defName>
+		<ability>RH_TET_TzeentchPinkFire_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>26.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pink</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchPinkFire_WarlockAI</defName>
+		<ability>RH_TET_TzeentchPinkFire_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>26.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pink</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchPinkFire_MasterAI</defName>
+		<ability>RH_TET_TzeentchPinkFire_Master</ability>
+		<power>15.0</power>
+		<maxRange>26.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pink</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_GreenTzeentchBolt_MageAI</defName>
+		<ability>RH_TET_GreenTzeentchBolt_Mage</ability>
+		<power>34.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>Green</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_GreenTzeentchBolt_WizardAI</defName>
+		<ability>RH_TET_GreenTzeentchBolt_Wizard</ability>
+		<power>34.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>Green</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_GreenTzeentchBolt_WarlockAI</defName>
+		<ability>RH_TET_GreenTzeentchBolt_Warlock</ability>
+		<power>34.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>Green</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_GreenTzeentchBolt_MasterAI</defName>
+		<ability>RH_TET_GreenTzeentchBolt_Master</ability>
+		<power>34.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>Green</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeenchFireOrange_MageAI</defName>
+		<ability>RH_TET_TzeenchFireOrange_Mage</ability>
+		<power>25.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Orange</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeenchFireOrange_WizardAI</defName>
+		<ability>RH_TET_TzeenchFireOrange_Wizard</ability>
+		<power>25.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Orange</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeenchFireOrange_WarlockAI</defName>
+		<ability>RH_TET_TzeenchFireOrange_Warlock</ability>
+		<power>25.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Orange</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeenchFireOrange_MasterAI</defName>
+		<ability>RH_TET_TzeenchFireOrange_Master</ability>
+		<power>25.0</power>
+		<maxRange>2.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Orange</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchIndigoFire_MageAI</defName>
+		<ability>RH_TET_TzeentchIndigoFire_Mage</ability>
+		<power>25.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Indigo</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchIndigoFire_WizardAI</defName>
+		<ability>RH_TET_TzeentchIndigoFire_Wizard</ability>
+		<power>26.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Indigo</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchIndigoFire_WarlockAI</defName>
+		<ability>RH_TET_TzeentchIndigoFire_Warlock</ability>
+		<power>27.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Indigo</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_TzeentchIndigoFire_MasterAI</defName>
+		<ability>RH_TET_TzeentchIndigoFire_Master</ability>
+		<power>28.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Indigo</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

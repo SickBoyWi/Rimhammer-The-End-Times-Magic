@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Flames of the Phoenix =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_HighPhoenixFlamesP</defName>
+		<label>flames of the phoenix</label>
+		<graphicData>
+			<texPath>Things/Projectile/High/RH_TET_HighPhoenixFlames</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighPhoenixFlames_Mage</defName>
+		<label>Flames of the Phoenix I</label>
+		<uiIconPath>UI/Magic/RH_TET_HighPhoenixFlames</uiIconPath>
+		<description>Pure white flames emerge from the air itself and envelop the target, immolating the unworthy foe. With every passing second the flames grow hotter, swiftly intensifying until they can sear flesh or even melt steel.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_PhoenixFlames</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighPhoenixFlamesP</defaultProjectile>
+			<abilityDef>RH_TET_HighPhoenixFlames_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>10</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighPhoenixFlames_Wizard</defName>
+		<label>Flames of the Phoenix II</label>
+		<uiIconPath>UI/Magic/RH_TET_HighPhoenixFlames</uiIconPath>
+		<description>Pure white flames emerge from the air itself and envelop the target, immolating the unworthy foe. With every passing second the flames grow hotter, swiftly intensifying until they can sear flesh or even melt steel.</description>
+		<magicPoolCost>0.32</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_PhoenixFlames</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighPhoenixFlamesP</defaultProjectile>
+			<abilityDef>RH_TET_HighPhoenixFlames_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>35</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>12</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighPhoenixFlames_Warlock</defName>
+		<label>Flames of the Phoenix III</label>
+		<uiIconPath>UI/Magic/RH_TET_HighPhoenixFlames</uiIconPath>
+		<description>Pure white flames emerge from the air itself and envelop the target, immolating the unworthy foe. With every passing second the flames grow hotter, swiftly intensifying until they can sear flesh or even melt steel.</description>
+		<magicPoolCost>0.34</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_PhoenixFlames</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighPhoenixFlamesP</defaultProjectile>
+			<abilityDef>RH_TET_HighPhoenixFlames_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>14</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighPhoenixFlames_Master</defName>
+		<label>Flames of the Phoenix IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HighPhoenixFlames</uiIconPath>
+		<description>Pure white flames emerge from the air itself and envelop the target, immolating the unworthy foe. With every passing second the flames grow hotter, swiftly intensifying until they can sear flesh or even melt steel.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_PhoenixFlames</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighPhoenixFlamesP</defaultProjectile>
+			<abilityDef>RH_TET_HighPhoenixFlames_Master</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>45</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<extraDamages>
+				<li>
+					<damage>16</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Shield of Saphery =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_HighShieldSapheryP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Shield of Saphery</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HighShieldSaphery</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighShieldSaphery_Mage</defName>
+		<label>Shield of Saphery I</label>
+		<uiIconPath>UI/Magic/RH_TET_HighShieldSaphery</uiIconPath>
+		<description>As the Mage bends the Winds of Magic to his will, a shroud of glittering magical energy descends upon the target ally, protecting that person from all ranged attack harm. Arrows and bolts wash harmlessly past, robbed of all strength at the Mage's command.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighShieldSaphery_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighShieldSapheryP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShieldSaphery</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighShieldSaphery_Wizard</defName>
+		<label>Shield of Saphery II</label>
+		<uiIconPath>UI/Magic/RH_TET_HighShieldSaphery</uiIconPath>
+		<description>As the Mage bends the Winds of Magic to his will, a shroud of glittering magical energy descends upon the target ally, protecting that person from all ranged attack harm. Arrows and bolts wash harmlessly past, robbed of all strength at the Mage's command.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighShieldSaphery_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighShieldSapheryP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShieldSaphery</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighShieldSaphery_Warlock</defName>
+		<label>Shield of Saphery III</label>
+		<uiIconPath>UI/Magic/RH_TET_HighShieldSaphery</uiIconPath>
+		<description>As the Mage bends the Winds of Magic to his will, a shroud of glittering magical energy descends upon the target ally, protecting that person from all ranged attack harm. Arrows and bolts wash harmlessly past, robbed of all strength at the Mage's command.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighShieldSaphery_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighShieldSapheryP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShieldSaphery</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.7</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighShieldSaphery_Master</defName>
+		<label>Shield of Saphery IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HighShieldSaphery</uiIconPath>
+		<description>As the Mage bends the Winds of Magic to his will, a shroud of glittering magical energy descends upon the target ally, protecting that person from all ranged attack harm. Arrows and bolts wash harmlessly past, robbed of all strength at the Mage's command.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighShieldSaphery_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighShieldSapheryP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>90.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShieldSaphery</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.9</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Apotheosis =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_HighApotheosisP</defName>
+		<label>apotheosis</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HighApotheosis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighApotheosis_Mage</defName>
+		<label>Apotheosis I</label>
+		<uiIconPath>UI/Magic/RH_TET_HighApotheosis</uiIconPath>
+		<description>Waves of pure magic erupt from the caster, and infuse the caster's target and other friendlies near the target.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Apotheosis</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighApotheosisP</defaultProjectile>
+			<abilityDef>RH_TET_HighApotheosis_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ApotheosisI</hediffDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighApotheosis_Wizard</defName>
+		<label>Apotheosis II</label>
+		<uiIconPath>UI/Magic/RH_TET_HighApotheosis</uiIconPath>
+		<description>Waves of pure magic erupt from the caster, and infuse the caster's target and other friendlies near the target.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Apotheosis</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighApotheosisP</defaultProjectile>
+			<abilityDef>RH_TET_HighApotheosis_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ApotheosisII</hediffDef>
+					<applyChance>.88</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighApotheosis_Warlock</defName>
+		<label>Apotheosis III</label>
+		<uiIconPath>UI/Magic/RH_TET_HighApotheosis</uiIconPath>
+		<description>Waves of pure magic erupt from the caster, and infuse the caster's target and other friendlies near the target.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Apotheosis</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighApotheosisP</defaultProjectile>
+			<abilityDef>RH_TET_HighApotheosis_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ApotheosisIII</hediffDef>
+					<applyChance>.95</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighApotheosis_Master</defName>
+		<label>Apotheosis IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HighApotheosis</uiIconPath>
+		<description>Waves of pure magic erupt from the caster, and infuse the caster's target and other friendlies near the target.</description>
+		<magicPoolCost>0.39</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Apotheosis</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HighApotheosisP</defaultProjectile>
+			<abilityDef>RH_TET_HighApotheosis_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>6</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ApotheosisIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Fury of Khaine =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_HighFuryOfKhaineP</defName>
+		<label>Fury of Khaine</label>
+		<graphicData>
+			<texPath>Things/Projectile/High/RH_TET_FuryKhaine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>35</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighFuryOfKhaine_Mage</defName>
+		<label>Fury of Khaine I</label>
+		<uiIconPath>UI/Magic/RH_TET_HighFuryKhaine</uiIconPath>
+		<description>Calling upon the dread might of Khaine, the mage launches a searing bolt of brilliant white energy at his enemies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HighFuryOfKhaineP</defaultProjectile>
+			<abilityDef>RH_TET_HighFuryOfKhaine_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>25</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighFuryOfKhaine_Wizard</defName>
+		<label>Fury of Khaine II</label>
+		<uiIconPath>UI/Magic/RH_TET_HighFuryKhaine</uiIconPath>
+		<description>Calling upon the dread might of Khaine, the mage launches a searing bolt of brilliant white energy at his enemies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HighFuryOfKhaineP</defaultProjectile>
+			<abilityDef>RH_TET_HighFuryOfKhaine_Wizard</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>55</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighFuryOfKhaine_Warlock</defName>
+		<label>Fury of Khaine III</label>
+		<uiIconPath>UI/Magic/RH_TET_HighFuryKhaine</uiIconPath>
+		<description>Calling upon the dread might of Khaine, the mage launches a searing bolt of brilliant white energy at his enemies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HighFuryOfKhaineP</defaultProjectile>
+			<abilityDef>RH_TET_HighFuryOfKhaine_Warlock</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>50</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighFuryOfKhaine_Master</defName>
+		<label>Fury of Khaine IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HighFuryKhaine</uiIconPath>
+		<description>Calling upon the dread might of Khaine, the mage launches a searing bolt of brilliant white energy at his enemies.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HighFuryOfKhaineP</defaultProjectile>
+			<abilityDef>RH_TET_HighFuryOfKhaine_Master</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>40</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Bewilder =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_HighGlamourTeclisP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>Glamour of Teclic</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HighGlamourTeclis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighGlamourOfTeclis_Mage</defName>
+		<label>Glamour of Teclis I</label>
+		<uiIconPath>UI/Magic/RH_TET_HighGlamourTeclis</uiIconPath>
+		<description>Those affected believe themselves to be lost in a realm of mist and shadows, and are unable to remember where they are or what they are supposed to be doing. To outside observers they appear to wander in a daze, unable to see or hear anything around them; if struck or shaken they will show fear but will not attempt to defend themselves. To those targeted by the spell, it is as if a dense mist has risen. Through this, strange and sometimes threatening shadows move, just on the edge of sight. They feel as if they have always been in this mist, stalked by creatures that never attack. Memories of the real world and their lives before the mist are vague or nonexistent. After sufficient time the victims will come back to reality with no memory of how they reached their present location.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighGlamourOfTeclis_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighGlamourTeclisP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>75.0</SecondsToRecharge>
+			<range>18</range>
+			<soundCast>RH_TET_Magic_Chimes</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.82</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighGlamourOfTeclis_Wizard</defName>
+		<label>Glamour of Teclis II</label>
+		<uiIconPath>UI/Magic/RH_TET_HighGlamourTeclis</uiIconPath>
+		<description>Those affected believe themselves to be lost in a realm of mist and shadows, and are unable to remember where they are or what they are supposed to be doing. To outside observers they appear to wander in a daze, unable to see or hear anything around them; if struck or shaken they will show fear but will not attempt to defend themselves. To those targeted by the spell, it is as if a dense mist has risen. Through this, strange and sometimes threatening shadows move, just on the edge of sight. They feel as if they have always been in this mist, stalked by creatures that never attack. Memories of the real world and their lives before the mist are vague or nonexistent. After sufficient time the victims will come back to reality with no memory of how they reached their present location.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighGlamourOfTeclis_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighGlamourTeclisP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>70.0</SecondsToRecharge>
+			<range>19</range>
+			<soundCast>RH_TET_Magic_Chimes</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.88</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighGlamourOfTeclis_Warlock</defName>
+		<label>Glamour of Teclis III</label>
+		<uiIconPath>UI/Magic/RH_TET_HighGlamourTeclis</uiIconPath>
+		<description>Those affected believe themselves to be lost in a realm of mist and shadows, and are unable to remember where they are or what they are supposed to be doing. To outside observers they appear to wander in a daze, unable to see or hear anything around them; if struck or shaken they will show fear but will not attempt to defend themselves. To those targeted by the spell, it is as if a dense mist has risen. Through this, strange and sometimes threatening shadows move, just on the edge of sight. They feel as if they have always been in this mist, stalked by creatures that never attack. Memories of the real world and their lives before the mist are vague or nonexistent. After sufficient time the victims will come back to reality with no memory of how they reached their present location.</description>
+		<magicPoolCost>0.37</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighGlamourOfTeclis_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighGlamourTeclisP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>65.0</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_Chimes</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.92</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HighGlamourOfTeclis_Master</defName>
+		<label>Glamour of Teclis IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HighGlamourTeclis</uiIconPath>
+		<description>Those affected believe themselves to be lost in a realm of mist and shadows, and are unable to remember where they are or what they are supposed to be doing. To outside observers they appear to wander in a daze, unable to see or hear anything around them; if struck or shaken they will show fear but will not attempt to defend themselves. To those targeted by the spell, it is as if a dense mist has risen. Through this, strange and sometimes threatening shadows move, just on the edge of sight. They feel as if they have always been in this mist, stalked by creatures that never attack. Memories of the real world and their lives before the mist are vague or nonexistent. After sufficient time the victims will come back to reality with no memory of how they reached their present location.</description>
+		<magicPoolCost>0.38</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_HighGlamourOfTeclis_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_HighGlamourTeclisP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60.0</SecondsToRecharge>
+			<range>21</range>
+			<soundCast>RH_TET_Magic_Chimes</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.99</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

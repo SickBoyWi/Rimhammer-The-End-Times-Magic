@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RH_TET_Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</RH_TET_Box_Titles>
+	<RH_TET_Box_Domains>&lt;b&gt;Domains&lt;/b&gt;</RH_TET_Box_Domains>
+	<RH_TET_Box_Description>&lt;b&gt;Description&lt;/b&gt;</RH_TET_Box_Description>
+  
+	<!-- Settings -->
+	<RH_TET_Magic_UseMiscasts>Use Miscasts?</RH_TET_Magic_UseMiscasts>
+	<RH_TET_Magic_UseMiscastsInfo>Allow magic using pawns to suffer miscasts as was done in Warhammer Lore. Turn this off if you want pawns to not miscast, say for instance if you are doing a non-Warhammer themed game. On a related note, and in the latter case, you should get my Any One Can Magic mod, as it'll make the magic lores available to all pawns in the game, not just specific pawns configured in the Rimhammer - The End Times faction mods.</RH_TET_Magic_UseMiscastsInfo>
+	<RH_TET_Magic_AllowMagicDropPodRaids>Allow magic drop pod raids?</RH_TET_Magic_AllowMagicDropPodRaids>
+	<RH_TET_Magic_AllowMagicDropPodRaidsInfo>Allow enemies to raid via magic drop pods. Turning this off takes effect immediately, and will stop all magic drop pod raids added by this mod.</RH_TET_Magic_AllowMagicDropPodRaidsInfo>
+  
+	<!-- Tab -->
+	<RH_TET_TabMagic>Magic</RH_TET_TabMagic>
+	<RH_TET_TabFaith>Faith</RH_TET_TabFaith>
+	<RH_TET_TabAbilityAction>Abilities</RH_TET_TabAbilityAction>
+	<RH_TET_Lore>lore</RH_TET_Lore>
+	<RH_TET_LoreOfTzeentch>lore of Tzeentch</RH_TET_LoreOfTzeentch>
+	<RH_TET_LoreOfBeasts>lore of Beasts</RH_TET_LoreOfBeasts>
+	<RH_TET_LoreOfShadow>lore of Shadow</RH_TET_LoreOfShadow>
+	<RH_TET_LoreOfWild>lore of Wild</RH_TET_LoreOfWild>
+	<RH_TET_LoreOfDeath>lore of Death</RH_TET_LoreOfDeath>
+	<RH_TET_MagicInfo>magic info</RH_TET_MagicInfo>
+	<RH_TET_Spells>lore spells</RH_TET_Spells>
+	<RH_TET_AddOnSpells>non lore spells</RH_TET_AddOnSpells>
+	<RH_TET_Prayers>prayers</RH_TET_Prayers>
+	<RH_TET_Abilities>abilities</RH_TET_Abilities>
+	<RH_TET_Level>level</RH_TET_Level>
+	<RH_TET_MagicalLevelUp>{0} has leveled up! New magic points available.</RH_TET_MagicalLevelUp>
+	<RH_TET_PointsAvail>points available</RH_TET_PointsAvail>
+	<RH_TET_MagicPointsRequired>Requires {0} magic points in order to upgrade.</RH_TET_MagicPointsRequired>
+	<RH_TET_CheckBoxesForMoreInfo>For more detailed spell info, hover your mouse pointer over the boxes to the right.</RH_TET_CheckBoxesForMoreInfo>
+	<RH_TET_FaithCheckBoxesForMoreInfo>For more detailed faith power info, hover your mouse pointer over the boxes to the right.</RH_TET_FaithCheckBoxesForMoreInfo>
+	<RH_TET_AbilityCheckBoxesForMoreInfo>For more detailed ability info, hover your mouse pointer over the boxes to the right.</RH_TET_AbilityCheckBoxesForMoreInfo>
+	<RH_TET_PointsRequired>Required Magic Points: {0}</RH_TET_PointsRequired>
+	<RH_TET_PoolPercentRequired>Magic Pool Usage: {0}%</RH_TET_PoolPercentRequired>
+	<RH_TET_MagicXPDesc>Magic experience points are gained when a pawn uses their magic. The level of increase is dependant upon the spell used.</RH_TET_MagicXPDesc>
+	<RH_TET_MagicSensitiveDesc>{0} can feel winds of magic flowing. Start leveraging them to see {0} develop as a magic user.</RH_TET_MagicSensitiveDesc>
+	<RH_TET_MagicSensitiveMessage>Magical Awakening</RH_TET_MagicSensitiveMessage>
+	<RH_TET_FaithSensitiveMessage>Faith Awakening</RH_TET_FaithSensitiveMessage>
+	<RH_TET_AbilitySensitiveMessage>Ability Initiate</RH_TET_AbilitySensitiveMessage>
+	<RH_TET_MagicPowersUnlocked>{0} can now control the winds of magic.</RH_TET_MagicPowersUnlocked>
+	<RH_TET_MagicalAwakeningLabel>Magical Awakening</RH_TET_MagicalAwakeningLabel>
+	<RH_TET_MagicalAwakeningDesc>{0} has discovered that they possess the ability to control the winds of magic.</RH_TET_MagicalAwakeningDesc>
+	<RH_TET_DrainedMagicPool>{0} does not have enough magic power stored.</RH_TET_DrainedMagicPool>
+	<RH_TET_AbilityRenew>Click this icon to use a magic ability point to instanty complete the cool down on this ability.</RH_TET_AbilityRenew>
+	<RH_TET_AbilityRenewNoPoints>A magic point is required to instantly complete the cool down on this ability.</RH_TET_AbilityRenewNoPoints>
+	<RH_TET_FailReachedSpellLimit>A magic user can only have a maximum of 5 non lore spells.</RH_TET_FailReachedSpellLimit>
+	<RH_TET_FailAlreadyKnowsSpell>already knows the spell, and cannot learn it twice.</RH_TET_FailAlreadyKnowsSpell>
+  
+	<!-- Spell specifics. -->
+	<RH_TET_LetterBeastMasterSpellFail>{0} failed to cast the Beast Master spell, and has caused a {1} to go mad.</RH_TET_LetterBeastMasterSpellFail>
+	<RH_TET_LetterLabelBeastMasterSpellFail>Beast Master Failure</RH_TET_LetterLabelBeastMasterSpellFail>
+	<RH_TET_LetterBeastMasterSpellSuccess>{0} successfully cast the Beast Master spell, and has tamed a {1}.</RH_TET_LetterBeastMasterSpellSuccess>
+	<RH_TET_LetterBeastMasterSpellSuccessTwo>{0} successfully cast the Beast Master spell, and has cured a {1} of its manhunter state.</RH_TET_LetterBeastMasterSpellSuccessTwo>
+	<RH_TET_LetterLabelBeastMasterSpellSuccess>Beast Master Success</RH_TET_LetterLabelBeastMasterSpellSuccess>
+	<RH_TET_MessageStealLifeSpellSuccess>{0} successfully cast the Steal Life spell, and has stolen health from {1}.</RH_TET_MessageStealLifeSpellSuccess>
+	<RH_TET_MessageDrainLifeSpellSuccess>{0} successfully cast the Drain Life spell, and has stolen health from {1}.</RH_TET_MessageDrainLifeSpellSuccess>
+	<RH_TET_MessageClearSkyFail>{0} was unable to end any existing weather conditions.</RH_TET_MessageClearSkyFail>
+	<RH_TET_MessageClearSkySuccess>{0} successfully ended the {1}.</RH_TET_MessageClearSkySuccess>
+	<RH_TET_MessageFinalTransmutationHumansOnly>Final Transmutation will only turn flesh based humanlike pawns to statues.</RH_TET_MessageFinalTransmutationHumansOnly>
+	<RH_TET_MessageFinalTransmutationSuccess>{0} successfully cast Final Transmutation, and turned {1} into a golden statue.</RH_TET_MessageFinalTransmutationSuccess>
+	<RH_TET_MessageFinalTransmutationFail>{0} failed to cast Final Transmutation.</RH_TET_MessageFinalTransmutationFail>
+	<RH_TET_MessageFinalTransmutationSuccessNoGold>Final Transmutation success, the target was not turned to gold.</RH_TET_MessageFinalTransmutationSuccessNoGold>
+	<RH_TET_MessageForgeOfChamonSuccessQuality>{0} successfully increased the quality of {1}.</RH_TET_MessageForgeOfChamonSuccessQuality>
+	<RH_TET_MessageForgeOfChamonSuccessHP>{0} successfully repaired the {1} to full hitpoints.</RH_TET_MessageForgeOfChamonSuccessHP>
+	<RH_TET_MessageForgeOfChamonFail>{0} failed to cast Forge of Chamon. Only use it on apparel or weapons.</RH_TET_MessageForgeOfChamonFail>
+	<RH_TET_MessageSpellFailTargets>{0} failed to cast the spell. Invalid or no target.</RH_TET_MessageSpellFailTargets>
+	<RH_TET_Magic_Unsummon>Unsummon</RH_TET_Magic_Unsummon>
+	<RH_TET_Magic_NotEmpirePlayerUnsummon>Only Empire players may unsummon.</RH_TET_Magic_NotEmpirePlayerUnsummon>
+	<RH_TET_Magic_PoisonGasCloud_statusReadout_high>{0} ({1}K, {2}% effect)</RH_TET_Magic_PoisonGasCloud_statusReadout_high>
+	<RH_TET_Magic_PoisonGasCloud_statusReadout_low>{0} ({1}, {2}% effect)</RH_TET_Magic_PoisonGasCloud_statusReadout_low>
+	<RH_TET_Magic_InvalidTargetLocation>Invalid target location.</RH_TET_Magic_InvalidTargetLocation>
+	<RH_TET_MessageCuredOf>{0} was cured of {1}.</RH_TET_MessageCuredOf>
+	
+	<!-- Hediff -->
+	<RH_TET_Magic_HediffRecovery_status_label>recovering</RH_TET_Magic_HediffRecovery_status_label>
+	<RH_TET_GainedTrollBoost>{0} has gained a temporary healing boost by eating the troll heart.</RH_TET_GainedTrollBoost>
+	<RH_TET_DidntGainTrollBoost>{0} did not gain a healing boost by eating the troll heart.</RH_TET_DidntGainTrollBoost>
+	<RH_TET_FoodPoisoning>{0} has gotten food poisoning from eating the {1}.</RH_TET_FoodPoisoning>
+	<RH_TET_GainedMagicTrait>{0} has gained the following magic trait by eating the jabberslythe's tongue: {1}.</RH_TET_GainedMagicTrait>
+	<RH_TET_DidntGainMagicTrait>{0} received no bonus from consuming the jabberslthe's tongue.</RH_TET_DidntGainMagicTrait>
+	<RH_TET_ChaosCorruptionToxic>{0} has received a significant amount of {1} from eating the jabberslythe's tongue.</RH_TET_ChaosCorruptionToxic>
+	
+	<!-- Menus for magic meditation spots -->
+	<RH_TET_MagicMeditate>Meditate</RH_TET_MagicMeditate>
+	<RH_TET_MagicMeditate_MagicUsersOnly>Magic or faith users only</RH_TET_MagicMeditate_MagicUsersOnly>
+	<RH_TET_MagicMeditate_NeedRest>Try again later. Medidated too recently.</RH_TET_MagicMeditate_NeedRest>
+  
+	<!-- Miscasts -->
+	<RH_TET_MessageMiscast>{0} has miscast the spell they were attempting! They have no doubt suffered something horrible.</RH_TET_MessageMiscast>
+  
+	<!-- Faith -->
+	<RH_TET_DrainedFaithPool>{0} does not have enough faith power stored.</RH_TET_DrainedFaithPool>
+	<RH_TET_FaithPoolPercentRequired>Faith Pool Usage: {0}%</RH_TET_FaithPoolPercentRequired>
+	<RH_TET_FaithPawnInfo>Faith pawns gain new prayers by praying on godly artifacts.\n\nArtifacts can be purchased from other faction bases, or created at an idol of the god in question.\n\nIdols can be created at art sculpting work benches, and also work like normal statues in terms of adding beauty to a room.</RH_TET_FaithPawnInfo>
+  
+	<!-- Ability Action -->
+	<RH_TET_DrainedAbilityPool>{0} does not have enough ability power.</RH_TET_DrainedAbilityPool>
+	<RH_TET_AbilityPoolPercentRequired>Ability Pool Usage: {0}%</RH_TET_AbilityPoolPercentRequired>
+	<RH_TET_AbilityPawnInfo>Pawns with special abilities gain new ones by studying an item of power that belongs to their power group.\n\Items of power can be purchased from other faction bases, or created at an idol of the approprite god, forged, crafted at a magic workbench, or more; depending on the type powers your pawn has.\nMouse over the ability below in order to see what the item of power is for a specific power group, as well as where to create them.</RH_TET_AbilityPawnInfo>
+  
+	<!-- Faith Relic Creation -->
+	<RH_TET_Magic_NoFaithPower>{0} does not have enough faith power remaining to continue creating relic.</RH_TET_Magic_NoFaithPower>
+	<!-- Magic Item Creation -->
+	<RH_TET_Magic_NoMagicPower>{0} does not have enough magic power remaining to continue creating relic.</RH_TET_Magic_NoMagicPower>
+  
+	<!-- Items -->
+	<RH_TET_ClearMentalState>{0} has recovered from the {1} mental state.</RH_TET_ClearMentalState>
+	<RH_TET_ClearMentalStateFail>{0} was unable to correct the mental state of {1}.</RH_TET_ClearMentalStateFail>
+	<RH_TET_MisusedNurgleCharm>{0} is displeased! You've misused his charm on a mentally healthy being. As a punishment, {0} has gifted the target with {1}.</RH_TET_MisusedNurgleCharm>
+	<RH_TET_GainedPleasureOfSlaanesh>{0} smiles as the Pleasure of Slaanesh is received.</RH_TET_GainedPleasureOfSlaanesh>
+	<RH_TET_CoinOfTzeentchGood>{0} flipped the Coin of Tzeentch, and received the following boon: {1}</RH_TET_CoinOfTzeentchGood>
+	<RH_TET_CoinOfTzeentchBad>{0} flipped the Coin of Tzeentch, and was unlucky. They have been wounded.</RH_TET_CoinOfTzeentchBad>
+	<RH_TET_ExperienceMagic>magic experience points</RH_TET_ExperienceMagic>
+	<RH_TET_Experience>experience points</RH_TET_Experience>
+	<RH_TET_ShieldBeltFail>The shield that the pawn is wearing blocks the magic power.</RH_TET_ShieldBeltFail>
+	<RH_TET_SigmarArtifactCannotUse>Only a pawn faithful and recognized by {0} can use this.</RH_TET_SigmarArtifactCannotUse>
+	<RH_TET_SigmarArtifactUsed>{0} prayed upon the Artifact of Faith, and received the following ability: {1}</RH_TET_SigmarArtifactUsed>
+	<RH_TET_SigmarArtifactUsedNoEffect>{0} prayed upon the Artifact of Faith, but there was no effect.</RH_TET_SigmarArtifactUsedNoEffect>
+	<RH_TET_SigmarThunderboltAbility>Sigmar's Thunderbolt</RH_TET_SigmarThunderboltAbility>
+	<RH_TET_SigmarCometAbility>Sigmar's Comet</RH_TET_SigmarCometAbility>
+	<RH_TET_SigmarShieldAbility>Sigmar's Shield of Faith</RH_TET_SigmarShieldAbility>
+	<RH_TET_UricWolfAbility>Ulrics's Wolves</RH_TET_UricWolfAbility>
+	<RH_TET_UricWarhammerAbility>Ulrics's Warhammer</RH_TET_UricWarhammerAbility>
+	<RH_TET_UricWinterAbility>Winter Vortex</RH_TET_UricWinterAbility>
+	<RH_TET_ShallyaLightAbility>Shallya's Light</RH_TET_ShallyaLightAbility>
+	<RH_TET_ShallyaFortuneAbility>Shallya's Fortune</RH_TET_ShallyaFortuneAbility>
+	<RH_TET_ShallyaRegrowthAbility>Shallya's Regrowth</RH_TET_ShallyaRegrowthAbility>
+	<RH_TET_LovePotion_NoUseUserPartner>{0} cannot use the love potion due to an existing relationship.</RH_TET_LovePotion_NoUseUserPartner>
+	<RH_TET_LovePotion_NoUseTargetPartner>Love potion cannot be used on {0} due to an existing relationship.</RH_TET_LovePotion_NoUseTargetPartner>
+	<RH_TET_LovePotion_NoUseUserAsexual>Love potion cannot be used by a pawn that is asexual.</RH_TET_LovePotion_NoUseUserAsexual>
+	<RH_TET_LovePotion_NoUseTargetAsexual>Love potion cannot be used on a pawn that is asexual.</RH_TET_LovePotion_NoUseTargetAsexual>
+	<RH_TET_LovePotion_NoUseRelation>Love potion cannot be used on a related pawn.</RH_TET_LovePotion_NoUseRelation>
+	<RH_TET_LovePotion_NoUseInappropriate>Pawns must have appropriate sexual orientations and genders for the love potion to be usable.</RH_TET_LovePotion_NoUseInappropriate>
+	<RH_TET_LovePotion_NewRelationship>{0} and {1} are now in a relationship, due to the love potion.</RH_TET_LovePotion_NewRelationship>
+	<RH_TET_Magic_Charged>Charged</RH_TET_Magic_Charged>
+	<RH_TET_Magic_TimeUntilCharged>Time until charged: {0}</RH_TET_Magic_TimeUntilCharged>
+	<RH_TET_Magic_NeedsToCharge>Needs to recharge.</RH_TET_Magic_NeedsToCharge>
+	<RH_TET_FailAlreadyAMagicUser>Cannot be used by a pawn that is already a magic user.</RH_TET_FailAlreadyAMagicUser>
+	<RH_TET_FailNotAMagicUser>Cannot be used by a pawn that is not a magic user.</RH_TET_FailNotAMagicUser>
+	<RH_TET_LearnedMagicLoreChaosUndivided>has been blessed by the dark gods, and can now cast spells from the Lore of Chaos Undivided.</RH_TET_LearnedMagicLoreChaosUndivided>
+	<RH_TET_AddOns_NewPowerAdded>has learned the basics of the following spell:</RH_TET_AddOns_NewPowerAdded>
+	<RH_TET_ShieldUserIsMagicUser>Caster wearing shield belt.</RH_TET_ShieldUserIsMagicUser>
+	<RH_TET_ShieldUserIsMagicUserDesc>Shield belts will disrupt magic and faith abilities; making the wearer unable to cast abilities.</RH_TET_ShieldUserIsMagicUserDesc>
+	<RH_TET_AbilityArtifactCannotUse>Only a pawn that is a {0} can use this.</RH_TET_AbilityArtifactCannotUse>
+	<RH_TET_AbilityArtifactUsedNoEffect>{0} used the item, but there was no effect.</RH_TET_AbilityArtifactUsedNoEffect>
+	<RH_TET_AbilityArtifactUsed>{0} used the item, and received the following ability: {1}</RH_TET_AbilityArtifactUsed>
+	<RH_TET_Magic_PotionSkillTrainerUsed>{USER_labelShort} used {1} learning potion to go from level {2} to level {3}.</RH_TET_Magic_PotionSkillTrainerUsed>
+	<RH_TET_Magic_PotionHediffUsed>{USER_labelShort} used the {1}.</RH_TET_Magic_PotionHediffUsed>
+  
+	<!-- God Stuff -->
+	<RH_TET_Khorne>Khorne</RH_TET_Khorne>
+	<RH_TET_Nurgle>Nurgle</RH_TET_Nurgle>
+	<RH_TET_Slaanesh>Slaanesh</RH_TET_Slaanesh>
+	<RH_TET_Tzeentch>Tzeentch</RH_TET_Tzeentch>
+	<RH_TET_FavorOf>Favor of</RH_TET_FavorOf>
+	<RH_TET_Praise>Praise</RH_TET_Praise>
+  
+	<!-- Error Stuff -->
+	<RH_TET_PawnStateFail>CheckPawnState Failed on Summoned Pawn:</RH_TET_PawnStateFail>
+	<RH_TET_JabberFail>Unable to summon jabberslythe. Something bad happened:</RH_TET_JabberFail>
+	<RH_TET_WolfFail>Unable to summon Ulric wolf. Something bad happened:</RH_TET_WolfFail>
+  
+	<!-- Building Stuff -->
+	<RH_TET_Magic_PlaceWorker_UnderCeiling>Must be placed under a roof.</RH_TET_Magic_PlaceWorker_UnderCeiling>
+	<RH_TET_Magic_TransportCollapseFinal>The magic of the transport platform has dissipated.</RH_TET_Magic_TransportCollapseFinal>
+	<RH_TET_Magic_InvalidTransportlLocation>Invalid transporter location - target position, and all adjacent positions, must be valid and free of debris.</RH_TET_Magic_InvalidTransportlLocation>
+	<RH_TET_Magic_TransporterDissipationTime>Transporter magic will dissipate in {0} seconds.</RH_TET_Magic_TransporterDissipationTime>
+	<RH_TET_Magic_SteamValveClosed>The steam valve is closed.</RH_TET_Magic_SteamValveClosed>
+	<RH_TET_Magic_NetworkHeatingCapacity>Connected demand/capacity: {0} / {1} - ({2})</RH_TET_Magic_NetworkHeatingCapacity>
+	<RH_TET_Magic_HeatingCapacity>Steam used/available: {0} / {1}</RH_TET_Magic_HeatingCapacity>
+	<RH_TET_Magic_HeatingUnits>Steam usage: {0}</RH_TET_Magic_HeatingUnits>
+	<RH_TET_Magic_RadiatorUsage>Radiator steam supply: {0}</RH_TET_Magic_RadiatorUsage>
+	<RH_TET_Magic_SteamUserUsage>Steam supply: {0}</RH_TET_Magic_SteamUserUsage>
+	<RH_TET_Magic_LowerPower>Reduce heat</RH_TET_Magic_LowerPower>
+	<RH_TET_Magic_LowerPowerDesc>Reduce the heat output.</RH_TET_Magic_LowerPowerDesc>
+	<RH_TET_Magic_RaisePower>Increase heat</RH_TET_Magic_RaisePower>
+	<RH_TET_Magic_RaisePowerDesc>Increase the heat output.</RH_TET_Magic_RaisePowerDesc>
+	<RH_TET_Magic_DesigRemovePipes>Remove steam pipes</RH_TET_Magic_DesigRemovePipes>
+	<RH_TET_Magic_DesigRemovePipesDesc>Designate sections of steam pipe type for deconstruction.</RH_TET_Magic_DesigRemovePipesDesc>
+  
+	<!-- Incidents -->
+	<RH_TET_LabelJabberWandersIn>Jabberslythe Wanders In</RH_TET_LabelJabberWandersIn>
+	<RH_TET_JabberWandersIn>A large jabberslythe has wandered into the area.\n\nAggressive by nature, these rare creatures are extremely dangerous when confronted. Some traders are willing to pay a lot of money for their precious leather and magical tongue.\n\nThe jabberslythe will lurk around, looking for someone to eat, but will leave the area in a few days if they don't encounter any one.</RH_TET_JabberWandersIn>
+	<RH_TET_LetterLabelMagicPodCrash>Magical Delivery</RH_TET_LetterLabelMagicPodCrash>
+	<RH_TET_MagicPodCrash>A magical flare nearby has potentially left something of value.\n\nPerhaps a wizard has misjudged the location to send them to, or perhaps someone is trying to help you out.</RH_TET_MagicPodCrash>
+	<RH_TET_LetterLabelMagicTransportPodCrash>Magical Arrival Mishap</RH_TET_LetterLabelMagicTransportPodCrash>
+	<RH_TET_MagicTransportPodCrash>{PAWN_titleIndef} named {PAWN_nameDef} is crashing in a magic transport pod nearby. If {PAWN_pronoun} survives the impact, {PAWN_pronoun} will be badly wounded.\n\n{PAWN_nameDef} is not affiliated with any faction. You can rescue {PAWN_objective} and hope {PAWN_pronoun} joins freely, or capture {PAWN_objective} for recruitment or slavery purposes.</RH_TET_MagicTransportPodCrash>
+   
+</LanguageData>

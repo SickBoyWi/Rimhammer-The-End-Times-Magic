@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef Name="RH_TET_GodLightBase" ParentName="BuildingBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Light</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>false</selectable>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_KhorneLight</defName>
+		<label>Khorne light</label>
+		<description>Khorne light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(229,0,0,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_NurgleLight</defName>
+		<label>Nurgle light</label>
+		<description>Nurgle light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,229,0,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_TzeentchLight</defName>
+		<label>Tzeentch light</label>
+		<description>Tzeentch light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,207,235,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_SlaaneshLight</defName>
+		<label>Slaanesh light</label>
+		<description>Slaanesh light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(255,128,243,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_SigmarLight</defName>
+		<label>Sigmar light</label>
+		<description>Sigmar light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(255,254,168,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_GodLightBase">
+		<defName>RH_TET_UlricLight</defName>
+		<label>Ulric light</label>
+		<description>Ulric light.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(208,253,255,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_KhorneAxe</defName>
+		<thingClass>TheEndTimes_Magic.Thing_KhorneAxe</thingClass>
+		<label>axe of Khorne</label>
+		<description>An amazing axe, a gift from the Lord Khorne.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_KhorneAxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<equippedStatOffsets>
+			<PlantWorkSpeed>0.05</PlantWorkSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>RH_TET_Beastmen_Khornegor</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>ChaosArtifact</li>
+		</thingSetMakerTags>
+		<tools>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>1.0</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_SigmarHammer</defName>
+		<thingClass>TheEndTimes_Magic.Thing_SigmarHammer</thingClass>
+		<label>Ghal Maraz</label>
+		<description>An amazing axe, a gift from the God Sigmar.\n\nGhal Maraz (Skull-Splitter in the original Khazalid) is the legendary Warhammer once wielded by the founder of the Empire of Man; Sigmar Heldenhammer.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_SigmarHammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RH_TET_Empire_Sigmar</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>GoodArtifact</li>
+		</thingSetMakerTags>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>RH_TET_Lightning</def>
+						<amount>10</amount>
+						<chance>1.0</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_UlricHammer</defName>
+		<thingClass>TheEndTimes_Magic.Thing_UlricHammer</thingClass>
+		<label>Hammer of Ulric</label>
+		<description>A huge, beautiful, and powerful hammer; gifted to people by the God Ulric.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_UlricHammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RH_TET_Empire_Ulric</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>GoodArtifact</li>
+		</thingSetMakerTags>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Frostbite</def>
+						<amount>10</amount>
+						<chance>1.0</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_NurgleStar</defName>
+		<thingClass>TheEndTimes_Magic.Thing_NurgleStar</thingClass>
+		<label>morning star of Nurgle</label>
+		<description>A disgusting morning star, a gift from Papa Nurgle.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_NurgleStar</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RH_TET_Beastmen_Pestigor</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>ChaosArtifact</li>
+		</thingSetMakerTags>
+		<tools>
+			<li>
+				<label>spiked ball</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>RH_TET_Poison</def>
+						<amount>10</amount>
+						<chance>1.0</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_SlaaneshWhip</defName>
+		<thingClass>TheEndTimes_Magic.Thing_SlaaneshWhip</thingClass>
+		<label>whip of Slaanesh</label>
+		<description>A sleek and dangerous looking magical whip gifted by Slaanesh.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_SlaaneshWhip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.5</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<weaponTags>
+			<li>RH_TET_Beastmen_Slaangor</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>ChaosArtifact</li>
+		</thingSetMakerTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_SlaaneshLash</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>7</range>
+				<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>butt</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>RH_TET_SlaaneshLash</defName>
+		<label>whip of Slaanesh</label>
+		<graphicData>
+			<texPath>Things/Projectile/Whip/RH_TET_Lash</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<stoppingPower>5.0</stoppingPower>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseWeapon">
+		<defName>RH_TET_MeleeWeapon_TzeentchStaff</defName>
+		<thingClass>TheEndTimes_Magic.Thing_TzeentchStaff</thingClass>
+		<label>staff of Tzeentch</label>
+		<description>A magic staff, gifted by Tzeentch. Shoots Tzeentchian fire. If a magic user is weilding this, they will be less likely to miscast.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Weapons/RH_TET_TzeentchStaff</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<smeltable>false</smeltable>
+		<thingCategories>
+			<li>RH_TET_WeaponsMagic</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<weaponTags>
+			<li>RH_TET_Beastmen_Tzaangor</li>
+		</weaponTags>
+		<equippedAngleOffset>60</equippedAngleOffset>
+		<thingSetMakerTags>
+			<li>ChaosArtifact</li>
+		</thingSetMakerTags>
+		<equippedStatOffsets>
+			<MeleeDodgeChance>.30</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_TzeentchBlueFire</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>25</range>
+				<soundCast>ThrowGrenade</soundCast>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<forcedMissRadius>1.5</forcedMissRadius>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>end</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentEast>-130</angleAdjustmentEast>
+				<northOffset>(0.30,0,0.2)</northOffset>
+				<eastOffset>(0,0,-0.1)</eastOffset>
+				<westOffset>(0,0,-0.1)</westOffset>
+				<southOffset>(-0.30,0,-0.2)</southOffset>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>RH_TET_TzeentchBlueFire</defName>
+		<label>fire of Tzeentch</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_PurpleFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<explosionRadius>1.5</explosionRadius>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<speed>40</speed>
+			<preExplosionSpawnChance>0.2</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+  
+</Defs>

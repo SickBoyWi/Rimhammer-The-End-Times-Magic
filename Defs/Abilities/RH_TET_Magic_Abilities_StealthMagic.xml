@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<!-- Skitterleap -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_Stealth_SkitterleapP</defName>
+		<label>Skitterleap</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_StealthSkitterleap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<alwaysFreeIntercept>false</alwaysFreeIntercept>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>9999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSkitterleap_Mage</defName>
+		<label>Skitterleap I</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSkitterleap</uiIconPath>
+		<description>The skaven sorcerer disappears in a puff of smoke to appear elsewhere on the battlefield.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Skitterleap</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_SkitterleapP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSkitterleap_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15.0</SecondsToRecharge>
+			<range>28</range>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSkitterleap_Wizard</defName>
+		<label>Skitterleap II</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSkitterleap</uiIconPath>
+		<description>The skaven sorcerer disappears in a puff of smoke to appear elsewhere on the battlefield.</description>
+		<magicPoolCost>0.12</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Skitterleap</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_SkitterleapP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSkitterleap_Wizard</abilityDef>
+			<warmupTime>.8</warmupTime>
+			<SecondsToRecharge>10.0</SecondsToRecharge>
+			<range>30</range>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSkitterleap_Warlock</defName>
+		<label>Skitterleap III</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSkitterleap</uiIconPath>
+		<description>The skaven sorcerer disappears in a puff of smoke to appear elsewhere on the battlefield.</description>
+		<magicPoolCost>0.09</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Skitterleap</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_SkitterleapP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSkitterleap_Warlock</abilityDef>
+			<warmupTime>.7</warmupTime>
+			<SecondsToRecharge>5.0</SecondsToRecharge>
+			<range>32</range>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSkitterleap_Master</defName>
+		<label>Skitterleap IV</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSkitterleap</uiIconPath>
+		<description>The skaven sorcerer disappears in a puff of smoke to appear elsewhere on the battlefield.</description>
+		<magicPoolCost>0.05</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Skitterleap</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_SkitterleapP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSkitterleap_Warlock</abilityDef>
+			<warmupTime>.5</warmupTime>
+			<SecondsToRecharge>1.0</SecondsToRecharge>
+			<range>36</range>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Swift Scamper =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_StealthSwiftscamperP</defName>
+		<label>Swiftscamper</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_StealthSwiftscamper</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSwiftscamper_Mage</defName>
+		<label>Swiftscamper I</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSwiftscamper</uiIconPath>
+		<description>The caster grants friendly targets in an area around the targeted location the ability move at an increased rate.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Swiftscamper</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_StealthSwiftscamperP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSwiftscamper_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_StealthSwiftscamper</hediffDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSwiftscamper_Wizard</defName>
+		<label>Swiftscamper II</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSwiftscamper</uiIconPath>
+		<description>The caster grants friendly targets in an area around the targeted location the ability move at an increased rate.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Swiftscamper</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_StealthSwiftscamperP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSwiftscamper_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_StealthSwiftscamper</hediffDef>
+					<applyChance>.88</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSwiftscamper_Warlock</defName>
+		<label>Swiftscamper III</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSwiftscamper</uiIconPath>
+		<description>The caster grants friendly targets in an area around the targeted location the ability move at an increased rate.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Swiftscamper</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_StealthSwiftscamperP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSwiftscamper_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_StealthSwiftscamper</hediffDef>
+					<applyChance>.95</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthSwiftscamper_Master</defName>
+		<label>Swiftscamper IV</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthSwiftscamper</uiIconPath>
+		<description>The caster grants friendly targets in an area around the targeted location the ability move at an increased rate.</description>
+		<magicPoolCost>0.39</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Swiftscamper</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_StealthSwiftscamperP</defaultProjectile>
+			<abilityDef>RH_TET_StealthSwiftscamper_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>6</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_StealthSwiftscamper</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Shadow's Companion =============================== -->
+ 
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_Stealth_ShadowsCompanionP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Shadow's Companion</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_StealthShadowCompan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+ 
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_Stealth_ShadowsCompanion_Mage</defName>
+		<label>Shadow's Companion I</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthShadowCompan</uiIconPath>
+		<description>With this spell, a Skaven sorcerer can melt into the darkness simply by stepping into a shadow.\n\nThe caster will become invisible to enemies for 20 to 25 seconds. Should the caster interact with enemies, the spell will be broken. Foes will not be able to see, and therefore target the caster while the spell is in effect.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ShadowsCompanion</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_ShadowsCompanionP</defaultProjectile>
+			<abilityDef>RH_TET_Stealth_ShadowsCompanion_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>1000</SecondsToRecharge>
+			<range>0</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>6</muzzleFlashScale>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_Stealth_ShadowsCompanion_Wizard</defName>
+		<label>Shadow's Companion</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthShadowCompan</uiIconPath>
+		<description>With this spell, a Skaven sorcerer can melt into the darkness simply by stepping into a shadow.\n\nThe caster will become invisible to enemies for 30 to 35 seconds. Should the caster interact with enemies, the spell will be broken. Foes will not be able to see, and therefore target the caster while the spell is in effect.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ShadowsCompanion</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_ShadowsCompanionP</defaultProjectile>
+			<abilityDef>RH_TET_Stealth_ShadowsCompanion_Wizard</abilityDef>
+			<warmupTime>1.2</warmupTime>
+			<SecondsToRecharge>900</SecondsToRecharge>
+			<range>0</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>6</muzzleFlashScale>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_Stealth_ShadowsCompanion_Warlock</defName>
+		<label>Shadow's Companion</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthShadowCompan</uiIconPath>
+		<description>With this spell, a Skaven sorcerer can melt into the darkness simply by stepping into a shadow.\n\nThe caster will become invisible to enemies for 40 to 45 seconds. Should the caster interact with enemies, the spell will be broken. Foes will not be able to see, and therefore target the caster while the spell is in effect.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ShadowsCompanion</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_ShadowsCompanionP</defaultProjectile>
+			<abilityDef>RH_TET_Stealth_ShadowsCompanion_Warlock</abilityDef>
+			<warmupTime>.8</warmupTime>
+			<SecondsToRecharge>700</SecondsToRecharge>
+			<range>0</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>6</muzzleFlashScale>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_Stealth_ShadowsCompanion_Master</defName>
+		<label>Shadow's Companion</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthShadowCompan</uiIconPath>
+		<description>With this spell, a Skaven sorcerer can melt into the darkness simply by stepping into a shadow.\n\nThe caster will become invisible to enemies for 50 to 55 seconds. Should the caster interact with enemies, the spell will be broken. Foes will not be able to see, and therefore target the caster while the spell is in effect.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ShadowsCompanion</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Stealth_ShadowsCompanionP</defaultProjectile>
+			<abilityDef>RH_TET_Stealth_ShadowsCompanion_Master</abilityDef>
+			<warmupTime>.5</warmupTime>
+			<SecondsToRecharge>500</SecondsToRecharge>
+			<range>0</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>6</muzzleFlashScale>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Armor of Darkness =============================== -->
+ 
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_StealthArmorOfDarknessP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Armor of Darkness</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_StealthArmorDarkness</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthArmorOfDarkness_Mage</defName>
+		<label>Armor of Darkness I</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthArmorDarkness</uiIconPath>
+		<description>The caster solidifies the shadows around their body. This shadow armour also protects the caster from harm from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_StealthArmorOfDarkness_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_StealthArmorOfDarknessP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ArmorOfDarkness</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthArmorOfDarkness_Wizard</defName>
+		<label>Armor of Darkness II</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthArmorDarkness</uiIconPath>
+		<description>The caster solidifies the shadows around their body. This shadow armour also protects the caster from harm from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_StealthArmorOfDarkness_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_StealthArmorOfDarknessP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ArmorOfDarkness</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthArmorOfDarkness_Warlock</defName>
+		<label>Armor of Darkness III</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthArmorDarkness</uiIconPath>
+		<description>The caster solidifies the shadows around their body. This shadow armour also protects the caster from harm from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_StealthArmorOfDarkness_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_StealthArmorOfDarknessP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ArmorOfDarkness</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.7</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthArmorOfDarkness_Master</defName>
+		<label>Armor of Darkness IV</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthArmorDarkness</uiIconPath>
+		<description>The caster solidifies the shadows around their body. This shadow armour also protects the caster from harm from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_StealthArmorOfDarkness_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_StealthArmorOfDarknessP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>90.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ArmorOfDarkness</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.9</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Traceless Demise =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_StealthTracelessDemiseP</defName>
+		<label>TracelessDemise</label>
+		<thingClass>TheEndTimes_Magic.Projectile_TracelessDemise</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Stealth/RH_TET_TracelessDemise</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<alwaysFreeIntercept>false</alwaysFreeIntercept>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthTracelessDemise_Mage</defName>
+		<label>Traceless Demise I</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthTracelessDemise</uiIconPath>
+		<description>Targets a single enemy pawn, and kills them outright. Their body disappears without a trace. Traceless demise is commonly cast upon the assassins of Clan Eshin before they embark on a hunt, ensuring that no Skaven corpses are left behind.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_StealthTracelessDemiseP</defaultProjectile>
+			<abilityDef>RH_TET_StealthTracelessDemise_Mage</abilityDef>
+			<warmupTime>3.5</warmupTime>
+			<SecondsToRecharge>100</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>6</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<AlwaysHits>true</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthTracelessDemise_Wizard</defName>
+		<label>Traceless Demise II</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthTracelessDemise</uiIconPath>
+		<description>Targets a single enemy pawn, and kills them outright. Their body disappears without a trace. Traceless demise is commonly cast upon the assassins of Clan Eshin before they embark on a hunt, ensuring that no Skaven corpses are left behind.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_StealthTracelessDemiseP</defaultProjectile>
+			<abilityDef>RH_TET_StealthTracelessDemise_Wizard</abilityDef>
+			<warmupTime>3.3</warmupTime>
+			<SecondsToRecharge>90</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.7</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<AlwaysHits>true</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthTracelessDemise_Warlock</defName>
+		<label>Traceless Demise III</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthTracelessDemise</uiIconPath>
+		<description>Targets a single enemy pawn, and kills them outright. Their body disappears without a trace. Traceless demise is commonly cast upon the assassins of Clan Eshin before they embark on a hunt, ensuring that no Skaven corpses are left behind.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_StealthTracelessDemiseP</defaultProjectile>
+			<abilityDef>RH_TET_StealthTracelessDemise_Warlock</abilityDef>
+			<warmupTime>3.2</warmupTime>
+			<SecondsToRecharge>80</SecondsToRecharge>
+			<range>25</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.5</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<AlwaysHits>true</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_StealthTracelessDemise_Master</defName>
+		<label>Traceless Demise IV</label>
+		<uiIconPath>UI/Magic/RH_TET_StealthTracelessDemise</uiIconPath>
+		<description>Targets a single enemy pawn, and kills them outright. Their body disappears without a trace. Traceless demise is commonly cast upon the assassins of Clan Eshin before they embark on a hunt, ensuring that no Skaven corpses are left behind.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_StealthTracelessDemiseP</defaultProjectile>
+			<abilityDef>RH_TET_StealthTracelessDemise_Master</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>70</SecondsToRecharge>
+			<range>30</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.0</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<AlwaysHits>true</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

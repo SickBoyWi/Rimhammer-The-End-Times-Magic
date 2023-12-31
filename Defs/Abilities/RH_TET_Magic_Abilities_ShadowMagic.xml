@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Bewilder =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_ShadowBewilderP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>bewildered</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_ShadowBewilder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowBewilder_Mage</defName>
+		<label>Bewilder I</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowBewilder</uiIconPath>
+		<description>Bewilders a humanlike victim, causing them to wander around aimlessly. Has no discernable effect on animals.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_ShadowBewilder_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShadowBewilderP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>75.0</SecondsToRecharge>
+			<range>18</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.7</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowBewilder_Wizard</defName>
+		<label>Bewilder II</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowBewilder</uiIconPath>
+		<description>Bewilders a humanlike victim, causing them to wander around aimlessly. Has no discernable effect on animals.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_ShadowBewilder_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShadowBewilderP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>70.0</SecondsToRecharge>
+			<range>19</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.8</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowBewilder_Warlock</defName>
+		<label>Bewilder III</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowBewilder</uiIconPath>
+		<description>Bewilders a humanlike victim, causing them to wander around aimlessly. Has no discernable effect on animals.</description>
+		<magicPoolCost>0.37</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_ShadowBewilder_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShadowBewilderP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>65.0</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.9</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowBewilder_Master</defName>
+		<label>Bewilder IV</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowBewilder</uiIconPath>
+		<description>Bewilders a humanlike victim, causing them to wander around aimlessly. Has no discernable effect on animals.</description>
+		<magicPoolCost>0.38</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_ShadowBewilder_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShadowBewilderP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60.0</SecondsToRecharge>
+			<range>21</range>
+			<soundCast>Hive_Spawn</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.99</applyChance>
+				</li>
+			</mentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Steed of Shadows =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Name="RH_TET_FlyingObjectP">
+		<defName>RH_TET_FlyingObjectP</defName>
+		<thingClass>TheEndTimes_Magic.FlyingObject</thingClass>
+		<label>flying object</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_ShadowSteedOfShadows</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+ 
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="RH_TET_ShadowSteedOfShadows">
+		<defName>RH_TET_ShadowSteedOfShadowsP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>steed of shadows</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_ShadowSteedOfShadows</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>9999</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowSteedOfShadows_Mage</defName>
+		<label>steed of shadows I</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowSteedOfShadows</uiIconPath>
+		<description>Steed of Shadows will forcibly shove a pawn from one location to another, friend or foe. If any obstructions are hit during travel, damage will be taken. If not, they will land hard on the ground.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_ShadowSteedOfShadowsP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowSteedOfShadows_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25.0</SecondsToRecharge>
+			<range>24</range>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_SoundSteedOfShadows</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>1</damage>
+					<damageDef>RH_TET_FlyingPawnDamage</damageDef>
+					<chance>1.0</chance>
+				</li>
+			</extraDamages>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetItems>false</canTargetItems>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowSteedOfShadows_Wizard</defName>
+		<label>steed of shadows II</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowSteedOfShadows</uiIconPath>
+		<description>Steed of Shadows will forcibly shove a pawn from one location to another, friend or foe. If any obstructions are hit during travel, damage will be taken. If not, they will land hard on the ground.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_ShadowSteedOfShadowsP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowSteedOfShadows_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25.0</SecondsToRecharge>
+			<range>28</range>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_SoundSteedOfShadows</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>2</damage>
+					<damageDef>RH_TET_FlyingPawnDamage</damageDef>
+					<chance>1.0</chance>
+				</li>
+			</extraDamages>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetItems>false</canTargetItems>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowSteedOfShadows_Warlock</defName>
+		<label>steed of shadows III</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowSteedOfShadows</uiIconPath>
+		<description>Steed of Shadows will forcibly shove a pawn from one location to another, friend or foe. If any obstructions are hit during travel, damage will be taken. If not, they will land hard on the ground.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_ShadowSteedOfShadowsP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowSteedOfShadows_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25.0</SecondsToRecharge>
+			<range>32</range>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_SoundSteedOfShadows</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>3</damage>
+					<damageDef>RH_TET_FlyingPawnDamage</damageDef>
+					<chance>1.0</chance>
+				</li>
+			</extraDamages>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetItems>false</canTargetItems>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowSteedOfShadows_Master</defName>
+		<label>steed of shadows IV</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowSteedOfShadows</uiIconPath>
+		<description>Steed of Shadows will forcibly shove a pawn from one location to another, friend or foe. If any obstructions are hit during travel, damage will be taken. If not, they will land hard on the ground.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_ShadowSteedOfShadowsP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowSteedOfShadows_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25.0</SecondsToRecharge>
+			<range>36</range>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_SoundSteedOfShadows</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>4</damage>
+					<damageDef>RH_TET_FlyingPawnDamage</damageDef>
+					<chance>1.0</chance>
+				</li>
+			</extraDamages>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetItems>false</canTargetItems>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Penumbral Pendulum =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_PenumbralPendulumP</defName>
+		<label>penumbral pendulum</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shadow/RH_TET_PenumbralPendulum</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowPenumbralPendulum_Mage</defName>
+		<label>Penumbral Pendulum I</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowPenumbralPendulum</uiIconPath>
+		<description>A ghostly pendulum materialises in the air above the wizard. On his single word of command, the pendulum swings towards the enemy, picking up speed as it does so.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PenumbralPendulumP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowPenumbralPendulum_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_PenumbralPendulum</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowPenumbralPendulum_Wizard</defName>
+		<label>Penumbral Pendulum II</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowPenumbralPendulum</uiIconPath>
+		<description>A ghostly pendulum materialises in the air above the wizard. On his single word of command, the pendulum swings towards the enemy, picking up speed as it does so.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PenumbralPendulumP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowPenumbralPendulum_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_PenumbralPendulum</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowPenumbralPendulum_Warlock</defName>
+		<label>Penumbral Pendulum III</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowPenumbralPendulum</uiIconPath>
+		<description>A ghostly pendulum materialises in the air above the wizard. On his single word of command, the pendulum swings towards the enemy, picking up speed as it does so.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PenumbralPendulumP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowPenumbralPendulum_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_PenumbralPendulum</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowPenumbralPendulum_Master</defName>
+		<label>Penumbral Pendulum IV</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowPenumbralPendulum</uiIconPath>
+		<description>A ghostly pendulum materialises in the air above the wizard. On his single word of command, the pendulum swings towards the enemy, picking up speed as it does so.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PenumbralPendulumP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowPenumbralPendulum_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_PenumbralPendulum</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Mind Slip =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_ShadowMindSlipP</defName>
+		<label>mind slip</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_ShadowMindSlip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowMindSlip_Mage</defName>
+		<label>Mind Slip I</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowMindSlip</uiIconPath>
+		<description>Blanks the mind one or multiple targets, making them forget their existing loyalties. Will make an aggressive pawn neutral instantly, and higher levels will work on multiple near by pawns.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ClearFaction</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowMindSlipP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowMindSlip_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowMindSlip_Wizard</defName>
+		<label>Mind Slip II</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowMindSlip</uiIconPath>
+		<description>Blanks the mind one or multiple targets, making them forget their existing loyalties. Will make an aggressive pawn neutral instantly, and higher levels will work on multiple near by pawns.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ClearFaction</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowMindSlipP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowMindSlip_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowMindSlip_Warlock</defName>
+		<label>Mind Slip III</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowMindSlip</uiIconPath>
+		<description>Blanks the mind one or multiple targets, making them forget their existing loyalties. Will make an aggressive pawn neutral instantly, and higher levels will work on multiple near by pawns.</description>
+		<magicPoolCost>0.65</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ClearFaction</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowMindSlipP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowMindSlip_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowMindSlip_Master</defName>
+		<label>Mind Slip IV</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowMindSlip</uiIconPath>
+		<description>Blanks the mind one or multiple targets, making them forget their existing loyalties. Will make an aggressive pawn neutral instantly, and higher levels will work on multiple near by pawns.</description>
+		<magicPoolCost>0.70</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ClearFaction</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowMindSlipP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowMindSlip_Master</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>240</SecondsToRecharge>
+			<range>25</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Enfeebling Foe =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_ShadowEnfeeblingFoeP</defName>
+		<label>Enfeebling Foe</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shadow/RH_TET_EnfeeblingFoe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>250</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowEnfeeblingFoe_Mage</defName>
+		<label>Enfeebling Foe I</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowEnfeeblingFoe</uiIconPath>
+		<description>Deceived by the Grey Wizard's wiles, the enemy's burdens lie impossibly heavy upon their shoulders.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowEnfeeblingFoeP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowEnfeeblingFoe_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShadowEnfeeblingFoeI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowEnfeeblingFoe_Wizard</defName>
+		<label>Enfeebling Foe II</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowEnfeeblingFoe</uiIconPath>
+		<description>Deceived by the Grey Wizard's wiles, the enemy's burdens lie impossibly heavy upon their shoulders.</description>
+		<magicPoolCost>0.26</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowEnfeeblingFoeP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowEnfeeblingFoe_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>115.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShadowEnfeeblingFoeII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowEnfeeblingFoe_Warlock</defName>
+		<label>Enfeebling Foe III</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowEnfeeblingFoe</uiIconPath>
+		<description>Deceived by the Grey Wizard's wiles, the enemy's burdens lie impossibly heavy upon their shoulders.</description>
+		<magicPoolCost>0.27</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowEnfeeblingFoeP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowEnfeeblingFoe_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShadowEnfeeblingFoeIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_ShadowEnfeeblingFoe_Master</defName>
+		<label>Enfeebling Foe IV</label>
+		<uiIconPath>UI/Magic/RH_TET_ShadowEnfeeblingFoe</uiIconPath>
+		<description>Deceived by the Grey Wizard's wiles, the enemy's burdens lie impossibly heavy upon their shoulders.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShadowEnfeeblingFoeP</defaultProjectile>
+			<abilityDef>RH_TET_ShadowEnfeeblingFoe_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>105.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_ShadowEnfeeblingFoeIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

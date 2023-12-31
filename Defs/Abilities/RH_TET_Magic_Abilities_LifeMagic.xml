@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Winter Frost -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_DirectDamagePawnLaser</thingClass>
+		<defName>RH_TET_LifeWinterFrostP</defName>
+		<label>Winter Frost</label>
+		<graphicData>
+			<texPath>Things/Projectile/Life/RH_TET_GreenLaser</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Frostbite</damageDef>
+			<damageAmountBase>35</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>15</postFiringDuration>
+		<StartFireChance>0.0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeWinterFrost_Mage</defName>
+		<label>Winter Frost I</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeWinterFrost</uiIconPath>
+		<description>Coats the target of the caster with a layer of frost. Anyone affected suffers fronstbite injury.</description>
+		<magicPoolCost>0.24</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LifeWinterFrostP</defaultProjectile>
+			<abilityDef>RH_TET_LifeWinterFrost_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWindIce</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeWinterFrost_Wizard</defName>
+		<label>Winter Frost II</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeWinterFrost</uiIconPath>
+		<description>Coats the target of the caster with a layer of frost. Anyone affected suffers fronstbite injury.</description>
+		<magicPoolCost>0.23</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LifeWinterFrostP</defaultProjectile>
+			<abilityDef>RH_TET_LifeWinterFrost_Wizard</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWindIce</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeWinterFrost_Warlock</defName>
+		<label>Winter Frost III</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeWinterFrost</uiIconPath>
+		<description>Coats the target of the caster with a layer of frost. Anyone affected suffers fronstbite injury.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LifeWinterFrostP</defaultProjectile>
+			<abilityDef>RH_TET_LifeWinterFrost_Warlock</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>20</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWindIce</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeWinterFrost_Master</defName>
+		<label>Winter Frost IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeWinterFrost</uiIconPath>
+		<description>Coats the target of the caster with a layer of frost. Anyone affected suffers fronstbite injury.</description>
+		<magicPoolCost>0.21</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_LifeWinterFrostP</defaultProjectile>
+			<abilityDef>RH_TET_LifeWinterFrost_Master</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWindIce</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Drain Life -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_LifeDrainLifeP</defName>
+		<label>Drain Life</label>
+		<graphicData>
+			<texPath>Things/Projectile/Life/RH_TET_GreenProjectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalInjury</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+			<speed>150</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeDrainLife_Mage</defName>
+		<label>Drain Life I</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeDrainLife</uiIconPath>
+		<description>This spell allows the wizard to drain the life from a person, sucking out life force, and absorbing it into themselves.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_DrainLife</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeDrainLifeP</defaultProjectile>
+			<abilityDef>RH_TET_LifeDrainLife_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>40</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>0</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeDrainLife_Wizard</defName>
+		<label>Drain Life II</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeDrainLife</uiIconPath>
+		<description>This spell allows the wizard to drain the life from a person, sucking out life force, and absorbing it into themselves.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_DrainLife</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeDrainLifeP</defaultProjectile>
+			<abilityDef>RH_TET_LifeDrainLife_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>35</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>0</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeDrainLife_Warlock</defName>
+		<label>Drain Life III</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeDrainLife</uiIconPath>
+		<description>This spell allows the wizard to drain the life from a person, sucking out life force, and absorbing it into themselves.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_DrainLife</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeDrainLifeP</defaultProjectile>
+			<abilityDef>RH_TET_LifeDrainLife_Warlock</abilityDef>
+			<warmupTime>1.75</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>0</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeDrainLife_Master</defName>
+		<label>Drain Life IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeDrainLife</uiIconPath>
+		<description>This spell allows the wizard to drain the life from a person, sucking out life force, and absorbing it into themselves.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>18</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_DrainLife</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeDrainLifeP</defaultProjectile>
+			<abilityDef>RH_TET_LifeDrainLife_Master</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>30</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>true</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>0</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Regenerate -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Regenerate</thingClass>
+		<defName>RH_TET_Life_RegenerateP</defName>
+		<label>Regenerate</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_LifeRegenerate</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeRegenerate_Mage</defName>
+		<label>Regenerate I</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeRegenerate</uiIconPath>
+		<description>With a swirling of the winds of Gyish, the wizard's target instantly regenerates their most aggregious wound or removes their need for a drug.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_RegenerateP</defaultProjectile>
+			<abilityDef>RH_TET_LifeRegenerate_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeRegenerate_Wizard</defName>
+		<label>Regenerate II</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeRegenerate</uiIconPath>
+		<description>With a swirling of the winds of Gyish, the wizard's target instantly regenerates their most aggregious wound.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_RegenerateP</defaultProjectile>
+			<abilityDef>RH_TET_LifeRegenerate_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>55000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeRegenerate_Warlock</defName>
+		<label>Regenerate III</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeRegenerate</uiIconPath>
+		<description>With a swirling of the winds of Gyish, the wizard's target instantly regenerates their most aggregious wound.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_RegenerateP</defaultProjectile>
+			<abilityDef>RH_TET_LifeRegenerate_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>50000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeRegenerate_Master</defName>
+		<label>Regenerate IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeRegenerate</uiIconPath>
+		<description>With a swirling of the winds of Gyish, the wizard's target instantly regenerates their most aggregious wound.</description>
+		<magicPoolCost>0.95</magicPoolCost>
+		<abilityPoints>7</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>7</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_Life_RegenerateP</defaultProjectile>
+			<abilityDef>RH_TET_LifeRegenerate_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45000</SecondsToRecharge>
+			<range>5</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Cure Blight -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_LifeCureBlightP</defName>
+		<label>Cure Blight</label>
+		<graphicData>
+			<texPath>Things/Projectile/Life/RH_TET_GreenLaserDark</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>120</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>25</preFiringFinalIntensity>
+		<postFiringInitialIntensity>80</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>20</preFiringDuration>
+		<postFiringDuration>10</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeCureBlight_Mage</defName>
+		<label>Cure Blight I</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeCureBlight</uiIconPath>
+		<description>Cleanses an area of blight. This saves plants, trees, crops, and other growing things.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CureBlight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeCureBlightP</defaultProjectile>
+			<abilityDef>RH_TET_LifeCureBlight_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>25</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeCureBlight_Wizard</defName>
+		<label>Cure Blight II</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeCureBlight</uiIconPath>
+		<description>Cleanses an area of blight. This saves plants, trees, crops, and other growing things.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CureBlight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeCureBlightP</defaultProjectile>
+			<abilityDef>RH_TET_LifeCureBlight_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>26</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>30</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeCureBlight_Warlock</defName>
+		<label>Cure Blight III</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeCureBlight</uiIconPath>
+		<description>Cleanses an area of blight. This saves plants, trees, crops, and other growing things.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CureBlight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeCureBlightP</defaultProjectile>
+			<abilityDef>RH_TET_LifeCureBlight_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>22</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>35</maxTargets>
+				<range>7</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeCureBlight_Master</defName>
+		<label>Cure Blight IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeCureBlight</uiIconPath>
+		<description>Cleanses an area of blight. This saves plants, trees, crops, and other growing things.</description>
+		<magicPoolCost>0.33</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CureBlight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeCureBlightP</defaultProjectile>
+			<abilityDef>RH_TET_LifeCureBlight_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>40</maxTargets>
+				<range>8</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- Lifebloom -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_LifeLifebloomP</defName>
+		<label>Lifebloom</label>
+		<graphicData>
+			<texPath>Things/Projectile/Life/RH_TET_GreenVine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeLifebloom_Mage</defName>
+		<label>Lifebloom I</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LifeBloom</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeLifebloomP</defaultProjectile>
+			<abilityDef>RH_TET_LifeLifebloom_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>10</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeLifebloom_Wizard</defName>
+		<label>Lifebloom II</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LifeBloom</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeLifebloomP</defaultProjectile>
+			<abilityDef>RH_TET_LifeLifebloom_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>25000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>15</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeLifebloom_Warlock</defName>
+		<label>Lifebloom III</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<magicPoolCost>0.50</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LifeBloom</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeLifebloomP</defaultProjectile>
+			<abilityDef>RH_TET_LifeLifebloom_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>20</maxTargets>
+				<range>7</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_LifeLifebloom_Master</defName>
+		<label>Lifebloom IV</label>
+		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LifeBloom</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LifeLifebloomP</defaultProjectile>
+			<abilityDef>RH_TET_LifeLifebloom_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Plant</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>25</maxTargets>
+				<range>8</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

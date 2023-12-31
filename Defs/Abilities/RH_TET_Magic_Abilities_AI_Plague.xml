@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Plague Lore =================== -->
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_PlagueWizardAI">
+		<defName>RH_TET_Magic_PlagueWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_PlagueRedPox_MageAI</li>
+			<li>RH_TET_PlagueRedPox_WizardAI</li>
+			<li>RH_TET_PlagueRedPox_WarlockAI</li>
+			<li>RH_TET_PlagueRedPox_MasterAI</li>
+
+			<li>RH_TET_PlagueInfectingGaze_MageAI</li>
+			<li>RH_TET_PlagueInfectingGaze_WizardAI</li>
+			<li>RH_TET_PlagueInfectingGaze_WarlockAI</li>
+			<li>RH_TET_PlagueInfectingGaze_MasterAI</li>
+			
+			<li>RH_TET_PlaguePestilentBreath_MageAI</li>
+			<li>RH_TET_PlaguePestilentBreath_WizardAI</li>
+			<li>RH_TET_PlaguePestilentBreath_WarlockAI</li>
+			<li>RH_TET_PlaguePestilentBreath_MasterAI</li>
+			
+			<li>RH_TET_PlagueAirOfPestilence_MageAI</li>
+			<li>RH_TET_PlagueAirOfPestilence_WizardAI</li>
+			<li>RH_TET_PlagueAirOfPestilence_WarlockAI</li>
+			<li>RH_TET_PlagueAirOfPestilence_MasterAI</li>
+			
+			<li>RH_TET_PlagueCloudOfFlies_MageAI</li>
+			<li>RH_TET_PlagueCloudOfFlies_WizardAI</li>
+			<li>RH_TET_PlagueCloudOfFlies_WarlockAI</li>
+			<li>RH_TET_PlagueCloudOfFlies_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueRedPox_MageAI</defName>
+		<ability>RH_TET_PlagueRedPox_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<tags>
+			<li>RedPox</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueRedPox_WizardAI</defName>
+		<ability>RH_TET_PlagueRedPox_Wizard</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<tags>
+			<li>RedPox</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueRedPox_WarlockAI</defName>
+		<ability>RH_TET_PlagueRedPox_Warlock</ability>
+		<power>32.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<tags>
+			<li>RedPox</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueRedPox_MasterAI</defName>
+		<ability>RH_TET_PlagueRedPox_Master</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>10.0</maxRange>
+		<tags>
+			<li>RedPox</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueInfectingGaze_MageAI</defName>
+		<ability>RH_TET_PlagueInfectingGaze_Mage</ability>
+		<power>28.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>InfectingGaze</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueInfectingGaze_WizardAI</defName>
+		<ability>RH_TET_PlagueInfectingGaze_Wizard</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>24.0</maxRange>
+		<tags>
+			<li>InfectingGaze</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueInfectingGaze_WarlockAI</defName>
+		<ability>RH_TET_PlagueInfectingGaze_Warlock</ability>
+		<power>32.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>28.0</maxRange>
+		<tags>
+			<li>InfectingGaze</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueInfectingGaze_MasterAI</defName>
+		<ability>RH_TET_PlagueInfectingGaze_Master</ability>
+		<power>34.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>32.0</maxRange>
+		<tags>
+			<li>InfectingGaze</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlaguePestilentBreath_MageAI</defName>
+		<ability>RH_TET_PlaguePestilentBreath_Mage</ability>
+		<power>20.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>34.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>PestilentBreath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlaguePestilentBreath_WizardAI</defName>
+		<ability>RH_TET_PlaguePestilentBreath_Wizard</ability>
+		<power>20.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>PestilentBreath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlaguePestilentBreath_WarlockAI</defName>
+		<ability>RH_TET_PlaguePestilentBreath_Warlock</ability>
+		<power>20.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>36.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>PestilentBreath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlaguePestilentBreath_MasterAI</defName>
+		<ability>RH_TET_PlaguePestilentBreath_Master</ability>
+		<power>20.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>37.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>PestilentBreath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueAirOfPestilence_MageAI</defName>
+		<ability>RH_TET_PlagueAirOfPestilence_Mage</ability>
+		<power>40.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>AirOfPestilence</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueAirOfPestilence_WizardAI</defName>
+		<ability>RH_TET_PlagueAirOfPestilence_Wizard</ability>
+		<power>40.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>31.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>AirOfPestilence</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueAirOfPestilence_WarlockAI</defName>
+		<ability>RH_TET_PlagueAirOfPestilence_Warlock</ability>
+		<power>40.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>33.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>AirOfPestilence</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueAirOfPestilence_MasterAI</defName>
+		<ability>RH_TET_PlagueAirOfPestilence_Master</ability>
+		<power>40.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>36.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>AirOfPestilence</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueCloudOfFlies_MageAI</defName>
+		<ability>RH_TET_PlagueCloudOfFlies_Mage</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>28.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>CloudOfFlies</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueCloudOfFlies_WizardAI</defName>
+		<ability>RH_TET_PlagueCloudOfFlies_Wizard</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>31.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>CloudOfFlies</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueCloudOfFlies_WarlockAI</defName>
+		<ability>RH_TET_PlagueCloudOfFlies_Warlock</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>33.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>CloudOfFlies</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_PlagueCloudOfFlies_MasterAI</defName>
+		<ability>RH_TET_PlagueCloudOfFlies_Master</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>10.0</minRange>
+		<maxRange>36.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>CloudOfFlies</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_PlagueWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>38.0</maxDistance>
+											<minDistance>35.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>36.0</maxDistance>
+											<minDistance>25.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AirOfPestilence</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>CloudOfFlies</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>CloudOfFlies</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AirOfPestilence</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>16.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>16.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>CloudOfFlies</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AirOfPestilence</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>36.0</maxDistance>
+											<minDistance>25.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AirOfPestilence</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>CloudOfFlies</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>RedPox</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>InfectingGaze</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>38.0</maxDistance>
+											<minDistance>35.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PestilentBreath</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+</Defs>

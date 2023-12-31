@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_BodyPartsMagic</defName>
+		<label>magic</label>
+		<parent>BodyParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicArmor</defName>
+		<label>magic</label>
+		<parent>ApparelArmor</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicHelms</defName>
+		<label>magic</label>
+		<parent>ArmorHeadgear</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicApparel</defName>
+		<label>magic</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicBuildings</defName>
+		<label>magic</label>
+		<parent>Buildings</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Artifacts</defName>
+		<description>Magic items gifted by the gods, that cannot be crafted.</description>
+		<label>magic artifacts</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_WeaponsMagic</defName>
+		<label>magic</label>
+		<parent>Weapons</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicItems</defName>
+		<label>magic</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicItems_Trainers</defName>
+		<label>magic trainers</label>
+		<parent>RH_TET_MagicItems</parent>
+	</ThingCategoryDef>
+
+	<!-- NOTE: These two are a copy from KV Hands/Feet. It's an attempt not to have duplicate categories in game if folks have both mods. -->
+	<ThingCategoryDef>
+		<defName>Handwear</defName>
+		<label>handwear</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>Footwear</defName>
+		<label>footwear</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	
+</Defs>

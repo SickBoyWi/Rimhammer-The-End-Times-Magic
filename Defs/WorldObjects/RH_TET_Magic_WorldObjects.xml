@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorldObjectDef>
+		<defName>RH_TET_Magic_TravelingTransportPod</defName>
+		<label>transport pod</label>
+		<description>Magic based transport pods in flight.</description>
+		<worldObjectClass>TheEndTimes_Magic.TravelingMagicTransportPods</worldObjectClass>
+		<texture>Things/Special/RH_TET_MagicPod</texture>
+		<useDynamicDrawer>true</useDynamicDrawer>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconTexture>Things/Special/RH_TET_MagicPod</expandingIconTexture>
+		<expandingIconPriority>60</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+	</WorldObjectDef>
+
+</Defs>

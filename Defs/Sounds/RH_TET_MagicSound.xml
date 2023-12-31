@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SoundDef>
+		<defName>RH_TET_ElectricitySound</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>4</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Electricity</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>30.51151</min>
+					<max>42.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_MagicPowersUnlocked</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_LevelUp</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>30</min>
+					<max>30</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_Miscast</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Miscast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60</min>
+					<max>60</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_SoundSteedOfShadows</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_SteedOfShadows</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_PenumbralPendulum</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Pendulum</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Scratch</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Scratch</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundBrayScream</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_BrayScream</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundDevolve</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Devolve</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundMantleGhorok</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_MantleGhorok</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundVileTide</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_VileTide</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundChains</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Chains</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundWhoosh</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Whoosh</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundWind</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Wind</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundWindIce</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_WindIce</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundPuke</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Nurgle_Puke</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Magic_Murmur</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Murmur</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>40</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Magic_WhipCrack</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_WhipCrack</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>60</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Magic_Chimes</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_Chimes</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>40</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_CrackingSoundLoud</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>3</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_BonesCrackingMore</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>30.51151</min>
+					<max>52.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_CrackingSound</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>3</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_BonesCracking</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>30.51151</min>
+					<max>42.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_ChompingSound</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>2</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_FoodChomping</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25.51151</min>
+					<max>45.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_GrowlSoundSmall</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>2</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_SmallGrowl</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25.51151</min>
+					<max>45.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_GrowlSoundDeep</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>2</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_DeepGrowl</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25.51151</min>
+					<max>45.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_SlurpSoundDeep</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>2</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Magic_DeepSlurp</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25.51151</min>
+					<max>45.93479</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Magic_SoundFlies</defName>
+		<eventNames/>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Flies</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>35</min>
+					<max>55</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9152174</min>
+					<max>1.042391</max>
+				</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+</Defs>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityUser.AbilityDef Name="RH_TET_BaseAbilityActionAbility" Abstract="True">
+		<abilityClass>TheEndTimes_Magic.AbilityActionAbility</abilityClass>
+		<uiIconPath>UI/Glow_Corrupt</uiIconPath>
+	</AbilityUser.AbilityDef>
+
+	<!-- Witch Hunter -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_Ability_WH_CondemnP</defName>
+		<label>Condemn</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shallya/RH_TET_ShallyaLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>35</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.AbilityActionAbilityDef ParentName="RH_TET_BaseAbilityActionAbility">
+		<defName>RH_TET_Ability_WH_Condemn</defName>
+		<label>Condemn</label>
+		<uiIconPath>UI/AbilityAction/Condemn</uiIconPath>
+		<description>The user of this ability calls on Sigmar to condemn a foe. The power of Sigmar blasts from the hand of the user, strikes an enemy, and causes that foe reduced pain fall threshold amount and slows their movement.\n\nWitchhunter abilities are gained by reading a Witchhunter Tome. Tomes can be created at a ...</description>
+		<abilityPoolCost>0.24</abilityPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityAction</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_Ability_WH_CondemnP</defaultProjectile>
+			<abilityDef>RH_TET_Ability_WH_Condemn</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>36</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WH_Condemned</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.AbilityActionAbilityDef>
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<defName>RH_TET_Ability_WH_GrimResolveP</defName>
+		<label>Grim Resolve</label>
+		<graphicData>
+			<texPath>UI/AbilityAction/GrimResolve</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.AbilityActionAbilityDef ParentName="RH_TET_BaseAbilityActionAbility">
+		<defName>RH_TET_Ability_WH_GrimResolve</defName>
+		<label>Grim Resolve</label>
+		<uiIconPath>UI/AbilityAction/GrimResolve</uiIconPath>
+		<description>The user of this ability calls on Sigmar for strength. The power of Sigmar surrounds the user, and bolsters the physical capacities of the user. Increases movement, pain shock threshold, mental break threshold, and grants a mood boost.\n\nWitchhunter abilities are gained by reading a Witchhunter Tome. Tomes can be created at a ...</description>
+		<abilityPoolCost>0.24</abilityPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_GrimResolve</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_Ability_WH_GrimResolveP</defaultProjectile>
+			<abilityDef>RH_TET_Ability_WH_GrimResolve</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>0</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Deflect_Metal</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_WH_GrimResolve</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.AbilityActionAbilityDef>
+	
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_Ability_WH_PurifyingFlameP</defName>
+		<label>Purifying Flame</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_BreatheFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.AbilityActionAbilityDef ParentName="RH_TET_BaseAbilityActionAbility">
+		<defName>RH_TET_Ability_WH_PurifyingFlame</defName>
+		<label>Purifying Flame</label>
+		<uiIconPath>UI/AbilityAction/PurifyingFlame</uiIconPath>
+		<description>The user calls upon Sigmar to assist all friendlies in a radius around the user. Those affected will be cleansed of any chaos corruption, toxic buildup, or other similar type of effect.</description>
+		<abilityPoolCost>0.24</abilityPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_PurifyingFlame</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_Ability_WH_PurifyingFlameP</defaultProjectile>
+			<abilityDef>RH_TET_Ability_WH_PurifyingFlame</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>10</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast><!-- TODO: FIND NEW SOUND -->
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<canCastInMelee>true</canCastInMelee>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>36</maxTargets>
+				<range>10</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.AbilityActionAbilityDef>
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_Ability_WH_ExecuteP</defName>
+		<label>Bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>1</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.AbilityActionAbilityDef ParentName="RH_TET_BaseAbilityActionAbility">
+		<defName>RH_TET_Ability_WH_Execute</defName>
+		<label>Execute</label>
+		<uiIconPath>UI/AbilityAction/Execute</uiIconPath>
+		<description>Execute a single enemy by shooting them in the head.</description>
+		<abilityPoolCost>0.24</abilityPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Execute</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_Ability_WH_ExecuteP</defaultProjectile>
+			<abilityDef>RH_TET_Ability_WH_Execute</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>14</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>0</forcedMissRadius>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.AbilityActionAbilityDef>
+	
+</Defs>

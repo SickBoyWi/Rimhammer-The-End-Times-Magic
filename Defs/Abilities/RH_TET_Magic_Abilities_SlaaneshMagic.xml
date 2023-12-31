@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Golden Torrent =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_SlaaneshGoldenTorrentP</defName>
+		<label>Golden Torrent</label>
+		<graphicData>
+			<texPath>Things/Projectile/Slaanesh/RH_TET_GoldenTorrent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>35</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshGoldenTorrent_Mage</defName>
+		<label>Golden Torrent I</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshGoldenTorrent</uiIconPath>
+		<description>Boiling out from the palm of the sorcerer's hand is a pulse of yellow light. The beam can affect any single nearby target in the caster's line of sight. The target is filled with pleasant, mind-numbing emotions. For moments at a time, they stand and smile mindlessly, giving up all actions they would normally take.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshGoldenTorrentP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshGoldenTorrent_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshGoldenTorrent_Wizard</defName>
+		<label>Golden Torrent II</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshGoldenTorrent</uiIconPath>
+		<description>Boiling out from the palm of the sorcerer's hand is a pulse of yellow light. The beam can affect any single nearby target in the caster's line of sight. The target is filled with pleasant, mind-numbing emotions. For moments at a time, they stand and smile mindlessly, giving up all actions they would normally take.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshGoldenTorrentP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshGoldenTorrent_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>42</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.85</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshGoldenTorrent_Warlock</defName>
+		<label>Golden Torrent III</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshGoldenTorrent</uiIconPath>
+		<description>Boiling out from the palm of the sorcerer's hand is a pulse of yellow light. The beam can affect any single nearby target in the caster's line of sight. The target is filled with pleasant, mind-numbing emotions. For moments at a time, they stand and smile mindlessly, giving up all actions they would normally take.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshGoldenTorrentP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshGoldenTorrent_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>50</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.9</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshGoldenTorrent_Master</defName>
+		<label>Golden Torrent IV</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshGoldenTorrent</uiIconPath>
+		<description>Boiling out from the palm of the sorcerer's hand is a pulse of yellow light. The beam can affect any single nearby target in the caster's line of sight. The target is filled with pleasant, mind-numbing emotions. For moments at a time, they stand and smile mindlessly, giving up all actions they would normally take.</description>
+		<magicPoolCost>0.22</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshGoldenTorrentP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshGoldenTorrent_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>55</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Wander_Psychotic</mentalStateDef>
+					<applyChance>0.95</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Blissful Throes =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_SlaaneshBlissfulP</defName>
+		<label>Blissful Throes</label>
+		<graphicData>
+			<texPath>Things/Projectile/Slaanesh/RH_TET_BlissfulThroes</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshBlissful_Mage</defName>
+		<label>Blissful Throes I</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshBlissfulThroes</uiIconPath>
+		<description>A long whip of pure Chaos energy lashes out at the enemy with a delightful crack, leaving its victims wracked with pain, to the envy of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshBlissfulP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshBlissful_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshBlissful_Wizard</defName>
+		<label>Blissful Throes II</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshBlissfulThroes</uiIconPath>
+		<description>A long whip of pure Chaos energy lashes out at the enemy with a delightful crack, leaving its victims wracked with pain, to the envy of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshBlissfulP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshBlissful_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshBlissful_Warlock</defName>
+		<label>Blissful Throes III</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshBlissfulThroes</uiIconPath>
+		<description>A long whip of pure Chaos energy lashes out at the enemy with a delightful crack, leaving its victims wracked with pain, to the envy of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshBlissfulP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshBlissful_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshBlissful_Master</defName>
+		<label>Blissful Throes IV</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshBlissfulThroes</uiIconPath>
+		<description>A long whip of pure Chaos energy lashes out at the enemy with a delightful crack, leaving its victims wracked with pain, to the envy of the caster.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshBlissfulP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshBlissful_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+
+	<!-- ===================== Delectable Torture =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_SlaaneshDelectableP</defName>
+		<label>Delectable Torture</label>
+		<graphicData>
+			<texPath>Things/Projectile/Slaanesh/RH_TET_DelectableTorture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>35</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshDelectableTorture_Mage</defName>
+		<label>Delectable Torture I</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshTorture</uiIconPath>
+		<description>A whip of magic energy reaches out, and forces an enemy to immediately attack the nearest person, friend or foe. Their loss of control will continue for a while, and friend or foe better be wary until their mind returns!</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshDelectableP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshDelectableTorture_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.7</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshDelectableTorture_Wizard</defName>
+		<label>Delectable Torture II</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshTorture</uiIconPath>
+		<description>A whip of magic energy reaches out, and forces an enemy to immediately attack the nearest person, friend or foe. Their loss of control will continue for a while, and friend or foe better be wary until their mind returns!</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshDelectableP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshDelectableTorture_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>42</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.8</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshDelectableTorture_Warlock</defName>
+		<label>Delectable Torture III</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshTorture</uiIconPath>
+		<description>A whip of magic energy reaches out, and forces an enemy to immediately attack the nearest person, friend or foe. Their loss of control will continue for a while, and friend or foe better be wary until their mind returns!</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshDelectableP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshDelectableTorture_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>50</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.85</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshDelectableTorture_Master</defName>
+		<label>Delectable Torture IV</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshTorture</uiIconPath>
+		<description>A whip of magic energy reaches out, and forces an enemy to immediately attack the nearest person, friend or foe. Their loss of control will continue for a while, and friend or foe better be wary until their mind returns!</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshDelectableP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshDelectableTorture_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>55</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_Magic_WhipCrack</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.9</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Slothful Stupor =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_SlaaneshStuporP</defName>
+		<label>Slothful Stupor</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_SlaaneshSlothfulStupor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshSlothfulStupor_Mage</defName>
+		<label>Slothful Stupor I</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshSlothfulStupor</uiIconPath>
+		<description>Though perhaps not the vice with which Slaanesh is most closely associated, sloth is just one more form of excess for the Prince of Chaos, and his chosen wizards to feed upon. No natural malaise is this, but a deep and abiding spiritual ennui that saps all sense of purpose and enthusiasm from the victim.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SlaaneshStuporP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshSlothfulStupor_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_SlaaneshLethargy</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshSlothfulStupor_Wizard</defName>
+		<label>Slothful Stupor II</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshSlothfulStupor</uiIconPath>
+		<description>Though perhaps not the vice with which Slaanesh is most closely associated, sloth is just one more form of excess for the Prince of Chaos, and his chosen wizards to feed upon. No natural malaise is this, but a deep and abiding spiritual ennui that saps all sense of purpose and enthusiasm from the victim.</description>
+		<magicPoolCost>0.32</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SlaaneshStuporP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshSlothfulStupor_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_SlaaneshLethargy</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.4</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshSlothfulStupor_Warlock</defName>
+		<label>Slothful Stupor III</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshSlothfulStupor</uiIconPath>
+		<description>Though perhaps not the vice with which Slaanesh is most closely associated, sloth is just one more form of excess for the Prince of Chaos, and his chosen wizards to feed upon. No natural malaise is this, but a deep and abiding spiritual ennui that saps all sense of purpose and enthusiasm from the victim.</description>
+		<magicPoolCost>0.36</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SlaaneshStuporP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshSlothfulStupor_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_SlaaneshLethargy</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshSlothfulStupor_Master</defName>
+		<label>Slothful Stupor IV</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshSlothfulStupor</uiIconPath>
+		<description>Though perhaps not the vice with which Slaanesh is most closely associated, sloth is just one more form of excess for the Prince of Chaos, and his chosen wizards to feed upon. No natural malaise is this, but a deep and abiding spiritual ennui that saps all sense of purpose and enthusiasm from the victim.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SlaaneshStuporP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshSlothfulStupor_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_SlaaneshLethargy</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== From Pain, Pleasure =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_SlaaneshPainPleasureP</defName>
+		<label>From Pain, Pleasure</label>
+		<graphicData>
+			<texPath>Things/Projectile/Slaanesh/RH_TET_PleasurePain</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshPainPleasure_Mage</defName>
+		<label>From Pain, Pleasure I</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshPleasurePain</uiIconPath>
+		<description>Blasts of magic energy strike out, hitting the caster's target. The magic sears the target's body, causing pain in the target, and jealousy in the caster.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshPainPleasureP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshPainPleasure_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>13</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshPainPleasure_Wizard</defName>
+		<label>From Pain, Pleasure II</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshPleasurePain</uiIconPath>
+		<description>Blasts of magic energy strike out, hitting the caster's target. The magic sears the target's body, causing pain in the target, and jealousy in the caster.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshPainPleasureP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshPainPleasure_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>15</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshPainPleasure_Warlock</defName>
+		<label>From Pain, Pleasure III</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshPleasurePain</uiIconPath>
+		<description>Blasts of magic energy strike out, hitting the caster's target. The magic sears the target's body, causing pain in the target, and jealousy in the caster.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshPainPleasureP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshPainPleasure_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>16</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_SlaaneshPainPleasure_Master</defName>
+		<label>From Pain, Pleasure IV</label>
+		<uiIconPath>UI/Magic/RH_TET_SlaaneshPleasurePain</uiIconPath>
+		<description>Blasts of magic energy strike out, hitting the caster's target. The magic sears the target's body, causing pain in the target, and jealousy in the caster.</description>
+		<magicPoolCost>0.34</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_SlaaneshPainPleasureP</defaultProjectile>
+			<abilityDef>RH_TET_SlaaneshPainPleasure_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>12</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Explosion_EMP</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>18</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Urannon's Thunderbolt -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Thunderbolt</thingClass>
+		<defName>RH_TET_HeavensUrannonsThunderboltP</defName>
+		<label>Urannon's Thunderbolt</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HeavensThunderbolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensUrannonsThunderbolt_Mage</defName>
+		<label>Urannon's Thunderbolt I</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensThunderbolt</uiIconPath>
+		<description>With a crack of thunder, the wizard calls down an almighty bolt of lightning upon the enemy.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensUrannonsThunderboltP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensUrannonsThunderbolt_Mage</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>40</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensUrannonsThunderbolt_Wizard</defName>
+		<label>Urannon's Thunderbolt II</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensThunderbolt</uiIconPath>
+		<description>With a crack of thunder, the wizard calls down an almighty bolt of lightning upon the enemy.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensUrannonsThunderboltP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensUrannonsThunderbolt_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>20</SecondsToRecharge>
+			<range>40</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensUrannonsThunderbolt_Warlock</defName>
+		<label>Urannon's Thunderbolt III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensThunderbolt</uiIconPath>
+		<description>With a crack of thunder, the wizard calls down an almighty bolt of lightning upon the enemy. This spell level will cause multiple bolts to fall.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensUrannonsThunderboltP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensUrannonsThunderbolt_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>20</SecondsToRecharge>
+			<range>40</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensUrannonsThunderbolt_Master</defName>
+		<label>Urannon's Thunderbolt IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensThunderbolt</uiIconPath>
+		<description>With a crack of thunder, the wizard calls down an almighty bolt of lightning upon the enemy. This spell level will cause multiple bolts to fall.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensUrannonsThunderboltP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensUrannonsThunderbolt_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>40</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Comet of Cassandra -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Comet</thingClass>
+		<defName>RH_TET_HeavensCometOfCassandoraP</defName>
+		<label>Comet of Cassandora</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HeavensComet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensCometOfCassandora_Mage</defName>
+		<label>Comet of Cassandora I</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensComet</uiIconPath>
+		<description>Reaching out across the Winds of Magic into the highest heavens, the wizard draws a wandering meteorite down towards the battlefield.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensCometOfCassandoraP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensCometOfCassandora_Mage</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>50</range>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensCometOfCassandora_Wizard</defName>
+		<label>Comet of Cassandora II</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensComet</uiIconPath>
+		<description>Reaching out across the Winds of Magic into the highest heavens, the wizard draws a wandering meteorite down towards the battlefield.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensCometOfCassandoraP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensCometOfCassandora_Wizard</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>18000</SecondsToRecharge>
+			<range>50</range>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensCometOfCassandora_Warlock</defName>
+		<label>Comet of Cassandora III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensComet</uiIconPath>
+		<description>Reaching out across the Winds of Magic into the highest heavens, the wizard draws a wandering meteorite down towards the battlefield.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensCometOfCassandoraP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensCometOfCassandora_Warlock</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>50</range>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensCometOfCassandora_Master</defName>
+		<label>Comet of Cassandora IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensComet</uiIconPath>
+		<description>Reaching out across the Winds of Magic into the highest heavens, the wizard draws a wandering meteorite down towards the battlefield. This highest version of the spell will cause multiple meteorites to come down.</description>
+		<magicPoolCost>0.60</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensCometOfCassandoraP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensCometOfCassandora_Master</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>50</range>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Harmonic Convergence -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_HeavensHarmonicConvergenceP</defName>
+		<label>Harmonic Convergence</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HeavensHarmonic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>15</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensHarmonicConvergence_Mage</defName>
+		<label>Harmonic Convergence I</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensHarmonic</uiIconPath>
+		<description>The caster boosts the physical state of his fellow warriors to enhance their outcomes in battle.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensHarmonicConvergenceP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensHarmonicConvergence_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowGrenade</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_HeavensHarmonicConvergenceI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensHarmonicConvergence_Wizard</defName>
+		<label>Harmonic Convergence II</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensHarmonic</uiIconPath>
+		<description>The caster boosts the physical state of his fellow warriors to enhance their outcomes in battle.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensHarmonicConvergenceP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensHarmonicConvergence_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>105.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowGrenade</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_HeavensHarmonicConvergenceII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensHarmonicConvergence_Warlock</defName>
+		<label>Harmonic Convergence III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensHarmonic</uiIconPath>
+		<description>The caster boosts the physical state of his fellow warriors to enhance their outcomes in battle.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensHarmonicConvergenceP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensHarmonicConvergence_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>50.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowGrenade</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_HeavensHarmonicConvergenceIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensHarmonicConvergence_Master</defName>
+		<label>Harmonic Convergence III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensHarmonic</uiIconPath>
+		<description>The caster boosts the physical state of his fellow warriors to enhance their outcomes in battle.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensHarmonicConvergenceP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensHarmonicConvergence_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThrowGrenade</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_HeavensHarmonicConvergenceIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Clear Sky -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_ClearSky</thingClass>
+		<defName>RH_TET_HeavensClearSkyP</defName>
+		<label>Clear Sky</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_HeavensClearSky</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensClearSky_Mage</defName>
+		<label>Clear Sky I</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensClearSky</uiIconPath>
+		<description>Drawing on the winds of magic, the caster removes any current extreme weather or celestial conditions that may exist. A massive high level wind blows through, and carries the effect away. Will only target one condition, be it a toxic fallout, a chaos storm, volcanic winter, or the like. Will not affect daily and normal weather patterns.</description>
+		<magicPoolCost>0.90</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensClearSkyP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensClearSky_Mage</abilityDef>
+			<warmupTime>6</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>1</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ShipTakeoff</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensClearSky_Wizard</defName>
+		<label>Clear Sky II</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensClearSky</uiIconPath>
+		<description>Drawing on the winds of magic, the caster removes any current extreme weather or celestial conditions that may exist. A massive high level wind blows through, and carries the effect away. Will only target one condition, be it a toxic fallout, a chaos storm, volcanic winter, or the like. Will not affect daily and normal weather patterns.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensClearSkyP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensClearSky_Wizard</abilityDef>
+			<warmupTime>6</warmupTime>
+			<SecondsToRecharge>13000</SecondsToRecharge>
+			<range>1</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ShipTakeoff</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensClearSky_Warlock</defName>
+		<label>Clear Sky III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensClearSky</uiIconPath>
+		<description>Drawing on the winds of magic, the caster removes any current extreme weather or celestial conditions that may exist. A massive high level wind blows through, and carries the effect away. Will only target one condition, be it a toxic fallout, a chaos storm, volcanic winter, or the like. Will not affect daily and normal weather patterns.</description>
+		<magicPoolCost>0.80</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensClearSkyP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensClearSky_Warlock</abilityDef>
+			<warmupTime>6</warmupTime>
+			<SecondsToRecharge>11000</SecondsToRecharge>
+			<range>1</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ShipTakeoff</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensClearSky_Master</defName>
+		<label>Clear Sky IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensClearSky</uiIconPath>
+		<description>Drawing on the winds of magic, the caster removes any current extreme weather or celestial conditions that may exist. A massive high level wind blows through, and carries the effect away. Will only target one condition, be it a toxic fallout, a chaos storm, volcanic winter, or the like. Will not affect daily and normal weather patterns.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_HeavensClearSkyP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensClearSky_Master</abilityDef>
+			<warmupTime>6</warmupTime>
+			<SecondsToRecharge>9000</SecondsToRecharge>
+			<range>1</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ShipTakeoff</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- Azure Blades -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_HeavensAzureBladesP</defName>
+		<label>Azure Blades</label>
+		<graphicData>
+			<texPath>Things/Projectile/Heavens/RH_TET_AzureBlade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicalSharp</damageDef>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>65</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensAzureBlades_Mage</defName>
+		<label>Azure Blades I</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensAzureBlades</uiIconPath>
+		<description>Thin, razor-like blades shoot from the wizard, whirling end over end like miniature stars, and strike the wizard's target, slicing them severely.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HeavensAzureBladesP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensAzureBlades_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>25</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Bow_Recurve</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>10</damage>
+					<damageDef>RH_TET_MagicalSharp</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensAzureBlades_Wizard</defName>
+		<label>Azure Blades II</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensAzureBlades</uiIconPath>
+		<description>Thin, razor-like blades shoot from the wizard, whirling end over end like miniature stars, and strike the wizard's target, slicing them severely.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HeavensAzureBladesP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensAzureBlades_Wizard</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>25</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Bow_Recurve</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>10</damage>
+					<damageDef>RH_TET_MagicalSharp</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensAzureBlades_Warlock</defName>
+		<label>Azure Blades III</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensAzureBlades</uiIconPath>
+		<description>Thin, razor-like blades shoot from the wizard, whirling end over end like miniature stars, and strike the wizard's target, slicing them severely.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HeavensAzureBladesP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensAzureBlades_Warlock</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>25</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Bow_Recurve</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>10</damage>
+					<damageDef>RH_TET_MagicalSharp</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_HeavensAzureBlades_Master</defName>
+		<label>Azure Blades IV</label>
+		<uiIconPath>UI/Magic/RH_TET_HeavensAzureBlades</uiIconPath>
+		<description>Thin, razor-like blades shoot from the wizard, whirling end over end like miniature stars, and strike the wizard's target, slicing them severely.</description>
+		<magicPoolCost>0.19</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_HeavensAzureBladesP</defaultProjectile>
+			<abilityDef>RH_TET_HeavensAzureBlades_Master</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>25</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>Bow_Recurve</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>10</damage>
+					<damageDef>RH_TET_MagicalSharp</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/ThingDef[defName = "Human"]/recipes</xpath>
+		<value>
+			<li>RH_TET_AdministerHealingPotion</li>
+		</value>
+	</Operation>
+	
+	<!-- Base mod presence fix. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>//PawnKindDef[defName = "RH_TET_JabberslytheSummoned"]/defaultFactionType</xpath>
+					<value>
+						<defaultFactionType>RH_TET_ChaosMonsterFaction</defaultFactionType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceSummoned"]/race/useMeatFrom</xpath>
+					<value>
+						<useMeatFrom>RH_TET_ChaosSpawnRace</useMeatFrom>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.001</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosSpawnRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.15</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosSpawnAncientRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.1</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_RazorgorRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.1</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_TuskgorAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.15</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosWarhoundRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.25</RH_TET_ChaosWastes>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_Beastmen_Raven_Race"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.20</RH_TET_ChaosWastes>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!--If Empre mod is present, add research to idols and relics. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Beastmen</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosSpawnRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.03</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.0001</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosSpawnAncientRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.01</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_RazorgorRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.01</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_TuskgorAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.05</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_ChaosWarhoundRaceAnimal"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.10</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_Beastmen_Raven_Race"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_Beastmen_OldGrowthForest>0.20</RH_TET_Beastmen_OldGrowthForest>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!--If Empre mod is present, add research to idols and relics. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Empire</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_FaithItemExoticBaseSigmar"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_FaithItemExoticBaseUlric"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_FaithItemExoticBaseShallya"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_Magic_FaithIdolBase"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_Magic_FaithIdolBase"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Empire_TableSculpting</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!--If skaven mod is present, add gasmask. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Skaven</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_PoisonGas"]/mote/immunizingApparelDefs</xpath>
+					<value>
+						<li>RH_TET_Skaven_Apparel_GasMask</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_CombatGas"]/mote/immunizingApparelDefs</xpath>
+					<value>
+						<li>RH_TET_Skaven_Apparel_GasMask</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!--If dwarfs mod is present, allow idol construction at dwarf sculpting spot. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Dwarfs</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_Magic_FaithIdolBase"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_DwarfPillarSculptingSpot</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_Magic_InstallMagicEye</li>
+						<li>RH_TET_Magic_InstallMagicArm</li>
+						<li>RH_TET_Magic_InstallMagicLeg</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Dwarf_Slayer_Race_Standard"]/recipes</xpath>
+					<value>
+						<li>RH_TET_Magic_InstallMagicEye</li>
+						<li>RH_TET_Magic_InstallMagicArm</li>
+						<li>RH_TET_Magic_InstallMagicLeg</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/RecipeDef[@Name = "CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>RH_TET_JabberTounge</li>
+			<li>RH_TET_TrollHeart</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RaidStrategyDef[defName = "ImmediateAttackSmart"]/arriveModes</xpath>
+		<value>
+			<li>RH_TET_EdgeDropGroups</li>
+			<li>RH_TET_CenterDrop</li>
+			<li>RH_TET_RandomDrop</li>
+			<!--<li>RH_TET_CenterDropMine</li>-->
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RaidStrategyDef[@Name = "ImmediateAttack"]/arriveModes</xpath>
+		<value>
+			<li>RH_TET_EdgeDropGroups</li>
+			<li>RH_TET_CenterDrop</li>
+			<li>RH_TET_RandomDrop</li>
+			<!--<li>RH_TET_CenterDropMine</li>-->
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/DesignationCategoryDef[defName = "Temperature"]/specialDesignatorClasses</xpath>
+		<value>
+			<li>TheEndTimes_Magic.Designator_RemoveSteamPipes</li>
+		</value>
+	</Operation>
+	
+</Patch>
+

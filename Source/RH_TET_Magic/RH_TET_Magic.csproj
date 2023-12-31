@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C53833E-4687-4D26-ABB6-52A112239B6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RH_TET_Magic</RootNamespace>
+    <AssemblyName>RH_TET_Magic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AbilityUser">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AbilityUserAI">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUserAI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.4\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ability\CompAbilityActionUser.cs" />
+    <Compile Include="Ability\AbilityActionAbility.cs" />
+    <Compile Include="Ability\AbilityActionAbilityDef.cs" />
+    <Compile Include="Ability\AbilityActionData.cs" />
+    <Compile Include="Ability\AbilityActionPower.cs" />
+    <Compile Include="AI\AbilityDecisionConditionalNode_EnemyTargetIsAnimal.cs" />
+    <Compile Include="AI\AbilityDecisionConditionalNode_EnemyTargetIsBuilding.cs" />
+    <Compile Include="BaseModDups\ChaosSpawn.cs" />
+    <Compile Include="Commands\Command_Rechargeable.cs" />
+    <Compile Include="Comps\CompHeDiffPotion.cs" />
+    <Compile Include="Comps\CompProperties_HeDiffPotion.cs" />
+    <Compile Include="Comps\CompUseEffect_GiveHeDiff.cs" />
+    <Compile Include="Comps\CompUseEffect_WitchhunterTome.cs" />
+    <Compile Include="Comps\Gizmo_MagicEnergyShieldStatus.cs" />
+    <Compile Include="Comps\CompMagicShield.cs" />
+    <Compile Include="Comps\CompProperties_MagicShield.cs" />
+    <Compile Include="Comps\CompProperties_ShieldKhorne.cs" />
+    <Compile Include="Comps\CompShieldKhorne.cs" />
+    <Compile Include="Comps\CompTendWounds.cs" />
+    <Compile Include="Comps\CompFastHealingPawn.cs" />
+    <Compile Include="Comps\CompProperties_TendWounds.cs" />
+    <Compile Include="Comps\CompProperties_LearningPotion.cs" />
+    <Compile Include="Comps\CompProperties_FastHealingPawn.cs" />
+    <Compile Include="Comps\CompUseEffect_LearnSkill.cs" />
+    <Compile Include="Hediff\HediffComp_ArmorOfDarkness.cs" />
+    <Compile Include="Hediff\HediffComp_ShadowsCompanion.cs" />
+    <Compile Include="Comps\CompProperties_Rechargeable.cs" />
+    <Compile Include="Comps\CompProperties_ThoughtGiver.cs" />
+    <Compile Include="Comps\CompRechargeable.cs" />
+    <Compile Include="Comps\CompTargetable_SingleHumanlikePawn.cs" />
+    <Compile Include="Comps\CompTargetEffect_CreateRelationship.cs" />
+    <Compile Include="Comps\CompThoughtGiver.cs" />
+    <Compile Include="Comps\CompPuffs.cs" />
+    <Compile Include="Comps\CompProperties_Puffs.cs" />
+    <Compile Include="Comps\CompUseEffect_FixHealthConditionRH.cs" />
+    <Compile Include="Comps\CompUseEffect_FixWorstHealthConditionRH.cs" />
+    <Compile Include="DarkGods\DarkGodDef.cs" />
+    <Compile Include="DarkGods\DarkGodTracker.cs" />
+    <Compile Include="DarkGods\Dialog_DarkGodInfoBox.cs" />
+    <Compile Include="DarkGods\WorldComponent_DarkGods.cs" />
+    <Compile Include="DarkGods\DarkGod.cs" />
+    <Compile Include="Faith\CompFaithUser.cs" />
+    <Compile Include="Faith\FaithData.cs" />
+    <Compile Include="Faith\FaithAbility.cs" />
+    <Compile Include="Faith\FaithAbilityDef.cs" />
+    <Compile Include="Faith\FaithPower.cs" />
+    <Compile Include="GasStuff\HediffCompProps_SeverityRecovery.cs" />
+    <Compile Include="GasStuff\HediffComp_SeverityRecovery.cs" />
+    <Compile Include="GasStuff\HediffDef_NonLethal.cs" />
+    <Compile Include="GasStuff\Hediff_NonLethal.cs" />
+    <Compile Include="GasStuff\PlayerAvoidanceGrids.cs" />
+    <Compile Include="GasStuff\CurveType.cs" />
+    <Compile Include="GasStuff\MagicGasUtility.cs" />
+    <Compile Include="GasStuff\Compatibility_DoorsExpanded.cs" />
+    <Compile Include="GasStuff\GasCloud_DamageDealer.cs" />
+    <Compile Include="GasStuff\InterpolationCurves.cs" />
+    <Compile Include="GasStuff\ValueInterpolator.cs" />
+    <Compile Include="GasStuff\MoteProperties_GasEffect.cs" />
+    <Compile Include="GasStuff\MoteProperties_GasCloud.cs" />
+    <Compile Include="GasStuff\Graphic_GasCloud.cs" />
+    <Compile Include="GasStuff\GasCloud.cs" />
+    <Compile Include="GasStuff\GasCloud_AffectThing.cs" />
+    <Compile Include="GasStuff\GasCloud_HediffGiver.cs" />
+    <Compile Include="Harmony\HarmonyPatches.cs" />
+    <Compile Include="Damages\DamageWorker_PowerLeveled.cs" />
+    <Compile Include="Damages\DamageWorker_Flying.cs" />
+    <Compile Include="Hediff\HediffComp_ShieldOfSaphery.cs" />
+    <Compile Include="Hediff\HediffComp_SigmarShield.cs" />
+    <Compile Include="Hediff\HediffComp_GlitteringRobe.cs" />
+    <Compile Include="Hediff\HediffComp_FireCloak.cs" />
+    <Compile Include="Hediff\HediffComp_MagicShield.cs" />
+    <Compile Include="Incidents\IncidentWorker_MagicTransportPodCrash.cs" />
+    <Compile Include="Incidents\IncidentWorker_MagicPodCrash.cs" />
+    <Compile Include="Incidents\IncidentWorker_JabberNearby.cs" />
+    <Compile Include="Alert\Alert_ShieldUserIsMagicUser.cs" />
+    <Compile Include="Comps\CompTargetEffect_EndMentalState.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollLowerGround.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollLightCantrip.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollZoneOfFertility.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollTransport.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollRaiseGround.cs" />
+    <Compile Include="Comps\CompUseEffect_ShallyaArtifactFortune.cs" />
+    <Compile Include="Comps\CompUseEffect_ShallyaArtifactRegrowth.cs" />
+    <Compile Include="Comps\CompUseEffect_GrantTraitChaosUndivided.cs" />
+    <Compile Include="Comps\CompUseEffect_JabberTongue.cs" />
+    <Compile Include="Comps\CompUseEffect_ScrollCurePoison.cs" />
+    <Compile Include="Comps\CompUseEffect_UlricArtifactWarhammer.cs" />
+    <Compile Include="Comps\CompUseEffect_UlricArtifactWinter.cs" />
+    <Compile Include="Comps\CompUseEffect_ShallyaArtifactLight.cs" />
+    <Compile Include="Comps\CompUseEffect_UlricArtifactWolf.cs" />
+    <Compile Include="Comps\CompUseEffect_SigmarArtifactComet.cs" />
+    <Compile Include="Comps\CompUseEffect_SigmarArtifactShield.cs" />
+    <Compile Include="Comps\CompUseEffect_SlaaneshPleasure.cs" />
+    <Compile Include="Comps\CompUseEffect_SigmarArtifactThunderbolt.cs" />
+    <Compile Include="Comps\CompUseEffect_TzeentchCoin.cs" />
+    <Compile Include="Items\Thing_MagicWeaponWithLight.cs" />
+    <Compile Include="Comps\CompLearningPotion.cs" />
+    <Compile Include="Items\Thing_UlricHammer.cs" />
+    <Compile Include="Items\Thing_SigmarHammer.cs" />
+    <Compile Include="Items\Thing_TzeentchRibbon.cs" />
+    <Compile Include="Items\Thing_KhorneAxe.cs" />
+    <Compile Include="Items\Thing_NurgleStar.cs" />
+    <Compile Include="Items\Thing_SlaaneshWhip.cs" />
+    <Compile Include="Items\Thing_TzeentchStaff.cs" />
+    <Compile Include="Jobs\JobDriver_PrayAwayTaint.cs" />
+    <Compile Include="Jobs\JobGiver_FaithMeditation.cs" />
+    <Compile Include="Jobs\JobGiver_AbilityMeditation.cs" />
+    <Compile Include="Jobs\JobGiver_PrayAwayTaint.cs" />
+    <Compile Include="MagicCreation\JobDriver_DoBillMagicBench.cs" />
+    <Compile Include="MagicCreation\Toils_RecipeMagicBench.cs" />
+    <Compile Include="MagicCreation\WorkGiver_DoBillMagicBench.cs" />
+    <Compile Include="Mental\ThoughtWorker_MagicApparel.cs" />
+    <Compile Include="ModExtensions\Projectile_ExplosiveGasExtended.cs" />
+    <Compile Include="ModExtensions\ProjectileCloundExtension.cs" />
+    <Compile Include="Needs\Need_FaithPool.cs" />
+    <Compile Include="Jobs\ThinkNode_ModHediffPercentageAbove.cs" />
+    <Compile Include="Needs\Need_AbilityPool.cs" />
+    <Compile Include="Needs\ThinkNode_ModNeedPercentageAbove.cs" />
+    <Compile Include="PawnArrival\MineInSpawner.cs" />
+    <Compile Include="PawnArrival\PawnsArrivalModeWorker_CenterDropMine.cs" />
+    <Compile Include="PawnArrival\PawnsArrivalModeWorker_CenterDrop.cs" />
+    <Compile Include="PawnArrival\PawnsArrivalModeWorker_RandomDrop.cs" />
+    <Compile Include="PawnArrival\PawnsArrivalModeWorker_EdgeDropGroups.cs" />
+    <Compile Include="Pawns\Jabberslythe.cs" />
+    <Compile Include="Pawns\Pawn_JabberslytheSummonedExpires.cs" />
+    <Compile Include="Pawns\PawnLeaper.cs" />
+    <Compile Include="Pawns\Pawn_WolfUlric.cs" />
+    <Compile Include="Pawns\Pawn_SummonedExpires.cs" />
+    <Compile Include="PlaceWorker\PlaceWorker_RadiusTwelve.cs" />
+    <Compile Include="PlaceWorker\PlaceWorker_UnderCeiling.cs" />
+    <Compile Include="Projectile\Projectile_LightCantrip.cs" />
+    <Compile Include="Projectile\Projectile_Transport.cs" />
+    <Compile Include="Projectile\Projectile_CloudOfFlies.cs" />
+    <Compile Include="Projectile\Projectile_AirOfPestilence.cs" />
+    <Compile Include="Projectile\Projectile_TracelessDemise.cs" />
+    <Compile Include="Projectile\Projectile_Trollguts.cs" />
+    <Compile Include="Projectile\Projectile_VerminousRuin.cs" />
+    <Compile Include="Projectile\Projectile_RatThrall.cs" />
+    <Compile Include="Projectile\Projectile_GhostlyFlame.cs" />
+    <Compile Include="Projectile\Projectile_StreamOfCorruption.cs" />
+    <Compile Include="Projectile\Projectile_NurgleBoon.cs" />
+    <Compile Include="Projectile\Projectile_ShallyaRegrowth.cs" />
+    <Compile Include="Projectile\Projectile_HealingLight.cs" />
+    <Compile Include="Projectile\Projectile_NurgleRotbomb.cs" />
+    <Compile Include="Projectile\Projectile_ChaosVeilOfCorruption.cs" />
+    <Compile Include="Projectile\Projectile_UlricWarhammer.cs" />
+    <Compile Include="Projectile\Projectile_FlockOfDoom.cs" />
+    <Compile Include="Projectile\Projectile_UlricWolves.cs" />
+    <Compile Include="Projectile\Projectile_UlricVortex.cs" />
+    <Compile Include="Projectile\Projectile_IlluminateTheEdifice.cs" />
+    <Compile Include="Projectile\Projectile_Regenerate.cs" />
+    <Compile Include="Projectile\Projectile_EnstableMind.cs" />
+    <Compile Include="Projectile\Projectile_DirectDamagePawnLaser.cs" />
+    <Compile Include="Projectile\Projectile_FinalTransmutation.cs" />
+    <Compile Include="Projectile\Projectile_FireAegis.cs" />
+    <Compile Include="Projectile\Projectile_Comet.cs" />
+    <Compile Include="Projectile\Projectile_ClearSky.cs" />
+    <Compile Include="Projectile\Projectile_ForgeOfChamon.cs" />
+    <Compile Include="Projectile\Projectile_Thunderbolt.cs" />
+    <Compile Include="Projectile\Projectile_FlameStorm.cs" />
+    <Compile Include="Projectile\Projectile_SavageDominion.cs" />
+    <Compile Include="Projectile\Projectile_DeathPurpleSun.cs" />
+    <Compile Include="Projectile\Projectile_DirectDamage.cs" />
+    <Compile Include="RelicCreation\WorkGiver_DoBillIdolShallya.cs" />
+    <Compile Include="RelicCreation\JobDriver_DoBillIdol.cs" />
+    <Compile Include="RelicCreation\Toils_RecipeIdol.cs" />
+    <Compile Include="RelicCreation\WorkGiver_DoBillIdolBase.cs" />
+    <Compile Include="RelicCreation\WorkGiver_DoBillIdolUlric.cs" />
+    <Compile Include="RelicCreation\WorkGiver_DoBillIdolSigmar.cs" />
+    <Compile Include="Repair\JobDriver_DoBillMagic.cs" />
+    <Compile Include="Repair\JobDriver_Repair.cs" />
+    <Compile Include="Repair\RecipeWorkerWithJob_Repair.cs" />
+    <Compile Include="Repair\RecipeWorkerWithJob.cs" />
+    <Compile Include="Settings\SettingsController.cs" />
+    <Compile Include="SteamPower\CompGeothermalBoiler.cs" />
+    <Compile Include="SteamPower\CompSteamUser.cs" />
+    <Compile Include="SteamPower\CompProperties_SteamUser.cs" />
+    <Compile Include="SteamPower\CompTemperatureControl.cs" />
+    <Compile Include="SteamPower\Designator_RemoveSteamPipes.cs" />
+    <Compile Include="SteamPower\SectionLayer_SteamPipeOverlay.cs" />
+    <Compile Include="SteamPower\DefExtensions.cs" />
+    <Compile Include="SteamPower\PlaceWorker_SteamPipe.cs" />
+    <Compile Include="SteamPower\SteamPowerUtils.cs" />
+    <Compile Include="SteamPower\MagicSteamCompTempControl.cs" />
+    <Compile Include="SteamPower\Building_SteamValve.cs" />
+    <Compile Include="SteamPower\CompBoiler.cs" />
+    <Compile Include="SteamPower\CompHeatStore.cs" />
+    <Compile Include="SteamPower\Gizmo_BoilerStatus.cs" />
+    <Compile Include="SteamPower\CompProperties_HeatStore.cs" />
+    <Compile Include="SteamPower\CompRadiator.cs" />
+    <Compile Include="SteamPower\CompProperties_CompBoiler.cs" />
+    <Compile Include="SteamPower\CompProperties_Radiator.cs" />
+    <Compile Include="SteamPower\CompProperties_Thermostat.cs" />
+    <Compile Include="SteamPower\CompThermostat.cs" />
+    <Compile Include="SteamPower\Graphic_LinkedPipeOverlay.cs" />
+    <Compile Include="SteamPower\GraphicsCache.cs" />
+    <Compile Include="SteamPower\HeatStore.cs" />
+    <Compile Include="SteamPower\CompProperties_SteamPipe.cs" />
+    <Compile Include="SteamPower\PipeType.cs" />
+    <Compile Include="SteamPower\Graphic_LinkedPipe.cs" />
+    <Compile Include="SteamPower\PlumbingNet.cs" />
+    <Compile Include="SteamPower\SteamPipeMapComp.cs" />
+    <Compile Include="SteamPower\CompSteamPipe.cs" />
+    <Compile Include="SteamPower\Building_SteamPipe.cs" />
+    <Compile Include="Things\Building_CleaningStatue.cs" />
+    <Compile Include="Things\FlameTornado.cs" />
+    <Compile Include="Things\FlyingObject.cs" />
+    <Compile Include="Pawns\Pawn_Raven.cs" />
+    <Compile Include="UI\Gizmo_MagicShieldStatus.cs" />
+    <Compile Include="UI\Gizmo_HediffArmorOfDarknessStatus.cs" />
+    <Compile Include="UI\Gizmo_HediffShieldSapheryStatus.cs" />
+    <Compile Include="UI\Gizmo_HediffSigmarShieldStatus.cs" />
+    <Compile Include="UI\Gizmo_HediffGlitteringRobeStatus.cs" />
+    <Compile Include="UI\Gizmo_HediffFireCloakStatus.cs" />
+    <Compile Include="UI\ITab_Pawn_AbilityAction.cs" />
+    <Compile Include="UI\ITab_Pawn_Faith.cs" />
+    <Compile Include="Utilities\AbilityActionCardUtility.cs" />
+    <Compile Include="Utilities\FaithCardUtility.cs" />
+    <Compile Include="Utilities\MagicTransportPodUtility.cs" />
+    <Compile Include="Verbs\Verb_CurePoison.cs" />
+    <Compile Include="Verbs\Verb_LowerGround.cs" />
+    <Compile Include="Verbs\Verb_GrimResolve.cs" />
+    <Compile Include="Verbs\Verb_Execute.cs" />
+    <Compile Include="Verbs\Verb_PurifyingFlame.cs" />
+    <Compile Include="Verbs\Verb_TrollGuts.cs" />
+    <Compile Include="Verbs\Verb_UseAbilityGeneral.cs" />
+    <Compile Include="Verbs\Verb_ZoneOfFertility.cs" />
+    <Compile Include="Verbs\Verb_RaiseGround.cs" />
+    <Compile Include="Verbs\Verb_ShallyaLight.cs" />
+    <Compile Include="Verbs\Verb_Lifebloom.cs" />
+    <Compile Include="Verbs\Verb_ShadowsCompanion.cs" />
+    <Compile Include="Verbs\Verb_Swiftscamper.cs" />
+    <Compile Include="Verbs\Verb_Skitterleap.cs" />
+    <Compile Include="Verbs\Verb_Toothcracker.cs" />
+    <Compile Include="Verbs\Verb_Braingobbler.cs" />
+    <Compile Include="Verbs\Verb_InfectingGaze.cs" />
+    <Compile Include="Verbs\Verb_CurseOfHornedRat.cs" />
+    <Compile Include="Verbs\Verb_RedPox.cs" />
+    <Compile Include="Verbs\Verb_Apotheosis.cs" />
+    <Compile Include="Verbs\Verb_PhoenixFlames.cs" />
+    <Compile Include="Verbs\Verb_LaunchProjectileStaticReloadable.cs" />
+    <Compile Include="Verbs\Verb_Leap.cs" />
+    <Compile Include="Verbs\Verb_BurningBlood.cs" />
+    <Compile Include="Verbs\Verb_KnockDown.cs" />
+    <Compile Include="Verbs\Verb_Stupor.cs" />
+    <Compile Include="Verbs\Verb_Pestilence.cs" />
+    <Compile Include="Verbs\Verb_Snare.cs" />
+    <Compile Include="Verbs\Verb_Manacles.cs" />
+    <Compile Include="Verbs\Verb_ShallyaFortune.cs" />
+    <Compile Include="Verbs\Verb_UseAbilityFaith.cs" />
+    <Compile Include="Verbs\Verb_UseAbility_TrueBurstFaith.cs" />
+    <Compile Include="Verbs\Verb_ChaosBoon.cs" />
+    <Compile Include="Verbs\Verb_UseAbility_TrueBurstMultiMiscast.cs" />
+    <Compile Include="Verbs\Verb_WindOfDeath.cs" />
+    <Compile Include="Verbs\Verb_WildForm.cs" />
+    <Compile Include="Verbs\Verb_AmberTrance.cs" />
+    <Compile Include="Verbs\Verb_BestialSurge.cs" />
+    <Compile Include="Verbs\Verb_ClearFaction.cs" />
+    <Compile Include="Verbs\Verb_BrayScream.cs" />
+    <Compile Include="Verbs\Verb_CureBlight.cs" />
+    <Compile Include="Verbs\Verb_DrainLife.cs" />
+    <Compile Include="Verbs\Verb_StealLife.cs" />
+    <Compile Include="Verbs\Verb_TameAnimal.cs" />
+    <Compile Include="Verbs\Verb_ConsiderLineOfSight.cs" />
+    <Compile Include="Verbs\Verb_UseAbility_TrueBurstMiscast.cs" />
+    <Compile Include="Verbs\Verb_UseAbilityMiscast.cs" />
+    <Compile Include="Projectile\Projectile_TzeentchIndigoFire.cs" />
+    <Compile Include="Things\Building_MagicMeditationSpot.cs" />
+    <Compile Include="UI\Gizmo_HediffMagicShieldStatus.cs" />
+    <Compile Include="Jobs\JobGiver_MagicMeditation.cs" />
+    <Compile Include="Damages\DamageWorker_MagicalHealing.cs" />
+    <Compile Include="Utilities\MagicCardUtility.cs" />
+    <Compile Include="Magic\MagicAbilityDef.cs" />
+    <Compile Include="UI\ITab_Pawn_Magic.cs" />
+    <Compile Include="MagicLoreType.cs" />
+    <Compile Include="Jobs\JobDriver_MagicMeditation.cs" />
+    <Compile Include="MagicPoolCategory.cs" />
+    <Compile Include="Magic\MagicPower.cs" />
+    <Compile Include="UI\TexButton.cs" />
+    <Compile Include="Needs\Need_MagicPool.cs" />
+    <Compile Include="Utilities\MagicUtility.cs" />
+    <Compile Include="Magic\MagicData.cs" />
+    <Compile Include="Magic\CompMagicUser.cs" />
+    <Compile Include="Magic\MagicAbility.cs" />
+    <Compile Include="RH_TET_MagicDefOf.cs" />
+    <Compile Include="RH_TET_MagicMod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorldObjects\MagicPodLeaving.cs" />
+    <Compile Include="WorldObjects\MagicPodIncoming.cs" />
+    <Compile Include="WorldObjects\MagicTransportPodsArrivalAction_AttackSettlement.cs" />
+    <Compile Include="WorldObjects\MagicTransportPodsArrivalAction_LandInSpecificCell.cs" />
+    <Compile Include="WorldObjects\ActiveMagicPod.cs" />
+    <Compile Include="WorldObjects\TravelingMagicTransportPods.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

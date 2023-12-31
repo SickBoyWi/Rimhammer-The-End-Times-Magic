@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityUser.AbilityDef Name="RH_TET_BaseFaithAbility" Abstract="True">
+		<abilityClass>TheEndTimes_Magic.FaithAbility</abilityClass>
+		<uiIconPath>UI/Glow_Corrupt</uiIconPath>
+	</AbilityUser.AbilityDef>
+
+	<!-- Thunderbolt -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Thunderbolt</thingClass>
+		<defName>RH_TET_SigmarThunderboltP</defName>
+		<label>Thunderbolts of Sigmar</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_SigmarThunderbolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Sigmar_Thunderbolt</defName>
+		<label>Sigmar's Lightning</label>
+		<uiIconPath>UI/Faith/RH_TET_SigmarThunderbolt</uiIconPath>
+		<description>The faithful calls on Sigmar to send down a series of almighty bolts of lightning upon the enemy, smiting them where they stand.</description>
+		<faithPoolCost>0.65</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SigmarThunderboltP</defaultProjectile>
+			<abilityDef>RH_TET_Sigmar_Thunderbolt</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1000</SecondsToRecharge>
+			<range>45</range>
+			<soundCast>Thunder_OnMap</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>true</isViolent>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Comet -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Comet</thingClass>
+		<defName>RH_TET_SigmarCometP</defName>
+		<label>Comets of Sigmar</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_SigmarComet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Sigmar_Comet</defName>
+		<label>Comets of Sigmar</label>
+		<uiIconPath>UI/Faith/RH_TET_SigmarComet</uiIconPath>
+		<description>The faithful calls on Sigmar to send down a series of comets at the desired location, smashing foes, and leaving resources as well.</description>
+		<faithPoolCost>0.85</faithPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_SigmarCometP</defaultProjectile>
+			<abilityDef>RH_TET_Sigmar_Comet</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>50</range>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>true</isViolent>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Shield -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_SigmarShieldP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Shield of Faith</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_SigmarShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Sigmar_Shield</defName>
+		<label>Shield of Faith</label>
+		<uiIconPath>UI/Faith/RH_TET_SigmarShield</uiIconPath>
+		<description>The faithful says a prayer, and the power of Sigmar manifests in the form of a shield as hard as castle-forged steel. Makes the faithful invulnerable to attack while the shield is in effect.</description>
+		<faithPoolCost>0.35</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_Sigmar_Shield</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_SigmarShieldP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>1000</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_SigmarShield</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>1.0</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Ulric -->
+	<!-- Vortex -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_UlricVortex</thingClass>
+		<defName>RH_TET_UlricVortexP</defName>
+		<label>Winter Vortex</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_UlricVortex</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Ulric_Winter</defName>
+		<label>Winter Vortex</label>
+		<uiIconPath>UI/Faith/RH_TET_UlricVortex</uiIconPath>
+		<description>Creates a vortex to some far frozen lands, and pulls frigid air from that location until the spell dissipates. The cold can freeze people or animals dead, but can also keep food stuffs frozen for preservation.\n\nThe vortex will survive under its own power for a long time, then dies. Once created, it cannot be moved or deconstructed.</description>
+		<faithPoolCost>0.75</faithPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_UlricVortexP</defaultProjectile>
+			<abilityDef>RH_TET_Ulric_Winter</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge><!-- 20 days -->
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Wolves -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_UlricWolves</thingClass>
+		<defName>RH_TET_UlricWolfP</defName>
+		<label>Wolves of Ulric</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_UlricWolf</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Ulric_Wolf</defName>
+		<label>Wolves of Ulric</label>
+		<uiIconPath>UI/Faith/RH_TET_UlricWolf</uiIconPath>
+		<description>The faithful calls on Ulric to send assistance. That assistance will arrive in the form of massive vicious wolves. The wolves will attack any one nearby, so be cautious not to call on the aid too nearby. The wolves can be unsummoned by the controlling player. Should one of the wolves die, or be downed, it will disappear; returning to Ulric to be revived to fight another day. Otherwise it will stay for a short time, and then Ulric will recall it. Remember: Don't cast this close to your allies, as they show up very angry, and will attack any one nearby.</description>
+		<faithPoolCost>0.60</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_UlricWolfP</defaultProjectile>
+			<abilityDef>RH_TET_Ulric_Wolf</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>1000</SecondsToRecharge>
+			<range>45</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>true</isViolent>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Warhammer -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_UlricWarhammer</thingClass>
+		<defName>RH_TET_UlricWarhammerP</defName>
+		<label>Ulric's Warhammer</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_UlricWarhammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>3</explosionRadius>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Ulric_Warhammer</defName>
+		<label>Ulric's Warhammer</label>
+		<uiIconPath>UI/Faith/RH_TET_UlricWarhammer</uiIconPath>
+		<description>The faithful calls on Ulric to smite nearby enemies. Ulric will swing his mighty warhammer, and smash it down on the land at the selected spot. The warhammer will smash mountains, structures, and living things; leaving nothing left standing where it lands.</description>
+		<faithPoolCost>0.40</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_UlricWarhammerP</defaultProjectile>
+			<abilityDef>RH_TET_Ulric_Warhammer</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>5000</SecondsToRecharge>
+			<range>30</range>
+			<soundCast>RH_TET_Magic_SoundBrayScream</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>true</isViolent>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Shallya -->
+	<!-- Healing Light -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<!--<thingClass>TheEndTimes_Magic.Projectile_ShallyaLight</thingClass>-->
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_ShallyaLightP</defName>
+		<label>Shallya's Light</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shallya/RH_TET_ShallyaLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Shallya_Light</defName>
+		<label>Shallya's Light</label>
+		<uiIconPath>UI/Faith/RH_TET_ShallyaLight</uiIconPath>
+		<description>The faithful calls on Shallya to heal nearby allies. Shallya will send her healing light to heal one current injury of each ally in the target area. Will not affect permanent injuries.</description>
+		<faithPoolCost>0.25</faithPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<!--<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstFaith</verbClass>-->
+			<verbClass>TheEndTimes_Magic.Verb_ShallyaLight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_ShallyaLightP</defaultProjectile>
+			<abilityDef>RH_TET_Shallya_Light</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>360</SecondsToRecharge>
+			<range>10</range>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast><!-- FIND NEW SOUND -->
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>30</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Regrowth -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_ShallyaRegrowthP</defName>
+		<thingClass>TheEndTimes_Magic.Projectile_ShallyaRegrowth</thingClass>
+		<label>Regrowth</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_ShallyaRegrowth</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<HealFailChance>0</HealFailChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Shallya_Regrowth</defName>
+		<label>Regrowth</label>
+		<uiIconPath>UI/Faith/RH_TET_ShallyaRegrowth</uiIconPath>
+		<description>Heals a pawn with the power of Shallya. Will regrow missing limbs or body parts, cure disease, and even heal permanent injuries. Shallya blesses the faithful, and assists her allies in the fight against the corruption of the world.</description>
+		<faithPoolCost>.95</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_Shallya_Regrowth</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShallyaRegrowthP</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+
+	<!-- Fortune -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<defName>RH_TET_ShallyaFortuneP</defName>
+		<label>Shallya's Fortune</label>
+		<graphicData>
+			<texPath>UI/Faith/RH_TET_ShallyaFortune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.FaithAbilityDef ParentName="RH_TET_BaseFaithAbility">
+		<defName>RH_TET_Shallya_Fortune</defName>
+		<label>Shallya's Fortune</label>
+		<uiIconPath>UI/Faith/RH_TET_ShallyaFortune</uiIconPath>
+		<description>The faithful calls upon Shallya for a boon, and one is delivered. Affects a size 30 diameter circle from the user. Friendly pawns in that area will get a boost to healing rate and work speed, as well as a mood boost. The good fortune will last for three days. In addition, all filth in the 30 cell diametercircle from the caster that exists at the time of casting will be instantly cleaned up.</description>
+		<faithPoolCost>.80</faithPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ShallyaFortune</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_Shallya_Fortune</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_ShallyaFortuneP</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>10000</SecondsToRecharge>
+			<range>0</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>true</startsFromCaster>
+				<maxTargets>65</maxTargets>
+				<range>15</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.FaithAbilityDef>
+ 
+</Defs>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<AbilityUserAI.AbilityAIDef Name="RH_TET_Magic_BaseMagicAbilityAI" Abstract="True">
+		<maxRange>50.0</maxRange>
+		<tags>
+			<li>RH_TET_MagicAI</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+	<!-- =================== Death Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_DeathWizardAI">
+		<defName>RH_TET_Magic_DeathWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfDeathTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_DeathManacles_MageAI</li>
+			<li>RH_TET_DeathManacles_WizardAI</li>
+			<li>RH_TET_DeathManacles_WarlockAI</li>
+			<li>RH_TET_DeathManacles_MasterAI</li>
+			
+			<li>RH_TET_DeathPurpleSun_MageAI</li>
+			<li>RH_TET_DeathPurpleSun_WizardAI</li>
+			<li>RH_TET_DeathPurpleSun_WarlockAI</li>
+			<li>RH_TET_DeathPurpleSun_MasterAI</li>
+			
+			<li>RH_TET_DeathStealLife_MageAI</li>
+			<li>RH_TET_DeathStealLife_WizardAI</li>
+			<li>RH_TET_DeathStealLife_WarlockAI</li>
+			<li>RH_TET_DeathStealLife_MasterAI</li>
+			
+			<li>RH_TET_DeathWindOfDeath_MageAI</li>
+			<li>RH_TET_DeathWindOfDeath_WizardAI</li>
+			<li>RH_TET_DeathWindOfDeath_WarlockAI</li>
+			<li>RH_TET_DeathWindOfDeath_MasterAI</li>
+			
+			<li>RH_TET_DeathSoulBlight_MageAI</li>
+			<li>RH_TET_DeathSoulBlight_WizardAI</li>
+			<li>RH_TET_DeathSoulBlight_WarlockAI</li>
+			<li>RH_TET_DeathSoulBlight_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_DeathWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Manacles</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Manacles</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>3.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Manacles</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WindOfDeath</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>StealLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>PurpleSun</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SoulBlight</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathManacles_MageAI</defName>
+		<ability>RH_TET_DeathManacles_Mage</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Manacles</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathManacles_WizardAI</defName>
+		<ability>RH_TET_DeathManacles_Wizard</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Manacles</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathManacles_WarlockAI</defName>
+		<ability>RH_TET_DeathManacles_Warlock</ability>
+		<power>40.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Manacles</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathManacles_MasterAI</defName>
+		<ability>RH_TET_DeathManacles_Master</ability>
+		<power>45.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Manacles</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathPurpleSun_MageAI</defName>
+		<ability>RH_TET_DeathPurpleSun_Mage</ability>
+		<power>28.0</power>
+		<minRange>8.0</minRange>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PurpleSun</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathPurpleSun_WizardAI</defName>
+		<ability>RH_TET_DeathPurpleSun_Wizard</ability>
+		<power>28.0</power>
+		<minRange>8.0</minRange>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PurpleSun</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathPurpleSun_WarlockAI</defName>
+		<ability>RH_TET_DeathPurpleSun_Warlock</ability>
+		<power>28.0</power>
+		<minRange>8.0</minRange>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PurpleSun</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathPurpleSun_MasterAI</defName>
+		<ability>RH_TET_DeathPurpleSun_Master</ability>
+		<power>28.0</power>
+		<minRange>8.0</minRange>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>PurpleSun</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathStealLife_MageAI</defName>
+		<ability>RH_TET_DeathStealLife_Mage</ability>
+		<power>20.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>StealLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathStealLife_WizardAI</defName>
+		<ability>RH_TET_DeathStealLife_Wizard</ability>
+		<power>20.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>StealLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathStealLife_WarlockAI</defName>
+		<ability>RH_TET_DeathStealLife_Warlock</ability>
+		<power>20.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>StealLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathStealLife_MasterAI</defName>
+		<ability>RH_TET_DeathStealLife_Master</ability>
+		<power>20.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>StealLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathWindOfDeath_MageAI</defName>
+		<ability>RH_TET_DeathWindOfDeath_Mage</ability>
+		<power>15.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>WindOfDeath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathWindOfDeath_WizardAI</defName>
+		<ability>RH_TET_DeathWindOfDeath_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>WindOfDeath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathWindOfDeath_WarlockAI</defName>
+		<ability>RH_TET_DeathWindOfDeath_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>WindOfDeath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathWindOfDeath_MasterAI</defName>
+		<ability>RH_TET_DeathWindOfDeath_Master</ability>
+		<power>15.0</power>
+		<maxRange>25.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>WindOfDeath</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathSoulBlight_MageAI</defName>
+		<ability>RH_TET_DeathSoulBlight_Mage</ability>
+		<power>15.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>SoulBlight</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathSoulBlight_WizardAI</defName>
+		<ability>RH_TET_DeathSoulBlight_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>SoulBlight</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathSoulBlight_WarlockAI</defName>
+		<ability>RH_TET_DeathSoulBlight_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>SoulBlight</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_DeathSoulBlight_MasterAI</defName>
+		<ability>RH_TET_DeathSoulBlight_Master</ability>
+		<power>15.0</power>
+		<maxRange>28.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>SoulBlight</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

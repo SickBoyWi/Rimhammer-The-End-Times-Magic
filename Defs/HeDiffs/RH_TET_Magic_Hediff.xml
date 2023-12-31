@@ -1,0 +1,3162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Name="RH_TET_InjuryBaseHE" Abstract="True">
+		<hediffClass>Hediff_Injury</hediffClass>
+		<tendable>true</tendable>
+		<displayWound>true</displayWound>
+		<labelNounPretty>{0} in the {1}</labelNounPretty>
+	</HediffDef>
+  
+	<HediffDef Name="RH_TET_NoFindBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_CombatEnhanceBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>25000</min>
+					<max>30000</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_PawnEnhanceBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>55000</min>
+					<max>60000</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_PawnEnhanceTwoDaysBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>118000</min>
+					<max>125000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_CombatEnhanceShortBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>2500</min>
+					<max>2750</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>.7</severityPerDayNotImmune>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_CombatEnhanceLongerBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>3000</min>
+					<max>6000</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef Abstract="True" ParentName="RH_TET_NoFindBase" Name="RH_TET_CombatEnhanceBaseBetter">
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>3000</min>
+					<max>3600</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<NeedDef>
+		<defName>RH_TET_MagicPool</defName>
+		<needClass>TheEndTimes_Magic.Need_MagicPool</needClass>
+		<label>magic pool</label>
+		<description>Wizards's current magic pool level. To replenish, use a commune or meditation spot.</description>
+		<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+		<showOnNeedList>true</showOnNeedList>
+		<minIntelligence>Humanlike</minIntelligence>
+		<baseLevel>0.50</baseLevel>
+		<seekerRisePerHour>0.22</seekerRisePerHour>
+		<seekerFallPerHour>0.04</seekerFallPerHour>
+		<listPriority>900</listPriority>
+		<major>true</major>
+		<!--<freezeWhileSleeping>true</freezeWhileSleeping>-->
+		<showForCaravanMembers>true</showForCaravanMembers>
+	</NeedDef>
+  
+	<HediffDef>
+		<defName>RH_TET_MagicWielder</defName>
+		<description>This individual has the ability to see, capture, and weild the winds of magic.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>1.0</initialSeverity>
+		<label>magic wielder</label>
+		<causesNeed>RH_TET_MagicPool</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_InjuryBaseHE">
+		<defName>RH_TET_MagicMentalDamage</defName>
+		<description>Magical mental damage.</description>
+		<label>Magical</label>
+		<displayWound>false</displayWound>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>salved</labelTendedWell>
+				<labelTendedWellInner>bonded</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>destroyed by magical power</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.01</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.004</averagePainPerSeverityPermanent>
+			<bleedRate>0.002</bleedRate>
+			<canMerge>true</canMerge>
+			<destroyedLabel>blasted off</destroyedLabel>
+			<destroyedOutLabel>blasted out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+
+	<HediffDef ParentName="RH_TET_InjuryBaseHE">
+		<defName>RH_TET_MagicSharpDamage</defName>
+		<label>magic cut</label>
+		<labelNoun>a magic cut</labelNoun>
+		<description>A magical cut.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.15</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>magical cut scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0.06</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>Sliced off</destroyedLabel>
+			<destroyedOutLabel>Sliced out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_InjuryBaseHE">
+		<defName>RH_TET_MagicBluntDamage</defName>
+		<description>Magical blunt damage.</description>
+		<label>Magical</label>
+		<displayWound>true</displayWound>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>packed</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>destroyed by magic spell</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.004</averagePainPerSeverityPermanent>
+			<bleedRate>0.002</bleedRate>
+			<canMerge>true</canMerge>
+			<destroyedLabel>smashed off</destroyedLabel>
+			<destroyedOutLabel>blasted out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef ParentName="InjuryBase">
+		<defName>RH_TET_MagicBurn</defName>
+		<description>Magical burn damage.</description>
+		<label>magic burn</label>
+		<labelNoun>a magic burn wound</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.15</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0.015</bleedRate>
+			<canMerge>true</canMerge>
+			<destroyedLabel>Burned</destroyedLabel>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_MagicShield</defName>
+		<description>Magical shield to prevent damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Magic Shield</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_MagicShield</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_FireCloak</defName>
+		<description>Magical fire shield to prevent damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Fire Cloak</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_FireCloak</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_GlitteringRobe</defName>
+		<description>Magical glittering golden shield to prevent damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Glittering Robe</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_GlitteringRobe</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_ArmorOfDarkness</defName>
+		<description>Magically solidified shadows that protect the affected pawn from damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Armor of Darkness</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_ArmorOfDarkness</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_ShieldSaphery</defName>
+		<description>A shield of bright white magical energy that protects from ranged and melee attacks.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Shield of Saphery</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_ShieldOfSaphery</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2.0</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RH_TET_AmberTrance</defName>
+		<description>A magical trance.</description>
+		<label>amber trance</label>
+		<labelNoun>in a magic induced amber trance</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>60000</min>
+					<max>240000</max>
+				</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAmberTrance</stateEffecter>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_BeastsWyssonsWildformI</defName>
+		<description>A magical state that increases a pawns ability to fight, move, and take damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Wysson's Wildform</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<painOffset>-0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterWildform</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_BeastsWyssonsWildformII</defName>
+		<description>A magical state that increases a pawns ability to fight, move, and take damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Wysson's Wildform</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.6</restFallFactor>
+				<hungerRateFactor>1.6</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterWildform</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_BeastsWyssonsWildformIII</defName>
+		<description>A magical state that increases a pawns ability to fight, move, and take damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Wysson's Wildform</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2</restFallFactor>
+				<hungerRateFactor>2</hungerRateFactor>
+				<painOffset>-0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>.9</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.6</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterWildform</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_BeastsWyssonsWildformIV</defName>
+		<description>A magical state that increases a pawns ability to fight, move, and take damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Wysson's Wildform</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2.5</restFallFactor>
+				<hungerRateFactor>2.5</hungerRateFactor>
+				<painOffset>-0.5</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.65</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.7</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterWildform</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_InjuryBaseHE">
+		<defName>RH_TET_Poisoned</defName>
+		<description>Magical poisoning.</description>
+		<label>Poison</label>
+		<displayWound>true</displayWound>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>withered away</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.025</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0.0</bleedRate>
+			<canMerge>true</canMerge>
+			<destroyedLabel>withered</destroyedLabel>
+			<destroyedOutLabel>withered</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_Lethargic</defName>
+		<label>lethargic</label>
+		<description>This person has been drained by magic means, and will work slower until the effect wears off.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+				<disappearsAfterTicks>60000~180000</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>RH_TET_Slowed</defName>
+		<description>Magically slowed down.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+		<label>Lethargic</label>
+		<makesSickThought>false</makesSickThought>
+		<lethalSeverity>100</lethalSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-80</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>extreme</label>
+				<minSeverity>5</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.6</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ShadowEnfeeblingFoeI</defName>
+		<description>A magical state that weakens someone's ability to fight and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Enfeebling Foe</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterEnfeebled</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ShadowEnfeeblingFoeII</defName>
+		<description>A magical state that weakens someone's ability to fight and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Enfeebling Foe</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterEnfeebled</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ShadowEnfeeblingFoeIII</defName>
+		<description>A magical state that weakens someone's ability to fight and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Enfeebling Foe</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterEnfeebled</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ShadowEnfeeblingFoeIV</defName>
+		<description>A magical state that weakens someone's ability to fight and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Enfeebling Foe</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.45</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterEnfeebled</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_WildMantleGhorokI</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mantle of Ghorok</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<painOffset>-0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterMantle</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_WildMantleGhorokII</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mantle of Ghorok</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.6</restFallFactor>
+				<hungerRateFactor>1.6</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterMantle</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_WildMantleGhorokIII</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mantle of Ghorok</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2</restFallFactor>
+				<hungerRateFactor>2</hungerRateFactor>
+				<painOffset>-0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>.9</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.6</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterMantle</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_WildMantleGhorokIV</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mantle of Ghorok</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2.5</restFallFactor>
+				<hungerRateFactor>2.5</hungerRateFactor>
+				<painOffset>-0.5</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.65</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.7</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterMantle</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceLongerBase">
+		<defName>RH_TET_WildBestialSurge</defName>
+		<description>A magical state that makes someone move faster.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Bestial Surge</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.75</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterSurge</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceLongerBase">
+		<defName>RH_TET_StealthSwiftscamper</defName>
+		<description>A magical state that makes someone move faster.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Swiftscamper</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.75</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterSurge</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_SlaaneshLethargy</defName>
+		<description>A magical state that makes a person confused and lethargic.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Stupor</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterManacles</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_DeathManacles</defName>
+		<description>A magical state that makes someone move slower.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Manacles of Caloe</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.65</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterManacles</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_LightSnare</defName>
+		<description>A magical state that makes a pawn unable to move.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Abulla's Snare</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1.0</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterSnare</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_HeavensHarmonicConvergenceI</defName>
+		<description>A magical state that enhances someone's battle outcomes by making them a more excellent fighter.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Harmonic Convergence</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterConvergence</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_HeavensHarmonicConvergenceII</defName>
+		<description>A magical state that enhances someone's battle outcomes by making them a more excellent fighter.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Harmonic Convergence</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>-0.35</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.30</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterConvergence</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_HeavensHarmonicConvergenceIII</defName>
+		<description>A magical state that enhances someone's battle outcomes by making them a more excellent fighter.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Harmonic Convergence</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>-0.40</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.35</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterConvergence</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_HeavensHarmonicConvergenceIV</defName>
+		<description>A magical state that enhances someone's battle outcomes by making them a more excellent fighter.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Harmonic Convergence</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>-0.45</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.40</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.40</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.40</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.40</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterConvergence</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RH_TET_SigmarShield</defName>
+		<description>Magical glittering golden shield to prevent damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Shield of Faith</label>
+		<defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_SigmarShield</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-7.0</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_NurgleAfflictionsI</defName>
+		<description>A magical state that weakens one's physical stamina, healing ability, and overall health.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Afflictions</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAfflictions</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_NurgleAfflictionsII</defName>
+		<description>A magical state that weakens one's physical stamina, healing ability, and overall health.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Afflictions</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.2</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAfflictions</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_NurgleAfflictionsIII</defName>
+		<description>A magical state that weakens one's physical stamina, healing ability, and overall health.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Afflictions</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.3</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAfflictions</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_NurgleAfflictionsIV</defName>
+		<description>A magical state that weakens one's physical stamina, healing ability, and overall health.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Afflictions</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.45</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAfflictions</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceShortBase">
+		<defName>RH_TET_NurgleStreamOfCorruptionI</defName>
+		<description>A magical state that weakens one's physical stamina, healing ability, and overall health.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Nurgle Corruption</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterAfflictions</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RH_TET_Magic_Knockdown</defName>
+		<label>Knocked Down</label>
+		<labelNoun>been knocked down</labelNoun>
+		<description>A very brief state of mental shock which leads to a total inability to function. The victim collapses, but will arise quickly.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>100~500</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ChaosBoonI</defName>
+		<description>A magical state that grants the caster heightened skill with weaponry, strength of will, constitution, and even charisma.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Boon of Chaos</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.20</SocialImpact>
+					<MeleeHitChance>0.20</MeleeHitChance>
+					<MeleeDodgeChance>0.20</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.15</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterChaosBoon</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ChaosBoonII</defName>
+		<description>A magical state that grants the caster heightened skill with weaponry, strength of will, constitution, and even charisma.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Boon of Chaos</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.25</SocialImpact>
+					<MeleeHitChance>0.25</MeleeHitChance>
+					<MeleeDodgeChance>0.25</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.20</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterChaosBoon</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ChaosBoonIII</defName>
+		<description>A magical state that grants the caster heightened skill with weaponry, strength of will, constitution, and even charisma.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Boon of Chaos</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.30</SocialImpact>
+					<MeleeHitChance>0.30</MeleeHitChance>
+					<MeleeDodgeChance>0.30</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterChaosBoon</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ChaosBoonIV</defName>
+		<description>A magical state that grants the caster heightened skill with weaponry, strength of will, constitution, and even charisma.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Boon of Chaos</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.35</SocialImpact>
+					<MeleeHitChance>0.35</MeleeHitChance>
+					<MeleeDodgeChance>0.35</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.30</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterChaosBoon</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ApotheosisI</defName>
+		<description>Waves of pure magic infuse the caster's allies, improving their physical condition, and combat abilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Apotheosis</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.20</SocialImpact>
+					<MeleeHitChance>0.20</MeleeHitChance>
+					<MeleeDodgeChance>0.20</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.15</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterApotheosis</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ApotheosisII</defName>
+		<description>Waves of pure magic infuse the caster's allies, improving their physical condition, and combat abilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Apotheosis</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.25</SocialImpact>
+					<MeleeHitChance>0.25</MeleeHitChance>
+					<MeleeDodgeChance>0.25</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.20</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterApotheosis</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ApotheosisIII</defName>
+		<description>Waves of pure magic infuse the caster's allies, improving their physical condition, and combat abilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Apotheosis</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.30</SocialImpact>
+					<MeleeHitChance>0.30</MeleeHitChance>
+					<MeleeDodgeChance>0.30</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterApotheosis</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_ApotheosisIV</defName>
+		<description>Waves of pure magic infuse the caster's allies, improving their physical condition, and combat abilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Apotheosis</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<SocialImpact>0.35</SocialImpact>
+					<MeleeHitChance>0.35</MeleeHitChance>
+					<MeleeDodgeChance>0.35</MeleeDodgeChance>
+					<MeleeArmorPenetration>0.30</MeleeArmorPenetration>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterApotheosis</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_PlagueRedPoxI</defName>
+		<description>The caster vomits forth a crimson mist that rapidly moves across the battlefield, causing an instantaneous eruption of fist-sized boils and significant pain upon those targeted.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Red Pox</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>.8</hungerRateFactor>
+				<painOffset>0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterRedPox</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_PlagueRedPoxII</defName>
+		<description>The caster vomits forth a crimson mist that rapidly moves across the battlefield, causing an instantaneous eruption of fist-sized boils and significant pain upon those targeted.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Red Pox</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>.8</hungerRateFactor>
+				<painOffset>0.25</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterRedPox</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_PlagueRedPoxIII</defName>
+		<description>The caster vomits forth a crimson mist that rapidly moves across the battlefield, causing an instantaneous eruption of fist-sized boils and significant pain upon those targeted.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Red Pox</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>.8</hungerRateFactor>
+				<painOffset>0.25</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterRedPox</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_PlagueRedPoxIV</defName>
+		<description>The caster vomits forth a crimson mist that rapidly moves across the battlefield, causing an instantaneous eruption of fist-sized boils and significant pain upon those targeted.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Red Pox</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>.8</hungerRateFactor>
+				<painOffset>0.28</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterRedPox</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- NOTE: This idea was taken from the RemoteTech mod, and the effects of their sleeping gas. I'm trying to turn it into a kewl magic spell. Due to the tech level of Rimhammer being medieval, I need to reimplement the parts of their stuff that applies to the gas and gas effects. -->
+	<HediffDef Class="TheEndTimes_Magic.HediffDef_NonLethal">
+		<defName>RH_TET_PoisonGas</defName>
+		<description>The effects of poison gas.</description>
+		<hediffClass>TheEndTimes_Magic.Hediff_NonLethal</hediffClass>
+		<defaultLabelColor>(0.7, 0.1 , 1)</defaultLabelColor>
+		<label>poison gas</label>
+		<makesSickThought>true</makesSickThought>
+		<chanceToCauseNoPain>1</chanceToCauseNoPain>
+		<vanillaLethalityChance>.1</vanillaLethalityChance>
+		<maxSeverity>2.5</maxSeverity>
+		<comps>
+			<li Class="TheEndTimes_Magic.HediffCompProps_SeverityRecovery">
+				<compClass>TheEndTimes_Magic.HediffComp_SeverityRecovery</compClass>
+				<severityRecoveryPerTick>
+					<min>0.0001</min>
+					<max>0.0003</max>
+				</severityRecoveryPerTick>
+				<cooldownAfterSeverityIncrease>300</cooldownAfterSeverityIncrease>
+				<severityIncreaseDetectionThreshold>0.002</severityIncreaseDetectionThreshold>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label/>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<painOffset>.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>poisoned (some)</label>
+				<minSeverity>0.20</minSeverity>
+				<painOffset>.10</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>poisoned (moderate)</label>
+				<minSeverity>0.40</minSeverity>
+				<painOffset>.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.40</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>poisoned (high)</label>
+				<minSeverity>0.60</minSeverity>
+				<painOffset>.20</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.50</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>poisoned (downed)</label>
+				<minSeverity>0.80</minSeverity>
+				<painOffset>.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.10</setMax>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef Class="TheEndTimes_Magic.HediffDef_NonLethal">
+		<defName>RH_TET_CombatGas</defName>
+		<description>The effects of combat gas.</description>
+		<hediffClass>TheEndTimes_Magic.Hediff_NonLethal</hediffClass>
+		<defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+		<label>combat gas</label>
+		<makesSickThought>false</makesSickThought>
+		<chanceToCauseNoPain>0</chanceToCauseNoPain>
+		<vanillaLethalityChance>.1</vanillaLethalityChance>
+		<maxSeverity>2.5</maxSeverity>
+		<comps>
+			<li Class="TheEndTimes_Magic.HediffCompProps_SeverityRecovery">
+				<compClass>TheEndTimes_Magic.HediffComp_SeverityRecovery</compClass>
+				<severityRecoveryPerTick>
+					<min>0.0001</min>
+					<max>0.0002</max>
+				</severityRecoveryPerTick>
+				<cooldownAfterSeverityIncrease>100</cooldownAfterSeverityIncrease>
+				<severityIncreaseDetectionThreshold>0.002</severityIncreaseDetectionThreshold>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>enhanced (initial)</label>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>true</becomeVisible>
+				<restFallFactor>1.1</restFallFactor>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<painOffset>-0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>enhanced (some)</label>
+				<minSeverity>0.20</minSeverity>
+				<restFallFactor>1.2</restFallFactor>
+				<hungerRateFactor>1.2</hungerRateFactor>
+				<painOffset>-0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.3</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>enhanced (moderate)</label>
+				<minSeverity>0.40</minSeverity>
+				<restFallFactor>1.3</restFallFactor>
+				<hungerRateFactor>1.3</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.35</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>enhanced (high)</label>
+				<minSeverity>0.60</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<painOffset>-0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.45</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.45</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.45</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.45</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.40</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+			<li>
+				<label>enhanced (max)</label>
+				<minSeverity>0.80</minSeverity>
+				<restFallFactor>1.5</restFallFactor>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<painOffset>-0.5</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.45</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>false</lifeThreatening>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_Maw_BullgorgerI</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move; raw vitality from the Great Maw. Will make the affected pawns much hungrier than usual.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Bullgorger</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>I</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.4</restFallFactor>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<painOffset>-0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterBullgorger</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_Maw_BullgorgerII</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move; raw vitality from the Great Maw. Will make the affected pawns much hungrier than usual.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Bullgorger</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>II</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.6</restFallFactor>
+				<hungerRateFactor>1.6</hungerRateFactor>
+				<painOffset>-0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterBullgorger</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_Maw_BullgorgerIII</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move; raw vitality from the Great Maw. Will make the affected pawns much hungrier than usual.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Bullgorger</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>III</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2</restFallFactor>
+				<hungerRateFactor>2</hungerRateFactor>
+				<painOffset>-0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>.9</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.6</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterBullgorger</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_Maw_BullgorgerIV</defName>
+		<description>A magical state that enhances someone's ability to fight, take damage, and move; raw vitality from the Great Maw. Will make the affected pawns much hungrier than usual.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Bullgorger</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>IV</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>2.5</restFallFactor>
+				<hungerRateFactor>2.5</hungerRateFactor>
+				<painOffset>-0.5</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>.85</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.65</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.7</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.7</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterBullgorger</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBaseBetter">
+		<defName>RH_TET_Magic_Toothcracker</defName>
+		<label>toothcracker</label>
+		<labelNoun>a toothcracker spell</labelNoun>
+		<description>The effects of the Toothcracker spell from the Lore of the Maw. A pawn has their armor magically improved.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterToothcracker</stateEffecter>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>0.8</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+					<ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+					<ArmorRating_Heat>2.0</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>RH_TET_ShadowsCompanion_HE</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Shadow's Companion</label>
+		<description>Caused by Lore of Stealth spell with the same name. The pawn will effectively be invisible to enemies.</description>
+		<defaultLabelColor>(.35,.15,.85)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<maxSeverity>50.0</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>20</initialSeverity>
+		<comps>
+			<li>
+				<compClass>TheEndTimes_Magic.HediffComp_ShadowsCompanion</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label/>
+				<minSeverity>0.001</minSeverity>
+				<becomeVisible>true</becomeVisible>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+	<HediffDef ParentName="RH_TET_PawnEnhanceBase">
+		<defName>RH_TET_TrollHeartEffect</defName>
+		<description>A magical state that enhances one's healing ability.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Troll Heart</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>Boost</label>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0</painOffset>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>.25</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>.05</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+	<HediffDef ParentName="RH_TET_PawnEnhanceTwoDaysBase">
+		<defName>RH_TET_CharismaEffect</defName>
+		<description>A magical state that enhances a pawns social ability.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>charismatic</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<statOffsets>
+					<NegotiationAbility>.75</NegotiationAbility>
+					<PawnBeauty>.5</PawnBeauty>
+					<ArrestSuccessChance>1.0</ArrestSuccessChance>
+					<TradePriceImprovement>.350</TradePriceImprovement>
+					<SocialImpact>.5</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+	<HediffDef ParentName="RH_TET_PawnEnhanceTwoDaysBase">
+		<defName>RH_TET_MovementEffect</defName>
+		<description>A magical state that enhances a pawns movement.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>movement enhanced</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<statOffsets>
+					<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.34</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

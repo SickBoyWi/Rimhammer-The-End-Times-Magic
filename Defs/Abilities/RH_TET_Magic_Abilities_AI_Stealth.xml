@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Stealth Magic =================== -->
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_StealthWizardAI">
+		<defName>RH_TET_Magic_StealthWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfStealthTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_StealthSwiftscamper_MageAI</li>
+			<li>RH_TET_StealthSwiftscamper_WizardAI</li>
+			<li>RH_TET_StealthSwiftscamper_WarlockAI</li>
+			<li>RH_TET_StealthSwiftscamper_MasterAI</li>
+
+			<li>RH_TET_Stealth_ShadowsCompanion_MageAI</li>
+			<li>RH_TET_Stealth_ShadowsCompanion_WizardAI</li>
+			<li>RH_TET_Stealth_ShadowsCompanion_WarlockAI</li>
+			<li>RH_TET_Stealth_ShadowsCompanion_MasterAI</li>
+			
+			<li>RH_TET_StealthArmorOfDarkness_MageAI</li>
+			<li>RH_TET_StealthArmorOfDarkness_WizardAI</li>
+			<li>RH_TET_StealthArmorOfDarkness_WarlockAI</li>
+			<li>RH_TET_StealthArmorOfDarkness_MasterAI</li>
+			
+			<li>RH_TET_StealthTracelessDemise_MageAI</li>
+			<li>RH_TET_StealthTracelessDemise_WizardAI</li>
+			<li>RH_TET_StealthTracelessDemise_WarlockAI</li>
+			<li>RH_TET_StealthTracelessDemise_MasterAI</li>
+			
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthSwiftscamper_MageAI</defName>
+		<ability>RH_TET_StealthSwiftscamper_Mage</ability>
+		<power>30.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>SwiftScamper</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthSwiftscamper_WizardAI</defName>
+		<ability>RH_TET_StealthSwiftscamper_Wizard</ability>
+		<power>33.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>SwiftScamper</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthSwiftscamper_WarlockAI</defName>
+		<ability>RH_TET_StealthSwiftscamper_Warlock</ability>
+		<power>36.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>SwiftScamper</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthSwiftscamper_MasterAI</defName>
+		<ability>RH_TET_StealthSwiftscamper_Master</ability>
+		<power>39.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>SwiftScamper</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_Stealth_ShadowsCompanion_MageAI</defName>
+		<ability>RH_TET_Stealth_ShadowsCompanion_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>1.0</maxRange>
+		<tags>
+			<li>ShadowsCompanion</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_Stealth_ShadowsCompanion_WizardAI</defName>
+		<ability>RH_TET_Stealth_ShadowsCompanion_Wizard</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>1.0</maxRange>
+		<tags>
+			<li>ShadowsCompanion</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_Stealth_ShadowsCompanion_WarlockAI</defName>
+		<ability>RH_TET_Stealth_ShadowsCompanion_Warlock</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>1.0</maxRange>
+		<tags>
+			<li>ShadowsCompanion</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_Stealth_ShadowsCompanion_MasterAI</defName>
+		<ability>RH_TET_Stealth_ShadowsCompanion_Master</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>1.0</maxRange>
+		<tags>
+			<li>ShadowsCompanion</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthArmorOfDarkness_MageAI</defName>
+		<ability>RH_TET_StealthArmorOfDarkness_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>2.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>ArmorDarkness</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthArmorOfDarkness_WizardAI</defName>
+		<ability>RH_TET_StealthArmorOfDarkness_Wizard</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>2.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>ArmorDarkness</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthArmorOfDarkness_WarlockAI</defName>
+		<ability>RH_TET_StealthArmorOfDarkness_Warlock</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>2.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>ArmorDarkness</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthArmorOfDarkness_MasterAI</defName>
+		<ability>RH_TET_StealthArmorOfDarkness_Master</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>2.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>ArmorDarkness</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthTracelessDemise_MageAI</defName>
+		<ability>RH_TET_StealthTracelessDemise_Mage</ability>
+		<power>60.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>15.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>TracelessDemise</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthTracelessDemise_WizardAI</defName>
+		<ability>RH_TET_StealthTracelessDemise_Wizard</ability>
+		<power>60.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>TracelessDemise</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthTracelessDemise_WarlockAI</defName>
+		<ability>RH_TET_StealthTracelessDemise_Warlock</ability>
+		<power>60.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>25.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>TracelessDemise</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_StealthTracelessDemise_MasterAI</defName>
+		<ability>RH_TET_StealthTracelessDemise_Master</ability>
+		<power>60.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>30.0</maxRange>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>TracelessDemise</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_StealthWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- Not in combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<invert>true</invert>
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+							<tags>
+								<li>SwiftScamper</li>
+								<li>ArmorDarkness</li>
+							</tags>
+						</li>
+					</subNodes>
+				</li>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ArmorDarkness</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SwiftScamper</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ShadowsCompanion</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ShadowsCompanion</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ArmorDarkness</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SwiftScamper</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ShadowsCompanion</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ArmorDarkness</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SwiftScamper</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>28.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ArmorDarkness</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>SwiftScamper</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>ShadowsCompanion</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+</Defs>

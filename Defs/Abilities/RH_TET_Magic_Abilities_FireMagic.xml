@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Aqshy's Aegis -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
+		<defName>RH_TET_FireAegisIP</defName>
+		<label>Aqshy's Aegis</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_FireAegis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Extinguish</damageDef>
+			<explosionRadius>4</explosionRadius>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<explosionEffect>ExtinguisherExplosion</explosionEffect>
+			<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
+		<defName>RH_TET_FireAegisIIP</defName>
+		<label>Aqshy's Aegis</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_FireAegis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Extinguish</damageDef>
+			<explosionRadius>6</explosionRadius>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<explosionEffect>ExtinguisherExplosion</explosionEffect>
+			<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
+		<defName>RH_TET_FireAegisIIIP</defName>
+		<label>Aqshy's Aegis</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_FireAegis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Extinguish</damageDef>
+			<explosionRadius>8</explosionRadius>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<explosionEffect>ExtinguisherExplosion</explosionEffect>
+			<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
+		<defName>RH_TET_FireAegisIVP</defName>
+		<label>Aqshy's Aegis</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_FireAegis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Extinguish</damageDef>
+			<explosionRadius>10</explosionRadius>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<explosionEffect>ExtinguisherExplosion</explosionEffect>
+			<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireAegis_Mage</defName>
+		<label>Aqshy's Aegis I</label>
+		<uiIconPath>UI/Magic/RH_TET_FireAegis</uiIconPath>
+		<description>Lash out with a large blast that will extinguish all fires in the selected area.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireAegisIP</defaultProjectile>
+			<abilityDef>RH_TET_FireAegis_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_Stun</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireAegis_Wizard</defName>
+		<label>Aqshy's Aegis II</label>
+		<uiIconPath>UI/Magic/RH_TET_FireAegis</uiIconPath>
+		<description>Lash out with a large blast that will extinguish all fires in the selected area.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireAegisIIP</defaultProjectile>
+			<abilityDef>RH_TET_FireAegis_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>22</SecondsToRecharge>
+			<range>32</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_Stun</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireAegis_Warlock</defName>
+		<label>Aqshy's Aegis III</label>
+		<uiIconPath>UI/Magic/RH_TET_FireAegis</uiIconPath>
+		<description>Lash out with a large blast that will extinguish all fires in the selected area.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireAegisIIIP</defaultProjectile>
+			<abilityDef>RH_TET_FireAegis_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_Stun</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireAegis_Master</defName>
+		<label>Aqshy's Aegis IV</label>
+		<uiIconPath>UI/Magic/RH_TET_FireAegis</uiIconPath>
+		<description>Lash out with a large blast that will extinguish all fires in the selected area.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireAegisIVP</defaultProjectile>
+			<abilityDef>RH_TET_FireAegis_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>10</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Explosion_Stun</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Breathe Fire -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_FireBreathFireP</defName>
+		<label>Breathe Fire</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_BreatheFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>1.0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireBreatheFire_Mage</defName>
+		<label>Breathe Fire I</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBreatheFire</uiIconPath>
+		<description>The caster breathes out a rolling burst of flame, akin to that of the dragons of legend.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireBreathFireP</defaultProjectile>
+			<abilityDef>RH_TET_FireBreatheFire_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireBreatheFire_Wizard</defName>
+		<label>Breathe Fire II</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBreatheFire</uiIconPath>
+		<description>The caster breathes out a rolling burst of flame, akin to that of the dragons of legend.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireBreathFireP</defaultProjectile>
+			<abilityDef>RH_TET_FireBreatheFire_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireBreatheFire_Warlock</defName>
+		<label>Breathe Fire III</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBreatheFire</uiIconPath>
+		<description>The caster breathes out a rolling burst of flame, akin to that of the dragons of legend.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireBreathFireP</defaultProjectile>
+			<abilityDef>RH_TET_FireBreatheFire_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireBreatheFire_Master</defName>
+		<label>Breathe Fire IV</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBreatheFire</uiIconPath>
+		<description>The caster breathes out a rolling burst of flame, akin to that of the dragons of legend.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireBreathFireP</defaultProjectile>
+			<abilityDef>RH_TET_FireBreatheFire_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Cascading Fire Cloak -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_FireCascadingFireCloakP</defName>
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<label>Cascading Fire Cloak</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_FireCloak</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+			<explosionRadius>2</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireCascadingCloak_Mage</defName>
+		<label>Cascading Fire Cloak I</label>
+		<uiIconPath>UI/Magic/RH_TET_FireCloak</uiIconPath>
+		<description>A shield of flame appears around the wizard, providing protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_FireCascadingCloak_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_FireCascadingFireCloakP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_FireCloak</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireCascadingCloak_Wizard</defName>
+		<label>Cascading Fire Cloak II</label>
+		<uiIconPath>UI/Magic/RH_TET_FireCloak</uiIconPath>
+		<description>A shield of flame appears around the wizard, providing protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_FireCascadingCloak_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_FireCascadingFireCloakP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_FireCloak</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireCascadingCloak_Warlock</defName>
+		<label>Cascading Fire Cloak III</label>
+		<uiIconPath>UI/Magic/RH_TET_FireCloak</uiIconPath>
+		<description>A shield of flame appears around the wizard, providing protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_FireCascadingCloak_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_FireCascadingFireCloakP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>90.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_FireCloak</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.75</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireCascadingCloak_Master</defName>
+		<label>Cascading Fire Cloak IV</label>
+		<uiIconPath>UI/Magic/RH_TET_FireCloak</uiIconPath>
+		<description>A shield of flame appears around the wizard, providing protection from ranged attacks.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_FireCascadingCloak_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_FireCascadingFireCloakP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>75.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_FireCloak</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.9</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Piercing Bolts of Burning -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_FirePiercingBoltsP</defName>
+		<label>Piercing Bolts of Burning</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_PiercingBolts</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FirePiercingBolts_Mage</defName>
+		<label>Piercing Bolts of Burning I</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBolts</uiIconPath>
+		<description>Focusing all his mystical might, the wizard strikes his foe with a flurry of incandescent missiles.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FirePiercingBoltsP</defaultProjectile>
+			<abilityDef>RH_TET_FirePiercingBolts_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>14</burstShotCount>
+			<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>4</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FirePiercingBolts_Wizard</defName>
+		<label>Piercing Bolts of Burning II</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBolts</uiIconPath>
+		<description>Focusing all his mystical might, the wizard strikes his foe with a flurry of incandescent missiles.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FirePiercingBoltsP</defaultProjectile>
+			<abilityDef>RH_TET_FirePiercingBolts_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>18</burstShotCount>
+			<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>5</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FirePiercingBolts_Warlock</defName>
+		<label>Piercing Bolts of Burning III</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBolts</uiIconPath>
+		<description>Focusing all his mystical might, the wizard strikes his foe with a flurry of incandescent missiles.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FirePiercingBoltsP</defaultProjectile>
+			<abilityDef>RH_TET_FirePiercingBolts_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>20</burstShotCount>
+			<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>6</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FirePiercingBolts_Master</defName>
+		<label>Piercing Bolts of Burning IV</label>
+		<uiIconPath>UI/Magic/RH_TET_FireBolts</uiIconPath>
+		<description>Focusing all his mystical might, the wizard strikes his foe with a flurry of incandescent missiles.</description>
+		<magicPoolCost>0.19</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FirePiercingBoltsP</defaultProjectile>
+			<abilityDef>RH_TET_FirePiercingBolts_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>12</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>22</burstShotCount>
+			<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>8</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Flame Storm -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_FlameStorm</thingClass>
+		<defName>RH_TET_FireFlameStormP</defName>
+		<label>Flame Storm</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_FireStorm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireFlameStorm_Mage</defName>
+		<label>Flame Storm I</label>
+		<uiIconPath>UI/Magic/RH_TET_FireStorm</uiIconPath>
+		<description>A column of roiling flame bursts from the battlefield, the roar of its creation almost drowning out the screams of its victims.</description>
+		<magicPoolCost>0.90</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireFlameStormP</defaultProjectile>
+			<abilityDef>RH_TET_FireFlameStorm_Mage</abilityDef>
+			<warmupTime>5</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge><!-- 30 days -->
+			<range>25</range>
+			<soundCast>PsychicPulseGlobal</soundCast>
+			<muzzleFlashScale>50</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireFlameStorm_Wizard</defName>
+		<label>Flame Storm II</label>
+		<uiIconPath>UI/Magic/RH_TET_FireStorm</uiIconPath>
+		<description>A column of roiling flame bursts from the battlefield, the roar of its creation almost drowning out the screams of its victims.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireFlameStormP</defaultProjectile>
+			<abilityDef>RH_TET_FireFlameStorm_Wizard</abilityDef>
+			<warmupTime>5</warmupTime>
+			<SecondsToRecharge>25000</SecondsToRecharge><!-- 25 days -->
+			<range>25</range>
+			<soundCast>PsychicPulseGlobal</soundCast>
+			<muzzleFlashScale>50</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireFlameStorm_Warlock</defName>
+		<label>Flame Storm III</label>
+		<uiIconPath>UI/Magic/RH_TET_FireStorm</uiIconPath>
+		<description>A column of roiling flame bursts from the battlefield, the roar of its creation almost drowning out the screams of its victims.</description>
+		<magicPoolCost>0.80</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireFlameStormP</defaultProjectile>
+			<abilityDef>RH_TET_FireFlameStorm_Warlock</abilityDef>
+			<warmupTime>5</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge><!-- 20 days -->
+			<range>25</range>
+			<soundCast>PsychicPulseGlobal</soundCast>
+			<muzzleFlashScale>50</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_FireFlameStorm_Master</defName>
+		<label>Flame Storm IV</label>
+		<uiIconPath>UI/Magic/RH_TET_FireStorm</uiIconPath>
+		<description>A column of roiling flame bursts from the battlefield, the roar of its creation almost drowning out the screams of its victims.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>7</abilityPoints>
+		<experiencePoints>27</experiencePoints>
+		<nextMagicLevelPointsRequired>7</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_FireFlameStormP</defaultProjectile>
+			<abilityDef>RH_TET_FireFlameStorm_Master</abilityDef>
+			<warmupTime>5</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge><!-- 15 days -->
+			<range>25</range>
+			<soundCast>PsychicPulseGlobal</soundCast>
+			<muzzleFlashScale>50</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>RH_TET_FlameTornado</defName>
+		<label>flame tornado</label>
+		<thingClass>TheEndTimes_Magic.FlameTornado</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<drawOffscreen>true</drawOffscreen>
+		<seeThroughFog>true</seeThroughFog>
+		<alwaysFlee>true</alwaysFlee>
+		<comps>
+			<li Class="CompProperties_WindSource"/>
+		</comps>
+	</ThingDef>
+
+</Defs>

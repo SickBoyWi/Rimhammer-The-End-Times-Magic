@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <HairDef>
+    <defName>RH_TET_NoHair</defName>
+    <label>none</label>
+    <styleGender>Any</styleGender>
+    <texPath>Things/Pawn/Humanlike/Hairs/nohair</texPath>
+    <category>Minimal</category>
+    <styleTags>
+      <li>RH_TET_NoHair</li>
+    </styleTags>
+  </HairDef>
+
+</Defs>

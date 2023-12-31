@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<!-- ===================== Bonecrusher =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_MawBonecrusherP</defName>
+		<label>Bonecrusher</label>
+		<graphicData>
+			<texPath>Things/Projectile/Maw/RH_TET_MawBonecrusher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicalBlunt</damageDef>
+			<damageAmountBase>28</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBonecrusher_Mage</defName>
+		<label>Bonecrusher I</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBonecrusher</uiIconPath>
+		<description>Shoveling a handful of ribs, skulls, and femurs into his mouth, the Butcher crunches them up even while he curses his foes, who immediately find themself being buffeted by strong blunt magic forces.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MawBonecrusherP</defaultProjectile>
+			<abilityDef>RH_TET_MawBonecrusher_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>11</damage>
+					<damageDef>RH_TET_MagicalBlunt</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBonecrusher_Wizard</defName>
+		<label>Bonecrusher II</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBonecrusher</uiIconPath>
+		<description>Shoveling a handful of ribs, skulls, and femurs into his mouth, the Butcher crunches them up even while he curses his foes, who immediately find themself being buffeted by strong blunt magic forces.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MawBonecrusherP</defaultProjectile>
+			<abilityDef>RH_TET_MawBonecrusher_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2</forcedMissRadius>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>12</damage>
+					<damageDef>RH_TET_MagicalBlunt</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBonecrusher_Warlock</defName>
+		<label>Bonecrusher III</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBonecrusher</uiIconPath>
+		<description>Shoveling a handful of ribs, skulls, and femurs into his mouth, the Butcher crunches them up even while he curses his foes, who immediately find themself being buffeted by strong blunt magic forces.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MawBonecrusherP</defaultProjectile>
+			<abilityDef>RH_TET_MawBonecrusher_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>14</damage>
+					<damageDef>RH_TET_MagicalBlunt</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBonecrusher_Master</defName>
+		<label>Bonecrusher IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBonecrusher</uiIconPath>
+		<description>Shoveling a handful of ribs, skulls, and femurs into his mouth, the Butcher crunches them up even while he curses his foes, who immediately find themself being buffeted by strong blunt magic forces.</description>
+		<magicPoolCost>0.34</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_MawBonecrusherP</defaultProjectile>
+			<abilityDef>RH_TET_MawBonecrusher_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>12</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>2.5</forcedMissRadius>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>16</damage>
+					<damageDef>RH_TET_MagicalBlunt</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Braingobbler =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_MawBraingobblerP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>braingobbler</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MawBraingobbler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBraingobbler_Mage</defName>
+		<label>Braingobbler I</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBraingobbler</uiIconPath>
+		<description>Selecting a severed head attached to one of the meaty hooks secured about his person, the Butcher chomps through the skull and gobbles up the grey dainty within, projecting his victim's worst nightmares into the minds of his enemies.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MawBraingobbler_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MawBraingobblerP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60.0</SecondsToRecharge>
+			<range>18</range>
+			<soundCast>RH_TET_ChompingSound</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBraingobbler_Wizard</defName>
+		<label>Braingobbler II</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBraingobbler</uiIconPath>
+		<description>Selecting a severed head attached to one of the meaty hooks secured about his person, the Butcher chomps through the skull and gobbles up the grey dainty within, projecting his victim's worst nightmares into the minds of his enemies.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MawBraingobbler_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MawBraingobblerP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>55.0</SecondsToRecharge>
+			<range>19</range>
+			<soundCast>RH_TET_ChompingSound</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBraingobbler_Warlock</defName>
+		<label>Braingobbler III</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBraingobbler</uiIconPath>
+		<description>Selecting a severed head attached to one of the meaty hooks secured about his person, the Butcher chomps through the skull and gobbles up the grey dainty within, projecting his victim's worst nightmares into the minds of his enemies.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MawBraingobbler_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MawBraingobblerP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>50.0</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_ChompingSound</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBraingobbler_Master</defName>
+		<label>Braingobbler IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBraingobbler</uiIconPath>
+		<description>Selecting a severed head attached to one of the meaty hooks secured about his person, the Butcher chomps through the skull and gobbles up the grey dainty within, projecting his victim's worst nightmares into the minds of his enemies.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_MawBraingobbler_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_MawBraingobblerP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
+			<range>21</range>
+			<soundCast>RH_TET_ChompingSound</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Bullgorger =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_MawBullgorgerP</defName>
+		<label>Bullgorger</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MawBullgorger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>15</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBullgorger_Mage</defName>
+		<label>Bullgorger I</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBullgorger</uiIconPath>
+		<description>Greedily devouring the heart of a bull Rhinox or Mournfang, the Butcher can project raw vitality imbued by such a worthy sacrifice to the Great Maw. This will enhance the targeted friendly pawn with great additional fighting and physical capabilities.</description>
+		<magicPoolCost>0.15</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawBullgorgerP</defaultProjectile>
+			<abilityDef>RH_TET_MawBullgorger_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>480.0</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_GrowlSoundSmall</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Maw_BullgorgerI</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBullgorger_Wizard</defName>
+		<label>Bullgorger II</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBullgorger</uiIconPath>
+		<description>Greedily devouring the heart of a bull Rhinox or Mournfang, the Butcher can project raw vitality imbued by such a worthy sacrifice to the Great Maw. This will enhance the targeted friendly pawn with great additional fighting and physical capabilities.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawBullgorgerP</defaultProjectile>
+			<abilityDef>RH_TET_MawBullgorger_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>450.0</SecondsToRecharge>
+			<range>42</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_GrowlSoundSmall</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Maw_BullgorgerII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBullgorger_Warlock</defName>
+		<label>Bullgorger III</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBullgorger</uiIconPath>
+		<description>Greedily devouring the heart of a bull Rhinox or Mournfang, the Butcher can project raw vitality imbued by such a worthy sacrifice to the Great Maw. This will enhance the targeted friendly pawn with great additional fighting and physical capabilities.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawBullgorgerP</defaultProjectile>
+			<abilityDef>RH_TET_MawBullgorger_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>280.0</SecondsToRecharge>
+			<range>44</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_GrowlSoundSmall</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Maw_BullgorgerIII</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawBullgorger_Master</defName>
+		<label>Bullgorger IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MawBullgorger</uiIconPath>
+		<description>Greedily devouring the heart of a bull Rhinox or Mournfang, the Butcher can project raw vitality imbued by such a worthy sacrifice to the Great Maw. This will enhance the targeted friendly pawn with great additional fighting and physical capabilities.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawBullgorgerP</defaultProjectile>
+			<abilityDef>RH_TET_MawBullgorger_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>46</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_GrowlSoundSmall</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Maw_BullgorgerIV</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Trollguts =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<!--<thingClass>TheEndTimes_Magic.Projectile_Trollguts</thingClass>-->
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_MawTrollgutsP</defName>
+		<label>Trollguts</label>
+		<graphicData>
+			<texPath>Things/Projectile/Maw/RH_TET_Trollguts</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawTrollguts_Mage</defName>
+		<label>Trollguts I</label>
+		<uiIconPath>UI/Magic/RH_TET_MawTrollGuts</uiIconPath>
+		<description>Downing the toxic and utterly repulsive innards of a Troll isn't easy, but by doing so a Butcher can magically transfer the beast's supernatural healing ability onto himself or nearby companions. The Ogres' wounds seem to stitch themselves together before the eyes of their dumbfounded enemies.\n\nThe first three levels of this spell will only heal existing (those currently open, or bandaged but unhealed) wounds. The fourth level of this spell will heal any injury, including the loss of major limbs. This spell will affect multipe targets that are in range, and the highest version of the spell will heal open and life threatening wounds before regrowing old missing limbs.\n\nNOTE: Upgrading to the fourth version of this spell will cause it to take many days to be recastable, rather than being frequently castable.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawTrollgutsP</defaultProjectile>
+			<abilityDef>RH_TET_MawTrollguts_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>360</SecondsToRecharge>
+			<range>10</range>
+			<soundCast>RH_TET_SlurpSoundDeep</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>30</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawTrollguts_Wizard</defName>
+		<label>Trollguts II</label>
+		<uiIconPath>UI/Magic/RH_TET_MawTrollGuts</uiIconPath>
+		<description>Downing the toxic and utterly repulsive innards of a Troll isn't easy, but by doing so a Butcher can magically transfer the beast's supernatural healing ability onto himself or nearby companions. The Ogres' wounds seem to stitch themselves together before the eyes of their dumbfounded enemies.\n\nThe first three levels of this spell will only heal existing (those currently open, or bandaged but unhealed) wounds. The fourth level of this spell will heal any injury, including the loss of major limbs. This spell will affect multipe targets that are in range, and the highest version of the spell will heal open and life threatening wounds before regrowing old missing limbs.\n\nNOTE: Upgrading to the fourth version of this spell will cause it to take many days to be recastable, rather than being frequently castable.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawTrollgutsP</defaultProjectile>
+			<abilityDef>RH_TET_MawTrollguts_Wizard</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>320</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_SlurpSoundDeep</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>33</maxTargets>
+				<range>10</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawTrollguts_Warlock</defName>
+		<label>Trollguts III</label>
+		<uiIconPath>UI/Magic/RH_TET_MawTrollGuts</uiIconPath>
+		<description>Downing the toxic and utterly repulsive innards of a Troll isn't easy, but by doing so a Butcher can magically transfer the beast's supernatural healing ability onto himself or nearby companions. The Ogres' wounds seem to stitch themselves together before the eyes of their dumbfounded enemies.\n\nThe first three levels of this spell will only heal existing (those currently open, or bandaged but unhealed) wounds. The fourth level of this spell will heal any injury, including the loss of major limbs. This spell will affect multipe targets that are in range, and the highest version of the spell will heal open and life threatening wounds before regrowing old missing limbs.\n\nNOTE: Upgrading to the fourth version of this spell will cause it to take many days to be recastable, rather than being frequently castable.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawTrollgutsP</defaultProjectile>
+			<abilityDef>RH_TET_MawTrollguts_Warlock</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>300</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_SlurpSoundDeep</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>36</maxTargets>
+				<range>12</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawTrollguts_Master</defName>
+		<label>Trollguts IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MawTrollGuts</uiIconPath>
+		<description>Downing the toxic and utterly repulsive innards of a Troll isn't easy, but by doing so a Butcher can magically transfer the beast's supernatural healing ability onto himself or nearby companions. The Ogres' wounds seem to stitch themselves together before the eyes of their dumbfounded enemies.\n\nThe first three levels of this spell will only heal existing (those currently open, or bandaged but unhealed) wounds. The fourth level of this spell will heal any injury, including the loss of major limbs. This spell will affect multipe targets that are in range, and the highest version of the spell will heal open and life threatening wounds before regrowing old missing limbs.\n\nNOTE: Upgrading to the fourth version of this spell will cause it to take many days to be recastable, rather than being frequently castable. There is also a chance that the magical regeneration will fail, but if that's the case the spell will still head wounds on the pawn it failed to regenerate.</description>
+		<magicPoolCost>0.90</magicPoolCost>
+		<abilityPoints>6</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawTrollgutsP</defaultProjectile>
+			<abilityDef>RH_TET_MawTrollguts_Master</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>50000</SecondsToRecharge>
+			<range>15</range>
+			<soundCast>RH_TET_SlurpSoundDeep</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>10</maxTargets>
+				<range>10</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Bestial Surge =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_MawToothcrackerP</defName>
+		<label>toothcracker</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_MawToothCracker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<!--<explosionRadius>5</explosionRadius>-->
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawToothcracker_Mage</defName>
+		<label>Toothcracker I</label>
+		<uiIconPath>UI/Magic/RH_TET_MawToothCracker</uiIconPath>
+		<description>By consuming a hunk of tooth-breaking granite, the Butcher bestows the rock's resilience and the sturdiness of the mountains themselves into his brethren.\n\nImproves the armor, movement, and rest requirement of allies. Higher levels of the spell affect more allies.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawToothcrackerP</defaultProjectile>
+			<abilityDef>RH_TET_MawToothcracker_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Magic_Toothcracker</hediffDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawToothcracker_Wizard</defName>
+		<label>Toothcracker II</label>
+		<uiIconPath>UI/Magic/RH_TET_MawToothCracker</uiIconPath>
+		<description>By consuming a hunk of tooth-breaking granite, the Butcher bestows the rock's resilience and the sturdiness of the mountains themselves into his brethren.\n\nImproves the armor, movement, and rest requirement of allies. Higher levels of the spell affect more allies.</description>
+		<magicPoolCost>0.48</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawToothcrackerP</defaultProjectile>
+			<abilityDef>RH_TET_MawToothcracker_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Magic_Toothcracker</hediffDef>
+					<applyChance>.88</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawToothcracker_Warlock</defName>
+		<label>Toothcracker III</label>
+		<uiIconPath>UI/Magic/RH_TET_MawToothCracker</uiIconPath>
+		<description>By consuming a hunk of tooth-breaking granite, the Butcher bestows the rock's resilience and the sturdiness of the mountains themselves into his brethren.\n\nImproves the armor, movement, and rest requirement of allies. Higher levels of the spell affect more allies.</description>
+		<magicPoolCost>0.52</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawToothcrackerP</defaultProjectile>
+			<abilityDef>RH_TET_MawToothcracker_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Magic_Toothcracker</hediffDef>
+					<applyChance>.95</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_MawToothcracker_Master</defName>
+		<label>Toothcracker IV</label>
+		<uiIconPath>UI/Magic/RH_TET_MawToothCracker</uiIconPath>
+		<description>By consuming a hunk of tooth-breaking granite, the Butcher bestows the rock's resilience and the sturdiness of the mountains themselves into his brethren.\n\nImproves the armor, movement, and rest requirement of allies. Higher levels of the spell affect more allies.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_MawToothcrackerP</defaultProjectile>
+			<abilityDef>RH_TET_MawToothcracker_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundMantleGhorok</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_Magic_Toothcracker</hediffDef>
+					<applyChance>1</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

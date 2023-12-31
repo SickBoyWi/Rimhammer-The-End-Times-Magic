@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_ChaosItemExoticBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<tradeability>None</tradeability>
+		<thingCategories>
+			<li>RH_TET_Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_ArtifactChaos</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_ArtifactChaos</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_ChaosItemExoticBase">
+		<defName>RH_TET_KhorneHorn</defName>
+		<label>horn of Khorne</label>
+		<description>A one-use horn gifted by the Lord Khorne. When blown, it will drive all animals in the region into a manhunting rage.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_KhorneHorn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<statBases>
+			<MarketValue>700</MarketValue>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+			<li Class="CompProperties_Targetable">
+				<compClass>CompTargetable_AllAnimalsOnTheMap</compClass>
+				<psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+				<doCameraShake>true</doCameraShake>
+				<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+				<fleckOnUsed>PsycastAreaEffect</fleckOnUsed>
+				<moteOnUsedScale>10</moteOnUsedScale>
+				<ignorePlayerFactionPawns>True</ignorePlayerFactionPawns>
+			</li>
+			<li>
+				<compClass>CompTargetEffect_Manhunter</compClass>
+			</li>
+			<li Class="CompProperties_TargetEffect_GoodwillImpact">
+				<goodwillImpact>-200</goodwillImpact>
+			</li>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Activate</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_ChaosItemExoticBase">
+		<defName>RH_TET_NurgleCharm</defName>
+		<label>charm of Nurgle</label>
+		<description>A one-use charm gifted by Nurgle. Will instantly end the mental state of a pawn any where on the map when used on them. Be wary not to misuse this item. Nurgle will be displeased.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_NurgleCharm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use charm of nurgle</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>CompTargetable_SinglePawn</compClass>
+			</li>
+			<li>
+				<compClass>TheEndTimes_Magic.CompTargetEffect_EndMentalState</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_ChaosItemExoticBase">
+		<defName>RH_TET_StoneOfWisdomChaosUndiv</defName>
+		<label>Stone of Wisdom: Chaos Undivided</label>
+		<description>A one-use item gifted by the dark gods. It's a small stone covered in bizarre scrawlings that seem to move and wiggle around if looked at out of the corner of the eye. Will grant the pawn that prays upon it the ability to see and manipulate the winds of magic, the pawn will be able to cast magic from the Lore of Chaos Undivided.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_StoneOfWisdomChaosUndiv</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Pray upon</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li>
+				<compClass>TheEndTimes_Magic.CompUseEffect_GrantTraitChaosUndivided</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_ChaosItemExoticBase">
+		<defName>RH_TET_SlaaneshChalice</defName>
+		<label>chalice of Slaanesh</label>
+		<description>A chalice covered in disturbing pornographic imagery. Fill it and drink, and you'll receive the pleasure of Slaanesh. After one drink, the chalice will disintegrate.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_SlaaneshChalice</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>1100</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Drink from chalice of Slaanesh</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_SlaaneshPleasure</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_ChaosItemExoticBase">
+		<defName>RH_TET_TzeentchCoin</defName>
+		<label>coin of Tzeentch</label>
+		<description>A magic coin, with the symbol of Tzeentch on it. Flip the coin, and see what happens. Pawns will get a boon, and bray shamans may get more. You only get one flip, and it disappears.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_TzeentchCoin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Flip the coin of Tzeentch</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_TzeentchCoin</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedRelic_Sigmar</defName>
+		<label>unfinished Sigmar relic</label>
+		<description>An unfinished relic of Sigmar.</description>
+		<statBases>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,235,69)</color>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedRelic_Ulric</defName>
+		<label>unfinished Ulric relic</label>
+		<description>An unfinished relic of Ulric.</description>
+		<statBases>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,234,230)</color>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedRelic_Shallya</defName>
+		<label>unfinished Shallya relic</label>
+		<description>An unfinished relic of Shallya.</description>
+		<statBases>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(175,249,255)</color>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_FaithItemExoticBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Never</tickerType>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+			<Beauty>2</Beauty>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1</Mass>
+			<WorkToMake>200000</WorkToMake>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Artifact</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Artifact</li>
+			<li>ExoticMisc</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<effectWorking>Smelt</effectWorking>
+			<soundWorking>Recipe_Cremate</soundWorking>
+			<!--<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite> Add by injection, prevent errors.-->
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_AbilityItemExoticBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Never</tickerType>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>2</Beauty>
+			<DeteriorationRate>0.1</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Artifact</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Artifact</li>
+			<li>ExoticMisc</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBase" Name="RH_TET_FaithItemExoticBaseSigmar" Abstract="True">
+		<recipeMaker>
+			<unfinishedThingDef>RH_TET_UnfinishedRelic_Sigmar</unfinishedThingDef>
+			<recipeUsers>
+				<li>RH_TET_Magic_FaithIdol_Sigmar</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBase" Name="RH_TET_FaithItemExoticBaseShallya" Abstract="True">
+		<recipeMaker>
+			<unfinishedThingDef>RH_TET_UnfinishedRelic_Shallya</unfinishedThingDef>
+			<recipeUsers>
+				<li>RH_TET_Magic_FaithIdol_Shallya</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBase" Name="RH_TET_FaithItemExoticBaseUlric" Abstract="True">
+		<recipeMaker>
+			<unfinishedThingDef>RH_TET_UnfinishedRelic_Ulric</unfinishedThingDef>
+			<recipeUsers>
+				<li>RH_TET_Magic_FaithIdol_Ulric</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_AbilityItemExoticBase" Name="RH_TET_AbilityWitchhunterItemExoticBase" Abstract="True">
+		<!-- TODO: Pending a way to create these.
+	<recipeMaker>
+	  <unfinishedThingDef>RH_TET_UnfinishedRelic_Shallya</unfinishedThingDef>
+      <recipeUsers>
+        <li>RH_TET_Magic_FaithIdol_Shallya</li>
+      </recipeUsers>
+    </recipeMaker>
+	-->
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseSigmar">
+		<defName>RH_TET_SigmarArtifact_Thunderbolt</defName>
+		<label>Sigmar Artifact - Thunderbolt</label>
+		<description>An artifact containing some of the power of the god Sigmar. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Sigmar's Thunderbolt faith power. Other pawns cannot use this item, and if a pawn already has the Thunderbolt ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_SigmarArtifactThunderbolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Plasteel>250</Plasteel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_SigmarArtifactThunderbolt</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseSigmar">
+		<defName>RH_TET_SigmarArtifact_Comet</defName>
+		<label>Sigmar Artifact - Comet</label>
+		<description>An artifact containing some of the power of the god Sigmar. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Sigmar's Comet faith power. Other pawns cannot use this item, and if a pawn already has the Comet ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_SigmarArtifactComet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Plasteel>250</Plasteel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_SigmarArtifactComet</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseSigmar">
+		<defName>RH_TET_SigmarArtifact_Shield</defName>
+		<label>Sigmar Artifact - Shield</label>
+		<description>An artifact containing some of the power of the god Sigmar. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Sigmar's Shield of Faith faith power. Other pawns cannot use this item, and if a pawn already has the Shield of Faith ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_SigmarArtifactShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Plasteel>250</Plasteel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_SigmarArtifactShield</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseUlric">
+		<defName>RH_TET_UlricArtifact_Wolf</defName>
+		<label>Ulric Artifact - Wolves</label>
+		<description>An artifact containing some of the power of the god Ulric. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Wolves of Ulric faith power. Other pawns cannot use this item, and if a pawn already has the Wolves of Ulric ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_UlricArtifactWolf</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Uranium>250</Uranium>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_UlricArtifactWolf</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseUlric">
+		<defName>RH_TET_UlricArtifact_Warhammer</defName>
+		<label>Ulric Artifact - Warhammer</label>
+		<description>An artifact containing some of the power of the god Ulric. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Ulric's Warhammer faith power. Other pawns cannot use this item, and if a pawn already has the Ulric's Warhammer ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_UlricArtifactWarhammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Uranium>250</Uranium>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_UlricArtifactWarhammer</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseUlric">
+		<defName>RH_TET_UlricArtifact_Winter</defName>
+		<label>Ulric Artifact - Winter</label>
+		<description>An artifact containing some of the power of the god Ulric. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Ulric's Winter Vortex faith power. Other pawns cannot use this item, and if a pawn already has the Ulric's Winter Vortex ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_UlricArtifactWinter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Uranium>250</Uranium>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_UlricArtifactWinter</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseShallya">
+		<defName>RH_TET_ShallyaArtifact_Light</defName>
+		<label>Shallya Artifact - Light</label>
+		<description>An artifact containing some of the power of the god Shallya. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Shallya's Light faith power. Other pawns cannot use this item, and if a pawn already has the the ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_ShallyaArtifactLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Gold>25</Gold>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_ShallyaArtifactLight</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseShallya">
+		<defName>RH_TET_ShallyaArtifact_Regrowth</defName>
+		<label>Shallya Artifact - Regrowth</label>
+		<description>An artifact containing some of the power of the god Shallya. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Shallya's Regrowth faith power. Other pawns cannot use this item, and if a pawn already has the the ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_ShallyaArtifactRegrowth</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Gold>25</Gold>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_ShallyaArtifactRegrowth</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_FaithItemExoticBaseShallya">
+		<defName>RH_TET_ShallyaArtifact_Fortune</defName>
+		<label>Shallya Artifact - Fortune</label>
+		<description>An artifact containing some of the power of the god Shallya. If a faithful pawn prays upon it, the item will be destroyed, and the faithful will be granted the Shallya's Fortune faith power. Other pawns cannot use this item, and if a pawn already has the the ability, this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/RH_TET_ShallyaArtifactFortune</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>15000</MarketValue>
+		</statBases>
+		<costList>
+			<Gold>25</Gold>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Pray upon the artifact</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_ShallyaArtifactFortune</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_AbilityWitchhunterItemExoticBase">
+		<defName>RH_TET_Artifact_WHTome</defName>
+		<label>Witchhunter Tome</label>
+		<description>A book containing knowledge specific to Witchhunter abilities. If a pawn with witchhunter abilities reads it, the tome will be consumed, and the pawn will be granted a random witchhunter ability that was previously unknown. Other pawns cannot use this item, and if a pawn already knows all of the witchhunter abilities, then this item will do nothing.</description>
+		<graphicData>
+			<texPath>Things/Item/Artifact/The_Seeds_of_Heresy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<!-- TODO Pending a way to create these.
+	<costList>
+      <Gold>25</Gold>
+    </costList>
+	-->
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Read the tome</useLabel>
+				<useDuration>300</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompUseEffect_WitchhunterTome</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+  
+</Defs>

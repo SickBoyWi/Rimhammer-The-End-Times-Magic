@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Rimhammer - The End Times - Magic</name>
+	<author>SickBoyWI</author>
+	<supportedVersions><li>1.3</li><li>1.4</li></supportedVersions>
+	<packageId>SickBoyWi.TheEndTimes.Magic</packageId>
+	<description>
+
+If you use this mod without the Rimhammer - The End Times mod series, it will simply add some magic weapons and items. Similar to artifacts in vanilla RimWorld.
+
+Load this mod after the base Rimhammer - The End Times mod, and before any Rimhammer race/faction mods.
+
+This is not intended to be a stand alone mod. It is required for the Rimhammer - The End Times mod series, and will add the magical components in for all magic using races. The Rimhammer - The End Times faction mods require this mod.
+
+Current factions that use this mod: Beastmen, Dwarfs, Empire.
+
+Currently items added: 
+	-Chaos God Weapons: Khorne, Nurlge, Slaanesh, and Tzeentch.
+	-Chaos God Items: One unique item for each god. 
+	-Order God Weapons: Ghal Maraz, Hammer of Ulric
+	-Magic Apparel: Boots for speed, long jumping, Ruby Ring of Ruin, 
+	-Magic Weapons: Obsidian Blade, Gold Sigil Sword
+	-Magic Buildings: Magic heaters, coolers, cleaners, lights, and more.
+
+Current magic lores added:
+	-Lore of Tzeentch - Shoot small or large fireballs at your enemies, or mess with their minds!
+	-Lore of the Wild - Wound enemies with the Bray Scream, summon a Jabberslythe to attack them, or turn them into mindless violent beasts with Devolve. Buff your pawns with the Mantle of Ghorok, or speed them up with the Bestial Surge.
+	-Lore of Shadow - Confuse your enemies, send them flying with the Steed of Shadows, Enfeeble them, make them forget their loyaties with Mind Slip, or blast them with the Penumbral Pendulum.
+	-Lore of Death - Shoot the dreaded Purple Sun at your enemies, or wound them with the Wind of Death. Steal their life, or slow them down with magical Manacles.
+	-Lore of Beasts - Summon a flock of angry ravens to swarm your opponents, tame animals, buff your pawns with Wysson's Wildform, put enemies into a coma-like Amber Trance, or damage them with the Amber Spear.
+	-Lore of Metal - Blast an enemy and perhaps turn them into a gold statue, repair damaged apparel/items or make them better quality, clear a pawn's bad mental state, shoot golden arrows at enemies, or create a Glittering Robe of protective magic around the caster. 
+	-Lore of Light - Trap enemies in a magic snare, cause direct damage to enemies with the Claw of Apek or Burning Gaze, create a magical light that lasts almost a year, or heal the wounds or minor permantent injuries of your pawns. 
+	-Lore of Life - Regenerate missing limbs or heal wounds, cast freezing magic at enemies to give them frostbite, drain enemy life to heal the caster, cause an area of plants to be fully grown, or remove a large area of blight!
+	-Lore of Heavens - Drop lightning bolts or meteorites on your enemies, clear a bad weather condition, shoot magic blades at enemies, or buff up a friendly pawn!
+	-Lore of Fire - Shoot fire, cause a huge fire tornado, breath fire, and get a magical shield of fire to protect your pawn.
+	-Lore of Heavens - 
+	-Lore of Metal -
+	-Lore of Light -
+	-Lore of Life -
+	-Lore of Nurgle -
+	-Lore of Chaos Undivided -
+	-Lore of Slaanesh -
+	-High Lore -
+	-Lore of Plague -
+	-Lore of Warp -
+	-Lore of Stealth -
+	-Lore of the Great Maw -
+	
+Current faith abilities by god:
+	-Sigmar - damage to foes and self preservation.
+	-Shallya - healing and positivity.
+	-Ulric - Winter and smiting foes.
+	
+Each lore has 5 magic spells, so there's lots of variety!
+
+Cast to your heart's content, but be wary of miscasts! They will wreck your magic user! If a caster is holding a bray staff or a wizard's staff, the liklihood of miscast is much reduced.
+
+This mod is also a framework. Any one can add Warhammer themed magic to their own mods using this mod. You simply need to add some backstories that leverage the traits defined here in, and your pawns will have Warhammer themed magic abilities. 
+
+Other lores will come as the Rimhammer races/factions get added.
+
+Super special thanks to Discord users "Dino's Bar and Grill" for the forge/anvil texture, and leugimimi for patching several popular mods to work with this mod!!
+A huge thanks to the RemoteTech mod for the excellent examples and assistance their Gas implementation provided for some the gas effects used in this mod.
+
+If you'd like to speed up the process of release, please consider supporting me on Patreon. The more support I get, the more motivated I will be to create more races/factions. https://www.patreon.com/SickBoyWI
+
+Buy me a coffee: https://ko-fi.com/sickboywi
+
+Join the Discord channel: https://discord.gg/UCmQbCT
+
+========================
+Changelog
+========================
+
+0.0.0.1 2019-10-01
+========================
+Development started. 
+
+	</description>
+</ModMetaData>

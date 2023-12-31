@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Life Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_LifeWizardAI">
+		<defName>RH_TET_Magic_LifeWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfLifeTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_LifeWinterFrost_MageAI</li>
+			<li>RH_TET_LifeWinterFrost_WizardAI</li>
+			<li>RH_TET_LifeWinterFrost_WarlockAI</li>
+			<li>RH_TET_LifeWinterFrost_MasterAI</li>
+
+			<li>RH_TET_LifeDrainLife_MageAI</li>
+			<li>RH_TET_LifeDrainLife_WizardAI</li>
+			<li>RH_TET_LifeDrainLife_WarlockAI</li>
+			<li>RH_TET_LifeDrainLife_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_LifeWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>35.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WinterFrost</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>35.0</maxDistance>
+											<minDistance>28.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WinterFrost</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>DrainLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WinterFrost</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>30.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>DrainLife</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WinterFrost</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>35.0</maxDistance>
+											<minDistance>28.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>WinterFrost</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeWinterFrost_MageAI</defName>
+		<ability>RH_TET_LifeWinterFrost_Mage</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<tags>
+			<li>WinterFrost</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeWinterFrost_WizardAI</defName>
+		<ability>RH_TET_LifeWinterFrost_Wizard</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<tags>
+			<li>WinterFrost</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeWinterFrost_WarlockAI</defName>
+		<ability>RH_TET_LifeWinterFrost_Warlock</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<tags>
+			<li>WinterFrost</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeWinterFrost_MasterAI</defName>
+		<ability>RH_TET_LifeWinterFrost_Master</ability>
+		<power>25.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>35.0</maxRange>
+		<tags>
+			<li>WinterFrost</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeDrainLife_MageAI</defName>
+		<ability>RH_TET_LifeDrainLife_Mage</ability>
+		<power>20.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>DrainLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeDrainLife_WizardAI</defName>
+		<ability>RH_TET_LifeDrainLife_Wizard</ability>
+		<power>20.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>DrainLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeDrainLife_WarlockAI</defName>
+		<ability>RH_TET_LifeDrainLife_Warlock</ability>
+		<power>20.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>DrainLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_LifeDrainLife_MasterAI</defName>
+		<ability>RH_TET_LifeDrainLife_Master</ability>
+		<power>20.0</power>
+		<maxRange>30.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>DrainLife</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

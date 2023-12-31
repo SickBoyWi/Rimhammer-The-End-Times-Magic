@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RH_TET_SlaaneshPleasure</defName>
+		<icon>Mote/Symbols/RH_TET_Slaanesh</icon>
+		<showBubble>true</showBubble>
+		<durationDays>60</durationDays>
+		<stackLimit>6</stackLimit>
+		<stages>
+			<li>
+				<label>received pleasure of Slaanesh</label>
+				<description>The pleasure of Slaanesh is upon me!</description>
+				<baseMoodEffect>36</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_GrimResolve_Mood</defName>
+		<durationDays>.5</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Grim Resolve</label>
+				<description>The blessing of the God Sigmar will help me destroy this threat.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_ShallyaFortuneThought</defName>
+		<icon>Mote/Symbols/RH_TET_ShallyaDove</icon>
+		<showBubble>true</showBubble>
+		<durationDays>3</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>received fortune of Shallya</label>
+				<description>The fortune of Shallya is upon me!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_MagicallyMoved</defName>
+		<durationDays>0.5</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>was moved magically</label>
+				<description>Someone transported me magically.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Magic_WizardApparel</defName>
+		<workerClass>TheEndTimes_Magic.ThoughtWorker_MagicApparel</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<nullifyingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>wizard apparel</label>
+				<description>Only wizards should wear wizard's apparel. It just isn't appropriate.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

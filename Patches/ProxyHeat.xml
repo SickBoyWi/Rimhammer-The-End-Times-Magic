@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ProxyHeat</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- RH_TET_UlricVortex -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_UlricVortex"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_UlricVortex"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_UlricVortex"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>2</radius>
+							<tempOutcome>-10</tempOutcome>
+							<minTemperature>-18</minTemperature>
+						</li>
+					</value>
+				</li>
+				<!-- RH_TET_FreezingStatue -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_FreezingStatue"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_FreezingStatue"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_FreezingStatue"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>2</radius>
+							<tempOutcome>-8</tempOutcome>
+							<minTemperature>-15</minTemperature>
+						</li>
+					</value>
+				</li>
+				<!-- RH_TET_HeatingStatue -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_HeatingStatue"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_HeatingStatue"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_HeatingStatue"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>2</radius>
+							<tempOutcome>10</tempOutcome>
+							<minTemperature>30</minTemperature>
+							
+							<smeltSnowRadius>2</smeltSnowRadius>
+							<smeltSnowAtTemperature>1</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

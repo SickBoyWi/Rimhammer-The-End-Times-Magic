@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<ThingDef ParentName="MedicineBase">
+		<defName>RH_TET_Dwarf_MedicinalMushroom</defName>
+		<label>fungal medicine</label>
+		<description>A pack of fungal concoctions extracted from the stone salve mushroom. It is less potent than manufactured medicine, but much better than nothing. It is used in the creation of better medicine.\n\nThe dwarfen answer to healroot. Dwarfen growers always made some room in their grow rooms for stone salve, due to its usefulness.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Raw/StoneSalve</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.35</Mass>
+			<Flammability>1.3</Flammability>
+			<MedicalPotency>0.60</MedicalPotency>
+			<MedicalQualityMax>0.70</MedicalQualityMax>
+			<DeteriorationRate>6</DeteriorationRate>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>150</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MedicineBase">
+		<defName>RH_TET_Dwarfs_MedicineMedieval</defName>
+		<label>medicine</label>
+		<description>A kit of medical equipment. It contains basic drugs, tools for suturing and bone setting, diagnostic devices, and various pads and fluids.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MedicineMedieval</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<MarketValue>18</MarketValue>
+			<Mass>0.50</Mass>
+			<Flammability>0.7</Flammability>
+			<MedicalPotency>1.00</MedicalPotency>
+			<MedicalQualityMax>1.00</MedicalQualityMax>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+	</ThingDef>
+
+</Defs>

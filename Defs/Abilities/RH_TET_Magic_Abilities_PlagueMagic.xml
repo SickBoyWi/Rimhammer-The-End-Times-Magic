@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<!-- ===================== Great Red Pox =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_PlagueRedPoxP</defName>
+		<label>Great Red Pox</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_PlagueRedPox</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueRedPox_Mage</defName>
+		<label>Great Red Pox I</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueRedPox</uiIconPath>
+		<description>The caster unleashes a crimson mist upon enemies near or far away on the battlefield, causing an instantaneous eruption of debilitating fist-sized boils. The target is slowed, mentally and physically, and is subjected to much pain.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RedPox</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueRedPoxP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueRedPox_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_PlagueRedPoxI</hediffDef>
+					<applyChance>.8</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueRedPox_Wizard</defName>
+		<label>Great Red Pox II</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueRedPox</uiIconPath>
+		<description>The caster unleashes a crimson mist upon enemies near or far away on the battlefield, causing an instantaneous eruption of debilitating fist-sized boils. The target is slowed, mentally and physically, and is subjected to much pain.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RedPox</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueRedPoxP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueRedPox_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>4</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_PlagueRedPoxII</hediffDef>
+					<applyChance>.88</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueRedPox_Warlock</defName>
+		<label>Great Red Pox III</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueRedPox</uiIconPath>
+		<description>The caster unleashes a crimson mist upon enemies near or far away on the battlefield, causing an instantaneous eruption of debilitating fist-sized boils. The target is slowed, mentally and physically, and is subjected to much pain.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RedPox</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueRedPoxP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueRedPox_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>120</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>5</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_PlagueRedPoxIII</hediffDef>
+					<applyChance>.95</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueRedPox_Master</defName>
+		<label>Great Red Pox IV</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueRedPox</uiIconPath>
+		<description>The caster unleashes a crimson mist upon enemies near or far away on the battlefield, causing an instantaneous eruption of debilitating fist-sized boils. The target is slowed, mentally and physically, and is subjected to much pain.</description>
+		<magicPoolCost>0.35</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RedPox</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueRedPoxP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueRedPox_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>110</SecondsToRecharge>
+			<range>40</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_NegativeHealthEvent</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>5</maxTargets>
+				<range>6</range>
+			</TargetAoEProperties>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_PlagueRedPoxIV</hediffDef>
+					<applyChance>.99</applyChance>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Infecting Gaze =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_PlagueInfectingGazeP</defName>
+		<label>Infecting Gaze</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_PlagueInfectingGaze</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicalAugmentation</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>5</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueInfectingGaze_Mage</defName>
+		<label>Infecting Gaze I</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueInfectingGaze</uiIconPath>
+		<description>The spell infects one individual with the Black Plague. Infecting Gaze is perhaps one of the most underhanded Skaven spells. Victims rarely realize that they have had the spell cast upon them, and even once the plague takes hold, the victim may not realize that the cause is magical. Being magical, the disease will not spread beyond its intended victim, although it may well cause panic in urban areas.</description>
+		<magicPoolCost>0.25</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_InfectingGaze</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueInfectingGazeP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueInfectingGaze_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>20</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueInfectingGaze_Wizard</defName>
+		<label>Infecting Gaze II</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueInfectingGaze</uiIconPath>
+		<description>The spell infects one individual with the Black Plague. Infecting Gaze is perhaps one of the most underhanded Skaven spells. Victims rarely realize that they have had the spell cast upon them, and even once the plague takes hold, the victim may not realize that the cause is magical. Being magical, the disease will not spread beyond its intended victim, although it may well cause panic in urban areas.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_InfectingGaze</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueInfectingGazeP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueInfectingGaze_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>24</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>1</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueInfectingGaze_Warlock</defName>
+		<label>Infecting Gaze III</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueInfectingGaze</uiIconPath>
+		<description>The spell infects one individual with the Black Plague. Infecting Gaze is perhaps one of the most underhanded Skaven spells. Victims rarely realize that they have had the spell cast upon them, and even once the plague takes hold, the victim may not realize that the cause is magical. Being magical, the disease will not spread beyond its intended victim, although it may well cause panic in urban areas.</description>
+		<magicPoolCost>0.31</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_InfectingGaze</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueInfectingGazeP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueInfectingGaze_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>28</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>2</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueInfectingGaze_Master</defName>
+		<label>Infecting Gaze IV</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueInfectingGaze</uiIconPath>
+		<description>The spell infects one individual with the Black Plague. Infecting Gaze is perhaps one of the most underhanded Skaven spells. Victims rarely realize that they have had the spell cast upon them, and even once the plague takes hold, the victim may not realize that the cause is magical. Being magical, the disease will not spread beyond its intended victim, although it may well cause panic in urban areas.</description>
+		<magicPoolCost>0.34</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_InfectingGaze</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_PlagueInfectingGazeP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueInfectingGaze_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>55</SecondsToRecharge>
+			<range>32</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>true</showRangeOnSelect>
+				<friendlyFire>false</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Pestilent Breath =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_PlaguePestilentBreathP</defName>
+		<label>Breathe Fire</label>
+		<graphicData>
+			<texPath>Things/Projectile/Plague/RH_TET_PestilentBreath</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_Poison</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>1.0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlaguePestilentBreath_Mage</defName>
+		<label>Pestilent Breath I</label>
+		<uiIconPath>UI/Magic/RH_TET_PlaguePestilentBreath</uiIconPath>
+		<description>Uttering horrible phrases the sorcerer belches forth an impossibly foul cloud which blasts at the target.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlaguePestilentBreathP</defaultProjectile>
+			<abilityDef>RH_TET_PlaguePestilentBreath_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlaguePestilentBreath_Wizard</defName>
+		<label>Pestilent Breath II</label>
+		<uiIconPath>UI/Magic/RH_TET_PlaguePestilentBreath</uiIconPath>
+		<description>Uttering horrible phrases the sorcerer belches forth an impossibly foul cloud which blasts at the target.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlaguePestilentBreathP</defaultProjectile>
+			<abilityDef>RH_TET_PlaguePestilentBreath_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>16</SecondsToRecharge>
+			<range>35</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlaguePestilentBreath_Warlock</defName>
+		<label>Pestilent Breath III</label>
+		<uiIconPath>UI/Magic/RH_TET_PlaguePestilentBreath</uiIconPath>
+		<description>Uttering horrible phrases the sorcerer belches forth an impossibly foul cloud which blasts at the target.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlaguePestilentBreathP</defaultProjectile>
+			<abilityDef>RH_TET_PlaguePestilentBreath_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlaguePestilentBreath_Master</defName>
+		<label>Pestilent Breath IV</label>
+		<uiIconPath>UI/Magic/RH_TET_PlaguePestilentBreath</uiIconPath>
+		<description>Uttering horrible phrases the sorcerer belches forth an impossibly foul cloud which blasts at the target.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlaguePestilentBreathP</defaultProjectile>
+			<abilityDef>RH_TET_PlaguePestilentBreath_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>38</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Air of Pestilence =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_AirOfPestilence</thingClass>
+		<defName>RH_TET_PlagueAirPestilenceP</defName>
+		<label>Air of Pestilence</label>
+		<graphicData>
+			<texPath>Things/Projectile/Plague/RH_TET_AirOfPestilence</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.0</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueAirOfPestilence_Mage</defName>
+		<label>Air of Pestilence I</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueAirOfPestilence</uiIconPath>
+		<description>The caster hacks out a cloud at a specific location, the cloud flies to the location and magically spreads to befilth a wide area. All who breathe in its pestilent airs seem to shrivel and weaken, their bodies sagging.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueAirPestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueAirOfPestilence_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>500</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueAirOfPestilence_Wizard</defName>
+		<label>Air of Pestilence II</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueAirOfPestilence</uiIconPath>
+		<description>The caster hacks out a cloud at a specific location, the cloud flies to the location and magically spreads to befilth a wide area. All who breathe in its pestilent airs seem to shrivel and weaken, their bodies sagging.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueAirPestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueAirOfPestilence_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>400</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueAirOfPestilence_Warlock</defName>
+		<label>Air of Pestilence III</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueAirOfPestilence</uiIconPath>
+		<description>The caster hacks out a cloud at a specific location, the cloud flies to the location and magically spreads to befilth a wide area. All who breathe in its pestilent airs seem to shrivel and weaken, their bodies sagging.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueAirPestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueAirOfPestilence_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>300</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueAirOfPestilence_Master</defName>
+		<label>Air of Pestilence IV</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueAirOfPestilence</uiIconPath>
+		<description>The caster hacks out a cloud at a specific location, the cloud flies to the location and magically spreads to befilth a wide area. All who breathe in its pestilent airs seem to shrivel and weaken, their bodies sagging.</description>
+		<magicPoolCost>0.40</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueAirPestilenceP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueAirOfPestilence_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>200</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundPuke</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<!-- ===================== Cloud of Flies =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_CloudOfFlies</thingClass>
+		<defName>RH_TET_PlagueCloudOfFliesP</defName>
+		<label>Cloud of Flies</label>
+		<graphicData>
+			<texPath>Things/Projectile/Plague/RH_TET_CloudOfFlies</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.0</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueCloudOfFlies_Mage</defName>
+		<label>Cloud of Flies I</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueCloudOfFlies</uiIconPath>
+		<description>With a curse and a flailing of arms, the caster summons a cloud of gnats and biting flies. They fly out, and swarm about in the designated area, biting and stinging your enemies. The will gradually dissipate, flying off and returning to their lives.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueCloudOfFliesP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueCloudOfFlies_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>500</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundFlies</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueCloudOfFlies_Wizard</defName>
+		<label>Cloud of Flies II</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueCloudOfFlies</uiIconPath>
+		<description>With a curse and a flailing of arms, the caster summons a cloud of gnats and biting flies. They fly out, and swarm about in the designated area, biting and stinging your enemies. The will gradually dissipate, flying off and returning to their lives.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueCloudOfFliesP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueCloudOfFlies_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>400</SecondsToRecharge>
+			<range>30</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundFlies</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueCloudOfFlies_Warlock</defName>
+		<label>Cloud of Flies III</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueCloudOfFlies</uiIconPath>
+		<description>With a curse and a flailing of arms, the caster summons a cloud of gnats and biting flies. They fly out, and swarm about in the designated area, biting and stinging your enemies. The will gradually dissipate, flying off and returning to their lives.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueCloudOfFliesP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueCloudOfFlies_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>300</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundFlies</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_PlagueCloudOfFlies_Master</defName>
+		<label>Cloud of Flies IV</label>
+		<uiIconPath>UI/Magic/RH_TET_PlagueCloudOfFlies</uiIconPath>
+		<description>With a curse and a flailing of arms, the caster summons a cloud of gnats and biting flies. They fly out, and swarm about in the designated area, biting and stinging your enemies. The will gradually dissipate, flying off and returning to their lives.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PlagueCloudOfFliesP</defaultProjectile>
+			<abilityDef>RH_TET_PlagueCloudOfFlies_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>200</SecondsToRecharge>
+			<range>36</range>
+			<isViolent>false</isViolent>
+			<forcedMissRadius>3</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<soundCast>RH_TET_Magic_SoundFlies</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+  
+</Defs>

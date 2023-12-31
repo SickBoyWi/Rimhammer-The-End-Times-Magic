@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Cure Poison =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_AddOn_WeakenPoisonP</defName>
+		<label>cure poison</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_AddOns_WeakenPoison</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+			<explosionRadius>3</explosionRadius>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_WeakenPoison_Mage</defName>
+		<label>Cure Poison I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_WeakenPoison</uiIconPath>
+		<description>A simple spell that will cure poisoning (food and environmental). Will also cure toxic buildup, chaos corruption, and similar afflictions.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurePoison</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_WeakenPoisonP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_WeakenPoison_Mage</abilityDef>
+			<warmupTime>1.5</warmupTime>
+			<SecondsToRecharge>5000</SecondsToRecharge>
+			<range>10</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>1</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_WeakenPoison_Wizard</defName>
+		<label>Cure Poison II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_WeakenPoison</uiIconPath>
+		<description>A simple spell that will cure poisoning (food and environmental). Will also cure toxic buildup, chaos corruption, and similar afflictions. Will affect multiple targets if they're close to one another.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurePoison</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_WeakenPoisonP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_WeakenPoison_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>4200</SecondsToRecharge>
+			<range>14</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>2</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_WeakenPoison_Warlock</defName>
+		<label>Cure Poison III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_WeakenPoison</uiIconPath>
+		<description>A simple spell that will cure poisoning (food and environmental). Will also cure toxic buildup, chaos corruption, and similar afflictions. Will affect multiple targets if they're close to one another.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurePoison</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_WeakenPoisonP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_WeakenPoison_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>3500</SecondsToRecharge>
+			<range>18</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>3</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_WeakenPoison_Master</defName>
+		<label>Cure Poison IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_WeakenPoison</uiIconPath>
+		<description>A simple spell that will cure poisoning (food and environmental). Will also cure toxic buildup, chaos corruption, and similar afflictions. Will affect multiple targets if they're close to one another.</description>
+		<magicPoolCost>0.20</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_CurePoison</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_WeakenPoisonP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_WeakenPoison_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>3000</SecondsToRecharge>
+			<range>22</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+			<TargetAoEProperties>
+				<targetClass>Pawn</targetClass>
+				<showRangeOnSelect>false</showRangeOnSelect>
+				<friendlyFire>true</friendlyFire>
+				<startsFromCaster>false</startsFromCaster>
+				<maxTargets>4</maxTargets>
+				<range>3</range>
+			</TargetAoEProperties>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Raise Ground =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_AddOn_RaiseGroundP</defName>
+		<label>Raise Ground</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shallya/RH_TET_ShallyaLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_RaiseGround_Mage</defName>
+		<label>Raise Ground I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_RaiseGround</uiIconPath>
+		<description>The targets a location, and any soft or wet ground will be raised, and therefore dried out, by one level. Will not affect dry ground. Will raise deep water to the next higher grade; therefore requires a few castings in order to raise deep water to dry ground.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RaiseGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_RaiseGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_RaiseGround_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_RaiseGround_Wizard</defName>
+		<label>Raise Ground II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_RaiseGround</uiIconPath>
+		<description>The targets a location, and any soft or wet ground will be raised, and therefore dried out, by one level. Will not affect dry ground. Will raise deep water to the next higher grade; therefore requires a few castings in order to raise deep water to dry ground.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RaiseGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_RaiseGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_RaiseGround_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>17500</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_RaiseGround_Warlock</defName>
+		<label>Raise Ground III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_RaiseGround</uiIconPath>
+		<description>The targets a location, and any soft or wet ground will be raised, and therefore dried out, by one level. Will not affect dry ground. Will raise deep water to the next higher grade; therefore requires a few castings in order to raise deep water to dry ground.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RaiseGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_RaiseGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_RaiseGround_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_RaiseGround_Master</defName>
+		<label>Raise Ground IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_RaiseGround</uiIconPath>
+		<description>The targets a location, and any soft or wet ground will be raised, and therefore dried out, by one level. Will not affect dry ground. Will raise deep water to the next higher grade; therefore requires a few castings in order to raise deep water to dry ground.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_RaiseGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_RaiseGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_RaiseGround_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>12500</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Transport =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_Transport</thingClass>
+		<defName>RH_TET_AddOn_TransportP</defName>
+		<label>Transport</label>
+		<graphicData>
+			<texPath>RH_TET_Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<explosionRadius>1</explosionRadius>
+			<damageDef>Burn</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>1000</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_Transport_Mage</defName>
+		<label>Transport I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_Transport</uiIconPath>
+		<description>A spell to facilitate mass transportation of people, animals, and items across the planet. Creates a magic transportation pod that can be used for long range transport. If unused, the magic energy will dissipate eventually. Be wary: The magic supporting the transportation platform will dissipate before long, and there will be a small explosion at its location.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_AddOn_TransportP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_Transport_Mage</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<burstShotCount>1</burstShotCount>
+			<range>25</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>18</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_Transport_Wizard</defName>
+		<label>Transport II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_Transport</uiIconPath>
+		<description>A spell to facilitate mass transportation of people, animals, and items across the planet. Creates a magic transportation pod that can be used for long range transport. If unused, the magic energy will dissipate eventually. Be wary: The magic supporting the transportation platform will dissipate before long, and there will be a small explosion at its location.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_AddOn_TransportP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_Transport_Wizard</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>13500</SecondsToRecharge>
+			<burstShotCount>1</burstShotCount>
+			<range>25</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>18</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_Transport_Warlock</defName>
+		<label>Transport III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_Transport</uiIconPath>
+		<description>A spell to facilitate mass transportation of people, animals, and items across the planet. Creates a magic transportation pod that can be used for long range transport. If unused, the magic energy will dissipate eventually. Be wary: The magic supporting the transportation platform will dissipate before long, and there will be a small explosion at its location.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>25</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_AddOn_TransportP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_Transport_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>12000</SecondsToRecharge>
+			<burstShotCount>1</burstShotCount>
+			<range>25</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>18</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_Transport_Master</defName>
+		<label>Transport IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_Transport</uiIconPath>
+		<description>A spell to facilitate mass transportation of people, animals, and items across the planet. Creates a magic transportation pod that can be used for long range transport. If unused, the magic energy will dissipate eventually. Be wary: The magic supporting the transportation platform will dissipate before long, and there will be a small explosion at its location.</description>
+		<magicPoolCost>0.85</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>28</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_AddOn_TransportP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_Transport_Warlock</abilityDef>
+			<warmupTime>3</warmupTime>
+			<SecondsToRecharge>10000</SecondsToRecharge>
+			<burstShotCount>1</burstShotCount>
+			<range>25</range>
+			<isViolent>false</isViolent>
+			<soundCast>RH_TET_Magic_SoundWhoosh</soundCast>
+			<muzzleFlashScale>18</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+ 
+	<!-- ===================== Lower Ground =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_AddOn_LowerGroundP</defName>
+		<label>Lower Ground</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shallya/RH_TET_ShallyaLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LowerGround_Mage</defName>
+		<label>Lower Ground I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LowerGround</uiIconPath>
+		<description>The targets a location, and any ground that isn't solid rock will be lowered, and flooded with water. If the ground is currently soil, it will become shallow water. If it is currently shallow water, it will become deep water. Any structures or existing flooring that reside upon the lowered ground may be destroyed.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LowerGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_LowerGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LowerGround_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LowerGround_Wizard</defName>
+		<label>Lower Ground II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LowerGround</uiIconPath>
+		<description>The targets a location, and any ground that isn't solid rock will be lowered, and flooded with water. If the ground is currently soil, it will become shallow water. If it is currently shallow water, it will become deep water. Any structures or existing flooring that reside upon the lowered ground may be destroyed.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LowerGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_LowerGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LowerGround_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>17500</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LowerGround_Warlock</defName>
+		<label>Lower Ground III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LowerGround</uiIconPath>
+		<description>The targets a location, and any ground that isn't solid rock will be lowered, and flooded with water. If the ground is currently soil, it will become shallow water. If it is currently shallow water, it will become deep water. Any structures or existing flooring that reside upon the lowered ground may be destroyed.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LowerGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_LowerGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LowerGround_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LowerGround_Master</defName>
+		<label>Lower Ground IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LowerGround</uiIconPath>
+		<description>The targets a location, and any ground that isn't solid rock will be lowered, and flooded with water. If the ground is currently soil, it will become shallow water. If it is currently shallow water, it will become deep water. Any structures or existing flooring that reside upon the lowered ground may be destroyed.</description>
+		<magicPoolCost>0.55</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_LowerGround</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_LowerGroundP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LowerGround_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>12500</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>RH_TET_CrackingSoundLoud</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+ 
+	<!-- ===================== Zone of Fertility =============================== -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_AddOn_ZoneOfFertilityP</defName>
+		<label>Zone of Fertility</label>
+		<graphicData>
+			<texPath>Things/Projectile/Life/RH_TET_GreenLaserDark</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>5</postFiringInitialIntensity>
+		<postFiringFinalIntensity>15</postFiringFinalIntensity>
+		<preFiringDuration>10</preFiringDuration>
+		<postFiringDuration>5</postFiringDuration>
+		<StartFireChance>0</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_ZoneOfFertility_Mage</defName>
+		<label>Zone of Fertility I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_ZoneOfFertility</uiIconPath>
+		<description>The caster targets a location, and any ground that isn't solid rock or water saturated will become rich soil, with high fertility yield.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ZoneOfFertility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_ZoneOfFertilityP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_ZoneOfFertility_Mage</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>15000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_ZoneOfFertility_Wizard</defName>
+		<label>Zone of Fertility II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_ZoneOfFertility</uiIconPath>
+		<description>The caster targets a location, and any ground that isn't solid rock or water saturated will become rich soil, with high fertility yield.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ZoneOfFertility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_ZoneOfFertilityP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_ZoneOfFertility_Wizard</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>14000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_ZoneOfFertility_Warlock</defName>
+		<label>Zone of Fertility III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_ZoneOfFertility</uiIconPath>
+		<description>The caster targets a location, and any ground that isn't solid rock or water saturated will become rich soil, with high fertility yield.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ZoneOfFertility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_ZoneOfFertilityP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_ZoneOfFertility_Warlock</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>13000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_ZoneOfFertility_Master</defName>
+		<label>Zone of Fertility IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_ZoneOfFertility</uiIconPath>
+		<description>The caster targets a location, and any ground that isn't solid rock or water saturated will become rich soil, with high fertility yield.</description>
+		<magicPoolCost>0.45</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_ZoneOfFertility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>true</requiresLineOfSight>
+			<defaultProjectile>RH_TET_AddOn_ZoneOfFertilityP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_ZoneOfFertility_Master</abilityDef>
+			<warmupTime>2</warmupTime>
+			<SecondsToRecharge>12000</SecondsToRecharge>
+			<range>20</range>
+			<soundCast>PsychicSoothePulserCast</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>true</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- Light Cantrip -->
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_LightCantrip</thingClass>
+		<defName>RH_TET_LightCantripP</defName>
+		<label>Light Cantrip</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_AddOns_LightCantrip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+	</ThingDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LightCantrip_Mage</defName>
+		<label>Light Cantrip I</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LightCantrip</uiIconPath>
+		<description>Creates a light that will burn of its own accord for a long period of time before extinguishing.\n\nSimple light spells are a common spell for new mages to learn.\n\nWill not produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightCantripP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LightCantrip_Mage</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>30000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LightCantrip_Wizard</defName>
+		<label>Light Cantrip II</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LightCantrip</uiIconPath>
+		<description>Creates a light that will burn of its own accord for a long period of time before extinguishing.\n\nSimple light spells are a common spell for new mages to learn.\n\nWill not produce sufficient light to grow plants by..</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightCantripP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LightCantrip_Wizard</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>26666</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LightCantrip_Warlock</defName>
+		<label>Light Cantrip III</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LightCantrip</uiIconPath>
+		<description>Creates a light that will burn of its own accord for a long period of time before extinguishing.\n\nSimple light spells are a common spell for new mages to learn.\n\nWill not produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>21</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightCantripP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LightCantrip_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>23333</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_AddOn_LightCantrip_Master</defName>
+		<label>Light Cantrip IV</label>
+		<uiIconPath>UI/Magic/RH_TET_AddOns_LightCantrip</uiIconPath>
+		<description>Creates a light that will burn of its own accord for a long period of time before extinguishing.\n\nSimple light spells are a common spell for new mages to learn.\n\nWill not produce sufficient light to grow plants by.</description>
+		<magicPoolCost>0.75</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>23</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requiresLineOfSight>false</requiresLineOfSight>
+			<defaultProjectile>RH_TET_LightCantripP</defaultProjectile>
+			<abilityDef>RH_TET_AddOn_LightCantrip_Master</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>20000</SecondsToRecharge>
+			<range>5</range>
+			<soundCast>Message_PositiveEvent</soundCast>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<AlwaysHits>true</AlwaysHits>
+			<isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<targetParams>
+				<canTargetItems>false</canTargetItems>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+</Defs>

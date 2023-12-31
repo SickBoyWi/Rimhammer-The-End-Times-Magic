@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Magic_DoBillsSigmarIdol</defName>
+		<label>create relic</label>
+		<giverClass>TheEndTimes_Magic.WorkGiver_DoBillIdolSigmar</giverClass>
+		<workType>Art</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Magic_FaithIdol_Sigmar</li>
+		</fixedBillGiverDefs>
+		<verb>create</verb>
+		<gerund>creating at</gerund>
+		<requiredCapacities>
+			<li>Talking</li>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Magic_DoBillsShallyaIdol</defName>
+		<label>create relic</label>
+		<giverClass>TheEndTimes_Magic.WorkGiver_DoBillIdolShallya</giverClass>
+		<workType>Art</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Magic_FaithIdol_Shallya</li>
+		</fixedBillGiverDefs>
+		<verb>create</verb>
+		<gerund>creating at</gerund>
+		<requiredCapacities>
+			<li>Talking</li>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Magic_DoBillsUlricrIdol</defName>
+		<label>create relic</label>
+		<giverClass>TheEndTimes_Magic.WorkGiver_DoBillIdolUlric</giverClass>
+		<workType>Art</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Magic_FaithIdol_Ulric</li>
+		</fixedBillGiverDefs>
+		<verb>create</verb>
+		<gerund>creating at</gerund>
+		<requiredCapacities>
+			<li>Talking</li>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

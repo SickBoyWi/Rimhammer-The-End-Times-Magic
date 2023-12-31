@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Beasts Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_BeastsWizardAI">
+		<defName>RH_TET_Magic_BeastsWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_BeastsFlockOfDoom_MageAI</li>
+			<li>RH_TET_BeastsFlockOfDoom_WizardAI</li>
+			<li>RH_TET_BeastsFlockOfDoom_WarlockAI</li>
+			<li>RH_TET_BeastsFlockOfDoom_MasterAI</li>
+
+			<li>RH_TET_BeastsAmberSpear_MageAI</li>
+			<li>RH_TET_BeastsAmberSpear_WizardAI</li>
+			<li>RH_TET_BeastsAmberSpear_WarlockAI</li>
+			<li>RH_TET_BeastsAmberSpear_MasterAI</li>
+			
+			<li>RH_TET_BeastsAmberTrance_MageAI</li>
+			<li>RH_TET_BeastsAmberTrance_WizardAI</li>
+			<li>RH_TET_BeastsAmberTrance_WarlockAI</li>
+			<li>RH_TET_BeastsAmberTrance_MasterAI</li>
+			
+			<li>RH_TET_BeastsWyssonsWildform_MageAI</li>
+			<li>RH_TET_BeastsWyssonsWildform_WizardAI</li>
+			<li>RH_TET_BeastsWyssonsWildform_WarlockAI</li>
+			<li>RH_TET_BeastsWyssonsWildform_MasterAI</li>
+			
+			<li>RH_TET_BeastsBeastMaster_MageAI</li>
+			<li>RH_TET_BeastsBeastMaster_WizardAI</li>
+			<li>RH_TET_BeastsBeastMaster_WarlockAI</li>
+			<li>RH_TET_BeastsBeastMaster_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_BeastsWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- Not in combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<invert>true</invert>
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+							<tags>
+								<li>Wildform</li>
+							</tags>
+						</li>
+					</subNodes>
+				</li>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>24.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>BeastMaster</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>38.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Flock</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+														<li>Wildform</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Flock</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Wildform</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>15.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberTrance</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Wildform</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>15.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberTrance</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Wildform</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>34.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>AmberSpear</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Flock</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Wildform</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>38.0</maxDistance>
+											<minDistance>15.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Flock</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsFlockOfDoom_MageAI</defName>
+		<ability>RH_TET_BeastsFlockOfDoom_Mage</ability>
+		<power>28.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>25.0</minRange>
+		<maxRange>48.0</maxRange>
+		<tags>
+			<li>Flock</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsFlockOfDoom_WizardAI</defName>
+		<ability>RH_TET_BeastsFlockOfDoom_Wizard</ability>
+		<power>28.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>25.0</minRange>
+		<maxRange>48.0</maxRange>
+		<tags>
+			<li>Flock</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsFlockOfDoom_WarlockAI</defName>
+		<ability>RH_TET_BeastsFlockOfDoom_Warlock</ability>
+		<power>28.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>25.0</minRange>
+		<maxRange>48.0</maxRange>
+		<tags>
+			<li>Flock</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsFlockOfDoom_MasterAI</defName>
+		<ability>RH_TET_BeastsFlockOfDoom_Master</ability>
+		<power>28.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<minRange>25.0</minRange>
+		<maxRange>48.0</maxRange>
+		<tags>
+			<li>Flock</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberSpear_MageAI</defName>
+		<ability>RH_TET_BeastsAmberSpear_Mage</ability>
+		<power>15.0</power>
+		<maxRange>32.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>AmberSpear</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberSpear_WizardAI</defName>
+		<ability>RH_TET_BeastsAmberSpear_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>32.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>AmberSpear</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberSpear_WarlockAI</defName>
+		<ability>RH_TET_BeastsAmberSpear_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>32.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>AmberSpear</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberSpear_MasterAI</defName>
+		<ability>RH_TET_BeastsAmberSpear_Master</ability>
+		<power>15.0</power>
+		<maxRange>32.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>AmberSpear</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberTrance_MageAI</defName>
+		<ability>RH_TET_BeastsAmberTrance_Mage</ability>
+		<power>35.0</power>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>AmberTrance</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberTrance_WizardAI</defName>
+		<ability>RH_TET_BeastsAmberTrance_Wizard</ability>
+		<power>35.0</power>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>AmberTrance</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberTrance_WarlockAI</defName>
+		<ability>RH_TET_BeastsAmberTrance_Warlock</ability>
+		<power>35.0</power>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>AmberTrance</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsAmberTrance_MasterAI</defName>
+		<ability>RH_TET_BeastsAmberTrance_Master</ability>
+		<power>35.0</power>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>AmberTrance</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsWyssonsWildform_MageAI</defName>
+		<ability>RH_TET_BeastsWyssonsWildform_Mage</ability>
+		<power>15.0</power>
+		<maxRange>35.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Wildform</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsWyssonsWildform_WizardAI</defName>
+		<ability>RH_TET_BeastsWyssonsWildform_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>35.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Wildform</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsWyssonsWildform_WarlockAI</defName>
+		<ability>RH_TET_BeastsWyssonsWildform_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>35.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Wildform</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsWyssonsWildform_MasterAI</defName>
+		<ability>RH_TET_BeastsWyssonsWildform_Master</ability>
+		<power>15.0</power>
+		<maxRange>35.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<usedOnCaster>true</usedOnCaster>
+		<tags>
+			<li>Wildform</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsBeastMaster_MageAI</defName>
+		<ability>RH_TET_BeastsBeastMaster_Mage</ability>
+		<power>25.0</power>
+		<maxRange>23.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BeastMaster</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsBeastMaster_WizardAI</defName>
+		<ability>RH_TET_BeastsBeastMaster_Wizard</ability>
+		<power>45.0</power>
+		<maxRange>23.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BeastMaster</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsBeastMaster_WarlockAI</defName>
+		<ability>RH_TET_BeastsBeastMaster_Warlock</ability>
+		<power>45.0</power>
+		<maxRange>23.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BeastMaster</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_BeastsBeastMaster_MasterAI</defName>
+		<ability>RH_TET_BeastsBeastMaster_Master</ability>
+		<power>45.0</power>
+		<maxRange>23.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>BeastMaster</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

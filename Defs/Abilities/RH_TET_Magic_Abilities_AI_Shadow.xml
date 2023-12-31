@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =================== Shadow Magic =================== -->
+
+	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_ShadowWizardAI">
+		<defName>RH_TET_Magic_ShadowWizardAbilityAI</defName>
+		<matchingTraits>
+			<li>RH_TET_LoreOfShadowTrait</li>
+		</matchingTraits>
+		<abilities>
+			<li>RH_TET_ShadowBewilder_MageAI</li>
+			<li>RH_TET_ShadowBewilder_WizardAI</li>
+			<li>RH_TET_ShadowBewilder_WarlockAI</li>
+			<li>RH_TET_ShadowBewilder_MasterAI</li>
+			
+			<li>RH_TET_ShadowSteedOfShadows_MageAI</li>
+			<li>RH_TET_ShadowSteedOfShadows_WizardAI</li>
+			<li>RH_TET_ShadowSteedOfShadows_WarlockAI</li>
+			<li>RH_TET_ShadowSteedOfShadows_MasterAI</li>
+			
+			<li>RH_TET_ShadowPenumbralPendulum_MageAI</li>
+			<li>RH_TET_ShadowPenumbralPendulum_WizardAI</li>
+			<li>RH_TET_ShadowPenumbralPendulum_WarlockAI</li>
+			<li>RH_TET_ShadowPenumbralPendulum_MasterAI</li>
+			
+			<li>RH_TET_ShadowMindSlip_MageAI</li>
+			<li>RH_TET_ShadowMindSlip_WizardAI</li>
+			<li>RH_TET_ShadowMindSlip_WarlockAI</li>
+			<li>RH_TET_ShadowMindSlip_MasterAI</li>
+			
+			<li>RH_TET_ShadowEnfeeblingFoe_MageAI</li>
+			<li>RH_TET_ShadowEnfeeblingFoe_WizardAI</li>
+			<li>RH_TET_ShadowEnfeeblingFoe_WarlockAI</li>
+			<li>RH_TET_ShadowEnfeeblingFoe_MasterAI</li>
+		</abilities>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_ShadowWizardAI" Abstract="True">
+		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
+		<decisionTree>
+			<subNodes>
+				<!-- In combat -->
+				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+					<subNodes>
+						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+							<subNodes>
+								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>33.0</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using ranged weapon -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+									
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>40.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>33.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20.0</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18</maxDistance>
+											<minDistance>5.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bewilder</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>16</maxDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Steed</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bewilder</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<!-- Using melee weapon, agressive ability use. -->
+								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+									<subNodes>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>16.0</maxDistance>
+											<minDistance>3.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bewilder</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Steed</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>18.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Bewilder</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>20.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>MindSlip</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>32.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>Pendulum</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+											<maxDistance>40.0</maxDistance>
+											<minDistance>10.0</minDistance>
+											<subNodes>
+												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+													<tags>
+														<li>EnfeeblingFoe</li>
+													</tags>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</decisionTree>
+	</AbilityUserAI.AbilityUserAIProfileDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowBewilder_MageAI</defName>
+		<ability>RH_TET_ShadowBewilder_Mage</ability>
+		<power>33.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Bewilder</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowBewilder_WizardAI</defName>
+		<ability>RH_TET_ShadowBewilder_Wizard</ability>
+		<power>33.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>18.0</maxRange>
+		<tags>
+			<li>Bewilder</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowBewilder_WarlockAI</defName>
+		<ability>RH_TET_ShadowBewilder_Warlock</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>Bewilder</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowBewilder_MasterAI</defName>
+		<ability>RH_TET_ShadowBewilder_Master</ability>
+		<power>35.0</power>
+		<needSeeingTarget>true</needSeeingTarget>
+		<maxRange>20.0</maxRange>
+		<tags>
+			<li>Bewilder</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowSteedOfShadows_MageAI</defName>
+		<ability>RH_TET_ShadowSteedOfShadows_Mage</ability>
+		<power>15.0</power>
+		<minRange>5.0</minRange>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Steed</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowSteedOfShadows_WizardAI</defName>
+		<ability>RH_TET_ShadowSteedOfShadows_Wizard</ability>
+		<power>15.0</power>
+		<minRange>5.0</minRange>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Steed</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowSteedOfShadows_WarlockAI</defName>
+		<ability>RH_TET_ShadowSteedOfShadows_Warlock</ability>
+		<power>15.0</power>
+		<minRange>5.0</minRange>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Steed</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowSteedOfShadows_MasterAI</defName>
+		<ability>RH_TET_ShadowSteedOfShadows_Master</ability>
+		<power>15.0</power>
+		<minRange>5.0</minRange>
+		<maxRange>16.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Steed</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowPenumbralPendulum_MageAI</defName>
+		<ability>RH_TET_ShadowPenumbralPendulum_Mage</ability>
+		<power>15.0</power>
+		<maxRange>33.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pendulum</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowPenumbralPendulum_WizardAI</defName>
+		<ability>RH_TET_ShadowPenumbralPendulum_Wizard</ability>
+		<power>15.0</power>
+		<maxRange>33.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pendulum</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowPenumbralPendulum_WarlockAI</defName>
+		<ability>RH_TET_ShadowPenumbralPendulum_Warlock</ability>
+		<power>15.0</power>
+		<maxRange>33.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pendulum</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowPenumbralPendulum_MasterAI</defName>
+		<ability>RH_TET_ShadowPenumbralPendulum_Master</ability>
+		<power>15.0</power>
+		<maxRange>33.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>Pendulum</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowMindSlip_MageAI</defName>
+		<ability>RH_TET_ShadowMindSlip_Mage</ability>
+		<power>40.0</power>
+		<maxRange>20.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>MindSlip</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowMindSlip_WizardAI</defName>
+		<ability>RH_TET_ShadowMindSlip_Wizard</ability>
+		<power>55.0</power>
+		<maxRange>20.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>MindSlip</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowMindSlip_WarlockAI</defName>
+		<ability>RH_TET_ShadowMindSlip_Warlock</ability>
+		<power>65.0</power>
+		<maxRange>20.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>MindSlip</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowMindSlip_MasterAI</defName>
+		<ability>RH_TET_ShadowMindSlip_Master</ability>
+		<power>70.0</power>
+		<maxRange>20.0</maxRange>
+		<needSeeingTarget>true</needSeeingTarget>
+		<tags>
+			<li>MindSlip</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowEnfeeblingFoe_MageAI</defName>
+		<ability>RH_TET_ShadowEnfeeblingFoe_Mage</ability>
+		<power>25.0</power>
+		<maxRange>40.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>EnfeeblingFoe</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowEnfeeblingFoe_WizardAI</defName>
+		<ability>RH_TET_ShadowEnfeeblingFoe_Wizard</ability>
+		<power>25.0</power>
+		<maxRange>40.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>EnfeeblingFoe</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowEnfeeblingFoe_WarlockAI</defName>
+		<ability>RH_TET_ShadowEnfeeblingFoe_Warlock</ability>
+		<power>25.0</power>
+		<maxRange>40.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>EnfeeblingFoe</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+		<defName>RH_TET_ShadowEnfeeblingFoe_MasterAI</defName>
+		<ability>RH_TET_ShadowEnfeeblingFoe_Master</ability>
+		<power>25.0</power>
+		<maxRange>40.0</maxRange>
+		<needSeeingTarget>false</needSeeingTarget>
+		<tags>
+			<li>EnfeeblingFoe</li>
+		</tags>
+	</AbilityUserAI.AbilityAIDef>
+
+</Defs>

@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityUser.AbilityDef Name="RH_TET_BaseMagicAbility" Abstract="True">
+		<abilityClass>TheEndTimes_Magic.MagicAbility</abilityClass>
+		<uiIconPath>UI/Glow_Corrupt</uiIconPath>
+	</AbilityUser.AbilityDef>
+
+	<!-- ===================== Bolt of Tzeentch =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_PinkBoltOfTzeentchP</defName>
+		<label>pink bolt of Tzeentch</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_PinkBoltOfTzeentch</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_Lightning</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>20</preFiringFinalIntensity>
+		<postFiringInitialIntensity>20</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>12</preFiringDuration>
+		<postFiringDuration>75</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchBolt_Mage</defName>
+		<label>Purple Bolt of Tzeentch I</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchBolt</uiIconPath>
+		<description>Lash out with pure warp energy.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchBolt_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>15</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchBolt_Wizard</defName>
+		<label>Purple Bolt of Tzeentch II</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchBolt</uiIconPath>
+		<description>Lash out with pure warp energy.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchBolt_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>13</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchBolt_Warlock</defName>
+		<label>Purple Bolt of Tzeentch III</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchBolt</uiIconPath>
+		<description>Lash out with pure warp energy.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchBolt_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>11</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchBolt_Master</defName>
+		<label>Purple Bolt of Tzeentch IV</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchBolt</uiIconPath>
+		<description>Lash out with pure warp energy.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchBolt_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>10</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>true</isViolent>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+  
+	<!-- ===================== Pink Fire of Tzeentch =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<defName>RH_TET_PinkFireOfTzeentchP</defName>
+		<label>Pink Fire of Tzeentch</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_PinkFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_MagicFire</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchPinkFire_Mage</defName>
+		<label>Pink Fire of Tzeentch I</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchPinkFire</uiIconPath>
+		<description>Shoot pink fireballs at your enemies.</description>
+		<magicPoolCost>0.16</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchPinkFire_Mage</abilityDef>
+			<warmupTime>2.5</warmupTime>
+			<SecondsToRecharge>18</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>14</burstShotCount>
+			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>4</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchPinkFire_Wizard</defName>
+		<label>Pink Fire of Tzeentch II</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchPinkFire</uiIconPath>
+		<description>Shoot pink fireballs at your enemies.</description>
+		<magicPoolCost>0.17</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchPinkFire_Wizard</abilityDef>
+			<warmupTime>2.2</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>18</burstShotCount>
+			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>5</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchPinkFire_Warlock</defName>
+		<label>Pink Fire of Tzeentch III</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchPinkFire</uiIconPath>
+		<description>Shoot pink fireballs at your enemies.</description>
+		<magicPoolCost>0.18</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchPinkFire_Warlock</abilityDef>
+			<warmupTime>2.0</warmupTime>
+			<SecondsToRecharge>14</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>20</burstShotCount>
+			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>6</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchPinkFire_Master</defName>
+		<label>Pink Fire of Tzeentch IV</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchPinkFire</uiIconPath>
+		<description>Shoot pink fireballs at your enemies.</description>
+		<magicPoolCost>0.19</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_PinkFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchPinkFire_Master</abilityDef>
+			<warmupTime>1.8</warmupTime>
+			<SecondsToRecharge>12</SecondsToRecharge>
+			<range>28</range>
+			<isViolent>true</isViolent>
+			<forcedMissRadius>4.5</forcedMissRadius>
+			<burstShotCount>22</burstShotCount>
+			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+			<isPrimary>false</isPrimary>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+			<extraDamages>
+				<li>
+					<damage>8</damage>
+					<damageDef>RH_TET_MagicFire</damageDef>
+					<chance>1</chance>
+				</li>
+			</extraDamages>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Green Bolt of Tzeentch =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<defName>RH_TET_GreenBoltOfTzeentchP</defName>
+		<label>green bolt of Tzeentch</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_GreenBoltOfTzeentch</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>RH_TET_Lightning</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<speed>999</speed>
+		</projectile>
+		<preFiringInitialIntensity>0</preFiringInitialIntensity>
+		<preFiringFinalIntensity>10</preFiringFinalIntensity>
+		<postFiringInitialIntensity>10</postFiringInitialIntensity>
+		<postFiringFinalIntensity>0</postFiringFinalIntensity>
+		<preFiringDuration>22</preFiringDuration>
+		<postFiringDuration>35</postFiringDuration>
+		<StartFireChance>0.100</StartFireChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_GreenTzeentchBolt_Mage</defName>
+		<label>Green Bolt of Tzeentch I</label>
+		<uiIconPath>UI/Magic/RH_TET_GreenTzeentchBolt</uiIconPath>
+		<description>The green bolt of Tzeentch will drive an enemy into a mad rage, causing them to attack the nearest target without concern for loyalties or their own safety. Works on humanlikes only, will simply damage animals.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_GreenBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_GreenTzeentchBolt_Mage</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>60</SecondsToRecharge>
+			<range>34</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.7</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_GreenTzeentchBolt_Wizard</defName>
+		<label>Green Bolt of Tzeentch II</label>
+		<uiIconPath>UI/Magic/RH_TET_GreenTzeentchBolt</uiIconPath>
+		<description>The green bolt of Tzeentch will drive an enemy into a mad rage, causing them to attack the nearest target without concern for loyalties or their own safety. Works on humanlikes only, will simply damage animals.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_GreenBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_GreenTzeentchBolt_Wizard</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>45</SecondsToRecharge>
+			<range>42</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.8</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_GreenTzeentchBolt_Warlock</defName>
+		<label>Green Bolt of Tzeentch III</label>
+		<uiIconPath>UI/Magic/RH_TET_GreenTzeentchBolt</uiIconPath>
+		<description>The green bolt of Tzeentch will drive an enemy into a mad rage, causing them to attack the nearest target without concern for loyalties or their own safety. Works on humanlikes only, will simply damage animals.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_GreenBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_GreenTzeentchBolt_Warlock</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>50</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.85</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_GreenTzeentchBolt_Master</defName>
+		<label>Green Bolt of Tzeentch IV</label>
+		<uiIconPath>UI/Magic/RH_TET_GreenTzeentchBolt</uiIconPath>
+		<description>The green bolt of Tzeentch will drive an enemy into a mad rage, causing them to attack the nearest target without concern for loyalties or their own safety. Works on humanlikes only, will simply damage animals.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_GreenBoltOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_GreenTzeentchBolt_Master</abilityDef>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>25</SecondsToRecharge>
+			<range>55</range>
+			<isViolent>false</isViolent>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>RH_TET_ElectricitySound</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<mentalStatesToApply>
+				<li>
+					<mentalStateDef>Berserk</mentalStateDef>
+					<applyChance>0.9</applyChance>
+				</li>
+			</mentalStatesToApply>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Orange Fire of Tzeentch =============================== -->
+
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<defName>RH_TET_OrangeFireOfTzeentchP</defName>
+		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<label>orange fire of Tzeentch</label>
+		<graphicData>
+			<texPath>UI/Magic/RH_TET_TzeentchOrangeFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>RH_TET_MagicHealDamage</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+		<HealFailChance>0.1</HealFailChance>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeenchFireOrange_Mage</defName>
+		<label>Orange Fire of Tzeentch I</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchOrangeFire</uiIconPath>
+		<description>The sorcerer is surrounded by a shield of fire that protects from enemy ranged attacks.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>20</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_TzeenchFireOrange_Mage</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_OrangeFireOfTzeentchP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>120.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_MagicShield</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.3</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeenchFireOrange_Wizard</defName>
+		<label>Orange Fire of Tzeentch II</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchOrangeFire</uiIconPath>
+		<description>The sorcerer is surrounded by a shield of fire that protects from enemy ranged attacks.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>22</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_TzeenchFireOrange_Wizard</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_OrangeFireOfTzeentchP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>100.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_MagicShield</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.5</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeenchFireOrange_Warlock</defName>
+		<label>Orange Fire of Tzeentch III</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchOrangeFire</uiIconPath>
+		<description>The sorcerer is surrounded by a shield of fire that protects from enemy ranged attacks.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>24</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_TzeenchFireOrange_Warlock</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_OrangeFireOfTzeentchP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>90.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_MagicShield</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.75</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeenchFireOrange_Master</defName>
+		<label>Orange Fire of Tzeentch IV</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchOrangeFire</uiIconPath>
+		<description>The sorcerer is surrounded by a shield of fire that protects from enemy ranged attacks.</description>
+		<magicPoolCost>0.30</magicPoolCost>
+		<abilityPoints>5</abilityPoints>
+		<experiencePoints>26</experiencePoints>
+		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<abilityDef>RH_TET_TzeenchFireOrange_Master</abilityDef>
+			<isViolent>false</isViolent>
+			<defaultProjectile>RH_TET_OrangeFireOfTzeentchP</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<SecondsToRecharge>75.0</SecondsToRecharge>
+			<range>2</range>
+			<soundCast>Interact_Ignite</soundCast>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<isPrimary>false</isPrimary>
+			<canCastInMelee>true</canCastInMelee>
+			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+			<hediffsToApply>
+				<li>
+					<hediffDef>RH_TET_MagicShield</hediffDef>
+					<applyChance>1.0</applyChance>
+					<severity>0.9</severity>
+				</li>
+			</hediffsToApply>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<!-- ===================== Indigo Fire of Tzeentch =============================== -->
+  
+	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+		<thingClass>TheEndTimes_Magic.Projectile_TzeentchIndigoFire</thingClass>
+		<defName>RH_TET_IndigoFireOfTzeentchP</defName>
+		<label>Indigo Fire of Tzeentch</label>
+		<graphicData>
+			<texPath>Things/Projectile/Tzeentch/RH_TET_IndigoFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<explosionRadius>10</explosionRadius>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>55</speed>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchIndigoFire_Mage</defName>
+		<label>Indigo Fire of Tzeentch I</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchIndigoFire</uiIconPath>
+		<description>Shoot a massive fireball at an enemy. It doesn't do much damage, but it does strikes a huge area and starts fires.</description>
+		<magicPoolCost>0.26</magicPoolCost>
+		<abilityPoints>1</abilityPoints>
+		<experiencePoints>13</experiencePoints>
+		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_IndigoFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchIndigoFire_Mage</abilityDef>
+			<warmupTime>3.5</warmupTime>
+			<SecondsToRecharge>40</SecondsToRecharge>
+			<range>25</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>6</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>2</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.5</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchIndigoFire_Wizard</defName>
+		<label>Indigo Fire of Tzeentch II</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchIndigoFire</uiIconPath>
+		<description>Shoot a massive fireball at an enemy. It doesn't do much damage, but it does start a massive fire.</description>
+		<magicPoolCost>0.27</magicPoolCost>
+		<abilityPoints>2</abilityPoints>
+		<experiencePoints>15</experiencePoints>
+		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_IndigoFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchIndigoFire_Wizard</abilityDef>
+			<warmupTime>3.3</warmupTime>
+			<SecondsToRecharge>37</SecondsToRecharge>
+			<range>28</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.7</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>3</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.5</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchIndigoFire_Warlock</defName>
+		<label>Indigo Fire of Tzeentch III</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchIndigoFire</uiIconPath>
+		<description>Shoot a massive fireball at an enemy. It doesn't do much damage, but it does start a massive fire.</description>
+		<magicPoolCost>0.28</magicPoolCost>
+		<abilityPoints>3</abilityPoints>
+		<experiencePoints>17</experiencePoints>
+		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_IndigoFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchIndigoFire_Warlock</abilityDef>
+			<warmupTime>3.2</warmupTime>
+			<SecondsToRecharge>34</SecondsToRecharge>
+			<range>32</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.5</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>4</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.55</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+	
+	<TheEndTimes_Magic.MagicAbilityDef ParentName="RH_TET_BaseMagicAbility">
+		<defName>RH_TET_TzeentchIndigoFire_Master</defName>
+		<label>Indigo Fire of Tzeentch IV</label>
+		<uiIconPath>UI/Magic/RH_TET_TzeentchIndigoFire</uiIconPath>
+		<description>Shoot a massive fireball at an enemy. It doesn't do much damage, but it does start a massive fire.</description>
+		<magicPoolCost>0.29</magicPoolCost>
+		<abilityPoints>4</abilityPoints>
+		<experiencePoints>19</experiencePoints>
+		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>RH_TET_IndigoFireOfTzeentchP</defaultProjectile>
+			<abilityDef>RH_TET_TzeentchIndigoFire_Master</abilityDef>
+			<warmupTime>3.0</warmupTime>
+			<SecondsToRecharge>30</SecondsToRecharge>
+			<range>35</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<forcedMissRadius>5.0</forcedMissRadius>
+			<burstShotCount>1</burstShotCount>
+			<isPrimary>false</isPrimary>
+			<muzzleFlashScale>25</muzzleFlashScale>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<isViolent>true</isViolent>
+			<extraDamages>
+				<li>
+					<damage>5</damage>
+					<damageDef>Flame</damageDef>
+					<chance>.6</chance>
+				</li>
+			</extraDamages>
+			<AlwaysHits>false</AlwaysHits>
+			<canCastInMelee>true</canCastInMelee>
+		</MainVerb>
+	</TheEndTimes_Magic.MagicAbilityDef>
+
+</Defs>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RH_TET_Magic_RepairStuff</defName>
+		<driverClass>TheEndTimes_Magic.JobDriver_Repair</driverClass>
+		<reportString>Repairing TargetB.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Magic_UseNeurotrainer</defName>
+		<driverClass>JobDriver_UseItem</driverClass>
+		<reportString>consuming learning potion.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Magic_UsePotion</defName>
+		<driverClass>JobDriver_UseItem</driverClass>
+		<reportString>consuming potion.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+</Defs>

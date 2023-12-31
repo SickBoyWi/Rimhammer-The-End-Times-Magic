@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--TODO Add this in if I ever get more than 1 building. Seems unnecessary as of now.
+	<DesignationCategoryDef>
+		<defName>RH_TET_Magic_Buildings</defName>
+		<label>Magic</label>
+		<description>Rimhammer Magic specific buildings.</description>
+		<order>12</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+	-->
+	
+</Defs>

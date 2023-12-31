@@ -1,0 +1,38 @@
+﻿using AbilityUser;
+using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
+using Verse;
+
+namespace TheEndTimes_Magic
+{
+    public class Projectile_StreamOfCorruption : Projectile_AbilityLaser
+    {
+        protected override void Impact(Thing hitThing, bool blockedByShield = false)
+        {
+            Pawn pawnCaster = this.launcher as Pawn;
+ 
+            this.Draw();
+                
+            Pawn target = this.intendedTarget.Pawn;
+            IntVec3 pos = target.Position;
+
+            int damageAmt = this.def.projectile.GetDamageAmount(1f);
+            DamageDef damage = this.def.projectile.damageDef;
+            DamageInfo damageInfo = new DamageInfo(damage, damageAmt, 0, -1, pawnCaster);
+            FleckMaker.ThrowMicroSparks(destination, Map);
+            FleckMaker.Static(destination, Map, FleckDefOf.ShotHit_Dirt, 1f);
+            target.TakeDamage(damageInfo);
+
+            target.health.AddHediff(RH_TET_MagicDefOf.RH_TET_NurgleStreamOfCorruptionI);
+        }
+        
+        public Projectile_StreamOfCorruption()
+            : base()
+        {
+        }
+    }
+}

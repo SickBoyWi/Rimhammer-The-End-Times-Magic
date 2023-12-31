@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_ScrollBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MaxHitPoints>30</MaxHitPoints>
+		  <Mass>0.05</Mass>
+		  <Flammability>1.0</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>RH_TET_MagicItems</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>Artifact</li>
+		</tradeTags>
+		<thingSetMakerTags>
+		  <li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_CurePoison</defName>
+		<label>Scroll: Cure Poison</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Cure Poison spell. The Cure Poison spell will heal various forms of poison instantly, including food poisoning, toxic buildup, and chaos corruption. Can be learned by any one with magic talent.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_CurePoison</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollCurePoison</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_RaiseGround</defName>
+		<label>Scroll: Raise Ground</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Raise Ground spell. The Raise Ground spell will raise wet soil, making it dry, and capable of supporting structures. Can be learned by any one with magic talent.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_RaiseGround</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>1200</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollRaiseGround</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_Transport</defName>
+		<label>Scroll: Transport</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Transport spell. The Transport spell allows pawns to create a temporary means of planetary transportation. Can be learned by any one with magic talent.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_Transport</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>2400</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollTransport</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_LowerGround</defName>
+		<label>Scroll: Lower Ground</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Lower Ground spell. The Lower Ground spell will lower the ground, making it shallow water. It will lower shallow water to make deep water. Can be learned by any one with magic talent.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_LowerGround</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>1200</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollLowerGround</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_ZoneOfFertility</defName>
+		<label>Scroll: Zone of Fertility</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Zone of Fertility spell. The spell will turn all of the currently growable soil in the area of effect into rich high fertility soil.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_ZoneOfFertility</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>1300</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollZoneOfFertility</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_ScrollBase">
+		<defName>RH_TET_Scroll_LightCantrip</defName>
+		<label>Scroll: Light Cantrip</label>
+		<description>A magic scroll. Reading this scroll will grant a magic user the Light Cantrip spell. The spell will create a light that burns of its own power for many days before burning out. The light will not be powerful enough to grow plants.\n\nMagic users can learn up to five non-lore spells in addition to the five spells associated with the lore of magic that they know. A non-lore spell can only be known once by a magic user.\n\nAfter reading this scroll to learn the basics of the new magic spell, the magic user will still have to put a magic point into learning the level one version in order to cast the spell associated with this scroll.\n\nReading this scroll will cause it to be destroyed.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/Scrolls/RH_TET_Scroll_LightCantrip</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+		  <MarketValue>800</MarketValue>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Read Scroll</useLabel>
+			<useDuration>500</useDuration>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>TheEndTimes_Magic.CompUseEffect_ScrollLightCantrip</compClass>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

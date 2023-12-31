@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<DamageDef Name="RH_TET_InjuryBase" Abstract="True">
+		<workerClass>DamageWorker_AddInjury</workerClass>
+	</DamageDef>
+  
+	<DamageDef>
+		<defName>RH_TET_Lightning</defName>
+		<label>lightning</label>
+		<externalViolence>true</externalViolence>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been burned to a crisp.</deathMessage>
+		<hediff>RH_TET_MagicBurn</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>RH_TET_MagicFire</defName>
+		<label>magic fire</label>
+		<externalViolence>true</externalViolence>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been toasted to a crisp.</deathMessage>
+		<hediff>RH_TET_MagicBurn</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+	</DamageDef>
+  
+	<DamageDef>
+		<defName>RH_TET_MagicHealDamage</defName>
+		<label>magical healing</label>
+		<workerClass>TheEndTimes_Magic.DamageWorker_MagicalHealing</workerClass>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<harmsHealth>false</harmsHealth>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+	</DamageDef>
+
+	<DamageDef ParentName="RH_TET_InjuryBase">
+		<defName>RH_TET_MagicalAugmentation</defName>
+		<label>Magical Augmentation</label>
+		<externalViolence>false</externalViolence>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<deathMessage>{0} was killed by the magic.</deathMessage>
+		<hediff>RH_TET_BeastsWyssonsWildformI</hediff>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<defaultDamage>0</defaultDamage>
+		<isExplosive>false</isExplosive>
+		<impactSoundType>Blunt</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+		<explosionCellMote>Mote_ThoughtGood</explosionCellMote>
+		<explosionColorEdge>(0.8, 0.7, 1.0, 0.8)</explosionColorEdge>
+		<explosionColorCenter>(1, 0.7, 1.0, 0.8)</explosionColorCenter>
+		<explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+		<buildingDamageFactor>0.0</buildingDamageFactor>
+		<soundExplosion>Explosion_EMP</soundExplosion>
+	</DamageDef>
+
+	<DamageDef ParentName="RH_TET_InjuryBase">
+		<defName>RH_TET_Poison</defName>
+		<label>Poison</label>
+		<externalViolence>true</externalViolence>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<deathMessage>{0} was killed by poison.</deathMessage>
+		<hediff>RH_TET_Poisoned</hediff>
+		<hediffSkin>RH_TET_Poisoned</hediffSkin>
+		<hediffSolid>RH_TET_Poisoned</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<isExplosive>false</isExplosive>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<additionalHediffs>
+			<li>
+				<hediff>RH_TET_Slowed</hediff>
+				<severityPerDamageDealt>.1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>RH_TET_FlyingPawnDamage</defName>
+		<label>flying</label>
+		<workerClass>TheEndTimes_Magic.DamageWorker_Flying</workerClass>
+		<externalViolence>false</externalViolence>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<harmsHealth>false</harmsHealth>
+		<armorCategory>Heat</armorCategory>
+	</DamageDef>
+	
+	<DamageDef ParentName="RH_TET_InjuryBase">
+		<defName>RH_TET_MagicalInjury</defName>
+		<label>magical damage</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} was destroyed by magical power.</deathMessage>
+		<hediff>RH_TET_MagicMentalDamage</hediff>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<armorCategory>Blunt</armorCategory>
+		<explosionSnowMeltAmount>.2</explosionSnowMeltAmount>
+		<explosionCellFleck>BlastDry</explosionCellFleck>
+		<explosionColorCenter>(0, .2, .4)</explosionColorCenter>
+		<explosionColorEdge>(.6, 0.8, 1)</explosionColorEdge>
+		<soundExplosion>Explosion_Smoke</soundExplosion>
+	</DamageDef>
+	
+	<DamageDef ParentName="RH_TET_InjuryBase">
+		<defName>RH_TET_MagicalBlunt</defName>
+		<label>magic wind</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} was destroyed by brutal magic.</deathMessage>
+		<hediff>RH_TET_MagicBluntDamage</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Blunt</armorCategory>
+	</DamageDef>
+	
+	<DamageDef ParentName="RH_TET_InjuryBase">
+		<defName>RH_TET_MagicalSharp</defName>
+		<label>magic cut</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} was sliced to death magically.</deathMessage>
+		<hediff>RH_TET_MagicSharpDamage</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+	
+</Defs>
