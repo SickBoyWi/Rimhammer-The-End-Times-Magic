@@ -68,7 +68,7 @@
 	<RH_TET_MessageForgeOfChamonFail>{0} failed to cast Forge of Chamon. Only use it on apparel or weapons.</RH_TET_MessageForgeOfChamonFail>
 	<RH_TET_MessageSpellFailTargets>{0} failed to cast the spell. Invalid or no target.</RH_TET_MessageSpellFailTargets>
 	<RH_TET_Magic_Unsummon>Unsummon</RH_TET_Magic_Unsummon>
-	<RH_TET_Magic_NotEmpirePlayerUnsummon>Only Empire players may unsummon.</RH_TET_Magic_NotEmpirePlayerUnsummon>
+	<RH_TET_Magic_NotEmpirePlayerUnsummon>Only the casting faction may unsummon.</RH_TET_Magic_NotEmpirePlayerUnsummon>
 	<RH_TET_Magic_PoisonGasCloud_statusReadout_high>{0} ({1}K, {2}% effect)</RH_TET_Magic_PoisonGasCloud_statusReadout_high>
 	<RH_TET_Magic_PoisonGasCloud_statusReadout_low>{0} ({1}, {2}% effect)</RH_TET_Magic_PoisonGasCloud_statusReadout_low>
 	<RH_TET_Magic_InvalidTargetLocation>Invalid target location.</RH_TET_Magic_InvalidTargetLocation>

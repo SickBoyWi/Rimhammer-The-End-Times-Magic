@@ -15,8 +15,8 @@ namespace TheEndTimes_Magic
         public override void PostSummonSetup()
         {
             base.PostSummonSetup();
-            if (this.Faction != null)
-                this.SetFaction(null);
+            //if (this.Faction != null)  Keep faction for new unsummon logic. 20240224
+            //    this.SetFaction(null);
             if (this.def.defName.Contains("Summonable") || this.def.defName.Contains("Maddened"))
                 this.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, false, false, (Pawn)null, false);
         }
@@ -48,7 +48,8 @@ namespace TheEndTimes_Magic
             commandToggle1.turnOffSound = SoundDefOf.DraftOff;
             commandToggle1.defaultLabel = (string)"RH_TET_Magic_Unsummon".Translate();
             commandToggle1.tutorTag = "RH_TET_Magic_Unsummon".Translate(); 
-            if (!Faction.OfPlayer.def.defName.Equals("RH_TET_Empire_PlayerWizard") && !Faction.OfPlayer.def.defName.Equals("RH_TET_Empire_PlayerColony"))
+            //if (!Faction.OfPlayer.def.defName.Equals("RH_TET_Empire_PlayerWizard") && !Faction.OfPlayer.def.defName.Equals("RH_TET_Empire_PlayerColony"))
+            if (!this.Faction.Equals(Faction.OfPlayer))
                 commandToggle1.Disable((string)"RH_TET_Magic_NotEmpirePlayerUnsummon".Translate());
             yield return (Gizmo)commandToggle1;
         }
