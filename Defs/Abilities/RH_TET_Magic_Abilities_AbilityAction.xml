@@ -220,7 +220,7 @@
 		<defName>RH_TET_Ability_WH_Execute</defName>
 		<label>Execute</label>
 		<uiIconPath>UI/AbilityAction/Execute</uiIconPath>
-		<description>Execute a single enemy by shooting them in the head.</description>
+		<description>Execute a single enemy by shooting them in the head. Works against humanlike pawns. If used against an animal, then it does normal damage to the head.</description>
 		<abilityPoolCost>0.24</abilityPoolCost>
 		<abilityPoints>2</abilityPoints>
 		<MainVerb Class="AbilityUser.VerbProperties_Ability">

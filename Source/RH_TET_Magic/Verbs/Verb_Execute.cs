@@ -62,6 +62,13 @@ namespace TheEndTimes_Magic
                 {
                     headHealth = 99999;
                 }
+
+                // Make it so it doesn't one shot kill all animals.
+                if (target.NonHumanlikeOrWildMan())
+                {
+                    headHealth = 18;
+                }
+
                 DamageInfo dinfo = new DamageInfo(DamageDefOf.Bullet, (float)headHealth, 999f, -1f, (Thing)caster, bodyPartRecord, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown, (Thing)null, false, true);
                 target.TakeDamage(dinfo);
                 if (!target.Dead)
