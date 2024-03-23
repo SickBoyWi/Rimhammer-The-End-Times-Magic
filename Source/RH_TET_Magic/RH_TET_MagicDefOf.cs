@@ -466,6 +466,7 @@ namespace TheEndTimes_Magic
 
         // Thoughts
         public static ThoughtDef RH_TET_SlaaneshPleasure;
+        public static ThoughtDef RH_TET_Plus15For15Days;
         public static ThoughtDef RH_TET_ShallyaFortuneThought;
         public static ThoughtDef RH_TET_GrimResolve_Mood;
 

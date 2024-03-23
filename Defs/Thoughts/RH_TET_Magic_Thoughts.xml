@@ -17,6 +17,21 @@
 	</ThoughtDef>
 
 	<ThoughtDef>
+		<defName>RH_TET_Plus15For15Days</defName>
+		<icon>Mote/Symbols/RH_TET_Slaanesh</icon>
+		<showBubble>true</showBubble>
+		<durationDays>15</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>magical mood boost</label>
+				<description>I feel great!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
 		<defName>RH_TET_GrimResolve_Mood</defName>
 		<durationDays>.5</durationDays>
 		<stackLimit>1</stackLimit>

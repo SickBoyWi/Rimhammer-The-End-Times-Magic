@@ -91,6 +91,8 @@
     <Compile Include="Comps\CompHeDiffPotion.cs" />
     <Compile Include="Comps\CompProperties_HeDiffPotion.cs" />
     <Compile Include="Comps\CompUseEffect_GiveHeDiff.cs" />
+    <Compile Include="Comps\CompTargetEffect_HappingIncrease15Days.cs" />
+    <Compile Include="Comps\CompTargetEffect_MagicPoolAndExperience.cs" />
     <Compile Include="Comps\CompUseEffect_WitchhunterTome.cs" />
     <Compile Include="Comps\Gizmo_MagicEnergyShieldStatus.cs" />
     <Compile Include="Comps\CompMagicShield.cs" />

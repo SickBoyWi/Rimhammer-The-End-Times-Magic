@@ -108,9 +108,11 @@
   
 	<!-- Items -->
 	<RH_TET_ClearMentalState>{0} has recovered from the {1} mental state.</RH_TET_ClearMentalState>
+	<RH_TET_MagicLevelNeedBoost>{0} has gained magic experience, and replenished their magic need.</RH_TET_MagicLevelNeedBoost>
 	<RH_TET_ClearMentalStateFail>{0} was unable to correct the mental state of {1}.</RH_TET_ClearMentalStateFail>
 	<RH_TET_MisusedNurgleCharm>{0} is displeased! You've misused his charm on a mentally healthy being. As a punishment, {0} has gifted the target with {1}.</RH_TET_MisusedNurgleCharm>
 	<RH_TET_GainedPleasureOfSlaanesh>{0} smiles as the Pleasure of Slaanesh is received.</RH_TET_GainedPleasureOfSlaanesh>
+	<RH_TET_GainedMoodBoost>{0} has received a magic moodlet.</RH_TET_GainedMoodBoost>
 	<RH_TET_CoinOfTzeentchGood>{0} flipped the Coin of Tzeentch, and received the following boon: {1}</RH_TET_CoinOfTzeentchGood>
 	<RH_TET_CoinOfTzeentchBad>{0} flipped the Coin of Tzeentch, and was unlucky. They have been wounded.</RH_TET_CoinOfTzeentchBad>
 	<RH_TET_ExperienceMagic>magic experience points</RH_TET_ExperienceMagic>

@@ -58,7 +58,63 @@
 			<li>RewardStandardLowFreq</li>
 		</thingSetMakerTags>
 	</ThingDef>
- 
+
+	<ThingDef ParentName="RH_TET_MagicItemBase">
+		<defName>RH_TET_Potion_Foolhardiness</defName>
+		<label>potion of foolhardiness</label>
+		<description>A one-use magic potion. The magic in the potion will grant the imbiber with a large mood boost that will last for a quarter of a year.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionFoolhardiness</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use potion of foolhardiness</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompTargetEffect_HappingIncrease15Days</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_MagicItemBase">
+		<defName>RH_TET_Potion_SupremeMagic</defName>
+		<label>potion of supreme magic</label>
+		<description>A one-use magic potion. This potion will automatically fill the magic pool of the imbiber, as well as grant them three magic experience points.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionSupremeMagic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use potion of supreme magic</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>TheEndTimes_Magic.CompTargetEffect_MagicPoolAndExperience</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
 	<!-- Trainer potions -->
 
 	<ThingDef Name="RH_TET_MagicLearningPotionBase" ParentName="RH_TET_MagicItemBase" Abstract="True">
@@ -350,6 +406,40 @@
 				<useJob>RH_TET_Magic_UsePotion</useJob>
 				<useLabel>Use potion of speed</useLabel>
 				<hediff>RH_TET_MovementEffect</hediff>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicHeDiffPotionBase">
+		<defName>RH_TET_Magic_PotionHeDiff_Unbreaking</defName>
+		<label>potion of unbreaking</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to be able to stay in a fight longer. It increases pain shock threshold significantly, and slightly reduces incoming damage amounts.\n\nThe potion is consumed orally. Once consumed, the magic will take effect immediately, and will last for 48 hours.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionUnbreaking</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_HeDiffPotion">
+				<compClass>TheEndTimes_Magic.CompHeDiffPotion</compClass>
+				<useJob>RH_TET_Magic_UsePotion</useJob>
+				<useLabel>Use potion of unbreaking</useLabel>
+				<hediff>RH_TET_PhysicalImprovePainReduceDamageEffect</hediff>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicHeDiffPotionBase">
+		<defName>RH_TET_Magic_PotionHeDiff_Immunity</defName>
+		<label>potion of immunity</label>
+		<description>A one-use magic potion. The magic in the potion will cause the consumer to be able to fight off disease significantly better, better resist environmental toxins, and heal from injuries at a slightly higher rate.\n\nThe potion is consumed orally. Once consumed, the magic will take effect immediately, and will last for 48 hours.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_PotionImmunity</texPath>
+		</graphicData>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_HeDiffPotion">
+				<compClass>TheEndTimes_Magic.CompHeDiffPotion</compClass>
+				<useJob>RH_TET_Magic_UsePotion</useJob>
+				<useLabel>Use potion of immunity</useLabel>
+				<hediff>RH_TET_ImprovedImmunityHealingEffect</hediff>
 			</li>
 		</comps>
 	</ThingDef>

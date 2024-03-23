@@ -3115,7 +3115,7 @@
 		<defName>RH_TET_CharismaEffect</defName>
 		<description>A magical state that enhances a pawns social ability.</description>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>charismatic</label>
+		<label>magical charisma boost</label>
 		<defaultLabelColor>(1,1,1)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -3138,7 +3138,7 @@
 		<defName>RH_TET_MovementEffect</defName>
 		<description>A magical state that enhances a pawns movement.</description>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>movement enhanced</label>
+		<label>magical movement boost</label>
 		<defaultLabelColor>(1,1,1)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -3155,6 +3155,47 @@
 						<offset>0.34</offset>
 					</li>
 				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+	<HediffDef ParentName="RH_TET_PawnEnhanceTwoDaysBase">
+		<defName>RH_TET_PhysicalImprovePainReduceDamageEffect</defName>
+		<description>A magical state that enhances a pawns ability to keep fighting. Increases pain threshold, reduces incoming damage by 15 percent.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>magical defensive boost</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<statOffsets>
+					<IncomingDamageFactor>-.15</IncomingDamageFactor>
+					<PainShockThreshold>.5</PainShockThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+	<HediffDef ParentName="RH_TET_PawnEnhanceTwoDaysBase">
+		<defName>RH_TET_ImprovedImmunityHealingEffect</defName>
+		<description>A magical state that enhances a pawns ability to fight off diseases, resist environmental toxins, and heal from injuries.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>magical healing boost</label>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>.2</InjuryHealingFactor>
+					<ToxicResistance>.2</ToxicResistance>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
