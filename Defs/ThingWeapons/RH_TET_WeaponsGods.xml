@@ -162,7 +162,7 @@
 		<defName>RH_TET_MeleeWeapon_SigmarHammer</defName>
 		<thingClass>TheEndTimes_Magic.Thing_SigmarHammer</thingClass>
 		<label>Ghal Maraz</label>
-		<description>An amazing axe, a gift from the God Sigmar.\n\nGhal Maraz (Skull-Splitter in the original Khazalid) is the legendary Warhammer once wielded by the founder of the Empire of Man; Sigmar Heldenhammer.</description>
+		<description>An amazing hammer, a gift from the God Sigmar.\n\nGhal Maraz (Skull-Splitter in the original Khazalid) is the legendary Warhammer once wielded by the founder of the Empire of Man; Sigmar Heldenhammer.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Item/Equipment/Weapons/RH_TET_SigmarHammer</texPath>
