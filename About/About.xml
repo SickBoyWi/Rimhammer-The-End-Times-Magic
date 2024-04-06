@@ -68,13 +68,35 @@ Buy me a coffee: https://ko-fi.com/sickboywi
 
 Join the Discord channel: https://discord.gg/UCmQbCT
 
-========================
-Changelog
-========================
-
-0.0.0.1 2019-10-01
-========================
-Development started. 
-
 	</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>UnlimitedHugs.HugsLib</packageId>
+			<displayName>HugsLib</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=818773962</steamWorkshopUrl>
+			<downloadUrl />
+		</li>
+		<li>
+			<packageId>sickboywi.sicktools</packageId>
+			<displayName>SickTools</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=932008009</steamWorkshopUrl>
+			<downloadUrl />
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.BioTech</li>
+		<li>UnlimitedHugs.HugsLib</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>sickboywi.sicktools</li>
+	</loadAfter>	
 </ModMetaData>
