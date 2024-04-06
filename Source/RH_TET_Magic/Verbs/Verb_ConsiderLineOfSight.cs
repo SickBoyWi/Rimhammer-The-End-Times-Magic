@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using Verse;
 
 namespace TheEndTimes_Magic

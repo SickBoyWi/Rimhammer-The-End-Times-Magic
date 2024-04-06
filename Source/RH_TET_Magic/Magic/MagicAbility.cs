@@ -1,5 +1,5 @@
 ﻿
-using AbilityUser;
+using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -45,7 +45,7 @@ namespace TheEndTimes_Magic
             this.abilityUser = (abilityData.Pawn.AllComps.FirstOrDefault<ThingComp>((Func<ThingComp, bool>)(x => x.GetType() == abilityData.AbilityClass)) as CompMagicUser);
         }
 
-        public MagicAbility(Pawn user, AbilityUser.AbilityDef pdef)
+        public MagicAbility(Pawn user, SickAbilityUser.AbilityDef pdef)
             : base (user, pdef)
         {
         }

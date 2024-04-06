@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using HarmonyLib;
 using RimWorld;
 using System;

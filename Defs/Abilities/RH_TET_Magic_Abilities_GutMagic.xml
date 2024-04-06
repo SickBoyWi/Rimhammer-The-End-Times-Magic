@@ -3,8 +3,8 @@
  
 	<!-- ===================== Bonecrusher =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_MawBonecrusherP</defName>
 		<label>Bonecrusher</label>
 		<graphicData>
@@ -28,7 +28,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -69,7 +69,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -110,7 +110,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -151,7 +151,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -185,9 +185,9 @@
  
 	<!-- ===================== Braingobbler =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<defName>RH_TET_MawBraingobblerP</defName>
-		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<thingClass>SickAbilityUser.Projectile_Ability</thingClass>
 		<label>braingobbler</label>
 		<graphicData>
 			<texPath>UI/Magic/RH_TET_MawBraingobbler</texPath>
@@ -211,7 +211,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to get this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -246,7 +246,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -281,7 +281,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -316,7 +316,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Braingobbler</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -344,8 +344,8 @@
 
 	<!-- ===================== Bullgorger =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_MawBullgorgerP</defName>
 		<label>Bullgorger</label>
 		<graphicData>
@@ -372,7 +372,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -416,7 +416,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -460,7 +460,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -504,7 +504,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -541,9 +541,9 @@
 
 	<!-- ===================== Trollguts =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<!--<thingClass>TheEndTimes_Magic.Projectile_Trollguts</thingClass>-->
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_MawTrollgutsP</defName>
 		<label>Trollguts</label>
 		<graphicData>
@@ -574,7 +574,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -619,7 +619,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -664,7 +664,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -709,7 +709,7 @@
 		<abilityPoints>6</abilityPoints>
 		<experiencePoints>25</experiencePoints>
 		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_TrollGuts</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -747,8 +747,8 @@
 
 	<!-- ===================== Bestial Surge =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_MawToothcrackerP</defName>
 		<label>toothcracker</label>
 		<graphicData>
@@ -775,7 +775,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -827,7 +827,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -879,7 +879,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -931,7 +931,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Toothcracker</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

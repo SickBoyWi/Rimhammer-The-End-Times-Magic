@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Aqshy's Aegis -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
 		<defName>RH_TET_FireAegisIP</defName>
 		<label>Aqshy's Aegis</label>
@@ -30,7 +30,7 @@
 		<StartFireChance>0</StartFireChance>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
 		<defName>RH_TET_FireAegisIIP</defName>
 		<label>Aqshy's Aegis</label>
@@ -58,7 +58,7 @@
 		<StartFireChance>0</StartFireChance>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
 		<defName>RH_TET_FireAegisIIIP</defName>
 		<label>Aqshy's Aegis</label>
@@ -86,7 +86,7 @@
 		<StartFireChance>0</StartFireChance>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<thingClass>TheEndTimes_Magic.Projectile_FireAegis</thingClass>
 		<defName>RH_TET_FireAegisIVP</defName>
 		<label>Aqshy's Aegis</label>
@@ -123,7 +123,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -160,7 +160,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -197,7 +197,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -234,7 +234,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -263,8 +263,8 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Breathe Fire -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_FireBreathFireP</defName>
 		<label>Breathe Fire</label>
 		<graphicData>
@@ -295,7 +295,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -326,7 +326,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -357,7 +357,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -388,7 +388,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -411,9 +411,9 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Cascading Fire Cloak -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<defName>RH_TET_FireCascadingFireCloakP</defName>
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<label>Cascading Fire Cloak</label>
 		<graphicData>
 			<texPath>UI/Magic/RH_TET_FireCloak</texPath>
@@ -439,7 +439,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -482,7 +482,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -524,7 +524,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -566,7 +566,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -600,8 +600,8 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Piercing Bolts of Burning -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_FirePiercingBoltsP</defName>
 		<label>Piercing Bolts of Burning</label>
 		<graphicData>
@@ -625,7 +625,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -666,7 +666,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -707,7 +707,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -748,7 +748,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -781,7 +781,7 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Flame Storm -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_FlameStorm</thingClass>
 		<defName>RH_TET_FireFlameStormP</defName>
 		<label>Flame Storm</label>
@@ -806,7 +806,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -842,7 +842,7 @@
 		<abilityPoints>5</abilityPoints>
 		<experiencePoints>23</experiencePoints>
 		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -878,7 +878,7 @@
 		<abilityPoints>6</abilityPoints>
 		<experiencePoints>25</experiencePoints>
 		<nextMagicLevelPointsRequired>6</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -914,7 +914,7 @@
 		<abilityPoints>7</abilityPoints>
 		<experiencePoints>27</experiencePoints>
 		<nextMagicLevelPointsRequired>7</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

@@ -7,8 +7,8 @@
 	</AbilityUser.AbilityDef>
 
 	<!-- Witch Hunter -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_Ability_WH_CondemnP</defName>
 		<label>Condemn</label>
 		<graphicData>
@@ -37,7 +37,7 @@
 		<description>The user of this ability calls on Sigmar to condemn a foe. The power of Sigmar blasts from the hand of the user, strikes an enemy, and causes that foe reduced pain fall threshold amount and slows their movement.\n\nWitchhunter abilities are gained by reading a Witchhunter Tome. Tomes can be created at a ...</description>
 		<abilityPoolCost>0.24</abilityPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityAction</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -73,8 +73,8 @@
 		</MainVerb>
 	</TheEndTimes_Magic.AbilityActionAbilityDef>
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_Ability</thingClass>
 		<defName>RH_TET_Ability_WH_GrimResolveP</defName>
 		<label>Grim Resolve</label>
 		<graphicData>
@@ -96,7 +96,7 @@
 		<description>The user of this ability calls on Sigmar for strength. The power of Sigmar surrounds the user, and bolsters the physical capacities of the user. Increases movement, pain shock threshold, mental break threshold, and grants a mood boost.\n\nWitchhunter abilities are gained by reading a Witchhunter Tome. Tomes can be created at a ...</description>
 		<abilityPoolCost>0.24</abilityPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_GrimResolve</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -133,8 +133,8 @@
 		</MainVerb>
 	</TheEndTimes_Magic.AbilityActionAbilityDef>
 	
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_Ability_WH_PurifyingFlameP</defName>
 		<label>Purifying Flame</label>
 		<graphicData>
@@ -163,7 +163,7 @@
 		<description>The user calls upon Sigmar to assist all friendlies in a radius around the user. Those affected will be cleansed of any chaos corruption, toxic buildup, or other similar type of effect.</description>
 		<abilityPoolCost>0.24</abilityPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_PurifyingFlame</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -200,8 +200,8 @@
 		</MainVerb>
 	</TheEndTimes_Magic.AbilityActionAbilityDef>
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_Ability_WH_ExecuteP</defName>
 		<label>Bullet</label>
 		<graphicData>
@@ -223,7 +223,7 @@
 		<description>Execute a single enemy by shooting them in the head. Works against humanlike pawns. If used against an animal, then it does normal damage to the head.</description>
 		<abilityPoolCost>0.24</abilityPoolCost>
 		<abilityPoints>2</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Execute</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

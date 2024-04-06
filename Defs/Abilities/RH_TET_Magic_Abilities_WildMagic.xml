@@ -3,8 +3,8 @@
  
 	<!-- ===================== Bray Scream =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_WildBrayScreamP</defName>
 		<label>bray scream</label>
 		<graphicData>
@@ -29,7 +29,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -83,7 +83,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -137,7 +137,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -191,7 +191,7 @@
 		<abilityPoints>5</abilityPoints>
 		<experiencePoints>23</experiencePoints>
 		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BrayScream</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -238,7 +238,7 @@
 	
 	<!-- Savage Dominion  -->
 	
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_SavageDominion</thingClass>
 		<defName>RH_TET_WildSavageDominionP</defName>
 		<label>savage dominion</label>
@@ -263,7 +263,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -300,7 +300,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -337,7 +337,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -374,7 +374,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -404,8 +404,8 @@
 
 	<!-- ===================== Mantle of Ghorok =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_WildMantleGhorokP</defName>
 		<label>Mantle of Ghorok</label>
 		<graphicData>
@@ -432,7 +432,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -476,7 +476,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -520,7 +520,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -564,7 +564,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ConsiderLineOfSight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -601,8 +601,8 @@
 
 	<!-- ===================== Devolve =============================== -->
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_WildDevolveP</defName>
 		<label>devolve</label>
 		<graphicData>
@@ -633,7 +633,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -670,7 +670,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -707,7 +707,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -744,7 +744,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -774,8 +774,8 @@
 
 	<!-- ===================== Bestial Surge =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_WildBestialSurgeP</defName>
 		<label>bestial surge</label>
 		<graphicData>
@@ -802,7 +802,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -848,7 +848,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -894,7 +894,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -940,7 +940,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_BestialSurge</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

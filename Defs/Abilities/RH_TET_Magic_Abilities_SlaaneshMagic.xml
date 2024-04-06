@@ -3,8 +3,8 @@
 
 	<!-- ===================== Golden Torrent =============================== -->
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_SlaaneshGoldenTorrentP</defName>
 		<label>Golden Torrent</label>
 		<graphicData>
@@ -35,7 +35,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -78,7 +78,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -121,7 +121,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -164,7 +164,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -200,8 +200,8 @@
 
 	<!-- ===================== Blissful Throes =============================== -->
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_SlaaneshBlissfulP</defName>
 		<label>Blissful Throes</label>
 		<graphicData>
@@ -232,7 +232,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -263,7 +263,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -294,7 +294,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -325,7 +325,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -350,8 +350,8 @@
 
 	<!-- ===================== Delectable Torture =============================== -->
 
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_SlaaneshDelectableP</defName>
 		<label>Delectable Torture</label>
 		<graphicData>
@@ -382,7 +382,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -425,7 +425,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -468,7 +468,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -511,7 +511,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -547,8 +547,8 @@
 
 	<!-- ===================== Slothful Stupor =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_SlaaneshStuporP</defName>
 		<label>Slothful Stupor</label>
 		<graphicData>
@@ -575,7 +575,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -628,7 +628,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -681,7 +681,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -734,7 +734,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_Stupor</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -780,8 +780,8 @@
 	
 	<!-- ===================== From Pain, Pleasure =============================== -->
   
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<defName>RH_TET_SlaaneshPainPleasureP</defName>
 		<label>From Pain, Pleasure</label>
 		<graphicData>
@@ -805,7 +805,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -846,7 +846,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -887,7 +887,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -928,7 +928,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to upgrade to this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>

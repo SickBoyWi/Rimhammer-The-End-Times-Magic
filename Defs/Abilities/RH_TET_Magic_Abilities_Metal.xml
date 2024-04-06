@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Final Transmutation -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<thingClass>TheEndTimes_Magic.Projectile_FinalTransmutation</thingClass>
 		<defName>RH_TET_MetalFinalTransmutationP</defName>
 		<label>Final Transmutation</label>
@@ -34,7 +34,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -64,7 +64,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -94,7 +94,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -124,7 +124,7 @@
 		<abilityPoints>5</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -197,7 +197,7 @@
 	</ThingDef>
 
 	<!-- Forge of Chamon -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_ForgeOfChamon</thingClass>
 		<defName>RH_TET_HeavensForgeOfChamonP</defName>
 		<label>Forge of Chamon</label>
@@ -222,7 +222,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -259,7 +259,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>18</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -296,7 +296,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -333,7 +333,7 @@
 		<abilityPoints>5</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>5</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -362,7 +362,7 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Gleeaming Arrow -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_DirectDamagePawn</thingClass>
 		<defName>RH_TET_MetalGleamingArrowP</defName>
 		<label>Gleaming Arrow</label>
@@ -387,7 +387,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -424,7 +424,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -461,7 +461,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -498,7 +498,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
@@ -527,7 +527,7 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 	
 	<!-- Transmutation of the Unstable Mind -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_EnstableMind</thingClass>
 		<defName>RH_TET_Metal_TransmuteUnstableMindP</defName>
 		<label>Transmutation of the Unstable Mind</label>
@@ -552,7 +552,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>13</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -581,7 +581,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -610,7 +610,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -639,7 +639,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell. -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -660,9 +660,9 @@
 	</TheEndTimes_Magic.MagicAbilityDef>
 
 	<!-- Glittering Robe -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<defName>RH_TET_MetalGlitteringRobeP</defName>
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<label>Glittering Robe</label>
 		<graphicData>
 			<texPath>UI/Magic/RH_TET_MetalGlitteringRobe</texPath>
@@ -685,7 +685,7 @@
 		<abilityPoints>1</abilityPoints>
 		<experiencePoints>15</experiencePoints>
 		<nextMagicLevelPointsRequired>1</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -728,7 +728,7 @@
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>17</experiencePoints>
 		<nextMagicLevelPointsRequired>2</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -771,7 +771,7 @@
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>19</experiencePoints>
 		<nextMagicLevelPointsRequired>3</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -814,7 +814,7 @@
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>21</experiencePoints>
 		<nextMagicLevelPointsRequired>4</nextMagicLevelPointsRequired><!-- points to acquire this spell -->
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityMiscast</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

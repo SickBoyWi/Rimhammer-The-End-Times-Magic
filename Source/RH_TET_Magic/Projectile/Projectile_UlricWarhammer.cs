@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using HugsLib;
 using RimWorld;
 using System;

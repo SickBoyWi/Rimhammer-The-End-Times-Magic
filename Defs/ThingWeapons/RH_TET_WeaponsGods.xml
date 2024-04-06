@@ -108,7 +108,7 @@
 			<li>RH_TET_WeaponsMagic</li>
 		</thingCategories>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
@@ -180,7 +180,7 @@
 			<li>RH_TET_WeaponsMagic</li>
 		</thingCategories>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
@@ -249,7 +249,7 @@
 			<li>RH_TET_WeaponsMagic</li>
 		</thingCategories>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
@@ -318,7 +318,7 @@
 			<li>RH_TET_WeaponsMagic</li>
 		</thingCategories>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
@@ -422,7 +422,7 @@
 			</li>
 		</tools>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>
@@ -525,7 +525,7 @@
 				<explosiveDamageType>Flame</explosiveDamageType>
 				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			</li>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>true</verticalFlipNorth>
 				<angleAdjustmentWest>90</angleAdjustmentWest>
 				<angleAdjustmentEast>-130</angleAdjustmentEast>

@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -57,16 +57,16 @@ namespace TheEndTimes_Magic
                     // TODO NEW Ability HERE
                     List<AbilityActionPower> powerList = new List<AbilityActionPower>();
 
-                    List<AbilityUser.AbilityDef> newAbilityDefs1 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs1 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs1.Add(RH_TET_MagicDefOf.RH_TET_Ability_WH_Condemn);
                     powerList.Add(new AbilityActionPower(newAbilityDefs1));
-                    List<AbilityUser.AbilityDef> newAbilityDefs2 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs2 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs2.Add(RH_TET_MagicDefOf.RH_TET_Ability_WH_GrimResolve);
                     powerList.Add(new AbilityActionPower(newAbilityDefs2));
-                    List<AbilityUser.AbilityDef> newAbilityDefs3 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs3 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs3.Add(RH_TET_MagicDefOf.RH_TET_Ability_WH_PurifyingFlame);
                     powerList.Add(new AbilityActionPower(newAbilityDefs3));
-                    List<AbilityUser.AbilityDef> newAbilityDefs4 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs4 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs4.Add(RH_TET_MagicDefOf.RH_TET_Ability_WH_Execute);
                     powerList.Add(new AbilityActionPower(newAbilityDefs4));
 

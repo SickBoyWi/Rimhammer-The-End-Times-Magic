@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using AbilityUser;
+using SickAbilityUser;
 using RimWorld;
 using Verse;
 using Verse.Sound;
@@ -19,7 +19,7 @@ namespace TheEndTimes_Magic
                 if (compUser != null)
                 {
                     List<AbilityActionAbility> abilitiesPossesssed = new List<AbilityActionAbility>();
-                    List<AbilityUser.AbilityDef> abilitiesNotPossesssed = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> abilitiesNotPossesssed = new List<SickAbilityUser.AbilityDef>();
                     using (List<PawnAbility>.Enumerator enumerator = compUser.AbilityData.Powers.GetEnumerator())
                     {
                         while (enumerator.MoveNext())
@@ -31,17 +31,17 @@ namespace TheEndTimes_Magic
                     bool alreadyHad = false;
 
                     List<AbilityActionPower> allPowers = compUser.AbilityActionData.PowersWitchHunter;
-                    List<AbilityUser.AbilityDef> allPowerDefs = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> allPowerDefs = new List<SickAbilityUser.AbilityDef>();
 
                     foreach (AbilityActionPower actionPower in allPowers)
                     {
-                        foreach (AbilityUser.AbilityDef abilityDef in actionPower.abilityDefs)
+                        foreach (SickAbilityUser.AbilityDef abilityDef in actionPower.abilityDefs)
                         {
                             allPowerDefs.Add(abilityDef);
                         }
                     }
 
-                    foreach (AbilityUser.AbilityDef abilityDef in allPowerDefs)
+                    foreach (SickAbilityUser.AbilityDef abilityDef in allPowerDefs)
                     {
                         bool matched = false;
                         foreach(AbilityActionAbility possessedAbility in abilitiesPossesssed)
@@ -64,7 +64,7 @@ namespace TheEndTimes_Magic
                         return;
                     }
 
-                    AbilityUser.AbilityDef newAbility = abilitiesNotPossesssed.RandomElement();
+                    SickAbilityUser.AbilityDef newAbility = abilitiesNotPossesssed.RandomElement();
                     AbilityActionPower newPower = compUser.AbilityActionData.PowersWitchHunter.Find((Predicate<AbilityActionPower>)(x => x.abilityDef.defName.Equals(newAbility.defName)));
                     compUser.GrantPower(newPower);
                     SoundInfo info = SoundInfo.InMap(new TargetInfo(user.Position, user.Map, false), MaintenanceType.None);

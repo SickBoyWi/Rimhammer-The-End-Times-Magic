@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;

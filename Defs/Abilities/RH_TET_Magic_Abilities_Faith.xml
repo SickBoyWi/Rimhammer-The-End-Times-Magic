@@ -7,7 +7,7 @@
 	</AbilityUser.AbilityDef>
 
 	<!-- Thunderbolt -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_Thunderbolt</thingClass>
 		<defName>RH_TET_SigmarThunderboltP</defName>
 		<label>Thunderbolts of Sigmar</label>
@@ -30,7 +30,7 @@
 		<description>The faithful calls on Sigmar to send down a series of almighty bolts of lightning upon the enemy, smiting them where they stand.</description>
 		<faithPoolCost>0.65</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -59,7 +59,7 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Comet -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_Comet</thingClass>
 		<defName>RH_TET_SigmarCometP</defName>
 		<label>Comets of Sigmar</label>
@@ -82,7 +82,7 @@
 		<description>The faithful calls on Sigmar to send down a series of comets at the desired location, smashing foes, and leaving resources as well.</description>
 		<faithPoolCost>0.85</faithPoolCost>
 		<abilityPoints>6</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -111,9 +111,9 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Shield -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<defName>RH_TET_SigmarShieldP</defName>
-		<thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+		<thingClass>SickAbilityUser.Projectile_AbilityBase</thingClass>
 		<label>Shield of Faith</label>
 		<graphicData>
 			<texPath>UI/Faith/RH_TET_SigmarShield</texPath>
@@ -134,7 +134,7 @@
 		<description>The faithful says a prayer, and the power of Sigmar manifests in the form of a shield as hard as castle-forged steel. Makes the faithful invulnerable to attack while the shield is in effect.</description>
 		<faithPoolCost>0.35</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -170,7 +170,7 @@
 
 	<!-- Ulric -->
 	<!-- Vortex -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_UlricVortex</thingClass>
 		<defName>RH_TET_UlricVortexP</defName>
 		<label>Winter Vortex</label>
@@ -193,7 +193,7 @@
 		<description>Creates a vortex to some far frozen lands, and pulls frigid air from that location until the spell dissipates. The cold can freeze people or animals dead, but can also keep food stuffs frozen for preservation.\n\nThe vortex will survive under its own power for a long time, then dies. Once created, it cannot be moved or deconstructed.</description>
 		<faithPoolCost>0.75</faithPoolCost>
 		<abilityPoints>5</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -222,7 +222,7 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Wolves -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_UlricWolves</thingClass>
 		<defName>RH_TET_UlricWolfP</defName>
 		<label>Wolves of Ulric</label>
@@ -245,7 +245,7 @@
 		<description>The faithful calls on Ulric to send assistance. That assistance will arrive in the form of massive vicious wolves. The wolves will attack any one nearby, so be cautious not to call on the aid too nearby. The wolves can be unsummoned by the controlling player. Should one of the wolves die, or be downed, it will disappear; returning to Ulric to be revived to fight another day. Otherwise it will stay for a short time, and then Ulric will recall it. Remember: Don't cast this close to your allies, as they show up very angry, and will attack any one nearby.</description>
 		<faithPoolCost>0.60</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -274,7 +274,7 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Warhammer -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_UlricWarhammer</thingClass>
 		<defName>RH_TET_UlricWarhammerP</defName>
 		<label>Ulric's Warhammer</label>
@@ -298,7 +298,7 @@
 		<description>The faithful calls on Ulric to smite nearby enemies. Ulric will swing his mighty warhammer, and smash it down on the land at the selected spot. The warhammer will smash mountains, structures, and living things; leaving nothing left standing where it lands.</description>
 		<faithPoolCost>0.40</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -328,9 +328,9 @@
 
 	<!-- Shallya -->
 	<!-- Healing Light -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">
 		<!--<thingClass>TheEndTimes_Magic.Projectile_ShallyaLight</thingClass>-->
-		<thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+		<thingClass>SickAbilityUser.Projectile_AbilityLaser</thingClass>
 		<defName>RH_TET_ShallyaLightP</defName>
 		<label>Shallya's Light</label>
 		<graphicData>
@@ -359,7 +359,7 @@
 		<description>The faithful calls on Shallya to heal nearby allies. Shallya will send her healing light to heal one current injury of each ally in the target area. Will not affect permanent injuries.</description>
 		<faithPoolCost>0.25</faithPoolCost>
 		<abilityPoints>5</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<!--<verbClass>TheEndTimes_Magic.Verb_UseAbility_TrueBurstFaith</verbClass>-->
 			<verbClass>TheEndTimes_Magic.Verb_ShallyaLight</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -397,7 +397,7 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Regrowth -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<defName>RH_TET_ShallyaRegrowthP</defName>
 		<thingClass>TheEndTimes_Magic.Projectile_ShallyaRegrowth</thingClass>
 		<label>Regrowth</label>
@@ -421,7 +421,7 @@
 		<description>Heals a pawn with the power of Shallya. Will regrow missing limbs or body parts, cure disease, and even heal permanent injuries. Shallya blesses the faithful, and assists her allies in the fight against the corruption of the world.</description>
 		<faithPoolCost>.95</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_UseAbilityFaith</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -448,8 +448,8 @@
 	</TheEndTimes_Magic.FaithAbilityDef>
 
 	<!-- Fortune -->
-	<ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
+		<thingClass>SickAbilityUser.Projectile_Ability</thingClass>
 		<defName>RH_TET_ShallyaFortuneP</defName>
 		<label>Shallya's Fortune</label>
 		<graphicData>
@@ -471,7 +471,7 @@
 		<description>The faithful calls upon Shallya for a boon, and one is delivered. Affects a size 30 diameter circle from the user. Friendly pawns in that area will get a boost to healing rate and work speed, as well as a mood boost. The good fortune will last for three days. In addition, all filth in the 30 cell diametercircle from the caster that exists at the time of casting will be instantly cleaned up.</description>
 		<faithPoolCost>.80</faithPoolCost>
 		<abilityPoints>4</abilityPoints>
-		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+		<MainVerb Class="SickAbilityUser.VerbProperties_Ability">
 			<verbClass>TheEndTimes_Magic.Verb_ShallyaFortune</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>

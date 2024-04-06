@@ -11,7 +11,7 @@ using Verse.AI.Group;
 using TheEndTimes_Magic;
 using System.Reflection;
 using RimWorld.Planet;
-using AbilityUser;
+using SickAbilityUser;
 using Verse.Sound;
 
 namespace TheEndTimes_Magic
@@ -142,7 +142,7 @@ namespace TheEndTimes_Magic
         {
             if (__instance.Ability != null && __instance.Ability.Def != null)
             {
-                AbilityUser.AbilityDef theDef = __instance.Ability.Def;
+                SickAbilityUser.AbilityDef theDef = __instance.Ability.Def;
                 if (theDef.defName.Contains("FirePiercingBolts")
                     || theDef.defName.Contains("MawBonecrusher")
                     || theDef.defName.Contains("HeavensAzureBlades")

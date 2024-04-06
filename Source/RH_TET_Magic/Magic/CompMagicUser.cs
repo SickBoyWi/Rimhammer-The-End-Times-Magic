@@ -1,5 +1,5 @@
 ﻿
-using AbilityUser;
+using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -229,7 +229,7 @@ namespace TheEndTimes_Magic
 
         public void LevelUpPower(MagicPower power)
         {
-            using (List<AbilityUser.AbilityDef>.Enumerator enumerator = power.abilityDefs.GetEnumerator())
+            using (List<SickAbilityUser.AbilityDef>.Enumerator enumerator = power.abilityDefs.GetEnumerator())
             {
                 while (enumerator.MoveNext())
                     this.RemovePawnAbility(enumerator.Current);

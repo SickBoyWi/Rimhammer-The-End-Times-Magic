@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using AbilityUser;
+using SickAbilityUser;
 using RimWorld;
 using Verse;
 using Verse.Sound;

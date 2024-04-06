@@ -48,7 +48,7 @@
 			<MarketValue>3500</MarketValue>
 		</statBases>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>false</verticalFlipNorth>
 				<angleAdjustmentWest>20</angleAdjustmentWest>
 				<angleAdjustmentEast>-20</angleAdjustmentEast>
@@ -103,7 +103,7 @@
 			<MarketValue>2500</MarketValue>
 		</statBases>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<li Class="SickCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<verticalFlipNorth>false</verticalFlipNorth>
 				<angleAdjustmentWest>20</angleAdjustmentWest>
 				<angleAdjustmentEast>-20</angleAdjustmentEast>

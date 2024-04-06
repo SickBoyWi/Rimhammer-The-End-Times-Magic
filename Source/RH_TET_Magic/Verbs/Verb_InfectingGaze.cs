@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -134,7 +134,7 @@ namespace TheEndTimes_Magic
                         return true;
                     })).ToList<Thing>();
                 }
-                int maxTargets = (int)((TargetAoEProperties)((VerbProperties_Ability)((AbilityUser.AbilityDef)this.UseAbilityProps.abilityDef).MainVerb).TargetAoEProperties).maxTargets;
+                int maxTargets = (int)((TargetAoEProperties)((VerbProperties_Ability)((SickAbilityUser.AbilityDef)this.UseAbilityProps.abilityDef).MainVerb).TargetAoEProperties).maxTargets;
                 List<Thing> source = new List<Thing>(list.InRandomOrder<Thing>((IList<Thing>)null));
                 for (int index = 0; index < maxTargets && index < source.Count<Thing>(); ++index)
                 {

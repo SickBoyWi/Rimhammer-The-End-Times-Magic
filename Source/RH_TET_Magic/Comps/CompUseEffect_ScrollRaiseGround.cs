@@ -18,7 +18,7 @@ namespace TheEndTimes_Magic
             {
                 List<MagicPower> addonPowers = compMagicUser.MagicData.PowersAddons;
 
-                List<AbilityUser.AbilityDef> newAbilityDefs = new List<AbilityUser.AbilityDef>();
+                List<SickAbilityUser.AbilityDef> newAbilityDefs = new List<SickAbilityUser.AbilityDef>();
                 newAbilityDefs.Add(RH_TET_MagicDefOf.RH_TET_AddOn_RaiseGround_Mage);
                 newAbilityDefs.Add(RH_TET_MagicDefOf.RH_TET_AddOn_RaiseGround_Wizard);
                 newAbilityDefs.Add(RH_TET_MagicDefOf.RH_TET_AddOn_RaiseGround_Warlock);

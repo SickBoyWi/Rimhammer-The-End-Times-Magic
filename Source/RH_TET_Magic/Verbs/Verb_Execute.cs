@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections;

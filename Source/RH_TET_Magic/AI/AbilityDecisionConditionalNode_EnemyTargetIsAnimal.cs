@@ -1,4 +1,4 @@
-﻿using AbilityUserAI;
+﻿using SickAbilityUserAI;
 using Verse;
 
 // This code is from the Torann Magic mod. 

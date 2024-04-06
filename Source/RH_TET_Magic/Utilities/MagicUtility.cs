@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using AbilityUser;
+using SickAbilityUser;
 using RimWorld;
 using Verse;
-using AbilityDef = AbilityUser.AbilityDef;
+using AbilityDef = SickAbilityUser.AbilityDef;
 
 namespace TheEndTimes_Magic
 {

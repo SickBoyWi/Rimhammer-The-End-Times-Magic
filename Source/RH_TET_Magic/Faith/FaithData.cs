@@ -1,4 +1,4 @@
-﻿using AbilityUser;
+﻿using SickAbilityUser;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -69,13 +69,13 @@ namespace TheEndTimes_Magic
                 if (this.powersSigmar == null)
                 {
                     List<FaithPower> powerList = new List<FaithPower>();
-                    List<AbilityUser.AbilityDef> newAbilityDefs1 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs1 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs1.Add(RH_TET_MagicDefOf.RH_TET_Sigmar_Thunderbolt);
                     powerList.Add(new FaithPower(newAbilityDefs1));
-                    List<AbilityUser.AbilityDef> newAbilityDefs2 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs2 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs2.Add(RH_TET_MagicDefOf.RH_TET_Sigmar_Comet);
                     powerList.Add(new FaithPower(newAbilityDefs2));
-                    List<AbilityUser.AbilityDef> newAbilityDefs3 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs3 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs3.Add(RH_TET_MagicDefOf.RH_TET_Sigmar_Shield);
                     powerList.Add(new FaithPower(newAbilityDefs3));
                     this.powersSigmar = powerList;
@@ -91,13 +91,13 @@ namespace TheEndTimes_Magic
                 if (this.powersShallya == null)
                 {
                     List<FaithPower> powerList = new List<FaithPower>();
-                    List<AbilityUser.AbilityDef> newAbilityDefs1 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs1 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs1.Add(RH_TET_MagicDefOf.RH_TET_Shallya_Light);
                     powerList.Add(new FaithPower(newAbilityDefs1));
-                    List<AbilityUser.AbilityDef> newAbilityDefs2 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs2 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs2.Add(RH_TET_MagicDefOf.RH_TET_Shallya_Regrowth);
                     powerList.Add(new FaithPower(newAbilityDefs2));
-                    List<AbilityUser.AbilityDef> newAbilityDefs3 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs3 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs3.Add(RH_TET_MagicDefOf.RH_TET_Shallya_Fortune);
                     powerList.Add(new FaithPower(newAbilityDefs3));
                     this.powersShallya = powerList;
@@ -113,13 +113,13 @@ namespace TheEndTimes_Magic
                 if (this.powersUlric == null)
                 {
                     List<FaithPower> powerList = new List<FaithPower>();
-                    List<AbilityUser.AbilityDef> newAbilityDefs1 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs1 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs1.Add(RH_TET_MagicDefOf.RH_TET_Ulric_Winter);
                     powerList.Add(new FaithPower(newAbilityDefs1)); 
-                    List<AbilityUser.AbilityDef> newAbilityDefs2 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs2 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs2.Add(RH_TET_MagicDefOf.RH_TET_Ulric_Wolf);
                     powerList.Add(new FaithPower(newAbilityDefs2));
-                    List<AbilityUser.AbilityDef> newAbilityDefs3 = new List<AbilityUser.AbilityDef>();
+                    List<SickAbilityUser.AbilityDef> newAbilityDefs3 = new List<SickAbilityUser.AbilityDef>();
                     newAbilityDefs3.Add(RH_TET_MagicDefOf.RH_TET_Ulric_Warhammer);
                     powerList.Add(new FaithPower(newAbilityDefs3));
                     this.powersUlric = powerList;
