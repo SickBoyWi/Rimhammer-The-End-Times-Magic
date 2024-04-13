@@ -210,7 +210,7 @@
 		<selectable>true</selectable>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<placeWorkers>
-			<li>TheEndTimes_Magic.PlaceWorker_UnderCeiling</li>
+			<li>SickTools.PlaceWorker_UnderCeiling</li>
 		</placeWorkers>
 		<tradeTags>
 			<li>RH_TET_MagicBuilding</li>

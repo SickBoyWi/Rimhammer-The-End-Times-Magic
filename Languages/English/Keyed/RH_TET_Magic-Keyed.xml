@@ -166,7 +166,6 @@
 	<RH_TET_WolfFail>Unable to summon Ulric wolf. Something bad happened:</RH_TET_WolfFail>
   
 	<!-- Building Stuff -->
-	<RH_TET_Magic_PlaceWorker_UnderCeiling>Must be placed under a roof.</RH_TET_Magic_PlaceWorker_UnderCeiling>
 	<RH_TET_Magic_TransportCollapseFinal>The magic of the transport platform has dissipated.</RH_TET_Magic_TransportCollapseFinal>
 	<RH_TET_Magic_InvalidTransportlLocation>Invalid transporter location - target position, and all adjacent positions, must be valid and free of debris.</RH_TET_Magic_InvalidTransportlLocation>
 	<RH_TET_Magic_TransporterDissipationTime>Transporter magic will dissipate in {0} seconds.</RH_TET_Magic_TransporterDissipationTime>
