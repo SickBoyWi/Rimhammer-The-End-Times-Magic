@@ -141,6 +141,8 @@
 	<RH_TET_Magic_TimeUntilCharged>Time until charged: {0}</RH_TET_Magic_TimeUntilCharged>
 	<RH_TET_Magic_NeedsToCharge>Needs to recharge.</RH_TET_Magic_NeedsToCharge>
 	<RH_TET_FailAlreadyAMagicUser>Cannot be used by a pawn that is already a magic user.</RH_TET_FailAlreadyAMagicUser>
+	<RH_TET_FailAlreadyAFaithUser>Cannot be used by a pawn that is already a faith user.</RH_TET_FailAlreadyAFaithUser>
+	<RH_TET_FailAlreadyAnAbilityUser>Cannot be used by a pawn that is already an ability user.</RH_TET_FailAlreadyAnAbilityUser>
 	<RH_TET_FailNotAMagicUser>Cannot be used by a pawn that is not a magic user.</RH_TET_FailNotAMagicUser>
 	<RH_TET_LearnedMagicLoreChaosUndivided>has been blessed by the dark gods, and can now cast spells from the Lore of Chaos Undivided.</RH_TET_LearnedMagicLoreChaosUndivided>
 	<RH_TET_AddOns_NewPowerAdded>has learned the basics of the following spell:</RH_TET_AddOns_NewPowerAdded>

@@ -57,18 +57,15 @@ namespace TheEndTimes_Magic
             }
         }
 
-
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
             if (p.IsFaithUserShallya())
             {
-                failReason = (string)null;
-                return true;
+                return base.CanBeUsedBy(p);
             }
             else
             {
-                failReason = "RH_TET_SigmarArtifactCannotUse".Translate("Shallya");
-                return false;
+                return (AcceptanceReport)"RH_TET_SigmarArtifactCannotUse".Translate("Shallya");
             }
         }
     }

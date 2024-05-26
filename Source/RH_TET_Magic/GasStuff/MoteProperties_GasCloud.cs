@@ -30,7 +30,7 @@ namespace TheEndTimes_Magic
         {
             if (check)
                 return;
-            Log.Error("[RemoteTech] Invalid data in " + this.GetType().Name + " definition: " + errorMessage, false);
+            Log.Error("[Rimhammer Magic] Invalid data in " + this.GetType().Name + " definition: " + errorMessage);
         }
     }
 }

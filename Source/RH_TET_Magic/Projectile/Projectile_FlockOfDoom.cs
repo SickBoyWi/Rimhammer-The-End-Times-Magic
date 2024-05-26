@@ -150,7 +150,7 @@ namespace TheEndTimes_Magic
                 {
                     GenSpawn.Spawn((Thing)newPawn, position, map, WipeMode.Vanish);
                     this.summonedPawns.Add(newPawn);
-                    newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, (Pawn)null, true);
+                    newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, false, (Pawn)null, true);
                 }
                 catch
                 {

@@ -58,7 +58,7 @@
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>100</autoRefuelPercent>
+				<autoRefuelPercent>0</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
@@ -114,7 +114,7 @@
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>100</autoRefuelPercent>
+				<autoRefuelPercent>0</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
@@ -170,7 +170,7 @@
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>100</autoRefuelPercent>
+				<autoRefuelPercent>0</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
@@ -226,7 +226,7 @@
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>100</autoRefuelPercent>
+				<autoRefuelPercent>0</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>

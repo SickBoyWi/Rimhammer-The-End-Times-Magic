@@ -16,16 +16,6 @@ namespace TheEndTimes_Magic
         private Vector3 effectivePos;
         private float effectiveHeight;
 
-        private Material ShadowMaterial
-        {
-            get
-            {
-                if ((UnityEngine.Object)this.cachedShadowMaterial == (UnityEngine.Object)null && !this.def.pawnFlyer.shadow.NullOrEmpty())
-                    this.cachedShadowMaterial = MaterialPool.MatFrom(this.def.pawnFlyer.shadow, ShaderDatabase.Transparent);
-                return this.cachedShadowMaterial;
-            }
-        }
-
         static PawnLeaper()
         {
             AnimationCurve animationCurve = new AnimationCurve();
@@ -44,10 +34,10 @@ namespace TheEndTimes_Magic
             }
         }
 
-        protected override bool ValidateFlyer()
-        {
-            return true;
-        }
+        //protected override bool ValidateFlyer()
+        //{
+        //    return true;
+        //}
 
         private void RecomputePosition()
         {
@@ -65,16 +55,19 @@ namespace TheEndTimes_Magic
             this.effectivePos = this.groundPos + vector3_2 + vector3_3;
         }
 
-        public override void DrawAt(Vector3 drawLoc, bool flip = false)
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            this.RecomputePosition();
+            //this.RecomputePosition();
             this.DrawShadow(this.groundPos, this.effectiveHeight);
-            this.FlyingPawn.DrawAt(this.effectivePos, flip);
+            if (this.CarriedThing == null || this.FlyingPawn == null)
+                return;
+            PawnRenderUtility.DrawCarriedThing(this.FlyingPawn, this.effectivePos, this.CarriedThing);
+            //this.FlyingPawn.DrawAt(this.effectivePos, flip);
         }
 
         private void DrawShadow(Vector3 drawLoc, float height)
         {
-            Material shadowMaterial = this.ShadowMaterial;
+            Material shadowMaterial = this.def.pawnFlyer.ShadowMaterial;
             if ((UnityEngine.Object)shadowMaterial == (UnityEngine.Object)null)
                 return;
             float num = Mathf.Lerp(1f, 0.6f, height);

@@ -36,7 +36,7 @@ namespace TheEndTimes_Magic
         public AbilityActionAbility(CompAbilityUser abilityUser)
             : base (abilityUser)
         {
-            this.abilityUser = abilityUser as CompAbilityActionUser;
+            this.AbilityUser = abilityUser as CompAbilityActionUser;
         }
 
         public AbilityActionAbility(AbilityData abilityData)

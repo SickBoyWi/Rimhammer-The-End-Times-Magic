@@ -66,7 +66,7 @@ namespace TheEndTimes_Magic
                         string text = "RH_TET_LetterBeastMasterSpellFail".Translate(theCaster.Name, thing).CapitalizeFirst();
                         Find.LetterStack.ReceiveLetter("RH_TET_LetterLabelBeastMasterSpellFail".Translate((NamedArgument)thing.KindLabel, (NamedArgument)((Thing)thing)).CapitalizeFirst(), text, LetterDefOf.NegativeEvent, (LookTargets)((Thing)thing), (Faction)null, (Quest)null, (List<ThingDef>)null, (string)null);
 
-                        thing.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, (Pawn)null, false);
+                        thing.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, false, (Pawn)null, false);
 
                         position = thing.Position;
                         FleckMaker.Static(position, map, RH_TET_MagicDefOf.RH_TET_FleckBrownEffect, 1.5f);

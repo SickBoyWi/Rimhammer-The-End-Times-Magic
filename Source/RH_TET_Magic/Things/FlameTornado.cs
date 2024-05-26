@@ -87,7 +87,7 @@ namespace TheEndTimes_Magic
                 return;
             if (this.sustainer == null)
             {
-                Log.Error("Tornado sustainer is null.", false);
+                Log.Error("Tornado sustainer is null.");
                 this.CreateSustainer();
             }
             this.sustainer.Maintain();
@@ -136,7 +136,7 @@ namespace TheEndTimes_Magic
                     } + Vector3Utility.RandomHorizontalOffset(1.5f)).ToIntVec3();
                     if (!intVec3Loc.InBounds(this.Map))
                         return;
-                    FireUtility.TryStartFireIn(intVec3Loc, this.Map, Rand.Range(0.1f, 0.925f));
+                    FireUtility.TryStartFireIn(intVec3Loc, this.Map, Rand.Range(0.1f, 0.925f), this);
 
                     FleckMaker.ThrowTornadoDustPuff(new Vector3(this.realPosition.x, 0.0f, this.realPosition.y)
                     {
@@ -151,7 +151,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Rand.PushState();
             Rand.Seed = this.thingIDNumber;

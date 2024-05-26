@@ -83,7 +83,7 @@ namespace TheEndTimes_Magic
         {
             if (map == null)
             {
-                Log.Warning("Tried to do explosion on null map.", false);
+                Log.Warning("Tried to do explosion on null map.");
             }
             else
             {

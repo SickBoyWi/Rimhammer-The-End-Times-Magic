@@ -134,16 +134,15 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (this.flyingThing == null)
                 return;
             if (this.flyingThing is Pawn)
             {
-                Vector3 drawPos = this.DrawPos;
                 if (!this.DrawPos.ToIntVec3().IsValid)
                     return;
-                (this.flyingThing as Pawn).Drawer.DrawAt(this.DrawPos);
+                (this.flyingThing as Pawn).Drawer.renderer.RenderPawnAt(DrawPos);
             }
             else
                 Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.DrawMatSingle, 0);

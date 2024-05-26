@@ -69,7 +69,7 @@ namespace TheEndTimes_Magic
             base.PreApplyDamage(ref damageInfo, out damageAbsorbed);
             if (!this.InMentalState && damageInfo.Instigator is Pawn p && p?.Faction == Faction.OfPlayerSilentFail)
             {
-                this.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, p.Label, true, false, null);
+                this.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, p.Label, true, false, false, null);
             }
         }
 

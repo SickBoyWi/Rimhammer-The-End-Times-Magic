@@ -118,7 +118,7 @@ namespace TheEndTimes_Magic
                 Pawn actor = toil.actor;
                 if (actor.carryTracker.CarriedThing == null)
                 {
-                    Log.Error("JumpToAlsoCollectTargetInQueue run on " + (object)actor + " who is not carrying something.", false);
+                    Log.Error("JumpToAlsoCollectTargetInQueue run on " + (object)actor + " who is not carrying something.");
                 }
                 else
                 {

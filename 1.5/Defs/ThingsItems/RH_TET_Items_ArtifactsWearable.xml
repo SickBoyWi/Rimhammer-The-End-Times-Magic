@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ApparelBase" Name="RH_TET_MagicGodApparelBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>0.5</DeteriorationRate>
+		</statBases>
+		<tradeability>None</tradeability>
+		<thingCategories>
+			<li>RH_TET_Artifacts</li>
+			<li>RH_TET_MagicApparel</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Artifact</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Artifact</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_MagicGodApparelBase">
+		<defName>RH_TET_Magic_Apparel_KhorneBelt</defName>
+		<label>khornate belt</label>
+		<description>A gift from the Lord of Skulls. Protects the wearer from ranged attacks.</description>
+		<thingClass>Apparel</thingClass>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Belts/RH_TET_KhorneBelt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+			<EnergyShieldRechargeRate>0.13</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.1</EnergyShieldEnergyMax>
+		</statBases>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>BeltDefense</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_ShieldKhorne"/>
+		</comps>
+		<smeltProducts>
+			<Leather_Human>50</Leather_Human>
+		</smeltProducts>
+	</ThingDef>
+	
+	<ThingDef ParentName="RH_TET_MagicGodApparelBase">
+		<defName>RH_TET_Magic_Apparel_TzeentchRibbon</defName>
+		<label>tzeentchian ribbon</label>
+		<description>A gift from the Changer of Ways. Should only be worn by magic users, around the waist typically. Has no effect when worn by non-magic users. Casting spells will not cost the bearer any magic from their magic pool.</description>
+		<thingClass>TheEndTimes_Magic.Thing_TzeentchRibbon</thingClass>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Belts/RH_TET_TzeentchRibbon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>900</MarketValue>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<smeltProducts>
+			<DevilstrandCloth>50</DevilstrandCloth>
+		</smeltProducts>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_MagicGodApparelBase">
+		<defName>RH_TET_Magic_Apparel_SlaaneshSash</defName>
+		<label>slaaneshi sash</label>
+		<description>A gift from the God of Pleasure and Pain. Worn around the waist. Will increase the pawn's speed.</description>
+		<thingClass>TheEndTimes_Magic.Thing_TzeentchRibbon</thingClass><!-- This class does nothing, so we'll use it for now. -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Belts/RH_TET_SlaaneshSash</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>1600</MarketValue>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>4.0</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<smeltProducts>
+			<DevilstrandCloth>50</DevilstrandCloth>
+		</smeltProducts>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_MagicGodApparelBase">
+		<defName>RH_TET_Magic_Apparel_NurgleBand</defName>
+		<label>nurgley band</label>
+		<description>A gift from the Lord of Rot. Worn around the waist. Will increase the speed at which a pawn gains immunity, and increase a pawn's resistance to toxicity.</description>
+		<thingClass>TheEndTimes_Magic.Thing_TzeentchRibbon</thingClass><!-- This class does nothing, so we'll use it for now. -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Belts/RH_TET_NurgleBand</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>1250</MarketValue>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicResistance>-.50</ToxicResistance>
+			<ImmunityGainSpeed>.8</ImmunityGainSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<smeltProducts>
+			<Leather_Lizard>100</Leather_Lizard>
+		</smeltProducts>
+	</ThingDef>
+
+</Defs>

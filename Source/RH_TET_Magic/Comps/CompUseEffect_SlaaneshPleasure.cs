@@ -14,10 +14,9 @@ namespace TheEndTimes_Magic
             Messages.Message("RH_TET_GainedPleasureOfSlaanesh".Translate(user.Name), (LookTargets)((Thing)user), MessageTypeDefOf.PositiveEvent, true);
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
-            failReason = (string) null;
-            return true;
+            return base.CanBeUsedBy(p);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace TheEndTimes_Magic
 {
@@ -33,6 +34,10 @@ namespace TheEndTimes_Magic
                 Messages.Message("RH_TET_ClearMentalState".Translate(theTarget.Name, label), MessageTypeDefOf.PositiveEvent);
                 FleckMaker.Static(targetLocation, launcher.Map, RH_TET_MagicDefOf.RH_TET_FleckGoldEffect, 1);
                 FleckMaker.Static(targetLocation, launcher.Map, FleckDefOf.PsycastAreaEffect, 1.1f);
+
+                // Reset current job.
+                if (theTarget.jobs != null)
+                    theTarget.jobs.EndCurrentJob(JobCondition.InterruptForced, true, true);
             }
             else
             {

@@ -26,16 +26,20 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
+            string failReason;
             if (!p.IsMagicUser())
             {
                 failReason = "RH_TET_FailNotAMagicUser".Translate();
-                return false;
             }
+            else
+                failReason = null;
 
-            failReason = (string)null;
-            return true;
+            if (failReason is null)
+                return base.CanBeUsedBy(p);
+            else
+                return (AcceptanceReport)failReason;
         }
     }
 }

@@ -15,18 +15,30 @@ namespace TheEndTimes_Magic
             Messages.Message("RH_TET_LearnedMagicLoreChaosUndivided".Translate(user.Name), (LookTargets)user, MessageTypeDefOf.PositiveEvent, true);
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
-            if (!p.IsMagicUser())
+            string failReason;
+            if (p.IsMagicUser())
             {
-                failReason = (string)null;
-                return true;
+                failReason = "RH_TET_FailAlreadyAMagicUser".Translate();
+            }
+            else if (p.IsFaithUser())
+            {
+                failReason = "RH_TET_FailAlreadyAFaithUser".Translate();
+            }
+            else if (p.IsAbilityUser())
+            {
+                failReason = "RH_TET_FailAlreadyAnAbilityUser".Translate();
             }
             else
             {
-                failReason = "RH_TET_FailAlreadyAMagicUser".Translate();
-                return false;
+                failReason = (string)null;
             }
+
+            if (failReason is null)
+                return base.CanBeUsedBy(p);
+            else
+                return (AcceptanceReport)failReason;
         }
     }
 }

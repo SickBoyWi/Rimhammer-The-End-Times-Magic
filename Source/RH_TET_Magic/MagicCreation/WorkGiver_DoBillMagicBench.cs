@@ -106,7 +106,7 @@ namespace TheEndTimes_Magic
         {
             if (uft.Creator != pawn)
             {
-                Log.Error("Tried to get FinishUftJob for " + (object)pawn + " finishing " + (object)uft + " but its creator is " + (object)uft.Creator, false);
+                Log.Error("Tried to get FinishUftJob for " + (object)pawn + " finishing " + (object)uft + " but its creator is " + (object)uft.Creator);
                 return (Job)null;
             }
             else if (pawn.needs.TryGetNeed<Need_MagicPool>() != null & pawn.needs.TryGetNeed<Need_MagicPool>().CurLevel < .05)
@@ -366,7 +366,7 @@ namespace TheEndTimes_Magic
                 return billGiver.Position;
             if (building.def.hasInteractionCell)
                 return building.InteractionCell;
-            Log.Error("Tried to find bill ingredients for " + (object)billGiver + " which has no interaction cell.", false);
+            Log.Error("Tried to find bill ingredients for " + (object)billGiver + " which has no interaction cell.");
             return forPawn.Position;
         }
 

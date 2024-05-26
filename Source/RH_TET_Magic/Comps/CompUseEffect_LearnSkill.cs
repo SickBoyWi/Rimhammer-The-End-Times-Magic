@@ -27,17 +27,15 @@ namespace TheEndTimes_Magic
             Messages.Message((string)"RH_TET_Magic_PotionSkillTrainerUsed".Translate((NamedArgument)user.LabelShort, (NamedArgument)skill.LabelCap, (NamedArgument)level1, (NamedArgument)level2, user.Named("USER")), (LookTargets)(Thing)user, MessageTypeDefOf.PositiveEvent, true);
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
             if (p.skills == null)
-            {
-                failReason = (string)null;
-                return false;
-            }
+                return (AcceptanceReport)"SkillDisabled".Translate();
+
             if (!p.skills.GetSkill(this.Skill).TotallyDisabled)
-                return base.CanBeUsedBy(p, out failReason);
-            failReason = (string)"SkillDisabled".Translate();
-            return false;
+                return base.CanBeUsedBy(p);
+
+            return(AcceptanceReport)"SkillDisabled".Translate();
         }
     }
 }

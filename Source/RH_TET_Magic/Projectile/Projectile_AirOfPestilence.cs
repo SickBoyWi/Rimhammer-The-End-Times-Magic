@@ -86,7 +86,7 @@ namespace TheEndTimes_Magic
             SoundInfo info = SoundInfo.InMap(new TargetInfo(position, map2, false), MaintenanceType.None);
             info.pitchFactor = 1.3f;
             info.volumeFactor = 1.6f;
-            SoundDefOf.Hive_Spawn.PlayOneShot(info);
+            DefDatabase<SoundDef>.GetNamed("Hive_Spawn").PlayOneShot(info);
         }
 
         public override void Tick()

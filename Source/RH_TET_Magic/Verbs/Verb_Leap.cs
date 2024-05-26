@@ -10,7 +10,7 @@ namespace TheEndTimes_Magic
     {
         private float cachedEffectiveRange = 24.9f;
 
-        protected override float EffectiveRange
+        public override float EffectiveRange
         {
             get
             {

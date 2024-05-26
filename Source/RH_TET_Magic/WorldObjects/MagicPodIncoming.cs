@@ -51,7 +51,7 @@ namespace TheEndTimes_Magic
             base.Impact();
         }
 
-        public override void DrawAt(Vector3 drawLoc, bool flip = false)
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
         }

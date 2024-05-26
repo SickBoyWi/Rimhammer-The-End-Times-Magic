@@ -56,7 +56,7 @@ namespace TheEndTimes_Magic
                 }
                 else
                 {
-                    curDriver.workLeft = curJob.bill.recipe.WorkAmountTotal(thing?.Stuff);
+                    curDriver.workLeft = curJob.bill.GetWorkAmount(thing);
                     if (thing != null)
                         thing.workLeft = curDriver.workLeft;
                 }
@@ -124,7 +124,7 @@ namespace TheEndTimes_Magic
                 Pawn actor = toil.actor;
                 Job curJob = actor.CurJob;
                 UnfinishedThing thing = curJob.GetTarget(TargetIndex.B).Thing as UnfinishedThing;
-                return (float)(1.0 - (double)((JobDriver_DoBillIdol)actor.jobs.curDriver).workLeft / (double)curJob.bill.recipe.WorkAmountTotal(thing?.Stuff));
+                return (float)(1.0 - (double)((JobDriver_DoBillIdol)actor.jobs.curDriver).workLeft / (double)curJob.bill.recipe.WorkAmountTotal(thing));
             }), false, -0.5f);
             toil.FailOn<Toil>((Func<bool>)(() =>
             {
@@ -161,7 +161,7 @@ namespace TheEndTimes_Magic
                 curJob.bill.Notify_IterationCompleted(actor, ingredients);
                 RecordsUtility.Notify_BillDone(actor, list);
                 UnfinishedThing thing = curJob.GetTarget(TargetIndex.B).Thing as UnfinishedThing;
-                if ((double)curJob.bill.recipe.WorkAmountTotal(thing?.Stuff) >= 10000.0 && list.Count > 0)
+                if ((double)curJob.bill.recipe.WorkAmountTotal(thing) >= 10000.0 && list.Count > 0)
                     TaleRecorder.RecordTale(TaleDefOf.CompletedLongCraftingProject, (object)actor, (object)list[0].GetInnerIfMinified().def);
                 if (list.Any<Thing>())
                     Find.QuestManager.Notify_ThingsProduced(actor, list);
@@ -172,7 +172,7 @@ namespace TheEndTimes_Magic
                     for (int index = 0; index < list.Count; ++index)
                     {
                         if (!GenPlace.TryPlaceThing(list[index], actor.Position, actor.Map, ThingPlaceMode.Near, (Action<Thing, int>)null, (Predicate<IntVec3>)null, new Rot4()))
-                            Log.Error(actor.ToString() + " could not drop recipe product " + (object)list[index] + " near " + (object)actor.Position, false);
+                            Log.Error(actor.ToString() + " could not drop recipe product " + (object)list[index] + " near " + (object)actor.Position);
                     }
                     actor.jobs.EndCurrentJob(JobCondition.Succeeded, true, true);
                 }
@@ -183,16 +183,16 @@ namespace TheEndTimes_Magic
                         for (int index = 1; index < list.Count; ++index)
                         {
                             if (!GenPlace.TryPlaceThing(list[index], actor.Position, actor.Map, ThingPlaceMode.Near, (Action<Thing, int>)null, (Predicate<IntVec3>)null, new Rot4()))
-                                Log.Error(actor.ToString() + " could not drop recipe product " + (object)list[index] + " near " + (object)actor.Position, false);
+                                Log.Error(actor.ToString() + " could not drop recipe product " + (object)list[index] + " near " + (object)actor.Position);
                         }
                     }
                     IntVec3 foundCell = IntVec3.Invalid;
                     if (curJob.bill.GetStoreMode() == BillStoreModeDefOf.BestStockpile)
                         StoreUtility.TryFindBestBetterStoreCellFor(list[0], actor, actor.Map, StoragePriority.Unstored, actor.Faction, out foundCell, true);
                     else if (curJob.bill.GetStoreMode() == BillStoreModeDefOf.SpecificStockpile)
-                        StoreUtility.TryFindBestBetterStoreCellForIn(list[0], actor, actor.Map, StoragePriority.Unstored, actor.Faction, curJob.bill.GetStoreZone().slotGroup, out foundCell, true);
+                        StoreUtility.TryFindBestBetterStoreCellForIn(list[0], actor, actor.Map, StoragePriority.Unstored, actor.Faction, curJob.bill.GetSlotGroup(), out foundCell, true);
                     else
-                        Log.ErrorOnce("Unknown store mode", 9158246, false);
+                        Log.ErrorOnce("Unknown store mode", 9158246);
                     if (foundCell.IsValid)
                     {
                         actor.carryTracker.TryStartCarry(list[0]);
@@ -203,7 +203,7 @@ namespace TheEndTimes_Magic
                     else
                     {
                         if (!GenPlace.TryPlaceThing(list[0], actor.Position, actor.Map, ThingPlaceMode.Near, (Action<Thing, int>)null, (Predicate<IntVec3>)null, new Rot4()))
-                            Log.Error("Bill doer could not drop product " + (object)list[0] + " near " + (object)actor.Position, false);
+                            Log.Error("Bill doer could not drop product " + (object)list[0] + " near " + (object)actor.Position);
                         actor.jobs.EndCurrentJob(JobCondition.Succeeded, true, true);
                     }
                 }
@@ -229,7 +229,7 @@ namespace TheEndTimes_Magic
                 {
                     if (job.placedThings[index].Count <= 0)
                     {
-                        Log.Error("PlacedThing " + (object)job.placedThings[index] + " with count " + (object)job.placedThings[index].Count + " for job " + (object)job, false);
+                        Log.Error("PlacedThing " + (object)job.placedThings[index] + " with count " + (object)job.placedThings[index].Count + " for job " + (object)job);
                     }
                     else
                     {
@@ -237,7 +237,7 @@ namespace TheEndTimes_Magic
                         job.placedThings[index].Count = 0;
                         if (thingList.Contains(thing2))
                         {
-                            Log.Error("Tried to add ingredient from job placed targets twice: " + (object)thing2, false);
+                            Log.Error("Tried to add ingredient from job placed targets twice: " + (object)thing2);
                         }
                         else
                         {
@@ -288,7 +288,7 @@ namespace TheEndTimes_Magic
                 IntVec3 cell = curJob.GetTarget(cellInd).Cell;
                 if (actor.carryTracker.CarriedThing == null)
                 {
-                    Log.Error(actor.ToString() + " tried to place hauled thing in cell but is not hauling anything.", false);
+                    Log.Error(actor.ToString() + " tried to place hauled thing in cell but is not hauling anything.");
                 }
                 else
                 {
@@ -335,7 +335,7 @@ namespace TheEndTimes_Magic
                             }
                             else
                             {
-                                Log.Error("Incomplete haul for " + (object)actor + ": Could not find anywhere to put " + (object)actor.carryTracker.CarriedThing + " near " + (object)actor.Position + ". Destroying. This should never happen!", false);
+                                Log.Error("Incomplete haul for " + (object)actor + ": Could not find anywhere to put " + (object)actor.carryTracker.CarriedThing + " near " + (object)actor.Position + ". Destroying. This should never happen!");
                                 actor.carryTracker.CarriedThing.Destroy(DestroyMode.Vanish);
                             }
                         }

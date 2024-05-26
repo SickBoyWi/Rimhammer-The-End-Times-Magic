@@ -23,7 +23,7 @@ namespace TheEndTimes_Magic
                 }
                 if (pawn != null)
                     return pawn;
-                Log.Error("Character tab found, but there is no selected pawn to display.", false);
+                Log.Error("Character tab found, but there is no selected pawn to display.");
                 return (Pawn)null;
             }
         }

@@ -13,9 +13,9 @@ namespace TheEndTimes_Magic
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             Pawn pawnCaster = this.launcher as Pawn;
- 
-            this.Draw();
-                
+
+            this.DrawAt(pawnCaster.Position.ToVector3(), false);
+
             Pawn target = this.intendedTarget.Pawn;
             IntVec3 pos = target.Position;
 

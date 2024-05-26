@@ -57,9 +57,9 @@ namespace TheEndTimes_Magic
                 else
                 {
                     if (target.RaceProps != null && target.RaceProps.Humanlike)
-                        target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "terror response", true, false, (Pawn)null, true);
+                        target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "terror response", true, false, false, (Pawn)null, true);
                     else
-                        target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, "terror response", true, false, (Pawn)null, true);
+                        target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, "terror response", true, false, false, (Pawn)null, true);
                 }
             }
             

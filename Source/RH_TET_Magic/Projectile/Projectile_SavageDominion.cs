@@ -176,12 +176,12 @@ namespace TheEndTimes_Magic
             {
                 GenSpawn.Spawn((Thing)newPawn, position, map, WipeMode.Vanish);
                 this.summonedPawn = (Pawn)newPawn;
-                newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, (Pawn)null, false);
+                newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, false, (Pawn)null, false);
             }
             catch (Exception e)
             {
                 this.age = this.duration;
-                Log.Error("RH_TET_JabberFail".Translate() + e.Message, false);
+                Log.Error("RH_TET_JabberFail".Translate() + e.Message);
                 this.Destroy(DestroyMode.Vanish);
             }
         }

@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using LudeonTK;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace TheEndTimes_Magic
             this.sustainer.Maintain();
             Vector3 vector3Shifted = this.Position.ToVector3Shifted();
             IntVec3 result;
-            if (Rand.MTBEventOccurs(MineInSpawner.FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableCellNear(this.Position, this.Map, MineInSpawner.FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false, false, false), (Predicate<IntVec3>)null, (Predicate<Region>)null, out result, 999999))
+            if (Rand.MTBEventOccurs(MineInSpawner.FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableCellNearPosition(this.Position, this.Position, this.Map, MineInSpawner.FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false, false, false), (Predicate<IntVec3>)null, (Predicate<Region>)null, out result, 999999))
                 FilthMaker.TryMakeFilth(result, this.Map, MineInSpawner.filthTypes.RandomElement<ThingDef>(), 1, FilthSourceFlags.None);
             if (Rand.MTBEventOccurs(MineInSpawner.DustMoteSpawnMTB, 1f, 1.TicksToSeconds()))
                 FleckMaker.ThrowDustPuffThick(new Vector3(vector3Shifted.x, 0.0f, vector3Shifted.z)
@@ -124,7 +125,7 @@ namespace TheEndTimes_Magic
         //    LordMaker.MakeNewLord(Faction.OfInsects, (LordJob)new LordJob_AssaultColony(Faction.OfInsects, true, false, false, false, true, false, false), map, (IEnumerable<Pawn>)list);
         //}
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Rand.PushState();
             Rand.Seed = this.thingIDNumber;

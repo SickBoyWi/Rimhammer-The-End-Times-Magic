@@ -95,7 +95,7 @@ namespace TheEndTimes_Magic
             Scribe_Values.Look<int>(ref this.gasTicksProcessed, "ticks", 0, false);
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (!Find.TickManager.Paused)
                 this.UpdateInterpolatedValues();
@@ -103,7 +103,7 @@ namespace TheEndTimes_Magic
             this.spriteOffset = new Vector2((float)this.interpolatedOffsetX, (float)this.interpolatedOffsetY);
             this.spriteScaleMultiplier = new Vector2((float)this.interpolatedScale, (float)this.interpolatedScale);
             this.spriteRotation = (float)this.interpolatedRotation;
-            base.Draw();
+            base.DrawAt(drawLoc, flip);
         }
 
         private void UpdateInterpolatedValues()

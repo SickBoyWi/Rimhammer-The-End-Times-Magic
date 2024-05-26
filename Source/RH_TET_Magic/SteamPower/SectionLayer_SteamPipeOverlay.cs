@@ -14,7 +14,7 @@ namespace TheEndTimes_Magic
           : base(section)
         {
             this.mode = PipeType.Heating;
-            this.relevantChangeTypes = MapMeshFlag.Buildings;
+            this.relevantChangeTypes = MapMeshFlagDefOf.Buildings;
         }
 
         public void DrawAllTileOverlays()
@@ -49,8 +49,8 @@ namespace TheEndTimes_Magic
         {
             CellRect sunShadowsViewRect = this.GetSunShadowsViewRect(map, Find.CameraDriver.CurrentViewRect);
             sunShadowsViewRect.ClipInsideMap(map);
-            IntVec2 intVec2_1 = this.SectionCoordsAt(sunShadowsViewRect.BottomLeft);
-            IntVec2 intVec2_2 = this.SectionCoordsAt(sunShadowsViewRect.TopRight);
+            IntVec2 intVec2_1 = this.SectionCoordsAt(sunShadowsViewRect.Min);
+            IntVec2 intVec2_2 = this.SectionCoordsAt(sunShadowsViewRect.Max);
             return intVec2_2.x < intVec2_1.x || intVec2_2.z < intVec2_1.z ? CellRect.Empty : CellRect.FromLimits(intVec2_1.x, intVec2_1.z, intVec2_2.x, intVec2_2.z);
         }
 

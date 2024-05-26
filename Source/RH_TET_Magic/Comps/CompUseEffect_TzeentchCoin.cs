@@ -97,10 +97,9 @@ namespace TheEndTimes_Magic
                 return null;
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
-            failReason = (string)null;
-            return true;
+            return base.CanBeUsedBy(p);
         }
     }
 }

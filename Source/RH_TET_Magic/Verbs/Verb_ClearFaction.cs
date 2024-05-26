@@ -90,7 +90,7 @@ namespace TheEndTimes_Magic
             if (this.UseAbilityProps.AbilityTargetCategory == AbilityTargetCategory.TargetAoE)
             {
                 if (this.UseAbilityProps.TargetAoEProperties == null)
-                    Log.Error("Tried to Cast AoE-Ability without defining a target class", false);
+                    Log.Error("Tried to Cast AoE-Ability without defining a target class");
                 List<Thing> thingList = new List<Thing>();
                 IntVec3 aoeStartPosition = ((Verb)this).caster.PositionHeld;
                 if (!((TargetAoEProperties)this.UseAbilityProps.TargetAoEProperties).startsFromCaster)

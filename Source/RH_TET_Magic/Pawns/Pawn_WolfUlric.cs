@@ -18,7 +18,7 @@ namespace TheEndTimes_Magic
             //if (this.Faction != null)  Keep faction for new unsummon logic. 20240224
             //    this.SetFaction(null);
             if (this.def.defName.Contains("Summonable") || this.def.defName.Contains("Maddened"))
-                this.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, false, false, (Pawn)null, false);
+                this.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, false, false, false, (Pawn)null, false);
         }
 
         private bool RetFalse()

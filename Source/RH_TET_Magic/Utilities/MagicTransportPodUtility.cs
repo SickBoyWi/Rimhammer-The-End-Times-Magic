@@ -71,7 +71,7 @@ namespace TheEndTimes_Magic
                 IntVec3 result = MagicTransportPodUtility.FindRootTunnelLoc(map, true, true);
                 if (result == null)
                 {
-                    Log.Warning("DropThingGroupsNear_NewTmpMineIn failed to find a place to mine in " + (object)thingsGroup.FirstOrDefault<Thing>() + " near " + (object)dropCenter + ". Dropping on random square instead.", false);
+                    Log.Warning("DropThingGroupsNear_NewTmpMineIn failed to find a place to mine in " + (object)thingsGroup.FirstOrDefault<Thing>() + " near " + (object)dropCenter + ". Dropping on random square instead.");
                     result = CellFinderLoose.RandomCellWith((Predicate<IntVec3>)(c => c.Walkable(map)), map, 1000);
                 }
 
@@ -145,7 +145,7 @@ namespace TheEndTimes_Magic
                 }
             }
 
-            SoundDefOf.DropPod_Open.PlayOneShot((SoundInfo)new TargetInfo(c, map, false));
+            DefDatabase<SoundDef>.GetNamed("DropPod_Open").PlayOneShot((SoundInfo)new TargetInfo(c, map, false));
         }
 
         private static IntVec3 FindRootTunnelLoc(
@@ -223,7 +223,7 @@ namespace TheEndTimes_Magic
                 IntVec3 result;
                 if (!DropCellFinder.TryFindDropSpotNear(dropCenter, map, out result, allowFogged, canRoofPunch, true, new IntVec2?()) && (canRoofPunch || !DropCellFinder.TryFindDropSpotNear(dropCenter, map, out result, allowFogged, true, true, new IntVec2?())))
                 {
-                    Log.Warning("DropThingsNear failed to find a place to drop " + (object)thingsGroup.FirstOrDefault<Thing>() + " near " + (object)dropCenter + ". Dropping on random square instead.", false);
+                    Log.Warning("DropThingsNear failed to find a place to drop " + (object)thingsGroup.FirstOrDefault<Thing>() + " near " + (object)dropCenter + ". Dropping on random square instead.");
                     result = CellFinderLoose.RandomCellWith((Predicate<IntVec3>)(c => c.Walkable(map)), map, 1000);
                 }
                 if (forbid)

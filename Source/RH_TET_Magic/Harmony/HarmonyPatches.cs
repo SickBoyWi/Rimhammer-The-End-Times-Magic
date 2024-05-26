@@ -19,7 +19,7 @@ namespace TheEndTimes_Magic
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
-        public static PawnKindDef SpaceRefugee;
+        //public static PawnKindDef SpaceRefugee;
 
         static HarmonyPatches()
         {
@@ -27,7 +27,7 @@ namespace TheEndTimes_Magic
 
             harmony.Patch(AccessTools.Method(typeof(SkillRecord), "Learn", null, null), null, 
                 new HarmonyMethod(typeof(HarmonyPatches), "Learn_PostFix", null), null);
-            harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment", null, null), null,
+            harmony.Patch(AccessTools.Method(typeof(PawnRenderUtility), "DrawEquipmentAndApparelExtras", null, null), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "DrawEquipment_PostFix", null), null);
             harmony.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), "GetGizmos", null, null), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "Pawn_ApparelTracker_GetGizmos_PostFix", null), null);
@@ -35,6 +35,7 @@ namespace TheEndTimes_Magic
                 new HarmonyMethod(typeof(HarmonyPatches), "Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix", null), null);
             harmony.Patch(AccessTools.DeclaredPropertyGetter(typeof(Pawn), "HealthScale"), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "Pawn_HealthScale_Getter_PostFix", null), null);
+
             harmony.Patch(original: AccessTools.Method(
                     type: typeof(Pawn_HealthTracker),
                     name: "PreApplyDamage"),
@@ -96,7 +97,125 @@ namespace TheEndTimes_Magic
                     name: "NeedInterval"),
                     prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(Need_Rest_NeedInterval_PreFix)),
                     postfix: null);
+
+
+
+            //harmony.Patch(original: AccessTools.Method(
+            //        type: typeof(JobDriver),
+            //        name: "DriverTick"),
+            //        prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(JobDriver_DriverTick_PreFix)),
+            //        postfix: null);
         }
+
+        //public static bool JobDriver_DriverTick_PreFix(JobDriver __instance, ref int ___curToilIndex, ref List<Toil> ___toils)
+        //{
+        //    if (!__instance.pawn.NameFullColored.ToString().Contains("Pepper"))
+        //        return true;
+        //    //else
+        //    //    Log.Error("IT IS PEPPER");
+
+
+        //    Toil CurToil;
+
+        //    ___curToilIndex = __instance.CurToilIndex;
+        //    // CODE TO SET CURTOIL
+        //    if (___curToilIndex < 0 || __instance.job == null || __instance.pawn.CurJob != __instance.job)
+        //        return true;
+
+        //    if (___curToilIndex < ___toils.Count)
+        //        CurToil = ___toils[___curToilIndex];
+        //    else
+        //    {
+        //        Log.Error(__instance.pawn.ToString() + " with job " + (object)__instance.pawn.CurJob + " tried to get CurToil with curToilIndex=" + (object)___curToilIndex + " but only has " + (object)___toils.Count + " toils.");
+        //        return true;
+        //    }
+
+        //    try
+        //    {
+        //        Log.Error("1");
+        //        --__instance.ticksLeftThisToil;
+        //        ++__instance.debugTicksSpentThisToil;
+        //        Log.Error("2");
+        //        if (CurToil == null)
+        //        {
+        //            Log.Error("3");
+        //            if (__instance.pawn.stances.FullBodyBusy)// && !__instance.CanStartNextToilInBusyStance)
+        //                return false;
+        //                __instance.ReadyForNextToil();
+        //        }
+        //        else
+        //        {
+        //            Log.Error("4");
+        //            //if (__instance.CheckCurrentToilEndOrFail())
+        //            //        return false;
+        //            if (CurToil.defaultCompleteMode == ToilCompleteMode.Instant)
+        //            {
+        //                Log.Error("5");
+        //                __instance.ReadyForNextToil();
+        //            }
+        //            else
+        //            {
+        //                Log.Error("6");
+        //                if (CurToil.defaultCompleteMode == ToilCompleteMode.Delay)
+        //                {
+        //                    if (__instance.ticksLeftThisToil <= 0)
+        //                    {
+        //                            __instance.ReadyForNextToil();
+        //                            return false;
+        //                    }
+        //                }
+        //                else if (CurToil.defaultCompleteMode == ToilCompleteMode.FinishedBusy && !__instance.pawn.stances.FullBodyBusy)
+        //                {
+        //                        __instance.ReadyForNextToil();
+        //                        return false;
+        //                }
+        //                //if (__instance.wantBeginNextToil)
+        //                //{
+        //                //        __instance.TryActuallyStartNextToil();
+        //                //}
+        //                else
+        //                {
+        //                    Log.Error("7");
+        //                    Job startingJob = __instance.pawn.CurJob;
+        //                    int startingJobId = startingJob.loadID;
+        //                    if (CurToil.preTickActions != null)
+        //                    {
+        //                        Toil curToil = CurToil;
+        //                        for (int index = 0; index < curToil.preTickActions.Count; ++index)
+        //                        {
+        //                            curToil.preTickActions[index]();
+        //                            if (JobChanged() || CurToil != curToil)// || __instance.wantBeginNextToil)
+        //                                    return false;
+        //                        }
+        //                    }
+        //                    Log.Error("8");
+        //                    if (CurToil.tickAction != null)
+        //                    {
+        //                        CurToil.tickAction();
+        //                        if (JobChanged())
+        //                                return false;
+        //                    }
+        //                    if (__instance.job.mote == null)
+        //                        return false;
+        //                        __instance.job.mote.Maintain();
+
+        //                    Log.Error("8");
+        //                    bool JobChanged()
+        //                    {
+        //                        return __instance.pawn.CurJob != startingJob || __instance.pawn.CurJob.loadID != startingJobId;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        JobUtility.TryStartErrorRecoverJob(__instance.pawn, "Exception in JobDriver tick for pawn " + __instance.pawn.ToStringSafe<Pawn>(), ex, __instance);
+        //    }
+
+
+        //    return false;
+        //}
 
         public static bool Need_Rest_NeedInterval_PreFix(Need_Rest __instance, ref float ___lastRestEffectiveness, ref Pawn ___pawn)
         {
@@ -500,9 +619,8 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public static void DrawEquipment_PostFix(PawnRenderer __instance, Vector3 rootLoc)
+        public static void DrawEquipment_PostFix(Pawn pawn, Vector3 drawPos, Rot4 facing, PawnRenderFlags flags)
         {
-            Pawn pawn = (Pawn)AccessTools.Field(typeof(PawnRenderer), "pawn").GetValue((object)__instance);
             if (pawn.health?.hediffSet?.hediffs == null || pawn.health.hediffSet.hediffs.Count <= 0)
                 return;
             Hediff hd = pawn.health.hediffSet.hediffs.FirstOrDefault<Hediff>((Func<Hediff, bool>)(x => x.TryGetComp<HediffComp_MagicShield>() != null));
@@ -519,7 +637,7 @@ namespace TheEndTimes_Magic
             (hd6 != null ? hd6.TryGetComp<HediffComp_ArmorOfDarkness>() : (HediffComp_ArmorOfDarkness)null)?.DrawWornExtras();
         }
 
-        public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
+        public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false, bool ignoreLearnRate = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue((object)__instance);
             if ((double)xp <= 0.0)

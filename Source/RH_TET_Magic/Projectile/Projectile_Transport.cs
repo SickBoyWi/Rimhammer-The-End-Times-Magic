@@ -247,7 +247,7 @@ namespace TheEndTimes_Magic
                 }
                 if (lord == null)
                 {
-                    LordJob_DefendPoint lordJobDefendPoint = new LordJob_DefendPoint(newPawn.Position, new float?(), false, true);
+                    LordJob_DefendPoint lordJobDefendPoint = new LordJob_DefendPoint(newPawn.Position, new float?(), new float?(), false, true);
                     lord = LordMaker.MakeNewLord(faction, (LordJob)lordJobDefendPoint, newPawn.Map, (IEnumerable<Pawn>)null);
                 }
                 else

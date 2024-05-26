@@ -152,7 +152,7 @@ namespace TheEndTimes_Magic
             }
             catch (Exception ex)
             {
-                Log.Error("Could not instantiate inspector tab of type " + (object)typeof(ITab_Pawn_AbilityAction) + ": " + (object)ex, false);
+                Log.Error("Could not instantiate inspector tab of type " + (object)typeof(ITab_Pawn_AbilityAction) + ": " + (object)ex);
             }
         }
 

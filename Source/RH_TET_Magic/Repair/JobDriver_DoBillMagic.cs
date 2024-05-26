@@ -60,9 +60,9 @@ namespace TheEndTimes_Magic
                         if (this.job.bill.GetStoreMode() == BillStoreModeDefOf.BestStockpile)
                             StoreUtility.TryFindBestBetterStoreCellFor(resultingThing, this.pawn, this.pawn.Map, StoragePriority.Unstored, this.pawn.Faction, out foundCell, true);
                         else if (this.job.bill.GetStoreMode() == BillStoreModeDefOf.SpecificStockpile)
-                            StoreUtility.TryFindBestBetterStoreCellForIn(resultingThing, this.pawn, this.pawn.Map, StoragePriority.Unstored, this.pawn.Faction, this.job.bill.GetStoreZone().slotGroup, out foundCell, true);
+                            StoreUtility.TryFindBestBetterStoreCellForIn(resultingThing, this.pawn, this.pawn.Map, StoragePriority.Unstored, this.pawn.Faction, this.job.bill.GetSlotGroup(), out foundCell, true);
                         else
-                            Log.ErrorOnce("Unknown store mode", 9158246, false);
+                            Log.ErrorOnce("Unknown store mode", 9158246);
                         if (foundCell.IsValid)
                         {
                             this.pawn.carryTracker.TryStartCarry(resultingThing, resultingThing.stackCount, true);

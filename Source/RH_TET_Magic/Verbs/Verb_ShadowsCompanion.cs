@@ -46,7 +46,7 @@ namespace TheEndTimes_Magic
                     FleckMaker.Static(caster.Position, map, RH_TET_MagicDefOf.RH_TET_FleckGrayEffect, 1f);
                     FleckMaker.Static(caster.Position, map, FleckDefOf.PsycastAreaEffect, 1f);
 
-                    List<Pawn> allPawnsSpawned = this.CasterPawn.Map.mapPawns.AllPawnsSpawned;
+                    IReadOnlyList<Pawn> allPawnsSpawned = this.CasterPawn.Map.mapPawns.AllPawnsSpawned;
                     for (int index = 0; index < allPawnsSpawned.Count; ++index)
                     {
                         if (((Thing)allPawnsSpawned[index]).Faction != null && GenHostility.HostileTo((Thing)allPawnsSpawned[index], CasterPawn.Faction) && (allPawnsSpawned[index].CurJob != null && allPawnsSpawned[index].CurJob.targetA != null && allPawnsSpawned[index].CurJob.targetA != CasterPawn))
@@ -58,7 +58,7 @@ namespace TheEndTimes_Magic
             else
                 successInd = false;
             if (!successInd)
-                Log.Warning("failed to TryCastShot on Shadows Companion.", false);
+                Log.Warning("failed to TryCastShot on Shadows Companion.");
 
             //this.PostCastShot(success, out success);
 

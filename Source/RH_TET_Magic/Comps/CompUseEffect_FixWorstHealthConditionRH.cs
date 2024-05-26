@@ -289,7 +289,7 @@ namespace TheEndTimes_Magic
                     else
                         break;
                 }
-                Log.Error("Too many iterations.", false);
+                Log.Error("Too many iterations.");
             }
         label_6:
             Messages.Message((string)"MessageHediffCuredByItem".Translate((NamedArgument)hediff.LabelBase.CapitalizeFirst()), (LookTargets)((Thing)pawn), MessageTypeDefOf.PositiveEvent, true);

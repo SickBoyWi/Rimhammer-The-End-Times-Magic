@@ -86,7 +86,7 @@ namespace TheEndTimes_Magic
                         if (!CasterPawn.Spawned)
                         {
                             GenSpawn.Spawn((Thing)casterPawn, position, map, WipeMode.Vanish);
-                            Log.Message("Exception occured when trying to Skitterleap - recovered pawn at the position the spell was cast from.", false);
+                            Log.Message("Exception occured when trying to Skitterleap - recovered pawn at the position the spell was cast from.");
                         }
                     }
                     success = true;
@@ -95,7 +95,7 @@ namespace TheEndTimes_Magic
                     Messages.Message((TaggedString)(Translator.Translate("RH_TET_Magic_InvalidTargetLocation")), (MessageTypeDef)MessageTypeDefOf.RejectInput, true);
             }
             else
-                Log.Warning("Failed to Skitterleap. Contact SickBoyWI on Discord.", false);
+                Log.Warning("Failed to Skitterleap. Contact SickBoyWI on Discord.");
 
             this.PostCastShot(success, out success);
 

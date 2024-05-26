@@ -85,7 +85,7 @@ namespace TheEndTimes_Magic
                         thing.Destroy(DestroyMode.Vanish);
                 }
             }
-            this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlag.PowerGrid);
+            this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlagDefOf.PowerGrid);
             this.mapComp.PipeComp.RegisterPipe(this, respawningAfterLoad);
         }
 

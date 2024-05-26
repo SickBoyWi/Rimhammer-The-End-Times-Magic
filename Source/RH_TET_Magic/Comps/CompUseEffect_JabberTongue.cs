@@ -75,10 +75,9 @@ namespace TheEndTimes_Magic
             Messages.Message("RH_TET_ChaosCorruptionToxic".Translate(user.Name, chaosCorruption.label), (LookTargets)((Thing)user), MessageTypeDefOf.NegativeEvent, true);
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
-            failReason = (string) null;
-            return true;
+            return base.CanBeUsedBy(p);
         }
     }
 }

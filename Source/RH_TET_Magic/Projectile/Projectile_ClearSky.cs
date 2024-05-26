@@ -40,11 +40,12 @@ namespace TheEndTimes_Magic
             affectedConditions.Add(GameConditionDefOf.HeatWave);
             affectedConditions.Add(GameConditionDefOf.PsychicDrone);
             affectedConditions.Add(GameConditionDefOf.PsychicSuppression);
-            affectedConditions.Add(GameConditionDefOf.SolarFlare);
+            affectedConditions.Add(DefDatabase<GameConditionDef>.GetNamed("SolarFlare"));
             affectedConditions.Add(GameConditionDefOf.ToxicFallout);
-            affectedConditions.Add(GameConditionDefOf.ToxicSpewer);
             affectedConditions.Add(GameConditionDefOf.VolcanicWinter);
             affectedConditions.Add(GameConditionDefOf.WeatherController);
+            if (ModsConfig.RoyaltyActive)
+                affectedConditions.Add(DefDatabase<GameConditionDef>.GetNamed("ToxicSpewer", false));
 
             GameConditionDef chaosStorm = DefDatabase<GameConditionDef>.GetNamed("RH_TET_ChaosStorm", false);
             if (chaosStorm != null)

@@ -179,7 +179,7 @@ namespace TheEndTimes_Magic
 
         private void Break()
         {
-            SoundDefOf.EnergyShield_Broken.PlayOneShot((SoundInfo)new TargetInfo(this.Pawn.Position, this.Pawn.Map, false));
+            DefDatabase<SoundDef>.GetNamed("EnergyShield_Broken").PlayOneShot((SoundInfo)new TargetInfo(this.Pawn.Position, this.Pawn.Map, false));
             FleckMaker.Static(this.Pawn.TrueCenter(), this.Pawn.Map, FleckDefOf.ExplosionFlash, 12f);
             for (int index = 0; index < 6; ++index)
                 FleckMaker.ThrowDustPuff(this.Pawn.TrueCenter() + Vector3Utility.HorizontalVectorFromAngle((float)Rand.Range(0, 360)) * Rand.Range(0.3f, 0.6f), this.Pawn.Map, Rand.Range(0.8f, 1.2f));

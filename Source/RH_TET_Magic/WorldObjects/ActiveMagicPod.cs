@@ -98,7 +98,7 @@ namespace TheEndTimes_Magic
                 for (int index = 0; index < 1; ++index)
                     GenPlace.TryPlaceThing(ThingMaker.MakeThing(ThingDefOf.ChunkSlagSteel, (ThingDef)null), this.Position, map, ThingPlaceMode.Near, (Action<Thing, int>)null, (Predicate<IntVec3>)null, new Rot4());
             }
-            SoundDefOf.DropPod_Open.PlayOneShot((SoundInfo)new TargetInfo(this.Position, map, false));
+            DefDatabase<SoundDef>.GetNamed("DropPod_Open").PlayOneShot((SoundInfo)new TargetInfo(this.Position, map, false));
             this.Destroy(DestroyMode.Vanish);
         }
     }

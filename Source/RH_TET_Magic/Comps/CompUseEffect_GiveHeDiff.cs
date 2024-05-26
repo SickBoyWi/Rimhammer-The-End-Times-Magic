@@ -23,9 +23,9 @@ namespace TheEndTimes_Magic
             Messages.Message((string)"RH_TET_Magic_PotionHediffUsed".Translate((NamedArgument)user.LabelShort, (NamedArgument)hediff.LabelCap, user.Named("USER")), (LookTargets)(Thing)user, MessageTypeDefOf.PositiveEvent, true);
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
-            return base.CanBeUsedBy(p, out failReason);
+            return base.CanBeUsedBy(p);
         }
     }
 }

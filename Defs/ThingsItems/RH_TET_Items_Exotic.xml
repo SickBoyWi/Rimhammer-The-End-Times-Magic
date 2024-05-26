@@ -203,6 +203,7 @@
 	<!-- Added from skaven mod, to make use of here without that mod in place. -->
 	<ThingDef ParentName="ResourceBase" Name="RH_TET_Skaven_MetalBase" Abstract="True">
 		<soundInteract>Metal_Drop</soundInteract>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<soundDrop>Metal_Drop</soundDrop>
 		<useHitPoints>false</useHitPoints>
 		<stuffProps>
@@ -211,7 +212,6 @@
 			</categories>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(107,225,75)</color>
-			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
@@ -234,6 +234,7 @@
 		</graphicData>
 		<soundInteract>Silver_Drop</soundInteract>
 		<soundDrop>Silver_Drop</soundDrop>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<useHitPoints>false</useHitPoints>
 		<statBases>
 			<MarketValue>32</MarketValue>
@@ -256,7 +257,6 @@
 			<commonality>0.01</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(107,225,75)</color>
-			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statOffsets>

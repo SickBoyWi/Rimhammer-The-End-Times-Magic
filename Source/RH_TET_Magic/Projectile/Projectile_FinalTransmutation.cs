@@ -41,7 +41,7 @@ namespace TheEndTimes_Magic
             
             try
             {
-                this.Draw();
+                this.DrawAt(pawnCaster.Position.ToVector3(), false);
 
                 Pawn target = this.intendedTarget.Pawn;
                 IntVec3 pos = target.Position;

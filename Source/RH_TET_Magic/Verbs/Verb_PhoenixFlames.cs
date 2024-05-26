@@ -69,7 +69,7 @@ namespace TheEndTimes_Magic
                     maxTargets--;
                     flag1 = true;
 
-                    target.TryAttachFire(Rand.Range(0.3f, 0.8f));
+                    target.TryAttachFire(Rand.Range(0.3f, 0.8f), theCaster);
 
                     continue;
                 }
@@ -84,7 +84,7 @@ namespace TheEndTimes_Magic
             if (this.UseAbilityProps.AbilityTargetCategory == AbilityTargetCategory.TargetAoE)
             {
                 if (this.UseAbilityProps.TargetAoEProperties == null)
-                    Log.Error("Tried to Cast Area of Effect Spell without target class", false);
+                    Log.Error("Tried to Cast Area of Effect Spell without target class");
                 List<Thing> thingList = new List<Thing>();
                 IntVec3 aoeStartPosition = ((Verb)this).caster.PositionHeld;
                 if (!((TargetAoEProperties)this.UseAbilityProps.TargetAoEProperties).startsFromCaster)

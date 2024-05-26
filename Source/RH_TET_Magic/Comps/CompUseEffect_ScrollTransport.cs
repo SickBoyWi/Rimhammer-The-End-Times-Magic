@@ -32,28 +32,30 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
+            string failReason;
             if (!p.IsMagicUser())
             {
                 failReason = "RH_TET_FailNotAMagicUser".Translate();
-                return false;
             }
             else if (MagicUtility.HasReachedNonLoreSpellLimit(p))
             {
                 failReason = "RH_TET_FailReachedSpellLimit".Translate();
-                return false;
             }
             else if (MagicUtility.DoesPawnKnowNonLoreSpell(p, RH_TET_MagicDefOf.RH_TET_AddOn_Transport_Mage))
             {
                 failReason = p.Name + " " + "RH_TET_FailAlreadyKnowsSpell".Translate();
-                return false;
             }
             else
             {
+                failReason = (string)null;
             }
-            failReason = (string)null;
-            return true;
+
+            if (failReason is null)
+                return base.CanBeUsedBy(p);
+            else
+                return (AcceptanceReport)failReason;
         }
     }
 }
