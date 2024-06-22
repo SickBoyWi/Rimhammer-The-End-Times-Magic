@@ -64,12 +64,6 @@
 						<RH_TET_ChaosWastes>0.25</RH_TET_ChaosWastes>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>//ThingDef[defName = "RH_TET_Beastmen_Raven_Race"]/race/wildBiomes</xpath>
-					<value>
-						<RH_TET_ChaosWastes>0.20</RH_TET_ChaosWastes>
-					</value>
-				</li>
 			</operations>
 		</match>
 	</Operation>
@@ -87,9 +81,9 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceAnimal"]/race/wildBiomes</xpath>
+					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceAnimal"]/race</xpath>
 					<value>
-						<RH_TET_Beastmen_OldGrowthForest>0.0001</RH_TET_Beastmen_OldGrowthForest>
+						<wildBiomes><RH_TET_Beastmen_OldGrowthForest>0.0001</RH_TET_Beastmen_OldGrowthForest></wildBiomes>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
