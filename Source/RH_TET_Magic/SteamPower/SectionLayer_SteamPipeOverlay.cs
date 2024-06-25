@@ -98,7 +98,7 @@ namespace TheEndTimes_Magic
         public override void Regenerate()
         {
             this.ClearSubMeshes(MeshParts.All);
-            if (PlumbingNet.AllTileNets(this.Map.Tile).EnumerableNullOrEmpty())
+            if (this.Map == null || this.Map.Tile < 0 || PlumbingNet.AllTileNets(this.Map.Tile).EnumerableNullOrEmpty())
                 return;
             foreach (PlumbingNet plumbingNet in PlumbingNet.AllTileNets(this.Map.Tile).Where<PlumbingNet>((Func<PlumbingNet, bool>)(x => x.MapComp.map != this.Map)))
             {
