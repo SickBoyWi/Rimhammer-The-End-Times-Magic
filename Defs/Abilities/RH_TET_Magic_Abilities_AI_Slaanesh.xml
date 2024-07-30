@@ -3,7 +3,7 @@
 
 	<!-- =================== Slaanesh Magic =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_SlaaneshWizardAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_SlaaneshWizardAI">
 		<defName>RH_TET_Magic_SlaaneshWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfSlaaneshTrait</li>
@@ -34,9 +34,9 @@
 			<li>RH_TET_SlaaneshPainPleasure_WarlockAI</li>
 			<li>RH_TET_SlaaneshPainPleasure_MasterAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshGoldenTorrent_MageAI</defName>
 		<ability>RH_TET_SlaaneshGoldenTorrent_Mage</ability>
 		<power>28.0</power>
@@ -45,8 +45,8 @@
 		<tags>
 			<li>GoldenTorrent</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshGoldenTorrent_WizardAI</defName>
 		<ability>RH_TET_SlaaneshGoldenTorrent_Wizard</ability>
 		<power>28.0</power>
@@ -55,8 +55,8 @@
 		<tags>
 			<li>GoldenTorrent</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshGoldenTorrent_WarlockAI</defName>
 		<ability>RH_TET_SlaaneshGoldenTorrent_Warlock</ability>
 		<power>28.0</power>
@@ -65,8 +65,8 @@
 		<tags>
 			<li>GoldenTorrent</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshGoldenTorrent_MasterAI</defName>
 		<ability>RH_TET_SlaaneshGoldenTorrent_Master</ability>
 		<power>28.0</power>
@@ -75,9 +75,9 @@
 		<tags>
 			<li>GoldenTorrent</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshBlissful_MageAI</defName>
 		<ability>RH_TET_SlaaneshBlissful_Mage</ability>
 		<power>18.0</power>
@@ -86,8 +86,8 @@
 		<tags>
 			<li>Blissful</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshBlissful_WizardAI</defName>
 		<ability>RH_TET_SlaaneshBlissful_Wizard</ability>
 		<power>18.0</power>
@@ -96,8 +96,8 @@
 		<tags>
 			<li>Blissful</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshBlissful_WarlockAI</defName>
 		<ability>RH_TET_SlaaneshBlissful_Warlock</ability>
 		<power>18.0</power>
@@ -106,8 +106,8 @@
 		<tags>
 			<li>Blissful</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshBlissful_MasterAI</defName>
 		<ability>RH_TET_SlaaneshBlissful_Master</ability>
 		<power>18.0</power>
@@ -116,9 +116,9 @@
 		<tags>
 			<li>Blissful</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshDelectableTorture_MageAI</defName>
 		<ability>RH_TET_SlaaneshDelectableTorture_Mage</ability>
 		<power>28.0</power>
@@ -127,8 +127,8 @@
 		<tags>
 			<li>Delectable</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshDelectableTorture_WizardAI</defName>
 		<ability>RH_TET_SlaaneshDelectableTorture_Wizard</ability>
 		<power>28.0</power>
@@ -137,8 +137,8 @@
 		<tags>
 			<li>Delectable</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshDelectableTorture_WarlockAI</defName>
 		<ability>RH_TET_SlaaneshDelectableTorture_Warlock</ability>
 		<power>28.0</power>
@@ -147,8 +147,8 @@
 		<tags>
 			<li>Delectable</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshDelectableTorture_MasterAI</defName>
 		<ability>RH_TET_SlaaneshDelectableTorture_Master</ability>
 		<power>28.0</power>
@@ -157,9 +157,9 @@
 		<tags>
 			<li>Delectable</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshSlothfulStupor_MageAI</defName>
 		<ability>RH_TET_SlaaneshSlothfulStupor_Mage</ability>
 		<power>30.0</power>
@@ -168,8 +168,8 @@
 		<tags>
 			<li>Stupor</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshSlothfulStupor_WizardAI</defName>
 		<ability>RH_TET_SlaaneshSlothfulStupor_Wizard</ability>
 		<power>30.0</power>
@@ -178,8 +178,8 @@
 		<tags>
 			<li>Stupor</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshSlothfulStupor_WarlockAI</defName>
 		<ability>RH_TET_SlaaneshSlothfulStupor_Warlock</ability>
 		<power>30.0</power>
@@ -188,8 +188,8 @@
 		<tags>
 			<li>Stupor</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshSlothfulStupor_MasterAI</defName>
 		<ability>RH_TET_SlaaneshSlothfulStupor_Master</ability>
 		<power>30.0</power>
@@ -198,9 +198,9 @@
 		<tags>
 			<li>Stupor</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshPainPleasure_MageAI</defName>
 		<ability>RH_TET_SlaaneshPainPleasure_Mage</ability>
 		<power>30.0</power>
@@ -209,8 +209,8 @@
 		<tags>
 			<li>PainPleasure</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshPainPleasure_WizardAI</defName>
 		<ability>RH_TET_SlaaneshPainPleasure_Wizard</ability>
 		<power>30.0</power>
@@ -219,8 +219,8 @@
 		<tags>
 			<li>PainPleasure</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshPainPleasure_WarlockAI</defName>
 		<ability>RH_TET_SlaaneshPainPleasure_Warlock</ability>
 		<power>30.0</power>
@@ -229,8 +229,8 @@
 		<tags>
 			<li>PainPleasure</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_SlaaneshPainPleasure_MasterAI</defName>
 		<ability>RH_TET_SlaaneshPainPleasure_Master</ability>
 		<power>30.0</power>
@@ -239,24 +239,24 @@
 		<tags>
 			<li>PainPleasure</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_SlaaneshWizardAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_SlaaneshWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Blissful</li>
 														<li>PainPleasure</li>
@@ -267,50 +267,50 @@
 									</subNodes>
 								</li>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>34.0</maxDistance>
 											<minDistance>25.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Blissful</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Delectable</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>PainPleasure</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stupor</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>10.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GoldenTorrent</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Delectable</li>
 													</tags>
@@ -320,50 +320,50 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>10.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GoldenTorrent</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Delectable</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>PainPleasure</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stupor</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>34.0</maxDistance>
 											<minDistance>25.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Blissful</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Delectable</li>
 													</tags>
@@ -378,6 +378,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
 </Defs>

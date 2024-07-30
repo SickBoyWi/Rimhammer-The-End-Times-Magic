@@ -3,7 +3,7 @@
 
 	<!-- =================== Metal Magic =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_MetalWizardAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_MetalWizardAI">
 		<defName>RH_TET_Magic_MetalWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfMetalTrait</li>
@@ -24,17 +24,17 @@
 			<li>RH_TET_MetalGlitteringRobe_WarlockAI</li>
 			<li>RH_TET_MetalGlitteringRobe_MasterAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_MetalWizardAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_MetalWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- Not in combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+						<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 							<tags>
 								<li>GlitteringRobe</li>
 							</tags>
@@ -42,17 +42,17 @@
 					</subNodes>
 				</li>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>40.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
@@ -63,11 +63,11 @@
 								</li>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>40.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
@@ -77,60 +77,60 @@
 									</subNodes>
 								</li>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>42.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FinalTransmutation</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>15.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FinalTransmutation</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
@@ -140,60 +140,60 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>15.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FinalTransmutation</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FinalTransmutation</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>42.0</maxDistance>
 											<minDistance>20.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GleamigArrow</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>GlitteringRobe</li>
 													</tags>
@@ -208,9 +208,9 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalFinalTransmutation_MageAI</defName>
 		<ability>RH_TET_MetalFinalTransmutation_Mage</ability>
 		<power>80.0</power>
@@ -220,8 +220,8 @@
 		<tags>
 			<li>FinalTransmutation</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalFinalTransmutation_WizardAI</defName>
 		<ability>RH_TET_MetalFinalTransmutation_Wizard</ability>
 		<power>80.0</power>
@@ -231,8 +231,8 @@
 		<tags>
 			<li>FinalTransmutation</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalFinalTransmutation_WarlockAI</defName>
 		<ability>RH_TET_MetalFinalTransmutation_Warlock</ability>
 		<power>80.0</power>
@@ -242,8 +242,8 @@
 		<tags>
 			<li>FinalTransmutation</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalFinalTransmutation_MasterAI</defName>
 		<ability>RH_TET_MetalFinalTransmutation_Master</ability>
 		<power>80.0</power>
@@ -253,9 +253,9 @@
 		<tags>
 			<li>FinalTransmutation</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGleamingArrow_MageAI</defName>
 		<ability>RH_TET_MetalGleamingArrow_Mage</ability>
 		<power>20.0</power>
@@ -264,8 +264,8 @@
 		<tags>
 			<li>GleamigArrow</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGleamingArrow_WizardAI</defName>
 		<ability>RH_TET_MetalGleamingArrow_Wizard</ability>
 		<power>20.0</power>
@@ -274,8 +274,8 @@
 		<tags>
 			<li>GleamigArrow</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGleamingArrow_WarlockAI</defName>
 		<ability>RH_TET_MetalGleamingArrow_Warlock</ability>
 		<power>20.0</power>
@@ -284,8 +284,8 @@
 		<tags>
 			<li>GleamigArrow</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGleamingArrow_MasterAI</defName>
 		<ability>RH_TET_MetalGleamingArrow_Master</ability>
 		<power>20.0</power>
@@ -294,9 +294,9 @@
 		<tags>
 			<li>GleamigArrow</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGlitteringRobe_MageAI</defName>
 		<ability>RH_TET_MetalGlitteringRobe_Mage</ability>
 		<power>22.0</power>
@@ -306,8 +306,8 @@
 		<tags>
 			<li>GlitteringRobe</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGlitteringRobe_WizardAI</defName>
 		<ability>RH_TET_MetalGlitteringRobe_Wizard</ability>
 		<power>22.0</power>
@@ -317,8 +317,8 @@
 		<tags>
 			<li>GlitteringRobe</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGlitteringRobe_WarlockAI</defName>
 		<ability>RH_TET_MetalGlitteringRobe_Warlock</ability>
 		<power>22.0</power>
@@ -328,8 +328,8 @@
 		<tags>
 			<li>GlitteringRobe</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalGlitteringRobe_MasterAI</defName>
 		<ability>RH_TET_MetalGlitteringRobe_Master</ability>
 		<power>22.0</power>
@@ -339,6 +339,6 @@
 		<tags>
 			<li>GlitteringRobe</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
 </Defs>

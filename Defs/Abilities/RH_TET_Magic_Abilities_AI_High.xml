@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =================== High Magic =================== -->
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_HighWizardAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_HighWizardAI">
 		<defName>RH_TET_Magic_HighWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfHighTrait</li>
@@ -33,17 +33,17 @@
 			<li>RH_TET_HighGlamourOfTeclis_WarlockAI</li>
 			<li>RH_TET_HighGlamourOfTeclis_MasterAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_HighWizardAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_HighWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- Not in combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+						<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 							<tags>
 								<li>ShieldSaphery</li>
 								<li>Apotheosis</li>
@@ -52,55 +52,55 @@
 					</subNodes>
 				</li>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>20.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FuryOfKhaine</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>15.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Glamour</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FuryOfKhaine</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
@@ -110,49 +110,49 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>15.0</maxDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Glamour</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FuryOfKhaine</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>FuryOfKhaine</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>20.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Phoenix</li>
 													</tags>
@@ -167,9 +167,9 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighPhoenixFlames_MageAI</defName>
 		<ability>RH_TET_HighPhoenixFlames_Mage</ability>
 		<power>40.0</power>
@@ -178,8 +178,8 @@
 		<tags>
 			<li>Phoenix</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighPhoenixFlames_WizardAI</defName>
 		<ability>RH_TET_HighPhoenixFlames_Wizard</ability>
 		<power>40.0</power>
@@ -188,8 +188,8 @@
 		<tags>
 			<li>Phoenix</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighPhoenixFlames_WarlockAI</defName>
 		<ability>RH_TET_HighPhoenixFlames_Warlock</ability>
 		<power>40.0</power>
@@ -198,8 +198,8 @@
 		<tags>
 			<li>Phoenix</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighPhoenixFlames_MasterAI</defName>
 		<ability>RH_TET_HighPhoenixFlames_Master</ability>
 		<power>40.0</power>
@@ -208,9 +208,9 @@
 		<tags>
 			<li>Phoenix</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighShieldSaphery_MageAI</defName>
 		<ability>RH_TET_HighShieldSaphery_Mage</ability>
 		<power>25.0</power>
@@ -220,8 +220,8 @@
 		<tags>
 			<li>ShieldSaphery</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighShieldSaphery_WizardAI</defName>
 		<ability>RH_TET_HighShieldSaphery_Wizard</ability>
 		<power>25.0</power>
@@ -231,8 +231,8 @@
 		<tags>
 			<li>ShieldSaphery</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighShieldSaphery_WarlockAI</defName>
 		<ability>RH_TET_HighShieldSaphery_Warlock</ability>
 		<power>25.0</power>
@@ -242,8 +242,8 @@
 		<tags>
 			<li>ShieldSaphery</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighShieldSaphery_MasterAI</defName>
 		<ability>RH_TET_HighShieldSaphery_Master</ability>
 		<power>25.0</power>
@@ -253,9 +253,9 @@
 		<tags>
 			<li>ShieldSaphery</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighApotheosis_MageAI</defName>
 		<ability>RH_TET_HighApotheosis_Mage</ability>
 		<power>35.0</power>
@@ -265,8 +265,8 @@
 		<tags>
 			<li>Apotheosis</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighApotheosis_WizardAI</defName>
 		<ability>RH_TET_HighApotheosis_Wizard</ability>
 		<power>35.0</power>
@@ -276,8 +276,8 @@
 		<tags>
 			<li>Apotheosis</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighApotheosis_WarlockAI</defName>
 		<ability>RH_TET_HighApotheosis_Warlock</ability>
 		<power>35.0</power>
@@ -287,8 +287,8 @@
 		<tags>
 			<li>Apotheosis</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighApotheosis_MasterAI</defName>
 		<ability>RH_TET_HighApotheosis_Master</ability>
 		<power>35.0</power>
@@ -298,9 +298,9 @@
 		<tags>
 			<li>Apotheosis</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighFuryOfKhaine_MageAI</defName>
 		<ability>RH_TET_HighFuryOfKhaine_Mage</ability>
 		<power>25.0</power>
@@ -309,8 +309,8 @@
 		<tags>
 			<li>FuryOfKhaine</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighFuryOfKhaine_WizardAI</defName>
 		<ability>RH_TET_HighFuryOfKhaine_Wizard</ability>
 		<power>25.0</power>
@@ -319,8 +319,8 @@
 		<tags>
 			<li>FuryOfKhaine</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighFuryOfKhaine_WarlockAI</defName>
 		<ability>RH_TET_HighFuryOfKhaine_Warlock</ability>
 		<power>25.0</power>
@@ -329,8 +329,8 @@
 		<tags>
 			<li>FuryOfKhaine</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighFuryOfKhaine_MasterAI</defName>
 		<ability>RH_TET_HighFuryOfKhaine_Master</ability>
 		<power>25.0</power>
@@ -339,9 +339,9 @@
 		<tags>
 			<li>FuryOfKhaine</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighGlamourOfTeclis_MageAI</defName>
 		<ability>RH_TET_HighGlamourOfTeclis_Mage</ability>
 		<power>51.0</power>
@@ -350,8 +350,8 @@
 		<tags>
 			<li>Glamour</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighGlamourOfTeclis_WizardAI</defName>
 		<ability>RH_TET_HighGlamourOfTeclis_Wizard</ability>
 		<power>51.0</power>
@@ -360,8 +360,8 @@
 		<tags>
 			<li>Glamour</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighGlamourOfTeclis_WarlockAI</defName>
 		<ability>RH_TET_HighGlamourOfTeclis_Warlock</ability>
 		<power>51.0</power>
@@ -370,8 +370,8 @@
 		<tags>
 			<li>Glamour</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighGlamourOfTeclis_MasterAI</defName>
 		<ability>RH_TET_HighGlamourOfTeclis_Master</ability>
 		<power>51.0</power>
@@ -380,6 +380,6 @@
 		<tags>
 			<li>Glamour</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
 </Defs>

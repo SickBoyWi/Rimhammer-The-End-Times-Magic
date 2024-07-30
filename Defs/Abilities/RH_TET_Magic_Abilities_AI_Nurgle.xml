@@ -3,7 +3,7 @@
 
 	<!-- =================== Nurgle Magic =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_NurgleWizardAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_NurgleWizardAI">
 		<defName>RH_TET_Magic_NurgleWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfNurgleTrait</li>
@@ -34,9 +34,9 @@
 			<li>RH_TET_NurgleRotbomb_WarlockAI</li>
 			<li>RH_TET_NurgleRotbomb_MasterAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleBoon_MageAI</defName>
 		<ability>RH_TET_NurgleBoon_Mage</ability>
 		<power>35.0</power>
@@ -47,8 +47,8 @@
 		<tags>
 			<li>NurgleBoon</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleBoon_WizardAI</defName>
 		<ability>RH_TET_NurgleBoon_Wizard</ability>
 		<power>35.0</power>
@@ -59,8 +59,8 @@
 		<tags>
 			<li>NurgleBoon</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleBoon_WarlockAI</defName>
 		<ability>RH_TET_NurgleBoon_Warlock</ability>
 		<power>35.0</power>
@@ -71,8 +71,8 @@
 		<tags>
 			<li>NurgleBoon</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleBoon_MasterAI</defName>
 		<ability>RH_TET_NurgleBoon_Master</ability>
 		<power>35.0</power>
@@ -83,9 +83,9 @@
 		<tags>
 			<li>NurgleBoon</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleAfflictions_MageAI</defName>
 		<ability>RH_TET_NurgleAfflictions_Mage</ability>
 		<power>28.0</power>
@@ -95,8 +95,8 @@
 		<tags>
 			<li>Afflictions</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleAfflictions_WizardAI</defName>
 		<ability>RH_TET_NurgleAfflictions_Wizard</ability>
 		<power>28.0</power>
@@ -106,8 +106,8 @@
 		<tags>
 			<li>Afflictions</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleAfflictions_WarlockAI</defName>
 		<ability>RH_TET_NurgleAfflictions_Warlock</ability>
 		<power>28.0</power>
@@ -117,8 +117,8 @@
 		<tags>
 			<li>Afflictions</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleAfflictions_MasterAI</defName>
 		<ability>RH_TET_NurgleAfflictions_Master</ability>
 		<power>28.0</power>
@@ -128,9 +128,9 @@
 		<tags>
 			<li>Afflictions</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleStream_MageAI</defName>
 		<ability>RH_TET_NurgleStream_Mage</ability>
 		<power>30.0</power>
@@ -140,8 +140,8 @@
 		<tags>
 			<li>Stream</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleStream_WizardAI</defName>
 		<ability>RH_TET_NurgleStream_Wizard</ability>
 		<power>30.0</power>
@@ -151,8 +151,8 @@
 		<tags>
 			<li>Stream</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleStream_WarlockAI</defName>
 		<ability>RH_TET_NurgleStream_Warlock</ability>
 		<power>30.0</power>
@@ -162,8 +162,8 @@
 		<tags>
 			<li>Stream</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleStream_MasterAI</defName>
 		<ability>RH_TET_NurgleStream_Master</ability>
 		<power>30.0</power>
@@ -173,9 +173,9 @@
 		<tags>
 			<li>Stream</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurglePestilence_MageAI</defName>
 		<ability>RH_TET_NurglePestilence_Mage</ability>
 		<power>50.0</power>
@@ -185,8 +185,8 @@
 		<tags>
 			<li>Pestilence</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurglePestilence_WizardAI</defName>
 		<ability>RH_TET_NurglePestilence_Wizard</ability>
 		<power>50.0</power>
@@ -196,8 +196,8 @@
 		<tags>
 			<li>Pestilence</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurglePestilence_WarlockAI</defName>
 		<ability>RH_TET_NurglePestilence_Warlock</ability>
 		<power>50.0</power>
@@ -207,8 +207,8 @@
 		<tags>
 			<li>Pestilence</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurglePestilence_MasterAI</defName>
 		<ability>RH_TET_NurglePestilence_Master</ability>
 		<power>50.0</power>
@@ -218,9 +218,9 @@
 		<tags>
 			<li>Pestilence</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleRotbomb_MageAI</defName>
 		<ability>RH_TET_NurgleRotbomb_Mage</ability>
 		<power>30.0</power>
@@ -230,8 +230,8 @@
 		<tags>
 			<li>Rotbomb</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleRotbomb_WizardAI</defName>
 		<ability>RH_TET_NurgleRotbomb_Wizard</ability>
 		<power>30.0</power>
@@ -241,8 +241,8 @@
 		<tags>
 			<li>Rotbomb</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleRotbomb_WarlockAI</defName>
 		<ability>RH_TET_NurgleRotbomb_Warlock</ability>
 		<power>30.0</power>
@@ -252,8 +252,8 @@
 		<tags>
 			<li>Rotbomb</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleRotbomb_MasterAI</defName>
 		<ability>RH_TET_NurgleRotbomb_Master</ability>
 		<power>30.0</power>
@@ -263,24 +263,24 @@
 		<tags>
 			<li>Rotbomb</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_NurgleWizardAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_NurgleWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsAnimal">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Rotbomb</li>
 														<li>Stream</li>
@@ -291,60 +291,60 @@
 									</subNodes>
 								</li>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>25.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Rotbomb</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Rotbomb</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stream</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Afflictions</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stream</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
@@ -354,60 +354,60 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>25.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Afflictions</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stream</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Rotbomb</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Stream</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>25.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Pestilence</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Rotbomb</li>
 													</tags>
@@ -420,12 +420,12 @@
 						</li>
 					</subNodes>
 				</li>
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
 							<subNodes>
-								<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+								<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 									<tags>
 										<li>NurgleBoon</li>
 									</tags>
@@ -436,6 +436,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
 </Defs>

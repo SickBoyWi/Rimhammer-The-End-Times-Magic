@@ -3,7 +3,7 @@
 
 	<!-- =================== Sigmar Faith =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Faith_SigmarAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Faith_SigmarAI">
 		<defName>RH_TET_Faith_SigmarFaithAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_SigmarTrait</li>
@@ -13,17 +13,17 @@
 			<li>RH_TET_Sigmar_CometAI</li>
 			<li>RH_TET_Sigmar_ShieldAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Faith_SigmarAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Faith_SigmarAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompFaithUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- Not in combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+						<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 							<tags>
 								<li>SigmarShield</li>
 							</tags>
@@ -31,17 +31,17 @@
 					</subNodes>
 				</li>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>45.0</maxDistance>
 											<minDistance>20.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>SigmarComet</li>
 													</tags>
@@ -51,18 +51,18 @@
 									</subNodes>
 								</li>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>45.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>SigmarThunderbolt</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>SigmarComet</li>
 													</tags>
@@ -72,18 +72,18 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>45.0</maxDistance>
 											<minDistance>10.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>SigmarComet</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>SigmarThunderbolt</li>
 													</tags>
@@ -98,16 +98,16 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityAIDef Name="RH_TET_Faith_BaseFaithAbilityAI" Abstract="True">
+	<SickAbilityUserAI.AbilityAIDef Name="RH_TET_Faith_BaseFaithAbilityAI" Abstract="True">
 		<maxRange>50.0</maxRange>
 		<tags>
 			<li>RH_TET_FaithAI</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Sigmar_ThunderboltAI</defName>
 		<ability>RH_TET_Sigmar_Thunderbolt</ability>
 		<power>65.0</power>
@@ -116,8 +116,8 @@
 		<tags>
 			<li>SigmarThunderbolt</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Sigmar_CometAI</defName>
 		<ability>RH_TET_Sigmar_Comet</ability>
 		<power>85.0</power>
@@ -126,8 +126,8 @@
 		<tags>
 			<li>SigmarComet</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Sigmar_ShieldAI</defName>
 		<ability>RH_TET_Sigmar_Shield</ability>
 		<power>35.0</power>
@@ -137,11 +137,11 @@
 		<tags>
 			<li>SigmarShield</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
 	<!-- =================== Ulric Faith =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Faith_UlricAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Faith_UlricAI">
 		<defName>RH_TET_Faith_UlricFaithAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_UlricTrait</li>
@@ -150,24 +150,24 @@
 			<li>RH_TET_Ulric_WolfAI</li>
 			<li>RH_TET_Ulric_WarhammerAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Faith_UlricAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Faith_UlricAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompFaithUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<li Class="TheEndTimes_Magic.AbilityDecisionConditionalNode_EnemyTargetIsBuilding">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>UlricWarhammer</li>
 													</tags>
@@ -177,18 +177,18 @@
 									</subNodes>
 								</li>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>UlricWolf</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>UlricWarhammer</li>
 													</tags>
@@ -198,18 +198,18 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>30.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>UlricWolf</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>UlricWarhammer</li>
 													</tags>
@@ -224,9 +224,9 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Ulric_WarhammerAI</defName>
 		<ability>RH_TET_Ulric_Warhammer</ability>
 		<power>40.0</power>
@@ -235,8 +235,8 @@
 		<tags>
 			<li>UlricWolf</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Ulric_WolfAI</defName>
 		<ability>RH_TET_Ulric_Wolf</ability>
 		<power>60.0</power>
@@ -245,11 +245,11 @@
 		<tags>
 			<li>UlricWarhammer</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 
 	<!-- =================== Shallya Faith =================== -->
 
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Faith_ShallyaAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Faith_ShallyaAI">
 		<defName>RH_TET_Faith_ShallyaFaithAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_ShallyaTrait</li>
@@ -258,20 +258,20 @@
 			<li>RH_TET_Shallya_FortuneAI</li>
 			<li>RH_TET_Shallya_LightAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Faith_ShallyaAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Faith_ShallyaAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompFaithUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- Not in combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
 							<maxHealth>.8</maxHealth>
 							<subNodes>
-								<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+								<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 									<tags>
 										<li>ShallyaShallyaFortune</li>
 										<li>ShallyaLight</li>
@@ -279,10 +279,10 @@
 								</li>
 							</subNodes>
 						</li>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
 							<maxHealth>.5</maxHealth>
 							<subNodes>
-								<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+								<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 									<tags>
 										<li>ShallyaFortune</li>
 										<li>ShallyaShallyaFortune</li>
@@ -294,9 +294,9 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Shallya_LightAI</defName>
 		<ability>RH_TET_Shallya_Light</ability>
 		<power>25.0</power>
@@ -306,8 +306,8 @@
 		<tags>
 			<li>ShallyaLight</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Faith_BaseFaithAbilityAI">
 		<defName>RH_TET_Shallya_FortuneAI</defName>
 		<ability>RH_TET_Shallya_Fortune</ability>
 		<power>50.0</power>
@@ -317,6 +317,6 @@
 		<tags>
 			<li>ShallyaFortune</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
 </Defs>

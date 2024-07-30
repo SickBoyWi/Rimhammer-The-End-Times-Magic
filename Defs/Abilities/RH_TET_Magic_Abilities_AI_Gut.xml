@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =================== Great Maw Magic =================== -->
-	<AbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_GreatMawWizardAI">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_GreatMawWizardAI">
 		<defName>RH_TET_Magic_GreatMawWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfGreatMawTrait</li>
@@ -33,9 +33,9 @@
 			<li>RH_TET_MawToothcracker_WarlockAI</li>
 			<li>RH_TET_MawToothcracker_MasterAI</li>
 		</abilities>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBonecrusher_MageAI</defName>
 		<ability>RH_TET_MawBonecrusher_Mage</ability>
 		<power>25.0</power>
@@ -45,8 +45,8 @@
 		<tags>
 			<li>BoneCrusher</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBonecrusher_WizardAI</defName>
 		<ability>RH_TET_MawBonecrusher_Wizard</ability>
 		<power>25.0</power>
@@ -56,8 +56,8 @@
 		<tags>
 			<li>BoneCrusher</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBonecrusher_WarlockAI</defName>
 		<ability>RH_TET_MawBonecrusher_Warlock</ability>
 		<power>25.0</power>
@@ -67,8 +67,8 @@
 		<tags>
 			<li>BoneCrusher</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBonecrusher_MasterAI</defName>
 		<ability>RH_TET_MawBonecrusher_Master</ability>
 		<power>25.0</power>
@@ -78,9 +78,9 @@
 		<tags>
 			<li>BoneCrusher</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBraingobbler_MageAI</defName>
 		<ability>RH_TET_MawBraingobbler_Mage</ability>
 		<power>35.0</power>
@@ -90,8 +90,8 @@
 		<tags>
 			<li>Braingobbler</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBraingobbler_WizardAI</defName>
 		<ability>RH_TET_MawBraingobbler_Wizard</ability>
 		<power>35.0</power>
@@ -101,8 +101,8 @@
 		<tags>
 			<li>Braingobbler</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBraingobbler_WarlockAI</defName>
 		<ability>RH_TET_MawBraingobbler_Warlock</ability>
 		<power>35.0</power>
@@ -112,8 +112,8 @@
 		<tags>
 			<li>Braingobbler</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBraingobbler_MasterAI</defName>
 		<ability>RH_TET_MawBraingobbler_Master</ability>
 		<power>35.0</power>
@@ -123,9 +123,9 @@
 		<tags>
 			<li>Braingobbler</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBullgorger_MageAI</defName>
 		<ability>RH_TET_MawBullgorger_Mage</ability>
 		<power>15.0</power>
@@ -135,8 +135,8 @@
 		<tags>
 			<li>Bullgorger</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBullgorger_WizardAI</defName>
 		<ability>RH_TET_MawBullgorger_Wizard</ability>
 		<power>15.0</power>
@@ -146,8 +146,8 @@
 		<tags>
 			<li>Bullgorger</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBullgorger_WarlockAI</defName>
 		<ability>RH_TET_MawBullgorger_Warlock</ability>
 		<power>15.0</power>
@@ -157,8 +157,8 @@
 		<tags>
 			<li>Bullgorger</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawBullgorger_MasterAI</defName>
 		<ability>RH_TET_MawBullgorger_Master</ability>
 		<power>15.0</power>
@@ -168,9 +168,9 @@
 		<tags>
 			<li>Bullgorger</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawTrollguts_MageAI</defName>
 		<ability>RH_TET_MawTrollguts_Mage</ability>
 		<power>25.0</power>
@@ -180,8 +180,8 @@
 		<tags>
 			<li>Trollguts</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawTrollguts_WizardAI</defName>
 		<ability>RH_TET_MawTrollguts_Wizard</ability>
 		<power>25.0</power>
@@ -191,8 +191,8 @@
 		<tags>
 			<li>Trollguts</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawTrollguts_WarlockAI</defName>
 		<ability>RH_TET_MawTrollguts_Warlock</ability>
 		<power>25.0</power>
@@ -202,8 +202,8 @@
 		<tags>
 			<li>Trollguts</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawTrollguts_MasterAI</defName>
 		<ability>RH_TET_MawTrollguts_Master</ability>
 		<power>25.0</power>
@@ -213,9 +213,9 @@
 		<tags>
 			<li>Trollguts</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawToothcracker_MageAI</defName>
 		<ability>RH_TET_MawToothcracker_Mage</ability>
 		<power>45.0</power>
@@ -225,8 +225,8 @@
 		<tags>
 			<li>Toothcracker</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawToothcracker_WizardAI</defName>
 		<ability>RH_TET_MawToothcracker_Wizard</ability>
 		<power>45.0</power>
@@ -236,8 +236,8 @@
 		<tags>
 			<li>Toothcracker</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawToothcracker_WarlockAI</defName>
 		<ability>RH_TET_MawToothcracker_Warlock</ability>
 		<power>45.0</power>
@@ -247,8 +247,8 @@
 		<tags>
 			<li>Toothcracker</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
-	<AbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
+	</SickAbilityUserAI.AbilityAIDef>
+	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MawToothcracker_MasterAI</defName>
 		<ability>RH_TET_MawToothcracker_Master</ability>
 		<power>45.0</power>
@@ -258,27 +258,27 @@
 		<tags>
 			<li>Toothcracker</li>
 		</tags>
-	</AbilityUserAI.AbilityAIDef>
+	</SickAbilityUserAI.AbilityAIDef>
 	
-	<AbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_GreatMawWizardAI" Abstract="True">
+	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_GreatMawWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
 				<!-- Not in combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
 							<maxHealth>.7</maxHealth>
 							<subNodes>
-								<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+								<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 									<tags>
 										<li>Trollguts</li>
 									</tags>
 								</li>
 							</subNodes>
 						</li>
-						<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+						<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 							<tags>
 								<li>Toothcracker</li>
 								<li>Bullgorger</li>
@@ -287,44 +287,44 @@
 					</subNodes>
 				</li>
 				<!-- In combat -->
-				<li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+				<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_InCombat">
 					<subNodes>
-						<li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+						<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
 							<subNodes>
 								<!-- Using ranged weapon -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>BoneCrusher</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Bullgorger</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>18.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Braingobbler</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Toothcracker</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Bullgorger</li>
 													</tags>
@@ -334,39 +334,39 @@
 									</subNodes>
 								</li>
 								<!-- Using melee weapon, agressive ability use. -->
-								<li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+								<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
 									<subNodes>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>18.0</maxDistance>
 											<minDistance>5.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Braingobbler</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Toothcracker</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Bullgorger</li>
 													</tags>
 												</li>
 											</subNodes>
 										</li>
-										<li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+										<li Class="SickAbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
 											<maxDistance>28.0</maxDistance>
 											<minDistance>15.0</minDistance>
 											<subNodes>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>BoneCrusher</li>
 													</tags>
 												</li>
-												<li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+												<li Class="SickAbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
 													<tags>
 														<li>Bullgorger</li>
 													</tags>
@@ -381,6 +381,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</AbilityUserAI.AbilityUserAIProfileDef>
+	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
 	
 </Defs>
