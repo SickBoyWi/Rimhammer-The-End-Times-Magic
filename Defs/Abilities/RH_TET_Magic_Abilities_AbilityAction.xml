@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<AbilityUser.AbilityDef Name="RH_TET_BaseAbilityActionAbility" Abstract="True">
+	<SickAbilityUser.AbilityDef Name="RH_TET_BaseAbilityActionAbility" Abstract="True">
 		<abilityClass>TheEndTimes_Magic.AbilityActionAbility</abilityClass>
 		<uiIconPath>UI/Glow_Corrupt</uiIconPath>
-	</AbilityUser.AbilityDef>
+	</SickAbilityUser.AbilityDef>
 
 	<!-- Witch Hunter -->
 	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_AbilityLaser">

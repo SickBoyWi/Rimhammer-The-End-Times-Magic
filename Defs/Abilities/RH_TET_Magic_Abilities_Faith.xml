@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<AbilityUser.AbilityDef Name="RH_TET_BaseFaithAbility" Abstract="True">
+	<SickAbilityUser.AbilityDef Name="RH_TET_BaseFaithAbility" Abstract="True">
 		<abilityClass>TheEndTimes_Magic.FaithAbility</abilityClass>
 		<uiIconPath>UI/Glow_Corrupt</uiIconPath>
-	</AbilityUser.AbilityDef>
+	</SickAbilityUser.AbilityDef>
 
 	<!-- Thunderbolt -->
 	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">

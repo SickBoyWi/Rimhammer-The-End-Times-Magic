@@ -28,12 +28,14 @@
 						<useMeatFrom>RH_TET_ChaosSpawnRace</useMeatFrom>
 					</value>
 				</li>
+				<!--
 				<li Class="PatchOperationAdd">
 					<xpath>//ThingDef[defName = "RH_TET_JabberslytheRaceAnimal"]/race/wildBiomes</xpath>
 					<value>
 						<RH_TET_ChaosWastes>0.001</RH_TET_ChaosWastes>
 					</value>
 				</li>
+				-->
 				<li Class="PatchOperationAdd">
 					<xpath>//ThingDef[defName = "RH_TET_ChaosSpawnRaceAnimal"]/race/wildBiomes</xpath>
 					<value>
