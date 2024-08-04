@@ -166,7 +166,7 @@
 		</MainVerb>
 	</TheEndTimes_Magic.MagicAbilityDef>
 
-	<!-- Comet of Cassandra -->
+	<!-- Comet of Cassandora -->
 	<ThingDef ParentName="BaseBullet" Class="SickAbilityUser.ProjectileDef_Ability">
 		<thingClass>TheEndTimes_Magic.Projectile_Comet</thingClass>
 		<defName>RH_TET_HeavensCometOfCassandoraP</defName>
