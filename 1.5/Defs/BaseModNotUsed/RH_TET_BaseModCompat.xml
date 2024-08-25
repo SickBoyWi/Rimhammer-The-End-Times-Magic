@@ -27,6 +27,7 @@
 				<min>20</min>
 				<max>45</max>
 			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 	</ThingDef>	
 	
