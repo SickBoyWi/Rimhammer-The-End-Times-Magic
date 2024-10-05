@@ -32,6 +32,7 @@
 					<min>25000</min>
 					<max>30000</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
@@ -53,6 +54,7 @@
 					<min>55000</min>
 					<max>60000</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
@@ -74,6 +76,7 @@
 					<min>118000</min>
 					<max>125000</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 		</comps>
 	</HediffDef>
@@ -92,6 +95,7 @@
 					<min>2500</min>
 					<max>2750</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>.7</severityPerDayNotImmune>
@@ -113,6 +117,7 @@
 					<min>3000</min>
 					<max>6000</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
@@ -134,6 +139,7 @@
 					<min>3000</min>
 					<max>3600</max>
 				</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>.5</severityPerDayNotImmune>
