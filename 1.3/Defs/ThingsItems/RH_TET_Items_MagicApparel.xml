@@ -172,6 +172,7 @@
   <ThingDef Name="RH_TET_FootwearBase" ParentName="RH_TET_MagicApparelBase" Abstract="True">
     <thingCategories>
       <li>Footwear</li>
+	  <li>RH_TET_MagicApparel</li>
     </thingCategories>
     <apparel>
       <scoreOffset>4</scoreOffset>
