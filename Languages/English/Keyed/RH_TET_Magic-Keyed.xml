@@ -183,6 +183,7 @@
 	<RH_TET_Magic_RaisePowerDesc>Increase the heat output.</RH_TET_Magic_RaisePowerDesc>
 	<RH_TET_Magic_DesigRemovePipes>Remove steam pipes</RH_TET_Magic_DesigRemovePipes>
 	<RH_TET_Magic_DesigRemovePipesDesc>Designate sections of steam pipe type for deconstruction.</RH_TET_Magic_DesigRemovePipesDesc>
+	<RH_TET_Magic_PlaceWorker_UnderCeiling>Must be placed under a ceiling.</RH_TET_Magic_PlaceWorker_UnderCeiling>
   
 	<!-- Incidents -->
 	<RH_TET_LabelJabberWandersIn>Jabberslythe Wanders In</RH_TET_LabelJabberWandersIn>
