@@ -42,18 +42,22 @@ namespace TheEndTimes_Magic
                 Log.Warning("Null SteamPipeComps - correcting");
                 SteamPipeMapComp.SteamPipeComps = new Dictionary<int, SteamPipeMapComp>();
             }
-            foreach (KeyValuePair<int, SteamPipeMapComp> steamPipeComp in SteamPipeMapComp.SteamPipeComps)
-            {
-                if (steamPipeComp.Value?.map != null && (steamPipeComp.Value?.PipeNets != null && steamPipeComp.Value.map.Tile == Tile))
+
+            if(SteamPipeMapComp.SteamPipeComps != null && SteamPipeMapComp.SteamPipeComps.Count > 0)
+            { 
+                foreach (KeyValuePair<int, SteamPipeMapComp> steamPipeComp in SteamPipeMapComp.SteamPipeComps)
                 {
-                    PlumbingNet[] plumbingNetArray = steamPipeComp.Value.PipeNets;
-                    for (int index = 0; index < plumbingNetArray.Length; ++index)
+                    if (steamPipeComp.Value?.map != null && (steamPipeComp.Value?.PipeNets != null &&  steamPipeComp.Value.map.Tile == Tile))
                     {
-                        PlumbingNet plumbingNet = plumbingNetArray[index];
-                        if (plumbingNet != null)
-                            yield return plumbingNet;
+                        PlumbingNet[] plumbingNetArray = steamPipeComp.Value.PipeNets;
+                        for (int index = 0; index < plumbingNetArray.Length; ++index)
+                        {
+                            PlumbingNet plumbingNet = plumbingNetArray[index];
+                            if (plumbingNet != null)
+                                yield return plumbingNet;
+                        }
+                        plumbingNetArray = (PlumbingNet[])null;
                     }
-                    plumbingNetArray = (PlumbingNet[])null;
                 }
             }
         }
