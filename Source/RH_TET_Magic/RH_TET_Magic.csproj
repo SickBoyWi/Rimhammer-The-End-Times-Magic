@@ -298,6 +298,7 @@
     <Compile Include="UI\ITab_Pawn_AbilityAction.cs" />
     <Compile Include="UI\ITab_Pawn_Faith.cs" />
     <Compile Include="Utilities\AbilityActionCardUtility.cs" />
+    <Compile Include="Utilities\IconUtilityData.cs" />
     <Compile Include="Utilities\FaithCardUtility.cs" />
     <Compile Include="Utilities\MagicTransportPodUtility.cs" />
     <Compile Include="Verbs\Verb_CurePoison.cs" />

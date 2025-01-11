@@ -16,11 +16,32 @@
 	<RH_TET_TabFaith>Faith</RH_TET_TabFaith>
 	<RH_TET_TabAbilityAction>Abilities</RH_TET_TabAbilityAction>
 	<RH_TET_Lore>lore</RH_TET_Lore>
-	<RH_TET_LoreOfTzeentch>lore of Tzeentch</RH_TET_LoreOfTzeentch>
+	
 	<RH_TET_LoreOfBeasts>lore of Beasts</RH_TET_LoreOfBeasts>
-	<RH_TET_LoreOfShadow>lore of Shadow</RH_TET_LoreOfShadow>
-	<RH_TET_LoreOfWild>lore of Wild</RH_TET_LoreOfWild>
+	<RH_TET_LoreOfChaos>lore of Chaos</RH_TET_LoreOfChaos>
 	<RH_TET_LoreOfDeath>lore of Death</RH_TET_LoreOfDeath>
+	<RH_TET_LoreOfFire>lore of Fire</RH_TET_LoreOfFire>
+	<RH_TET_LoreOfHeavens>lore of Heavens</RH_TET_LoreOfHeavens>
+	<RH_TET_LoreOfHigh>lore of Death</RH_TET_LoreOfHigh>
+	<RH_TET_LoreOfLife>lore of Life</RH_TET_LoreOfLife>
+	<RH_TET_LoreOfLight>lore of Light</RH_TET_LoreOfLight>
+	<RH_TET_LoreOfMaw>lore of the Maw</RH_TET_LoreOfMaw>
+	<RH_TET_LoreOfMetal>lore of Metal</RH_TET_LoreOfMetal>
+	<RH_TET_LoreOfNurgle>lore of Nurgle</RH_TET_LoreOfNurgle>
+	<RH_TET_LoreOfPlague>lore of Plague</RH_TET_LoreOfPlague>
+	<RH_TET_LoreOfShadow>lore of Shadow</RH_TET_LoreOfShadow>
+	<RH_TET_LoreOfSlaanesh>lore of Slaanesh</RH_TET_LoreOfSlaanesh>
+	<RH_TET_LoreOfStealth>lore of Stealth</RH_TET_LoreOfStealth>
+	<RH_TET_LoreOfTzeentch>lore of Tzeentch</RH_TET_LoreOfTzeentch>
+	<RH_TET_LoreOfWarp>lore of the Warp</RH_TET_LoreOfWarp>
+	<RH_TET_LoreOfWild>lore of the Wild</RH_TET_LoreOfWild>
+	
+	<RH_TET_FaithOfShallya>Shallya Faithful</RH_TET_FaithOfShallya>
+	<RH_TET_FaithOfSigmar>Sigmar Faithful</RH_TET_FaithOfSigmar>
+	<RH_TET_FaithOfUlric>Ulric Faithful</RH_TET_FaithOfUlric>
+	
+	<RH_TET_AbilityOfWitchhunter>Witchhunter</RH_TET_AbilityOfWitchhunter>
+	
 	<RH_TET_MagicInfo>magic info</RH_TET_MagicInfo>
 	<RH_TET_Spells>lore spells</RH_TET_Spells>
 	<RH_TET_AddOnSpells>non lore spells</RH_TET_AddOnSpells>

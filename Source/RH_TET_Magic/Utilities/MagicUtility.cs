@@ -4,11 +4,246 @@ using SickAbilityUser;
 using RimWorld;
 using Verse;
 using AbilityDef = SickAbilityUser.AbilityDef;
+using UnityEngine;
 
 namespace TheEndTimes_Magic
 {
-    internal static class MagicUtility
+    [StaticConstructorOnStartup]
+    public static class MagicUtility
     {
+        public static readonly Texture2D beastsIcon = ContentFinder<Texture2D>.Get("Icons/beasts", true);
+        public static readonly Texture2D deathIcon = ContentFinder<Texture2D>.Get("Icons/death", true);
+        public static readonly Texture2D fireIcon = ContentFinder<Texture2D>.Get("Icons/fire", true);
+        public static readonly Texture2D heavensIcon = ContentFinder<Texture2D>.Get("Icons/heavens", true);
+        public static readonly Texture2D lifeIcon = ContentFinder<Texture2D>.Get("Icons/life", true);
+        public static readonly Texture2D lightIcon = ContentFinder<Texture2D>.Get("Icons/light", true);
+        public static readonly Texture2D metalIcon = ContentFinder<Texture2D>.Get("Icons/metal", true);
+        public static readonly Texture2D shadowIcon = ContentFinder<Texture2D>.Get("Icons/shadow", true);
+
+        public static readonly Texture2D chaosIcon = ContentFinder<Texture2D>.Get("Icons/chaos", true);
+        public static readonly Texture2D highIcon = ContentFinder<Texture2D>.Get("Icons/high", true);
+        public static readonly Texture2D mawIcon = ContentFinder<Texture2D>.Get("Icons/maw", true);
+        public static readonly Texture2D nurgleIcon = ContentFinder<Texture2D>.Get("Icons/nurgle", true);
+        public static readonly Texture2D plagueIcon = ContentFinder<Texture2D>.Get("Icons/plague", true);
+        public static readonly Texture2D slaaneshIcon = ContentFinder<Texture2D>.Get("Icons/slaanesh", true);
+        public static readonly Texture2D stealthIcon = ContentFinder<Texture2D>.Get("Icons/stealth", true);
+        public static readonly Texture2D tzeentchIcon = ContentFinder<Texture2D>.Get("Icons/tzeentch", true);
+        public static readonly Texture2D warpIcon = ContentFinder<Texture2D>.Get("Icons/warp", true);
+        public static readonly Texture2D wildIcon = ContentFinder<Texture2D>.Get("Icons/wild", true);
+
+        public static readonly Texture2D shallyaIcon = ContentFinder<Texture2D>.Get("Icons/shallya", true);
+        public static readonly Texture2D sigmarIcon = ContentFinder<Texture2D>.Get("Icons/sigmar", true);
+        public static readonly Texture2D ulricIcon = ContentFinder<Texture2D>.Get("Icons/ulric", true);
+
+        public static readonly Texture2D witchhunterIcon = ContentFinder<Texture2D>.Get("Icons/witchhunter", true);
+
+         static MagicUtility()
+        {
+        }
+
+        public static List<TraitDef> AllAbilityTraits = new List<TraitDef>
+        {
+            RH_TET_MagicDefOf.RH_TET_SigmarTrait,
+            RH_TET_MagicDefOf.RH_TET_ShallyaTrait,
+            RH_TET_MagicDefOf.RH_TET_UlricTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfBeastsTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfWildTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfTzeentchTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfShadowTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfDeathTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfFireTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfHeavensTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfMetalTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfLightTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfLifeTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfNurgleTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfChaosUndividedTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfSlaaneshTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfHighTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfPlagueTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfGreatMawTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfWarpTrait,
+            RH_TET_MagicDefOf.RH_TET_LoreOfStealthTrait,
+            RH_TET_MagicDefOf.RH_TET_WitchHunterTrait
+        };
+
+        public static TraitDef GetFirstAbilityTrait (this Pawn p)
+        {
+            TraitSet traits = p?.story?.traits;
+
+            for (int i = 0; i < AllAbilityTraits.Count; i++)
+            {
+                if (traits.HasTrait(AllAbilityTraits[i]))
+                    return AllAbilityTraits[i];
+            }
+
+            return null;
+        }
+
+        public static IconUtilityData GetIconInfoForTrait(TraitDef abilityTrait)
+        {
+            IconUtilityData icu;
+
+            if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfBeastsTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.beastsIcon;
+                icu.ToolTip = "RH_TET_Magic_LoreOfBeasts".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfChaosUndividedTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.chaosIcon;
+                icu.ToolTip = "RH_TET_LoreOfChaos".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfDeathTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.deathIcon;
+                icu.ToolTip = "RH_TET_LoreOfDeath".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfFireTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.fireIcon;
+                icu.ToolTip = "RH_TET_LoreOfFire".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfHeavensTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.heavensIcon;
+                icu.ToolTip = "RH_TET_LoreOfHeavens".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfHighTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.highIcon;
+                icu.ToolTip = "RH_TET_LoreOfHigh".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfLifeTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.lifeIcon;
+                icu.ToolTip = "RH_TET_LoreOfLife".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfLightTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.lightIcon;
+                icu.ToolTip = "RH_TET_LoreOfLight".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfGreatMawTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.mawIcon;
+                icu.ToolTip = "RH_TET_LoreOfMaw".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfMetalTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.metalIcon;
+                icu.ToolTip = "RH_TET_LoreOfMetal".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfNurgleTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.nurgleIcon;
+                icu.ToolTip = "RH_TET_LoreOfNurgle".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfPlagueTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.plagueIcon;
+                icu.ToolTip = "RH_TET_LoreOfPlague".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfShadowTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.shadowIcon;
+                icu.ToolTip = "RH_TET_LoreOfShadow".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfSlaaneshTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.slaaneshIcon;
+                icu.ToolTip = "RH_TET_LoreOfSlaanesh".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfStealthTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.stealthIcon;
+                icu.ToolTip = "RH_TET_LoreOfStealth".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfTzeentchTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.tzeentchIcon;
+                icu.ToolTip = "RH_TET_LoreOfTzeentch".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfWarpTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.warpIcon;
+                icu.ToolTip = "RH_TET_LoreOfWarp".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_LoreOfWildTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.wildIcon;
+                icu.ToolTip = "RH_TET_LoreOfWild".Translate();
+                return icu;
+            }
+            // end magic, start faith
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_ShallyaTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.shallyaIcon;
+                icu.ToolTip = "RH_TET_FaithOfShallya".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_SigmarTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.sigmarIcon;
+                icu.ToolTip = "RH_TET_FaithOfSigmar".Translate();
+                return icu;
+            }
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_UlricTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.ulricIcon;
+                icu.ToolTip = "RH_TET_FaithOfUlric".Translate();
+                return icu;
+            }
+            // end faith, start abilities
+            else if (abilityTrait == RH_TET_MagicDefOf.RH_TET_WitchHunterTrait)
+            {
+                icu = new IconUtilityData();
+                icu.Texture = MagicUtility.witchhunterIcon;
+                icu.ToolTip = "RH_TET_AbilityOfWitchhunter".Translate();
+                return icu;
+            }
+
+            return null;
+        }
+
         public static bool IsMagicUser(this Pawn p)
         {
             if (p != null)

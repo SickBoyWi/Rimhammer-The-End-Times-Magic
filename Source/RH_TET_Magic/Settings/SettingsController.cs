@@ -36,6 +36,13 @@ namespace TheEndTimes_Magic
         private const int GAP_SIZE = 24;
         public static bool SteamPipesVisible = true;
         public static bool showLoreIconInColonistBar = true;
+        public float classIconSize = 1f; 
+        public static Settings Instance;
+
+        public Settings()
+        {
+            Settings.Instance = this;
+        }
 
         public override void ExposeData()
         {

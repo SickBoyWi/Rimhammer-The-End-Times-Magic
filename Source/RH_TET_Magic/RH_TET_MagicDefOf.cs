@@ -653,5 +653,6 @@ namespace TheEndTimes_Magic
         public static ThingDef RH_TET_Magic_ArmorVitality;
         public static ThingDef RH_TET_MeleeWeapon_ObsidianBlade;
         public static ThingDef RH_TET_MeleeWeapon_GoldSigilSword;
+
     }
 }

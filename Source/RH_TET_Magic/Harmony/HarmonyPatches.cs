@@ -62,6 +62,8 @@ namespace TheEndTimes_Magic
                 new HarmonyMethod(typeof(HarmonyPatches), "Verb_UseAbility_TryLaunchProjectile", null), null);
             harmony.Patch(AccessTools.Method(typeof(PawnAbility), "PostAbilityAttempt", null, null), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "Verb_PawnAbility_PostAbilityAttempt_PostFix", null), null);
+            harmony.Patch(AccessTools.Method(typeof(ColonistBarColonistDrawer), "DrawIcons", null, null), null,
+                new HarmonyMethod(typeof(HarmonyPatches), "ColonistBarColonistDrawer_DrawIcons_PostFix", null), null);
             harmony.Patch((MethodBase)AccessTools.Method(typeof(Map), 
                     "MapUpdate", 
                     (System.Type[])null, 
@@ -105,6 +107,60 @@ namespace TheEndTimes_Magic
             //        name: "DriverTick"),
             //        prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(JobDriver_DriverTick_PreFix)),
             //        postfix: null);
+        }
+
+        [HarmonyPatch(typeof(ColonistBarColonistDrawer), "DrawIcons", null)]
+        public static void ColonistBarColonistDrawer_DrawIcons_PostFix(
+              ColonistBarColonistDrawer __instance,
+              ref Rect rect,
+              Pawn colonist)
+        {
+            if (colonist.Dead)
+                return;
+
+            TraitDef abilityTrait = MagicUtility.GetFirstAbilityTrait(colonist);
+
+            if (abilityTrait == null)
+                return;
+
+            IconUtilityData icu = MagicUtility.GetIconInfoForTrait(abilityTrait);
+
+            //var traitIconValue = ColonistBarColonistDrawerCache.GetOrCreate(
+            //    colonist.ThingID,
+            //    () =>
+            //    {
+            //        if (colonist.health.hediffSet.HasHediff(TorannMagicDefOf.TM_UndeadHD))
+            //        {
+            //            return new TraitIconMap.TraitIconValue(TM_RenderQueue.necroMarkMat, TM_MatPool.Icon_Undead, "TM_Icon_Undead");
+            //        }
+            //            // Early exit condition
+            //            if (!ModOptions.Settings.Instance.showClassIconOnColonistBar || colonist.story == null)
+            //        {
+            //            return null;
+            //        }
+            //            //Custom Classes loaded at startup                        
+
+            //            for (int i = 0; i < colonist.story.traits.allTraits.Count; i++)
+            //        {
+            //            TraitDef trait = colonist.story.traits.allTraits[i].def;
+            //            if (TraitIconMap.ContainsKey(trait))
+            //            {
+            //                return TraitIconMap.Get(trait);
+            //            }
+            //        }
+            //        return null;
+            //    }, 5);
+
+            // Skip rendering if the pawn has no ability trait.
+            //if (traitIconValue == null) return;
+
+            // Otherwise render away!
+            float num = 20f * Find.ColonistBar.Scale * Settings.Instance.classIconSize;
+            Vector2 vector = new Vector2(rect.x + 1f, rect.yMin + 1f);
+            rect = new Rect(vector.x, vector.y, num, num);
+            GUI.DrawTexture(rect, icu.Texture);
+            TooltipHandler.TipRegion(rect, icu.ToolTip);
+            vector.x += num;
         }
 
         //public static bool JobDriver_DriverTick_PreFix(JobDriver __instance, ref int ___curToilIndex, ref List<Toil> ___toils)
