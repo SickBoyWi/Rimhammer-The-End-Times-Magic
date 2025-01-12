@@ -10,6 +10,8 @@
 	<RH_TET_Magic_UseMiscastsInfo>Allow magic using pawns to suffer miscasts as was done in Warhammer Lore. Turn this off if you want pawns to not miscast, say for instance if you are doing a non-Warhammer themed game. On a related note, and in the latter case, you should get my Any One Can Magic mod, as it'll make the magic lores available to all pawns in the game, not just specific pawns configured in the Rimhammer - The End Times faction mods.</RH_TET_Magic_UseMiscastsInfo>
 	<RH_TET_Magic_AllowMagicDropPodRaids>Allow magic drop pod raids?</RH_TET_Magic_AllowMagicDropPodRaids>
 	<RH_TET_Magic_AllowMagicDropPodRaidsInfo>Allow enemies to raid via magic drop pods. Turning this off takes effect immediately, and will stop all magic drop pod raids added by this mod.</RH_TET_Magic_AllowMagicDropPodRaidsInfo>
+	<RH_TET_Magic_ShowPortraitAbilityIcons>Show ability portrait icons?</RH_TET_Magic_ShowPortraitAbilityIcons>
+	<RH_TET_Magic_ShowPortraitAbilityIconsInfo>Show an icon near the pawn's head in the portrait area at the top of the screen that indicates at a glance which abilities (magic, faith, or skill) that the pawn has.</RH_TET_Magic_ShowPortraitAbilityIconsInfo>
   
 	<!-- Tab -->
 	<RH_TET_TabMagic>Magic</RH_TET_TabMagic>

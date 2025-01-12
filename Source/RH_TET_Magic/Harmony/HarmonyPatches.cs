@@ -115,7 +115,7 @@ namespace TheEndTimes_Magic
               ref Rect rect,
               Pawn colonist)
         {
-            if (colonist.Dead)
+            if (colonist.Dead || !Settings.ShowLoreIconInColonistBar)
                 return;
 
             TraitDef abilityTrait = MagicUtility.GetFirstAbilityTrait(colonist);

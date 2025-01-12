@@ -35,7 +35,7 @@ namespace TheEndTimes_Magic
         private static Vector2 scrollPosition = Vector2.zero;
         private const int GAP_SIZE = 24;
         public static bool SteamPipesVisible = true;
-        public static bool showLoreIconInColonistBar = true;
+        public static bool ShowLoreIconInColonistBar = true;
         public float classIconSize = 1f; 
         public static Settings Instance;
 
@@ -67,6 +67,10 @@ namespace TheEndTimes_Magic
 
             ls.CheckboxLabeled("RH_TET_Magic_AllowMagicDropPodRaids".Translate(), ref AllowDropPodRaids);
             ls.Label("RH_TET_Magic_AllowMagicDropPodRaidsInfo".Translate());
+            ls.Gap(GAP_SIZE);
+
+            ls.CheckboxLabeled("RH_TET_Magic_ShowPortraitAbilityIcons".Translate(), ref ShowLoreIconInColonistBar);
+            ls.Label("RH_TET_Magic_ShowPortraitAbilityIconsInfo".Translate());
             ls.Gap(GAP_SIZE);
 
             ls.End();
