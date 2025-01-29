@@ -103,11 +103,28 @@ namespace TheEndTimes_Magic
 
 
             //harmony.Patch(original: AccessTools.Method(
-            //        type: typeof(JobDriver),
-            //        name: "DriverTick"),
-            //        prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(JobDriver_DriverTick_PreFix)),
+            //        type: typeof(Verb),
+            //        name: "DrawHighlight"),
+            //        prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(TEST_PreFix)),
             //        postfix: null);
         }
+
+        //public static bool TEST_PreFix(Verb __instance, LocalTargetInfo target)
+        //{
+        //    Log.Error("JEH1-verbprops:" + (__instance.verbProps is null));
+        //    Log.Error("JEH1-caster:" + (__instance.caster is null));
+        //    __instance.verbProps.DrawRadiusRing(__instance.caster.Position);
+        //    Log.Error("JEH2");
+        //    if (!target.IsValid)
+        //        return false;
+        //    Log.Error("JEH3");
+        //    GenDraw.DrawTargetHighlight(target);
+        //    Log.Error("JEH4");
+        //    //__instance.DrawHighlightFieldRadiusAroundTarget(target);
+
+        //    Log.Error("JEH5");
+        //    return false;
+        //}
 
         [HarmonyPatch(typeof(ColonistBarColonistDrawer), "DrawIcons", null)]
         public static void ColonistBarColonistDrawer_DrawIcons_PostFix(
@@ -162,116 +179,6 @@ namespace TheEndTimes_Magic
             TooltipHandler.TipRegion(rect, icu.ToolTip);
             vector.x += num;
         }
-
-        //public static bool JobDriver_DriverTick_PreFix(JobDriver __instance, ref int ___curToilIndex, ref List<Toil> ___toils)
-        //{
-        //    if (!__instance.pawn.NameFullColored.ToString().Contains("Pepper"))
-        //        return true;
-        //    //else
-        //    //    Log.Error("IT IS PEPPER");
-
-
-        //    Toil CurToil;
-
-        //    ___curToilIndex = __instance.CurToilIndex;
-        //    // CODE TO SET CURTOIL
-        //    if (___curToilIndex < 0 || __instance.job == null || __instance.pawn.CurJob != __instance.job)
-        //        return true;
-
-        //    if (___curToilIndex < ___toils.Count)
-        //        CurToil = ___toils[___curToilIndex];
-        //    else
-        //    {
-        //        Log.Error(__instance.pawn.ToString() + " with job " + (object)__instance.pawn.CurJob + " tried to get CurToil with curToilIndex=" + (object)___curToilIndex + " but only has " + (object)___toils.Count + " toils.");
-        //        return true;
-        //    }
-
-        //    try
-        //    {
-        //        Log.Error("1");
-        //        --__instance.ticksLeftThisToil;
-        //        ++__instance.debugTicksSpentThisToil;
-        //        Log.Error("2");
-        //        if (CurToil == null)
-        //        {
-        //            Log.Error("3");
-        //            if (__instance.pawn.stances.FullBodyBusy)// && !__instance.CanStartNextToilInBusyStance)
-        //                return false;
-        //                __instance.ReadyForNextToil();
-        //        }
-        //        else
-        //        {
-        //            Log.Error("4");
-        //            //if (__instance.CheckCurrentToilEndOrFail())
-        //            //        return false;
-        //            if (CurToil.defaultCompleteMode == ToilCompleteMode.Instant)
-        //            {
-        //                Log.Error("5");
-        //                __instance.ReadyForNextToil();
-        //            }
-        //            else
-        //            {
-        //                Log.Error("6");
-        //                if (CurToil.defaultCompleteMode == ToilCompleteMode.Delay)
-        //                {
-        //                    if (__instance.ticksLeftThisToil <= 0)
-        //                    {
-        //                            __instance.ReadyForNextToil();
-        //                            return false;
-        //                    }
-        //                }
-        //                else if (CurToil.defaultCompleteMode == ToilCompleteMode.FinishedBusy && !__instance.pawn.stances.FullBodyBusy)
-        //                {
-        //                        __instance.ReadyForNextToil();
-        //                        return false;
-        //                }
-        //                //if (__instance.wantBeginNextToil)
-        //                //{
-        //                //        __instance.TryActuallyStartNextToil();
-        //                //}
-        //                else
-        //                {
-        //                    Log.Error("7");
-        //                    Job startingJob = __instance.pawn.CurJob;
-        //                    int startingJobId = startingJob.loadID;
-        //                    if (CurToil.preTickActions != null)
-        //                    {
-        //                        Toil curToil = CurToil;
-        //                        for (int index = 0; index < curToil.preTickActions.Count; ++index)
-        //                        {
-        //                            curToil.preTickActions[index]();
-        //                            if (JobChanged() || CurToil != curToil)// || __instance.wantBeginNextToil)
-        //                                    return false;
-        //                        }
-        //                    }
-        //                    Log.Error("8");
-        //                    if (CurToil.tickAction != null)
-        //                    {
-        //                        CurToil.tickAction();
-        //                        if (JobChanged())
-        //                                return false;
-        //                    }
-        //                    if (__instance.job.mote == null)
-        //                        return false;
-        //                        __instance.job.mote.Maintain();
-
-        //                    Log.Error("8");
-        //                    bool JobChanged()
-        //                    {
-        //                        return __instance.pawn.CurJob != startingJob || __instance.pawn.CurJob.loadID != startingJobId;
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        JobUtility.TryStartErrorRecoverJob(__instance.pawn, "Exception in JobDriver tick for pawn " + __instance.pawn.ToStringSafe<Pawn>(), ex, __instance);
-        //    }
-
-
-        //    return false;
-        //}
 
         public static bool Need_Rest_NeedInterval_PreFix(Need_Rest __instance, ref float ___lastRestEffectiveness, ref Pawn ___pawn)
         {

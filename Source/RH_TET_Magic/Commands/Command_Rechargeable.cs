@@ -33,6 +33,8 @@ namespace TheEndTimes_Magic
 
         public override void GizmoUpdateOnMouseover()
         {
+            this.verb.caster = this.comp.Wearer;
+
             this.verb.DrawHighlight(LocalTargetInfo.Invalid);
         }
 
