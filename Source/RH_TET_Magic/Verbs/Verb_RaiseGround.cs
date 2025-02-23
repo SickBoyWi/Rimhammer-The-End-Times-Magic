@@ -78,10 +78,10 @@ namespace TheEndTimes_Magic
             if (terrainDef.Equals(TerrainDefOf.SoilRich))
                 retDef = TerrainDefOf.SoilRich;
 
-            if (terrainDef.driesTo == null)
-                return retDef;
-
             retDef = map.Biome == BiomeDefOf.SeaIce ? TerrainDefOf.Ice : terrainDef.driesTo;
+
+            if (retDef != null)
+                return retDef;
 
             // JEH Exceptions
             if (terrainDef.Equals(TerrainDefOf.SoilRich))
@@ -117,13 +117,16 @@ namespace TheEndTimes_Magic
 
             if (terrainToDryTo1 != null)
                 map.terrainGrid.SetTerrain(c, terrainToDryTo1);
+
             TerrainDef terrainDef = map.terrainGrid.UnderTerrainAt(c);
+
             if (terrainDef == null)
                 return;
             TerrainDef terrainToDryTo2 = Verb_RaiseGround.GetTerrainToDryTo(map, terrainDef);
 
             if (terrainToDryTo2 == null)
                 return;
+
             map.terrainGrid.SetUnderTerrain(c, terrainToDryTo2);
         }
 
