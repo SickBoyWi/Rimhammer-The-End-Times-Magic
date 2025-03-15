@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GameConditionDef>
+		<defName>RH_TET_Magic_GameCondition_WindsOfMagic</defName>
+		<conditionClass>TheEndTimes_Magic.GameCondition_WindsOfMagic</conditionClass>
+		<label>mental suppression</label>
+		<description>The winds of magic blow strong, weakening the mental state of mortals.</description>
+		<descriptionFuture>the winds of magic will blow wildly around [map_definite] for [gameConditionDuration_duration], weakening the mental capacity for all</descriptionFuture>
+		<defaultDroneLevel>BadMedium</defaultDroneLevel>
+		<endMessage>The winds of magic have calmed.</endMessage>
+		<letterText>Every colonist feels a wave of laziness and distraction!\n\nThe winds of magic have stirred to a great level. They are sweeping the nearby area, altering the mental state of all. For up to a few days, all will be less capable.\n\nMagic users will have the ability to cast all spells without depleting their magic pools.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>true</canBePermanent>
+		<natural>true</natural>
+	</GameConditionDef>
+
+</Defs>

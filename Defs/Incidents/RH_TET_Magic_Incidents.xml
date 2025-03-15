@@ -37,6 +37,32 @@
 		<requireColonistsPresent>True</requireColonistsPresent>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>RH_TET_Magic_WindsOfMagic</defName>
+		<label>Winds of Magic</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<letterLabel>High Winds of Magic</letterLabel>
+		<letterText>The Winds of Magic, sometimes called the Aethyr in the Elven tongue, or simply just as magic in everyday usage, is the name given by magic-users to the invisible currents of magical energy -- the very substance of Chaos -- which flow across the mortal world from the Realm of Chaos.\n\nThe winds are blowing very strongly currently, and will coalesce into raw magic essence that can be gathered and refined.\n\nMagic users will be able to cast spells without worrying about their magic pool diminishing. However the large amount of Chaos power is unsettling and disorienting, so everyone will suffer a conscienceness debuff.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>.20</baseChance>
+		<gameCondition>RH_TET_Magic_GameCondition_WindsOfMagic</gameCondition>
+		<minRefireDays>30</minRefireDays>
+		<earliestDay>45</earliestDay>
+		<tags>
+			<li>RH_TET_Magic_WindsOfMagic</li>
+		</tags>
+		<refireCheckTags>
+			<li>RH_TET_Magic_WindsOfMagic</li>
+		</refireCheckTags>
+		<pointsScaleable>false</pointsScaleable>
+		<tale>RH_TET_Magic_WindsOfMagicHigh</tale>
+		<durationDays>2.5~5.5</durationDays>
+	</IncidentDef>
+
 	<!-- TODO These are future WIP incident ideas. -->
 	<!-- Mannslieb ascendent. Reverse for chaos
 	<IncidentDef>

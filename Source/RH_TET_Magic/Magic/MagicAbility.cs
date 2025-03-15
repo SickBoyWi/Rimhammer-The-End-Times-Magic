@@ -54,8 +54,13 @@ namespace TheEndTimes_Magic
         {
             get
             {
+                // If the winds of magic are blowing strong, then the spell costs zero.
+                if (this.Pawn != null && this.Pawn.Map.gameConditionManager.ConditionIsActive(RH_TET_MagicDefOf.RH_TET_Magic_GameCondition_WindsOfMagic))
+                {
+                    return 0f;
+                }
                 // If a belt of Tzeentch is worn, then all spells cost zero magic from the pawn's pool.
-                if (this.Pawn != null && this.Pawn.apparel != null && this.Pawn.apparel.WornApparel != null)
+                else if (this.Pawn != null && this.Pawn.apparel != null && this.Pawn.apparel.WornApparel != null)
                 { 
                     List<Apparel> wornApparel = this.Pawn.apparel.WornApparel;
 

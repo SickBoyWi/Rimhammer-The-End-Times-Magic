@@ -481,6 +481,8 @@ namespace TheEndTimes_Magic
         public static ThingDef RH_TET_InsectCloud;
         public static ThingDef RH_TET_GhostlyLight;
         public static ThingDef RH_TET_CombatGas;
+        public static ThingDef RH_TET_Daemons_MagicEssence_Raw;
+        public static ThingDef RH_TET_Filth_BloodDaemon;
 
         // Thing Categories
         public static ThingCategoryDef RH_TET_MagicItems;
@@ -577,7 +579,8 @@ namespace TheEndTimes_Magic
         public static HediffDef RH_TET_ShadowsCompanion_HE;
         public static HediffDef RH_TET_TrollHeartEffect;
         public static HediffDef RH_TET_Lethargic;
-        
+        public static HediffDef RH_TET_Magic_MentalSuppressionHE;
+
         //// =============== SOUNDS =============== 
         public static SoundDef RH_TET_Magic_Miscast;
         public static SoundDef RH_TET_Magic_SoundWhoosh;
@@ -608,6 +611,10 @@ namespace TheEndTimes_Magic
         public static FleckDef RH_TET_Fleck_Convergence;
         public static FleckDef RH_TET_Fleck_Apotheosis;
         public static FleckDef RH_TET_Fleck_RedPox;
+
+        // Effecters
+        public static EffecterDef RH_TET_Daemons_EmergencePointSustained2X2;
+        public static EffecterDef RH_TET_Daemons_EmergencePointComplete2X2;
 
         // Motes
         public static ThingDef RH_TET_Mote_Afflictions;
@@ -654,5 +661,7 @@ namespace TheEndTimes_Magic
         public static ThingDef RH_TET_MeleeWeapon_ObsidianBlade;
         public static ThingDef RH_TET_MeleeWeapon_GoldSigilSword;
 
+        // Game Conditions
+        public static GameConditionDef RH_TET_Magic_GameCondition_WindsOfMagic;
     }
 }

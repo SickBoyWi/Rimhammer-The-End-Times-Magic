@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TaleDef>
+		<defName>RH_TET_Magic_WindsOfMagicHigh</defName>
+		<label>magic winds</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>5</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef]'s [Community] with the air shimmering</li>
+				<li>image->a magic haze [circumstance_phrase]</li>
+				<li>image->a wave of [Color] shimmering air [circumstance_phrase]</li>
+				<li>image->a dense fog of multicolored specks [circumstance_phrase]</li>
+				<li>circumstance_phrase->advancing over a [TerrainFeature]</li>
+				<li>circumstance_phrase->completely encircling a [Community]</li>
+				<li>circumstance_phrase->streaming across the land</li>
+				<li>desc_sentence->[PAWN_nameDef] organizes a collection party.</li>
+				<li>desc_sentence->[PAWN_nameDef] smiles blankly.</li>
+				<li>desc_sentence->[PAWN_nameDef] lies on the ground, staring vacantly.</li>
+				<li>desc_sentence->[PAWN_nameDef] wraps cloth around [PAWN_possessive] mouth.</li>
+				<li>desc_sentence->[PAWN_nameDef] wears a sleepy expression.</li>
+				<li>desc_sentence->[PAWN_nameDef] wears a confused expression.</li>
+				<li>desc_sentence->The ground is coated in coalesced magic energy.</li>
+				<li>desc_sentence->All animal life wanders vacantly with shimmering eyes.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+</Defs>

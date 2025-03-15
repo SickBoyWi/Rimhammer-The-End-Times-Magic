@@ -55,6 +55,9 @@
       <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUserAI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="SickTools">
+      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickTools.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -105,6 +108,8 @@
     <Compile Include="Comps\CompProperties_LearningPotion.cs" />
     <Compile Include="Comps\CompProperties_FastHealingPawn.cs" />
     <Compile Include="Comps\CompUseEffect_LearnSkill.cs" />
+    <Compile Include="GameCondition\GameCondition_WindsOfMagic.cs" />
+    <Compile Include="Hediff\HediffComp_MentalSuppression.cs" />
     <Compile Include="Hediff\HediffComp_ArmorOfDarkness.cs" />
     <Compile Include="Hediff\HediffComp_ShadowsCompanion.cs" />
     <Compile Include="Comps\CompProperties_Rechargeable.cs" />

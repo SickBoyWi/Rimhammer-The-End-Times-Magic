@@ -27,3 +27,4 @@ D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\1.5\Assemb
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csproj.CoreCompileInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.dll
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csproj.CopyComplete

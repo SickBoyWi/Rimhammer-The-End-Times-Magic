@@ -215,5 +215,6 @@
 	<RH_TET_MagicPodCrash>A magical flare nearby has potentially left something of value.\n\nPerhaps a wizard has misjudged the location to send them to, or perhaps someone is trying to help you out.</RH_TET_MagicPodCrash>
 	<RH_TET_LetterLabelMagicTransportPodCrash>Magical Arrival Mishap</RH_TET_LetterLabelMagicTransportPodCrash>
 	<RH_TET_MagicTransportPodCrash>{PAWN_titleIndef} named {PAWN_nameDef} is crashing in a magic transport pod nearby. If {PAWN_pronoun} survives the impact, {PAWN_pronoun} will be badly wounded.\n\n{PAWN_nameDef} is not affiliated with any faction. You can rescue {PAWN_objective} and hope {PAWN_pronoun} joins freely, or capture {PAWN_objective} for recruitment or slavery purposes.</RH_TET_MagicTransportPodCrash>
+	<RH_TET_MagicEssenceCongealed>Magic essence has congealed into reality due to the high winds of magic.</RH_TET_MagicEssenceCongealed>
    
 </LanguageData>
