@@ -585,6 +585,7 @@ namespace TheEndTimes_Magic
         public static SoundDef RH_TET_Magic_Miscast;
         public static SoundDef RH_TET_Magic_SoundWhoosh;
         public static SoundDef RH_TET_Magic_SoundBrayScream;
+        public static SoundDef RH_TET_Magic_SoundWind;
 
         // Flecks
         public static FleckDef RH_TET_FleckPurpleEffect;

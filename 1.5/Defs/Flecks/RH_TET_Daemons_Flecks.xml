@@ -70,5 +70,24 @@
     <solidTime>5</solidTime>
     <fadeOutTime>3</fadeOutTime>
   </FleckDef> 
+
+  <ThingDef ParentName="MoteBase">
+    <defName>RH_TET_Deaemons_RealityCrackHuge</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>Filth</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>10</fadeInTime>
+      <solidTime>99999</solidTime>
+      <fadeOutTime>0</fadeOutTime>
+      <growthRate>0</growthRate>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/RealityCracks/Daemons-GroundCrackHuge</texPath>
+      <shaderType>Mote</shaderType>
+      <renderInstanced>false</renderInstanced>
+      <graphicClass>Graphic_Mote</graphicClass>
+    </graphicData>
+  </ThingDef>
   
 </Defs>

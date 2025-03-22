@@ -55,7 +55,7 @@ namespace TheEndTimes_Magic
 
                 // Do effect at cell.
                 Thing filth = ThingMaker.MakeThing(RH_TET_MagicDefOf.RH_TET_Filth_BloodDaemon);
-                SickTools.DelayedEffecterSpawnerNonPawn.Spawn(filth, intVec3, map, 10, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointSustained2X2, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointComplete2X2, RH_TET_MagicDefOf.RH_TET_Magic_SoundWhoosh);
+                SickTools.DelayedEffecterSpawnerNonPawn.Spawn(filth, intVec3, map, 10, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointSustained2X2, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointComplete2X2, RH_TET_MagicDefOf.RH_TET_Magic_SoundWind);
 
                 // Spawn magic essence.
                 if (Find.TickManager.TicksGame % CheckInterval == 8500)
@@ -63,7 +63,7 @@ namespace TheEndTimes_Magic
                     // Drop some goodies.
                     Thing rawEssence = ThingMaker.MakeThing(RH_TET_MagicDefOf.RH_TET_Daemons_MagicEssence_Raw);
                     rawEssence.stackCount = RH_TET_MagicMod.random.Next(1, 9);
-                    SickTools.DelayedEffecterSpawnerNonPawn.Spawn(null, intVec3, map, 10, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointSustained2X2, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointComplete2X2, RH_TET_MagicDefOf.RH_TET_Magic_SoundWhoosh);
+                    SickTools.DelayedEffecterSpawnerNonPawn.Spawn(null, intVec3, map, 10, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointSustained2X2, RH_TET_MagicDefOf.RH_TET_Daemons_EmergencePointComplete2X2, RH_TET_MagicDefOf.RH_TET_Magic_SoundWind);
 
                     Messages.Message("RH_TET_MagicEssenceCongealed".Translate(), (LookTargets)((Thing)rawEssence), MessageTypeDefOf.PositiveEvent, false);
                 }
