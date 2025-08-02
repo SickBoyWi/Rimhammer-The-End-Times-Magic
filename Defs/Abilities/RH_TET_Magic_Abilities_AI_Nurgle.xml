@@ -3,7 +3,7 @@
 
 	<!-- =================== Nurgle Magic =================== -->
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_NurgleWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_NurgleWizardAI">
 		<defName>RH_TET_Magic_NurgleWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfNurgleTrait</li>
@@ -34,7 +34,7 @@
 			<li>RH_TET_NurgleRotbomb_WarlockAI</li>
 			<li>RH_TET_NurgleRotbomb_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_NurgleBoon_MageAI</defName>
@@ -265,7 +265,7 @@
 		</tags>
 	</SickAbilityUserAI.AbilityAIDef>
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_NurgleWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_NurgleWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -436,6 +436,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 
 </Defs>

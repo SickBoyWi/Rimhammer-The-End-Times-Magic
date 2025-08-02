@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,19 +44,21 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="HugsLib">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.5\Assemblies\HugsLib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.6\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SickAbilityUser">
-      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUser.dll</HintPath>
+      <HintPath>..\..\..\SickTools\1.6\Assemblies\SickAbilityUser.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SickAbilityUserAI">
-      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUserAI.dll</HintPath>
+      <HintPath>..\..\..\SickTools\1.6\Assemblies\SickAbilityUserAI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SickTools">
-      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickTools.dll</HintPath>
+    <Reference Include="SickTools, Version=1.4.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SickTools\1.6\Assemblies\SickTools.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

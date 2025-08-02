@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ApparelNoQualityBase" Name="RH_TET_MagicApparelNoQualityBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>0.25</DeteriorationRate>
+			<Beauty>2</Beauty>
+		</statBases>
+		<tradeTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase" Name="RH_TET_MagicApparelBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>0.25</DeteriorationRate>
+			<Beauty>2</Beauty>
+		</statBases>
+		<tradeTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+		</apparel>
+	</ThingDef>
+  
+	<!-- Rings -->
+	<!-- NOTE: THis is a direct copy from KV jewelry mod to make this compatible with that, and not have to make the same thing twice. -->
+	<ApparelLayerDef>
+		<defName>Accessories</defName>
+		<label>accessories</label>
+		<drawOrder>350</drawOrder>
+	</ApparelLayerDef>
+  
+	<ThingDef Name="RH_TET_FingerwearRightBase" ParentName="RH_TET_MagicApparelBase" Abstract="True">
+		<thingCategories>
+			<li>RH_TET_MagicItems</li>
+			<li>RH_TET_MagicApparel</li>
+		</thingCategories>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<scoreOffset>4</scoreOffset>
+			<bodyPartGroups>
+				<li>RightHand</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Accessories</li>
+			</layers>
+			<tags>
+				<li>RH_TET_MagicJewelry</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FingerwearRightBase">
+		<defName>RH_TET_Magic_Jewelry_RubyRingOfRuin</defName>
+		<label>Ruby ring of ruin</label>
+		<description>A beautiful ring crafted at a wizard's workbench. It looks fantastic, and it is capable of casting a fireball spell. It must recharge after use, but is still a very powerful item. It's beauty gives the wearer a boost in social interactions, and it provides warmth for the wearer as well.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Handwear/RH_TET_RubyRingOfRuin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.05</Mass>
+			<EquipDelay>0.2</EquipDelay>
+			<Beauty>12</Beauty>
+			<MarketValue>1250</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.05</SocialImpact>
+			<Insulation_Cold>10</Insulation_Cold>
+		</equippedStatOffsets>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_Rechargeable">
+				<chargeNoun>cast</chargeNoun>
+				<baseRechargeTicks>10000</baseRechargeTicks>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<hotKey>Misc4</hotKey>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>TheEndTimes_Magic.Verb_LaunchProjectileStaticReloadable</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_Fireball</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>25</range>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<forcedMissRadius>1.5</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+			</li>
+		</verbs>
+		<tickerType>Normal</tickerType>
+		<smeltProducts>
+			<Gold>50</Gold>
+		</smeltProducts>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>RH_TET_Fireball</defName>
+		<label>fireball</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fire/RH_TET_FireAegis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<explosionRadius>3</explosionRadius>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<speed>40</speed>
+			<preExplosionSpawnChance>0.2</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FingerwearRightBase">
+		<defName>RH_TET_Magic_Jewelry_ShroudRingTending</defName>
+		<label>Shrouds ring of tending</label>
+		<description>A ring of metal, artistically formed to look like wood that was crafted at a wizard's workbench. It looks great, with three jade stones, and will instantly tend the wounds of its wearer. The quality of tending will be related to the quality of the ring itself; so a Masterwork ring tends the wearer much better than a Poor ring.\n\nShroud was a wizard of the Jade Order, who lived alone in the depths of the forest. This is one of his most famous creations, but was one of necessity if he was to survive the variety of threats that frequently assaulted him.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Handwear/RH_TET_ShroudsRingOfTending</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.05</Mass>
+			<EquipDelay>0.2</EquipDelay>
+			<Beauty>12</Beauty>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_TendWounds"/>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<smeltProducts>
+			<Silver>100</Silver>
+		</smeltProducts>
+	</ThingDef>
+
+	<!-- Footwear -->
+	<ThingDef Name="RH_TET_FootwearBase" ParentName="RH_TET_MagicApparelBase" Abstract="True">
+		<thingCategories>
+			<li>Footwear</li>
+		</thingCategories>
+		<apparel>
+			<scoreOffset>4</scoreOffset>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FootwearBase">
+		<defName>RH_TET_BootsOfSpeed</defName>
+		<label>boots of speed</label>
+		<description>A pair of magic boots, crafted by a wizard. They grant the wearer a movement speed bonus.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Footwear/RH_TET_BootsOfSpeed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToMake>125000</WorkToMake>
+			<ArmorRating_Sharp>.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>26</Insulation_Cold>
+			<Insulation_Heat>12</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>2.5</MoveSpeed>
+		</equippedStatOffsets>
+		<smeltProducts>
+			<DevilstrandCloth>50</DevilstrandCloth>
+		</smeltProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicApparelBase">
+		<defName>RH_TET_Magic_BeltArdor</defName>
+		<label>belt of ardor</label>
+		<description>A magic belt, created at a wizard's work bench. Increases the wearer's work speed, which causes others to respect and appreciate them more.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Belts/RH_TET_BeltOfArdor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>1700</MarketValue>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>2.0</WorkSpeedGlobal>
+			<SocialImpact>.20</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<thingCategories>
+			<li>RH_TET_MagicApparel</li>
+		</thingCategories>
+		<smeltProducts>
+			<DevilstrandCloth>50</DevilstrandCloth>
+		</smeltProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_MagicApparelNoQualityBase">
+		<defName>RH_TET_Rod_FlamingDeath</defName>
+		<label>rod of flaming death</label>
+		<description>A magic rod, crafted at a wizard's crafting bench, that fires a large gout of flame. Starts fires. Reusable, but must have time to recharge itself in between uses. Will explode dramatically if caught on fire.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_RodFlamingDeath</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+			<MarketValue>1350</MarketValue>
+			<EquipDelay>1</EquipDelay>
+			<Flammability>.1</Flammability>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_Rechargeable">
+				<chargeNoun>blast</chargeNoun>
+				<baseRechargeTicks>120000</baseRechargeTicks>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<hotKey>Misc4</hotKey>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>5.5</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>TheEndTimes_Magic.Verb_LaunchProjectileStaticReloadable</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_FlamingDeathShot</defaultProjectile>
+				<forcedMissRadius>1.0</forcedMissRadius>
+				<warmupTime>4</warmupTime>
+				<ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+				<range>35.9</range>
+				<!--<burstShotCount>3</burstShotCount>-->
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			</li>
+		</verbs>
+		<thingCategories>
+			<li>RH_TET_MagicItems</li>
+		</thingCategories>
+		<smeltProducts>
+			<Gold>50</Gold>
+		</smeltProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>RH_TET_FlamingDeathShot</defName>
+		<label>rod of flaming death blast</label>
+		<graphicData>
+			<texPath>Things/Projectile/RH_TET_FireBall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_DoomsdayRocket</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<explosionRadius>5.5</explosionRadius>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>RH_TET_Magic_PawnLeaper</defName>
+		<thingClass>TheEndTimes_Magic.PawnLeaper</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>10</flightSpeed>
+		</pawnFlyer>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_FootwearBase">
+		<defName>RH_TET_BootsWinged</defName>
+		<label>winged boots</label>
+		<description>A pair of shoes that allows the wearer to leap very long distances. They need a little time to recharge in between uses, but are still very much desired throughout the olde world.</description>
+		<techLevel>Medieval</techLevel>
+		<comps>
+			<li Class="TheEndTimes_Magic.CompProperties_Rechargeable">
+				<chargeNoun>leap</chargeNoun>
+				<baseRechargeTicks>2500</baseRechargeTicks>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<hotKey>Misc4</hotKey>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>TheEndTimes_Magic.Verb_Leap</verbClass>
+				<label>leap</label>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>0.5</warmupTime>
+				<warmupEffecter>RH_TET_LeapWarmupEffect</warmupEffecter>
+				<requireLineOfSight>true</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetPawns>false</canTargetPawns>
+					<canTargetBuildings>false</canTargetBuildings>
+				</targetParams>
+				<flightEffecterDef>RH_TET_Magic_FlightEffect</flightEffecterDef>
+				<soundLanding>Interact_BeatFire</soundLanding>
+			</li>
+		</verbs>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Footwear/RH_TET_BootsOfLeaping</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToMake>125000</WorkToMake>
+			<ArmorRating_Sharp>.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>26</Insulation_Cold>
+			<Insulation_Heat>12</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+			<MarketValue>1750</MarketValue>
+		</statBases>
+		<smeltProducts>
+			<Leather_Bird>100</Leather_Bird>
+		</smeltProducts>
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase" Name="RH_TET_MagicArmorBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>0.25</DeteriorationRate>
+			<Beauty>3</Beauty>
+		</statBases>
+		<tradeTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_MagicApparel</li>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Magic_ArmorHelmetMagicBase" ParentName="RH_TET_MagicArmorBase" Abstract="True">
+		<thingCategories>
+			<li>Headgear</li>
+			<li>RH_TET_MagicHelms</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Magic_ArmorBodyBase" ParentName="RH_TET_MagicArmorBase" Abstract="True">
+		<thingCategories>
+			<li>ApparelArmor</li>
+			<li>RH_TET_MagicArmor</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Magic_ArmorHelmetMagicBase">
+		<defName>RH_TET_Magic_HelmetRegeneration</defName>
+		<label>helmet of regeneration</label>
+		<description>A highly protective magic helmet crafted by a wizard. Looks great, and increases the rate at which the wearer heals tenfold.</description>
+		<techLevel>Medieval</techLevel>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Helmets/RH_TET_HelmOfRegen/RH_TET_HelmOfRegen</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			<DeteriorationRate>0</DeteriorationRate>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+		</equippedStatOffsets>
+		<generateCommonality>1</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Apparel/Helmets/RH_TET_HelmOfRegen/RH_TET_HelmOfRegen</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Magic_Armor</li>
+			</tags>
+		</apparel>
+		<smeltProducts>
+			<Gold>100</Gold>
+		</smeltProducts>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Magic_ArmorBodyBase">
+		<defName>RH_TET_Magic_ArmorVitality</defName>
+		<label>armor of vitality</label>
+		<description>Very protective magical armor that can be crafted by a wizard at a wizard's workbench. Increases a pawns overall vitality, and doesn't reduce movement as most suits of armor would.</description>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/Apparel/Armor/RH_TET_Magic_ArmorVitality/RH_TET_Magic_ArmorVitality</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+			<DeteriorationRate>0</DeteriorationRate>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicResistance>-0.25</ToxicResistance>
+			<PsychicSensitivity>-0.10</PsychicSensitivity>
+			<RestRateMultiplier>1.0</RestRateMultiplier>
+			<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+			<PainShockThreshold>0.30</PainShockThreshold>
+		</equippedStatOffsets>
+		<generateCommonality>.9</generateCommonality>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Apparel/Armor/RH_TET_Magic_ArmorVitality/RH_TET_Magic_ArmorVitality</wornGraphicPath>
+			<tags>
+				<li>RH_TET_Magic_Armor</li>
+			</tags>
+		</apparel>
+		<smeltProducts>
+			<Gold>200</Gold>
+		</smeltProducts>
+	</ThingDef>
+
+</Defs>

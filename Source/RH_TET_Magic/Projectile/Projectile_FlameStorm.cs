@@ -24,8 +24,8 @@ namespace TheEndTimes_Magic
             : base()
         {
         }
-        
-        public override void Tick()
+
+        protected override void Tick()
         {
             base.Tick();
             if (this.casterPawn != null && (this.casterPawn.Destroyed || this.casterPawn.Dead))

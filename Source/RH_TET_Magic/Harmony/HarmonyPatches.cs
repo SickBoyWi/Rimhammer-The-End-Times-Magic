@@ -31,8 +31,6 @@ namespace TheEndTimes_Magic
                 new HarmonyMethod(typeof(HarmonyPatches), "DrawEquipment_PostFix", null), null);
             harmony.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), "GetGizmos", null, null), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "Pawn_ApparelTracker_GetGizmos_PostFix", null), null);
-            harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), "EquipmentTrackerTick", null, null), null,
-                new HarmonyMethod(typeof(HarmonyPatches), "Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix", null), null);
             harmony.Patch(AccessTools.DeclaredPropertyGetter(typeof(Pawn), "HealthScale"), null,
                 new HarmonyMethod(typeof(HarmonyPatches), "Pawn_HealthScale_Getter_PostFix", null), null);
 
@@ -386,22 +384,27 @@ namespace TheEndTimes_Magic
             }
         }
 
-        private static void Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix(Pawn_EquipmentTracker __instance)
-        {
-            List<ThingWithComps> equipmentListForReading = __instance.AllEquipmentListForReading;
-            for (int index = 0; index < equipmentListForReading.Count; ++index)
-            {
-                if (equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_KhorneAxe")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_NurgleStar")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SlaaneshWhip")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_TzeentchStaff")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SigmarHammer")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_UlricHammer"))
-                {
-                    equipmentListForReading[index].Tick();
-                }
-            }
-        }
+        // TODO: Cleanup
+        // I believe it's safe to remove this one. It was used when these weapons were light sources also, which really 
+        // slagged the game down dramatically (and was therefore removed). 
+        //harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), "EquipmentTrackerTick", null, null), null,
+        //        new HarmonyMethod(typeof(HarmonyPatches), "Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix", null), null);
+        //private static void Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix(Pawn_EquipmentTracker __instance)
+        //{
+        //    List<ThingWithComps> equipmentListForReading = __instance.AllEquipmentListForReading;
+        //    for (int index = 0; index < equipmentListForReading.Count; ++index)
+        //    {
+        //        if (equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_KhorneAxe")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_NurgleStar")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SlaaneshWhip")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_TzeentchStaff")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SigmarHammer")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_UlricHammer"))
+        //        {
+        //            equipmentListForReading[index].Tick();
+        //        }
+        //    }
+        //}
 
         private static bool Pawn_PreApplyDamage_PreFix(Pawn __instance, ref DamageInfo dinfo, out bool absorbed)
         {

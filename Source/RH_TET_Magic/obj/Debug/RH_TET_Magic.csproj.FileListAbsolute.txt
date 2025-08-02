@@ -24,7 +24,7 @@ D:\BackUp\Modding\RimWorld\1.4\Rimhammer-The-End-Times-Magic1.4\Source\RH_TET_Ma
 D:\BackUp\Modding\RimWorld\1.4\Rimhammer-The-End-Times-Magic1.4\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\1.4\Assemblies\RH_TET_Magic.dll
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\1.5\Assemblies\RH_TET_Magic.dll
-D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csprojAssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\1.6\Assemblies\RH_TET_Magic.dll
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csproj.AssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csproj.CoreCompileInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.dll
-D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Magic\Source\RH_TET_Magic\obj\Debug\RH_TET_Magic.csproj.CopyComplete

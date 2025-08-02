@@ -3,7 +3,7 @@
 
 	<!-- =================== Metal Magic =================== -->
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_MetalWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_MetalWizardAI">
 		<defName>RH_TET_Magic_MetalWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfMetalTrait</li>
@@ -24,9 +24,9 @@
 			<li>RH_TET_MetalGlitteringRobe_WarlockAI</li>
 			<li>RH_TET_MetalGlitteringRobe_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_MetalWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_MetalWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -208,7 +208,7 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_MetalFinalTransmutation_MageAI</defName>

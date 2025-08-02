@@ -51,7 +51,7 @@ namespace TheEndTimes_Magic
                 FleckMaker.Static(target.Position, map, FleckDefOf.PsycastAreaEffect, 1f);
 
                 DamageDef damage = this.verbProps.defaultProjectile.projectile.damageDef;
-                float damageAmt = this.verbProps.defaultProjectile.projectile.GetDamageAmount(1f);
+                float damageAmt = this.verbProps.defaultProjectile.projectile.GetDamageAmount(null);
 
                 switch (spellLevel)
                 {

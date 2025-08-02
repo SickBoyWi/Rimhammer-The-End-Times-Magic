@@ -19,7 +19,7 @@ namespace TheEndTimes_Magic
             Pawn theTarget = hitThing as Pawn;
 
             DamageDef damage = this.def.projectile.damageDef;
-            DamageInfo damageInfo = new DamageInfo(damage, this.def.projectile.GetDamageAmount(1f), 0);
+            DamageInfo damageInfo = new DamageInfo(damage, this.def.projectile.GetDamageAmount(null), 0);
             FleckMaker.ThrowMicroSparks(destination, map);
             FleckMaker.Static(destination, map, FleckDefOf.ShotHit_Dirt, 1f);
             theTarget.TakeDamage(damageInfo);

@@ -20,7 +20,7 @@ namespace TheEndTimes_Magic
                 ((Thing)this).def.projectile.explosionRadius, 
                 RimWorld.DamageDefOf.Smoke, 
                 this.launcher, 
-                Mathf.RoundToInt((float)Rand.Range(((Thing)this).def.projectile.GetDamageAmount(1f, (StringBuilder)null) / 2, ((Thing)this).def.projectile.GetDamageAmount(1f, (StringBuilder)null)) * 1), 
+                Mathf.RoundToInt((float)Rand.Range(((Thing)this).def.projectile.GetDamageAmount(null, (StringBuilder)null) / 2, ((Thing)this).def.projectile.GetDamageAmount(null, (StringBuilder)null)) * 1), 
                 0.0f, 
                 SoundDef.Named("InfernoCannon_Fire"), 
                 def, 
@@ -30,6 +30,8 @@ namespace TheEndTimes_Magic
                 1.0f, 
                 1,
                 new GasType?(GasType.BlindSmoke),
+                new float?(),
+                new int(),
                 false, 
                 (ThingDef)null, 
                 0.0f, 
@@ -71,7 +73,7 @@ namespace TheEndTimes_Magic
                 explosion.radius = radius;
                 explosion.damType = damType;
                 explosion.instigator = instigator;
-                explosion.damAmount = projectile != null ? projectile.projectile.GetDamageAmount(1f) : 2;
+                explosion.damAmount = projectile != null ? projectile.projectile.GetDamageAmount(null) : 2;
                 explosion.weapon = source;
                 explosion.preExplosionSpawnThingDef = preExplosionSpawnThingDef;
                 explosion.preExplosionSpawnChance = preExplosionSpawnChance;
@@ -87,7 +89,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             Vector3 drawPos = this.DrawPos;
             drawPos.x += Rand.Range(-0.4f, 0.4f);

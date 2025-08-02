@@ -13,7 +13,7 @@ namespace TheEndTimes_Magic
     {
         private static List<List<Thing>> tempList = new List<List<Thing>>();
 
-        public static void MakeMagicPodAt(IntVec3 c, Map map, ActiveDropPodInfo info)
+        public static void MakeMagicPodAt(IntVec3 c, Map map, ActiveTransporterInfo info)
         {
             ActiveMagicPod tmActiveDropPod = (ActiveMagicPod)ThingMaker.MakeThing(RH_TET_MagicDefOf.RH_TET_ActiveMagicPod, (ThingDef)null);
             tmActiveDropPod.Contents = info;
@@ -69,13 +69,13 @@ namespace TheEndTimes_Magic
             foreach (List<Thing> thingsGroup in thingsGroups)
             {
                 IntVec3 result = MagicTransportPodUtility.FindRootTunnelLoc(map, true, true);
-                if (result == null)
+                if (result == IntVec3.Invalid)
                 {
                     Log.Warning("DropThingGroupsNear_NewTmpMineIn failed to find a place to mine in " + (object)thingsGroup.FirstOrDefault<Thing>() + " near " + (object)dropCenter + ". Dropping on random square instead.");
                     result = CellFinderLoose.RandomCellWith((Predicate<IntVec3>)(c => c.Walkable(map)), map, 1000);
                 }
 
-                ActiveDropPodInfo info = new ActiveDropPodInfo();
+                ActiveTransporterInfo info = new ActiveTransporterInfo();
                 foreach (Thing thing in thingsGroup)
                     info.innerContainer.TryAdd(thing, true);
                 info.openDelay = openDelay;
@@ -89,7 +89,7 @@ namespace TheEndTimes_Magic
         }
 
         internal static void DropTravelingTransportPodsMineIn(
-          List<ActiveDropPodInfo> dropPods,
+          List<ActiveTransporterInfo> dropPods,
           IntVec3 near,
           Map map,
           bool exactCell = false,
@@ -238,7 +238,7 @@ namespace TheEndTimes_Magic
                 }
                 else
                 {
-                    ActiveDropPodInfo info = new ActiveDropPodInfo();
+                    ActiveTransporterInfo info = new ActiveTransporterInfo();
                     foreach (Thing thing in thingsGroup)
                         info.innerContainer.TryAdd(thing, true);
                     info.openDelay = openDelay;
@@ -281,7 +281,7 @@ namespace TheEndTimes_Magic
           CompLaunchable representative,
           int destinationTile,
           Action<Action> uiConfirmationCallback = null)
-          where T : TransportPodsArrivalAction
+          where T : TransportersArrivalAction
         {
             FloatMenuAcceptanceReport floatMenuAcceptanceReport = acceptanceReportGetter();
             if (floatMenuAcceptanceReport.Accepted || !floatMenuAcceptanceReport.FailReason.NullOrEmpty() || !floatMenuAcceptanceReport.FailMessage.NullOrEmpty())
@@ -295,9 +295,9 @@ namespace TheEndTimes_Magic
                         if (acceptanceReport.Accepted)
                         {
                             if (uiConfirmationCallback == null)
-                                representative.TryLaunch(destinationTile, (TransportPodsArrivalAction)arrivalActionGetter());
+                                representative.TryLaunch(destinationTile, (TransportersArrivalAction)arrivalActionGetter());
                             else
-                                uiConfirmationCallback((Action)(() => representative.TryLaunch(destinationTile, (TransportPodsArrivalAction)arrivalActionGetter())));
+                                uiConfirmationCallback((Action)(() => representative.TryLaunch(destinationTile, (TransportersArrivalAction)arrivalActionGetter())));
                         }
                         else
                         {
@@ -337,7 +337,7 @@ namespace TheEndTimes_Magic
             return false;
         }
 
-        public static Thing GetLookTarget(List<ActiveDropPodInfo> pods)
+        public static Thing GetLookTarget(List<ActiveTransporterInfo> pods)
         {
             for (int index1 = 0; index1 < pods.Count; ++index1)
             {
@@ -358,7 +358,7 @@ namespace TheEndTimes_Magic
         }
 
         public static void DropTravelingTransportPods(
-          List<ActiveDropPodInfo> dropPods,
+          List<ActiveTransporterInfo> dropPods,
           IntVec3 near,
           Map map,
           bool exactCell = false,
@@ -376,7 +376,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public static void RemovePawnsFromWorldPawns(List<ActiveDropPodInfo> pods)
+        public static void RemovePawnsFromWorldPawns(List<ActiveTransporterInfo> pods)
         {
             for (int index1 = 0; index1 < pods.Count; ++index1)
             {
@@ -392,7 +392,7 @@ namespace TheEndTimes_Magic
         public static void MakeDropPodAt(
           IntVec3 c,
           Map map,
-          ActiveDropPodInfo info,
+          ActiveTransporterInfo info,
           ThingDef makePodThing,
           ThingDef makeSkyfallerThing,
           bool draftFlag = false)

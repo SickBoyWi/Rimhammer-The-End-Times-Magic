@@ -7,12 +7,12 @@ using Verse;
 
 namespace TheEndTimes_Magic
 {
-    public class MagicTransportPodsArrivalAction_AttackSettlement : TransportPodsArrivalAction_AttackSettlement
+    public class MagicTransportPodsArrivalAction_AttackSettlement : TransportersArrivalAction_AttackSettlement
     {
         private Settlement settlement;
         private PawnsArrivalModeDef arrivalMode;
 
-        public MagicTransportPodsArrivalAction_AttackSettlement(TransportPodsArrivalAction_AttackSettlement action)
+        public MagicTransportPodsArrivalAction_AttackSettlement(TransportersArrivalAction_AttackSettlement action)
         {
             this.settlement = Traverse.Create((object)action).Field("settlement").GetValue<Settlement>();
             this.arrivalMode = Traverse.Create((object)action).Field("arrivalMode").GetValue<PawnsArrivalModeDef>();
@@ -25,9 +25,9 @@ namespace TheEndTimes_Magic
             Scribe_Defs.Look<PawnsArrivalModeDef>(ref this.arrivalMode, "arrivalModeA");
         }
 
-        public override void Arrived(List<ActiveDropPodInfo> pods, int tile)
+        public override void Arrived(List<ActiveTransporterInfo> pods, PlanetTile tile)
         {
-            Thing lookTarget = TransportPodsArrivalActionUtility.GetLookTarget(pods);
+            Thing lookTarget = TransportersArrivalActionUtility.GetLookTarget(pods);
             int num = !this.settlement.HasMap ? 1 : 0;
             Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(this.settlement.Tile, (WorldObjectDef)null);
             TaggedString letterLabel = "LetterLabelCaravanEnteredEnemyBase".Translate();
@@ -42,7 +42,7 @@ namespace TheEndTimes_Magic
             this.TravelingTransportPodsArrived(pods, orGenerateMap);
         }
 
-        private void TravelingTransportPodsArrived(List<ActiveDropPodInfo> pods, Map orGenerateMap)
+        private void TravelingTransportPodsArrived(List<ActiveTransporterInfo> pods, Map orGenerateMap)
         {
             if (this.arrivalMode == PawnsArrivalModeDefOf.CenterDrop)
                 TravelingTransportPodsArrivedCenter(pods, orGenerateMap);
@@ -55,7 +55,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        private void TravelingTransportPodsArrivedCenter(List<ActiveDropPodInfo> dropPods, Map map)
+        private void TravelingTransportPodsArrivedCenter(List<ActiveTransporterInfo> dropPods, Map map)
         {
             IntVec3 spot;
             if (!DropCellFinder.TryFindRaidDropCenterClose(out spot, map, true, true, true, -1))
@@ -63,13 +63,13 @@ namespace TheEndTimes_Magic
             MagicTransportPodUtility.DropTravelingTransportPods(dropPods, spot, map);
         }
 
-        private void TravelingTransportPodsArrivedEdge(List<ActiveDropPodInfo> dropPods, Map map)
+        private void TravelingTransportPodsArrivedEdge(List<ActiveTransporterInfo> dropPods, Map map)
         {
             IntVec3 dropCenterDistant = DropCellFinder.FindRaidDropCenterDistant(map, false);
             MagicTransportPodUtility.DropTravelingTransportPods(dropPods, dropCenterDistant, map);
         }
 
-        public override bool ShouldUseLongEvent(List<ActiveDropPodInfo> pods, int tile)
+        public override bool ShouldUseLongEvent(List<ActiveTransporterInfo> pods, PlanetTile tile)
         {
             return !this.settlement.HasMap;
         }

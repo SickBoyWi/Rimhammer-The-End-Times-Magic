@@ -25,7 +25,7 @@ namespace TheEndTimes_Magic
             MagicTransportPodUtility.DropInDropPodsNearSpawnCenterMineIn(parms, pawns);
         }
 
-        public override void TravelingTransportPodsArrived(List<ActiveDropPodInfo> dropPods, Map map)
+        public override void TravellingTransportersArrived(List<ActiveTransporterInfo> dropPods, Map map)
         {
             IntVec3 spot;
             if (!InfestationCellFinder.TryFindCell(out spot, map))

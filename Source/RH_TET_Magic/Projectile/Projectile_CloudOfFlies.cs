@@ -89,7 +89,7 @@ namespace TheEndTimes_Magic
             DefDatabase<SoundDef>.GetNamed("Hive_Spawn").PlayOneShot(info);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             Vector3 drawPos = this.DrawPos;
             drawPos.x += Rand.Range(-0.4f, 0.4f);

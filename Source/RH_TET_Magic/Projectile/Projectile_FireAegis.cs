@@ -30,6 +30,8 @@ namespace TheEndTimes_Magic
                 1f, 
                 1,
                 new GasType?(),
+                new float?(),
+                new int(),
                 false, 
                 (ThingDef)null, 
                 0.0f, 
@@ -92,7 +94,7 @@ namespace TheEndTimes_Magic
                 explosion.radius = radius;
                 explosion.damType = damType;
                 explosion.instigator = instigator;
-                explosion.damAmount = projectile != null ? projectile.projectile.GetDamageAmount(1f) : 20;
+                explosion.damAmount = projectile != null ? projectile.projectile.GetDamageAmount(null) : 20;
                 explosion.weapon = source;
                 explosion.preExplosionSpawnThingDef = preExplosionSpawnThingDef;
                 explosion.preExplosionSpawnChance = preExplosionSpawnChance;
@@ -107,7 +109,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             Vector3 drawPos = this.DrawPos;
             drawPos.x += Rand.Range(-0.4f, 0.4f);

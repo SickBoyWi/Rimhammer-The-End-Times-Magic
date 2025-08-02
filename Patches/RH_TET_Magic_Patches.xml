@@ -17,9 +17,9 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>//PawnKindDef[defName = "RH_TET_JabberslytheSummoned"]/defaultFactionType</xpath>
+					<xpath>//PawnKindDef[defName = "RH_TET_JabberslytheSummoned"]/defaultFactionDef</xpath>
 					<value>
-						<defaultFactionType>RH_TET_ChaosMonsterFaction</defaultFactionType>
+						<defaultFactionDef>RH_TET_ChaosMonsterFaction</defaultFactionDef>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">

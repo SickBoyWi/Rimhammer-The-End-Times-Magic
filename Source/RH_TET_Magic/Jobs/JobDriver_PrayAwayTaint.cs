@@ -30,7 +30,7 @@ namespace TheEndTimes_Magic
                 tickAction = new Action((() =>
                 {
                     this.pawn.rotationTracker.FaceCell(this.pawn.Position + this.faceDir.FacingCell);
-                    this.pawn.GainComfortFromCellIfPossible();
+                    this.pawn.GainComfortFromCellIfPossible(1);
 
                     if (this.pawn == null || this.pawn.needs == null)
                         return;

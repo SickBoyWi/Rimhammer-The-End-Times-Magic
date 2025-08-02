@@ -23,7 +23,7 @@ namespace TheEndTimes_Magic
                 return;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             // TODO REMOVED LIGHTS FOR 1.4

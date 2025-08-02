@@ -10,7 +10,7 @@
 
 	<!-- =================== Death Magic =================== -->
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_DeathWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_DeathWizardAI">
 		<defName>RH_TET_Magic_DeathWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfDeathTrait</li>
@@ -41,9 +41,9 @@
 			<li>RH_TET_DeathSoulBlight_WarlockAI</li>
 			<li>RH_TET_DeathSoulBlight_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_DeathWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_DeathWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -338,7 +338,7 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_DeathManacles_MageAI</defName>

@@ -287,7 +287,7 @@ namespace TheEndTimes_Magic
         {
             get
             {
-                return this.AbilityUser.needs.TryGetNeed<Need_MagicPool>();
+                return this.Pawn.needs.TryGetNeed<Need_MagicPool>();
             }
         }
 
@@ -1106,18 +1106,18 @@ namespace TheEndTimes_Magic
 
         public void ResolveMagicPool()
         {
-            if (this.MagicPool != null)
+            if (this.MagicPool is null)
                 return;
-            Hediff firstHediffOfDef = this.AbilityUser.health.hediffSet.GetFirstHediffOfDef(RH_TET_MagicDefOf.RH_TET_MagicWielder, false);
+            Hediff firstHediffOfDef = this.Pawn.health.hediffSet.GetFirstHediffOfDef(RH_TET_MagicDefOf.RH_TET_MagicWielder, false);
             if (firstHediffOfDef != null)
             {
                 firstHediffOfDef.Severity = 1f;
             }
             else
             {
-                Hediff hediff = HediffMaker.MakeHediff(RH_TET_MagicDefOf.RH_TET_MagicWielder, this.AbilityUser, (BodyPartRecord)null);
+                Hediff hediff = HediffMaker.MakeHediff(RH_TET_MagicDefOf.RH_TET_MagicWielder, this.Pawn, (BodyPartRecord)null);
                 hediff.Severity = 1f;
-                this.AbilityUser.health.AddHediff(hediff, (BodyPartRecord)null, new DamageInfo?(), (DamageWorker.DamageResult)null);
+                this.Pawn.health.AddHediff(hediff, (BodyPartRecord)null, new DamageInfo?(), (DamageWorker.DamageResult)null);
             }
         }
 

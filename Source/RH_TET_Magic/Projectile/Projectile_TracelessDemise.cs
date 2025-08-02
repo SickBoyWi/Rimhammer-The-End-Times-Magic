@@ -39,7 +39,7 @@ namespace TheEndTimes_Magic
             theTarget.Corpse.Destroy(DestroyMode.KillFinalize);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             Vector3 drawPos = this.DrawPos;
             drawPos.x += Rand.Range(-0.4f, 0.4f);

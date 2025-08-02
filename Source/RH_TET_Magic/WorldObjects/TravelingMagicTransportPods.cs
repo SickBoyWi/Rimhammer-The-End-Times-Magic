@@ -9,11 +9,11 @@ using Verse;
 
 namespace TheEndTimes_Magic
 {
-    public class TravelingMagicTransportPods : TravelingTransportPods
+    public class TravelingMagicTransportPods : TravellingTransporters
     {
         public IntVec3 destinationCell = new IntVec3();
         public bool draftFlag = false;
-        private List<ActiveDropPodInfo> pods = new List<ActiveDropPodInfo>();
+        private List<ActiveTransporterInfo> pods = new List<ActiveTransporterInfo>();
         public float TravelSpeed = 0.0003f;
         private bool initialized = false;
         private bool arrived;
@@ -24,7 +24,7 @@ namespace TheEndTimes_Magic
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look<ActiveDropPodInfo>(ref this.pods, "podsA", LookMode.Deep, (object[])Array.Empty<object>());
+            Scribe_Collections.Look<ActiveTransporterInfo>(ref this.pods, "podsA", LookMode.Deep, (object[])Array.Empty<object>());
             Scribe_Values.Look<bool>(ref this.arrived, "arrivedA", false, false);
             Scribe_Values.Look<bool>(ref this.draftFlag, "draftFlagA", false, false);
             Scribe_Values.Look<float>(ref this.traveledPct, "traveledPctA", 0.0f, false);
@@ -53,7 +53,7 @@ namespace TheEndTimes_Magic
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             for (int index = 0; index < this.AllComps.Count; ++index)
                 this.AllComps[index].CompTick();
@@ -79,14 +79,14 @@ namespace TheEndTimes_Magic
             this.arrived = true;
             bool setToAttack = false;
 
-            if (this.arrivalAction != null && this.arrivalAction is TransportPodsArrivalAction_AttackSettlement)
+            if (this.arrivalAction != null && this.arrivalAction is TransportersArrivalAction_AttackSettlement)
             {
                 setToAttack = true;
             }
 
-            if (this.arrivalAction is TransportPodsArrivalAction_LandInSpecificCell)
+            if (this.arrivalAction is TransportersArrivalAction_LandInSpecificCell)
             {
-                TransportPodsArrivalAction_LandInSpecificCell actionIn = (TransportPodsArrivalAction_LandInSpecificCell)this.arrivalAction;
+                TransportersArrivalAction_LandInSpecificCell actionIn = (TransportersArrivalAction_LandInSpecificCell)this.arrivalAction;
                 this.destinationCell = Traverse.Create((object)actionIn).Field("cell").GetValue<IntVec3>();
             }
 
@@ -100,27 +100,27 @@ namespace TheEndTimes_Magic
                     {
                         if (this.destinationCell != new IntVec3())
                         {
-                            this.arrivalAction = (TransportPodsArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(maps[index].Parent, this.destinationCell, this.draftFlag);
+                            this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(maps[index].Parent, this.destinationCell, this.draftFlag);
                             break;
                         }
-                        this.arrivalAction = (TransportPodsArrivalAction)new TransportPodsArrivalAction_LandInSpecificCell(maps[index].Parent, DropCellFinder.RandomDropSpot(maps[index], true));
+                        this.arrivalAction = (TransportersArrivalAction)new TransportersArrivalAction_LandInSpecificCell(maps[index].Parent, DropCellFinder.RandomDropSpot(maps[index], true));
                         break;
                     }
                 }
                 if (this.arrivalAction == null)
                 {
-                    if (TransportPodsArrivalAction_FormCaravan.CanFormCaravanAt(this.pods.Cast<IThingHolder>(), this.destinationTile))
+                    if (TransportersArrivalAction_FormCaravan.CanFormCaravanAt(this.pods.Cast<IThingHolder>(), this.destinationTile))
                     {
-                        this.arrivalAction = (TransportPodsArrivalAction)new TransportPodsArrivalAction_FormCaravan();
+                        this.arrivalAction = (TransportersArrivalAction)new TransportersArrivalAction_FormCaravan();
                     }
                     else
                     {
                         List<Caravan> caravans = Find.WorldObjects.Caravans;
                         for (int index = 0; index < caravans.Count; ++index)
                         {
-                            if (caravans[index].Tile == this.destinationTile && (bool)TransportPodsArrivalAction_GiveToCaravan.CanGiveTo(this.pods.Cast<IThingHolder>(), caravans[index]))
+                            if (caravans[index].Tile == this.destinationTile && (bool)TransportersArrivalAction_GiveToCaravan.CanGiveTo(this.pods.Cast<IThingHolder>(), caravans[index]))
                             {
-                                this.arrivalAction = (TransportPodsArrivalAction)new TransportPodsArrivalAction_GiveToCaravan(caravans[index]);
+                                this.arrivalAction = (TransportersArrivalAction)new TransportersArrivalAction_GiveToCaravan(caravans[index]);
                                 break;
                             }
                         }
@@ -128,7 +128,7 @@ namespace TheEndTimes_Magic
                 }
             }
 
-            if (this.arrivalAction is TransportPodsArrivalAction_LandInSpecificCell)
+            if (this.arrivalAction is TransportersArrivalAction_LandInSpecificCell)
             {
                 List<Map> maps = Find.Maps;
                 MapParent mp = null;
@@ -146,12 +146,12 @@ namespace TheEndTimes_Magic
                 }
 
                 if (mp != null)
-                    this.arrivalAction = (TransportPodsArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(mp, this.destinationCell, this.draftFlag);
+                    this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(mp, this.destinationCell, this.draftFlag);
             }
 
             if (setToAttack)
             {
-                this.arrivalAction = new MagicTransportPodsArrivalAction_AttackSettlement((TransportPodsArrivalAction_AttackSettlement)this.arrivalAction);
+                this.arrivalAction = new MagicTransportPodsArrivalAction_AttackSettlement((TransportersArrivalAction_AttackSettlement)this.arrivalAction);
             }
 
             if (this.arrivalAction != null && (this.arrivalAction.ShouldUseLongEvent(this.pods, this.destinationTile) || this.arrivalAction is MagicTransportPodsArrivalAction_AttackSettlement))
@@ -181,7 +181,7 @@ namespace TheEndTimes_Magic
                 {
                     Log.Error("Exception in magic transport pods arrival action: " + (object)ex);
                 }
-                this.arrivalAction = (TransportPodsArrivalAction)null;
+                this.arrivalAction = (TransportersArrivalAction)null;
             }
             else
             {
@@ -201,7 +201,7 @@ namespace TheEndTimes_Magic
             this.Destroy();
         }
 
-        public new void AddPod(ActiveDropPodInfo contents, bool justLeftTheMap)
+        public new void AddPod(ActiveTransporterInfo contents, bool justLeftTheMap)
         {
             contents.parent = (IThingHolder)this;
             this.pods.Add(contents);

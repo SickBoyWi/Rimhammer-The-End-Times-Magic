@@ -100,7 +100,7 @@ namespace TheEndTimes_Magic
 
                     if (thing != null)
                         thing.workLeft = curDriver.workLeft;
-                    actor.GainComfortFromCellIfPossible(true);
+                    actor.GainComfortFromCellIfPossible(1, true);
                     if ((double)curDriver.workLeft <= 0.0)
                     {
                         curDriver.ReadyForNextToil();

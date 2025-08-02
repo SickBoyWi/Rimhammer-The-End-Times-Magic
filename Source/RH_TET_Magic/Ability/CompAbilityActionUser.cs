@@ -214,16 +214,16 @@ namespace TheEndTimes_Magic
         {
             if (this.AbilityPool != null)
                 return;
-            Hediff firstHediffOfDef = this.AbilityUser.health.hediffSet.GetFirstHediffOfDef(RH_TET_MagicDefOf.RH_TET_AbilityActionWielder, false);
+            Hediff firstHediffOfDef = this.Pawn.health.hediffSet.GetFirstHediffOfDef(RH_TET_MagicDefOf.RH_TET_AbilityActionWielder, false);
             if (firstHediffOfDef != null)
             {
                 firstHediffOfDef.Severity = 1f;
             }
             else
             {
-                Hediff hediff = HediffMaker.MakeHediff(RH_TET_MagicDefOf.RH_TET_AbilityActionWielder, this.AbilityUser, (BodyPartRecord)null);
+                Hediff hediff = HediffMaker.MakeHediff(RH_TET_MagicDefOf.RH_TET_AbilityActionWielder, this.Pawn, (BodyPartRecord)null);
                 hediff.Severity = 1f;
-                this.AbilityUser.health.AddHediff(hediff, (BodyPartRecord)null, new DamageInfo?(), (DamageWorker.DamageResult)null);
+                this.Pawn.health.AddHediff(hediff, (BodyPartRecord)null, new DamageInfo?(), (DamageWorker.DamageResult)null);
             }
         }
 

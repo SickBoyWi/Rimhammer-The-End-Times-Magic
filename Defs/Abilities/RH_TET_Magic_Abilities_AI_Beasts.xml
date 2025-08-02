@@ -3,7 +3,7 @@
 
 	<!-- =================== Beasts Magic =================== -->
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_BeastsWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef ParentName="RH_TET_Magic_BeastsWizardAI">
 		<defName>RH_TET_Magic_BeastsWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfBeastsTrait</li>
@@ -34,9 +34,9 @@
 			<li>RH_TET_BeastsBeastMaster_WarlockAI</li>
 			<li>RH_TET_BeastsBeastMaster_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_BeastsWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef Name="RH_TET_Magic_BeastsWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -214,7 +214,7 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_BeastsFlockOfDoom_MageAI</defName>

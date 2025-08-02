@@ -83,7 +83,7 @@ namespace TheEndTimes_Magic
             base.RespawnPawn();
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 

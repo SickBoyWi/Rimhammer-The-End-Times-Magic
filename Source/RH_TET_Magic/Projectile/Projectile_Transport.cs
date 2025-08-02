@@ -208,7 +208,7 @@ namespace TheEndTimes_Magic
             GenSpawn.Spawn(newThing, position, map, Rot4.North, WipeMode.Vanish, false);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             ++this.age;

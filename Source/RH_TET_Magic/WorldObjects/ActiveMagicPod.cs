@@ -6,13 +6,13 @@ using Verse.Sound;
 
 namespace TheEndTimes_Magic
 {
-    public class ActiveMagicPod : Thing, IActiveDropPod, IThingHolder
+    public class ActiveMagicPod : Thing, IActiveTransporter, IThingHolder
     {
         public bool draftFlag = false;
         public int age;
-        private ActiveDropPodInfo contents;
+        private ActiveTransporterInfo contents;
 
-        public ActiveDropPodInfo Contents
+        public ActiveTransporterInfo Contents
         {
             get
             {
@@ -32,7 +32,7 @@ namespace TheEndTimes_Magic
         {
             base.ExposeData();
             Scribe_Values.Look<int>(ref this.age, "age", 0, false);
-            Scribe_Deep.Look<ActiveDropPodInfo>(ref this.contents, "contents", (object)this);
+            Scribe_Deep.Look<ActiveTransporterInfo>(ref this.contents, "contents", (object)this);
         }
 
         public ThingOwner GetDirectlyHeldThings()
@@ -48,17 +48,17 @@ namespace TheEndTimes_Magic
             outChildren.Add((IThingHolder)this.contents);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
-            if (this.contents == null)
+
+            if (this.contents == null || !this.Spawned)
                 return;
-            this.contents.innerContainer.ThingOwnerTick(true);
-            if (this.Spawned)
-            {
-                ++this.age;
-                if (this.age > this.contents.openDelay)
-                    this.PodOpen();
-            }
+            // TODO: This line was active in 1.5 and before, consider it's necessity when you have some time.
+            //this.contents.innerContainer.ThingOwnerTick(true);
+            ++this.age;
+            if (this.age <= this.contents.openDelay)
+                return;
+            this.PodOpen();
         }
 
         private void PodOpen()

@@ -112,7 +112,7 @@ namespace TheEndTimes_Magic
             this.ticksToImpact = this.StartingTicksToImpact;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             Vector3 exactPosition = this.ExactPosition;

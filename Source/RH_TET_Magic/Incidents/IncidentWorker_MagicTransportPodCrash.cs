@@ -24,7 +24,7 @@ namespace TheEndTimes_Magic
             TaggedString text = taggedString;// + "RefugeePodCrash_Factionless".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
 
             this.SendStandardLetter(title, text, LetterDefOf.NeutralEvent, parms, (LookTargets)new TargetInfo(intVec3, target, false), (NamedArgument[])Array.Empty<NamedArgument>());
-            ActiveDropPodInfo info = new ActiveDropPodInfo();
+            ActiveTransporterInfo info = new ActiveTransporterInfo();
             info.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>)things, true, false);
             info.openDelay = 180;
             info.leaveSlag = true;

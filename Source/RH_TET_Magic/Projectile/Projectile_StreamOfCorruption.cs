@@ -20,7 +20,7 @@ namespace TheEndTimes_Magic
             Pawn target = this.intendedTarget.Pawn;
             IntVec3 pos = target.Position;
 
-            int damageAmt = this.def.projectile.GetDamageAmount(1f);
+            int damageAmt = this.def.projectile.GetDamageAmount(null);
             DamageDef damage = this.def.projectile.damageDef;
             DamageInfo damageInfo = new DamageInfo(damage, damageAmt, 0, -1, pawnCaster);
             FleckMaker.ThrowMicroSparks(destination, Map);

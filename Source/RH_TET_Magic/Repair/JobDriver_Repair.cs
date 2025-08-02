@@ -65,7 +65,7 @@ namespace TheEndTimes_Magic
                         skill.Learn(0.11f * this.job.RecipeDef.workSkillLearnFactor, false);
                     }
                 }
-                this.pawn.GainComfortFromCellIfPossible(false);
+                this.pawn.GainComfortFromCellIfPossible(1, false);
                 if (thing.HitPoints == thing.MaxHitPoints)
                 {
                     Apparel apparel = thing as Apparel;

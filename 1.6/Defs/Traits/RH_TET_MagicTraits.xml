@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TraitDef>
+		<defName>RH_TET_WitchHunterTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Witch Hunter Apprentice</label>
+				<description>[PAWN_nameDef] has been recently inducted into the Witch Hunter cadre, and is still in training.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_AbilityPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Witch Hunter Templar</label>
+				<description>[PAWN_nameDef] has learned the basic of being a Witch Hunter, but has little real world experience on the job.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_AbilityPool</li>
+				</enablesNeeds>				
+			</li>
+			<li>
+				<label>Witch Hunter Captain</label>
+				<description>[PAWN_nameDef] has been a Witch Hunter for a handful of years, but still has things to learn.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_AbilityPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Witch Hunter General</label>
+				<description>[PAWN_nameDef] is a high level Witch Hunter, one of the best.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_AbilityPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_SigmarTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Sigmar Initiate</label>
+				<description>[PAWN_nameDef] has found that they have been noticed by the god Sigmar.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Sigmar Blessed</label>
+				<description>[PAWN_nameDef] has been blessed by Sigmar, and can leverage some of the god's power.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Sigmar Illustrious</label>
+				<description>[PAWN_nameDef] has been gifted by Sigmar with the ability to harness a medium amount of the god's power.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Sigmar Exalted</label>
+				<description>[PAWN_nameDef] is truly one of the most gifted prophets of Sigmar.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_ShallyaTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Shallya Initiate</label>
+				<description>[PAWN_nameDef] has found that they have been noticed by the god Shallya.</description>
+				<degree>0</degree>
+				<statFactors>
+					<ImmunityGainSpeed>1.50</ImmunityGainSpeed>
+				</statFactors>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Shallya Blessed</label>
+				<description>[PAWN_nameDef] has been blessed by Shallya, and can leverage some of the god's power.</description>
+				<degree>1</degree>
+				<statFactors>
+					<ImmunityGainSpeed>1.55</ImmunityGainSpeed>
+				</statFactors>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Shallya Illustrious</label>
+				<description>[PAWN_nameDef] has been gifted by Shallya with the ability to harness a medium amount of the god's power.</description>
+				<degree>2</degree>
+				<statFactors>
+					<ImmunityGainSpeed>1.60</ImmunityGainSpeed>
+				</statFactors>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Shallya Exalted</label>
+				<description>[PAWN_nameDef] is truly one of the most gifted prophets of Shallya.</description>
+				<degree>3</degree>
+				<statFactors>
+					<ImmunityGainSpeed>1.65</ImmunityGainSpeed>
+				</statFactors>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_UlricTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Ulric Initiate</label>
+				<description>[PAWN_nameDef] has found that they have been noticed by the god Ulric.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Ulric Blessed</label>
+				<description>[PAWN_nameDef] has been blessed by Ulric, and can leverage some of the god's power.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Ulric Illustrious</label>
+				<description>[PAWN_nameDef] has been gifted by Ulric with the ability to harness a medium amount of the god's power.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Ulric Exalted</label>
+				<description>[PAWN_nameDef] is truly one of the most gifted prophets of Ulric.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_FaithPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfBeastsTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Beasts Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Beasts Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Beasts wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Beasts Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Beasts.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Beasts Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Beasts magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Beasts Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Beasts. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfDeathTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Death Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Death Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Death wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Death Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Death.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Death Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Death magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Death Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Death. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfShadowTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Shadow Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Shadow Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Shadow wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Shadow Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Shadow.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Shadow Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Shadow magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Shadow Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Shadow. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfWildTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of the Wild Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of the Wild Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Wild wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of the Wild Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Wild.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of the Wild Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Wild magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of the Wild Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Wild. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfTzeentchTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Tzeentch Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Tzeentch Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Tzeentch wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Tzeentch Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Tzeentch.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Tzeentch Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Tzeentch magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Tzeentch Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Tzeentch. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfFireTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Fire Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Fire Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Fire wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Fire Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Fire.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Fire Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Fire magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Fire Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Fire. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfHeavensTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Heavens Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Heavens Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Heavens wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Heavens Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Heavens.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Heavens Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Heavens magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Heavens Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Heavens. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfMetalTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Metal Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Metal Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Metal wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Metal Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Metal.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Metal Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Metal magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Metal Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Metal. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfLifeTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Life Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Life Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Life wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Life Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Life.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Life Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Life magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Life Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Life. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfLightTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Light Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Light Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Light wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Light Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Light.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Light Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Light magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Light Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Light. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfNurgleTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Nurgle Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Nurgle Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Nurgle wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Nurgle Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Nurgle.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Nurgle Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Nurgle magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Nurgle Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Nurgle. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfChaosUndividedTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Chaos Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Chaos Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Chaos Undivided wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Chaos Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Chaos Undivided.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Chaos Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Chaos Undivided magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Chaos Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Chaos Undivided. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>RH_TET_LoreOfSlaaneshTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Lore of Slaanesh Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Slaanesh Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Lore of Slaanesh wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Slaanesh Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the Lore of Slaanesh.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Slaanesh Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Lore of Slaanesh magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Lore of Slaanesh Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Lore of Slaanesh. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfHighTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>High Lore Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>High Lore Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper High Lore wizard.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>High Lore Wizard</label>
+				<description>[PAWN_nameDef] is a proper wizard, well skilled and experienced with the High Lore.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>High Lore Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of High Lore magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>High Lore Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the High Lore. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfPlagueTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Plague Lore Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Plague Lore Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Plague Lore seer.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Plague Lore Seer</label>
+				<description>[PAWN_nameDef] is a proper seer, well skilled and experienced with the Plague Lore.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Plague Lore Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Plague Lore magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Plague Lore Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Plague Lore. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfGreatMawTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Gut Magic Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent for the Lore of the Great Maw.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Gut Magic Butcher</label>
+				<description>[PAWN_nameDef] Has begun learning the ins and outs of gut magic, and is working on honing the skills required to use the Lore of the Great Maw.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Gut Magic High Butcher</label>
+				<description>[PAWN_nameDef] is a proper butcher, a user of the Lore of the Great Maw. Being well skilled and experienced in the Lore, [PAWN_nameDef] is held in high esteem by ogres.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Gut Magic Great Butcher</label>
+				<description>[PAWN_nameDef] is among the most revered of users of the Lore of the Great Maw. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Gut Magic Slaughtermaster</label>
+				<description>[PAWN_nameDef] is at the top of the Gut Magic skill level, being considered a proper Slaughtermaster. Truly a master of the Lore of the Great Maw.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfWarpTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Warp Lore Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Warp Lore Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Warp Lore seer.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Warp Lore Seer</label>
+				<description>[PAWN_nameDef] is a proper seer, well skilled and experienced with the Warp Lore.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Warp Lore Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Warp Lore magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Warp Lore Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Warp Lore. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfStealthTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>RH_TET_LoreOfStealthTrait</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Stealth Lore Initiate</label>
+				<description>[PAWN_nameDef] Is completely new to magic, but clearly has inate talent.</description>
+				<degree>0</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Stealth Lore Mage</label>
+				<description>[PAWN_nameDef] Has begun the journey to becoming a proper Stealth Lore seer.</description>
+				<degree>1</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Stealth Lore Seer</label>
+				<description>[PAWN_nameDef] is a proper seer, well skilled and experienced with the Stealth Lore.</description>
+				<degree>2</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Stealth Lore Warlock</label>
+				<description>[PAWN_nameDef] is among the most respected of Stealth Lore magic users. Extremely skilled, and powerful.</description>
+				<degree>3</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+			<li>
+				<label>Stealth Lore Master</label>
+				<description>[PAWN_nameDef] is ranked among the elite of magic users with the Stealth Lore. Truly a master of the lore.</description>
+				<degree>4</degree>
+				<enablesNeeds>
+					<li>RH_TET_MagicPool</li>
+				</enablesNeeds>	
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>RH_TET_LoreOfBeastsTrait</li>
+			<li>RH_TET_LoreOfDeathTrait</li>
+			<li>RH_TET_LoreOfWildTrait</li>
+			<li>RH_TET_LoreOfShadowTrait</li>
+			<li>RH_TET_LoreOfTzeentchTrait</li>
+			<li>RH_TET_LoreOfFireTrait</li>
+			<li>RH_TET_LoreOfHeavensTrait</li>
+			<li>RH_TET_LoreOfMetalTrait</li>
+			<li>RH_TET_LoreOfLifeTrait</li>
+			<li>RH_TET_LoreOfLightTrait</li>
+			<li>RH_TET_LoreOfNurgleTrait</li>
+			<li>RH_TET_LoreOfChaosUndividedTrait</li>
+			<li>RH_TET_LoreOfSlaaneshTrait</li>
+			<li>RH_TET_LoreOfHighTrait</li>
+			<li>RH_TET_LoreOfGreatMawTrait</li>
+			<li>RH_TET_LoreOfPlagueTrait</li>
+			<li>RH_TET_LoreOfWarpTrait</li>
+			<li>RH_TET_SigmarTrait</li>
+			<li>RH_TET_ShallyaTrait</li>
+			<li>RH_TET_UlricTrait</li>
+			<li>RH_TET_WitchHunterTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+  
+</Defs>

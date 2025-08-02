@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<NeedDef>
+		<defName>RH_TET_AbilityPool</defName>
+		<needClass>TheEndTimes_Magic.Need_AbilityPool</needClass>
+		<label>ability</label>
+		<description>Pawn's current ability level. To replenish, this pawn must sleep.</description>
+		<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+		<showOnNeedList>true</showOnNeedList>
+		<minIntelligence>Humanlike</minIntelligence>
+		<baseLevel>0.50</baseLevel>
+		<seekerRisePerHour>0.23</seekerRisePerHour>
+		<seekerFallPerHour>0.05</seekerFallPerHour>
+		<listPriority>900</listPriority>
+		<major>true</major>
+		<showForCaravanMembers>true</showForCaravanMembers>
+	</NeedDef>
+  
+	<HediffDef>
+		<defName>RH_TET_AbilityActionWielder</defName>
+		<description>This individual has special abilities that can affect others around them. They may be physical or quasi magic/faith based.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>1.0</initialSeverity>
+		<label>faithful</label>
+		<causesNeed>RH_TET_AbilityPool</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_WH_Condemned</defName>
+		<description>The pawn has been condemned by a witch hunter, and affected by the powers of Sigmar.\n\nSlows the affected pawn down, and lowers their pain shock threshold.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Condemned</label>
+		<defaultLabelColor>(1,.02,.02)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<stages>
+			<li>
+				<!--<label>Condemned</label>-->
+				<minSeverity>.001</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PainShockThreshold>-.15</PainShockThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterEnfeebled</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_CombatEnhanceBase">
+		<defName>RH_TET_WH_GrimResolve</defName>
+		<description>The pawn has been physically and mentally strengthened by the powers of Sigmar.\n\nThis increases pain shock threshold, and mental break threshold.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Grim Resolve</label>
+		<defaultLabelColor>(.02,1.0,.02)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>.001</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PainShockThreshold>.15</PainShockThreshold>
+					<MentalBreakThreshold>.15</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RH_TET_EffecterMantle</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

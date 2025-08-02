@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =================== High Magic =================== -->
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_HighWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_HighWizardAI">
 		<defName>RH_TET_Magic_HighWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfHighTrait</li>
@@ -33,9 +33,9 @@
 			<li>RH_TET_HighGlamourOfTeclis_WarlockAI</li>
 			<li>RH_TET_HighGlamourOfTeclis_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_HighWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_HighWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -167,7 +167,7 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_HighPhoenixFlames_MageAI</defName>

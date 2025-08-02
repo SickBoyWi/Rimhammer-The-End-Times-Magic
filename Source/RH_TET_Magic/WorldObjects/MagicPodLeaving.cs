@@ -53,14 +53,14 @@ namespace TheEndTimes_Magic
                 //travelingTransportPods.arrivalAction = new MagicTransportPodsArrivalAction_LandInSpecificCell();
                 Find.WorldObjects.Add((WorldObject)travelingTransportPods);
                 MagicPodLeaving.tmpActiveDropPods.Clear();
-                MagicPodLeaving.tmpActiveDropPods.AddRange((IEnumerable<Thing>)this.Map.listerThings.ThingsInGroup(ThingRequestGroup.ActiveDropPod));
+                MagicPodLeaving.tmpActiveDropPods.AddRange((IEnumerable<Thing>)this.Map.listerThings.ThingsInGroup(ThingRequestGroup.ActiveTransporter));
                 for (int index = 0; index < MagicPodLeaving.tmpActiveDropPods.Count; ++index)
                 {
                     if (MagicPodLeaving.tmpActiveDropPods[index] is MagicPodLeaving tmpActiveDropPod && tmpActiveDropPod.groupID == this.groupID)
                     {
                         tmpActiveDropPod.alreadyLeft = true;
                         travelingTransportPods.AddPod(tmpActiveDropPod.Contents, true);
-                        tmpActiveDropPod.Contents = (ActiveDropPodInfo)null;
+                        tmpActiveDropPod.Contents = (ActiveTransporterInfo)null;
                         tmpActiveDropPod.Destroy(DestroyMode.Vanish);
                     }
                 }

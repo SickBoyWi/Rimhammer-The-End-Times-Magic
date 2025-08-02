@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Magic_MagicEye</defName>
+		<label>magic eye</label>
+		<labelNoun>a magic eye</labelNoun>
+		<description>An installed magic eye.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Magic_MagicEye</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RH_TET_Magic_MagicEye</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.50</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Magic_MagicArm</defName>
+		<label>magic arm</label>
+		<labelNoun>a magic arm</labelNoun>
+		<description>An installed magic arm.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Magic_MagicArm</ThingDef></descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>14</power>
+						<cooldownTime>2</cooldownTime>
+						<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+						<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>RH_TET_Magic_MagicArm</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+ 
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Magic_MagicLeg</defName>
+		<label>magic leg</label>
+		<labelNoun>a magic leg</labelNoun>
+		<description>An installed magic leg.</description>
+		<descriptionHyperlinks><ThingDef>RH_TET_Magic_MagicLeg</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>RH_TET_Magic_MagicLeg</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+</Defs>

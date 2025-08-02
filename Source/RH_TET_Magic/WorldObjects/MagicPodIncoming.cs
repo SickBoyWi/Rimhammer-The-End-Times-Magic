@@ -5,11 +5,11 @@ using Verse;
 namespace TheEndTimes_Magic
 {
     [StaticConstructorOnStartup]
-    public class MagicPodIncoming : Skyfaller, IActiveDropPod, IThingHolder
+    public class MagicPodIncoming : Skyfaller, IActiveTransporter, IThingHolder
     {
         public bool draftFlag = false;
 
-        public ActiveDropPodInfo Contents
+        public ActiveTransporterInfo Contents
         {
             get
             {

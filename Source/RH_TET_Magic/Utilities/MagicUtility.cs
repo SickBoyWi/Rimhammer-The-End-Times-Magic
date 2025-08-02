@@ -564,6 +564,7 @@ namespace TheEndTimes_Magic
                     0, RH_TET_MagicDefOf.RH_TET_Magic_Miscast, null, 
                     null, null, null, 
                     0.0f, 1, new GasType?(GasType.BlindSmoke),
+                    new float?(), new int(),
                     true);
                 casterPawn.needs.TryGetNeed<Need_MagicPool>()?.SetLevelToZero();
 

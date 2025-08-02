@@ -60,7 +60,7 @@ namespace TheEndTimes_Magic
             Scribe_Values.Look<int>(ref this.humanlikesSacrificedCount, "humanlikesSacrificedCount", 0, false);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
         }

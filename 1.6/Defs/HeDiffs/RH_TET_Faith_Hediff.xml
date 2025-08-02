@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<NeedDef>
+		<defName>RH_TET_FaithPool</defName>
+		<needClass>TheEndTimes_Magic.Need_FaithPool</needClass>
+		<label>faith</label>
+		<description>Pawn's current faith level. To replenish, use a commune or meditation spot.</description>
+		<onlyIfCausedByTrait>true</onlyIfCausedByTrait>
+		<showOnNeedList>true</showOnNeedList>
+		<minIntelligence>Humanlike</minIntelligence>
+		<baseLevel>0.50</baseLevel>
+		<seekerRisePerHour>0.23</seekerRisePerHour>
+		<seekerFallPerHour>0.05</seekerFallPerHour>
+		<listPriority>900</listPriority>
+		<major>true</major>
+		<!--<freezeWhileSleeping>true</freezeWhileSleeping>-->
+		<showForCaravanMembers>true</showForCaravanMembers>
+	</NeedDef>
+  
+	<HediffDef>
+		<defName>RH_TET_FaithWielder</defName>
+		<description>This individual has the ability to spend faith to cause magic effects.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>1.0</initialSeverity>
+		<label>faithful</label>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="RH_TET_PawnEnhanceBase">
+		<defName>RH_TET_ShallyaFortune</defName>
+		<description>A god granted state that increases a pawns healing ability, and work speed.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Shallya's Fortune</label>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label/>
+				<minSeverity>.001</minSeverity>
+				<restFallFactor>1.0</restFallFactor>
+				<hungerRateFactor>1.0</hungerRateFactor>
+				<painOffset>0.0</painOffset>
+				<statOffsets>
+					<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+					<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

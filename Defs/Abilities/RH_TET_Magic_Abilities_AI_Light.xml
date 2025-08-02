@@ -3,7 +3,7 @@
 
 	<!-- =================== Light Magic =================== -->
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_LightWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_LightWizardAI">
 		<defName>RH_TET_Magic_LightWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfLightTrait</li>
@@ -29,9 +29,9 @@
 			<li>RH_TET_LightHealingLight_WarlockAI</li>
 			<li>RH_TET_LightHealingLight_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_LightWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_LightWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -213,7 +213,7 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 		
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_LightHealingLight_MageAI</defName>

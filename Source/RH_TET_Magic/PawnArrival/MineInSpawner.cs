@@ -56,7 +56,7 @@ namespace TheEndTimes_Magic
             this.CreateSustainer();
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (!this.Spawned)
                 return;

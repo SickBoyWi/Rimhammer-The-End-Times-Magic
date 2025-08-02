@@ -25,14 +25,6 @@ namespace TheEndTimes_Magic
             this.hotKey = KeyBindingDefOf.Misc1;
         }
 
-        public override int DraggableDimensions
-        {
-            get
-            {
-                return 2;
-            }
-        }
-
         public override bool DragDrawMeasurements
         {
             get

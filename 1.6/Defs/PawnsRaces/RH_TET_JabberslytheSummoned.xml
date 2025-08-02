@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+	<PawnKindDef>
+		<defName>RH_TET_JabberslytheSummoned</defName>
+		<label>jabberslythe</label>
+		<race>RH_TET_JabberslytheRaceSummoned</race>
+		<combatPower>1500</combatPower>
+		<!-- Insect  RH_TET_ChaosMonsterFaction  Base Mod Not present, set to Insect. It'll be fixed via patch if the base mod is used. -->
+		<defaultFactionDef>Insect</defaultFactionDef>
+		<aiAvoidCover>true</aiAvoidCover>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>5.3</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>5.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>10.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>10.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>13.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>13.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+  
+	<!-- RACE DEFS -->
+	<ThingDef ParentName="BaseChaos">
+		<defName>RH_TET_JabberslytheRaceSummoned</defName>
+		<label>jabberslythe</label>
+		<thingClass>TheEndTimes_Magic.Pawn_JabberslytheSummonedExpires</thingClass>
+		<description>A huge and hideous true monster of chaos. It's corruption is undescribable.</description>
+		<tradeability>None</tradeability>
+		<statBases>
+			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
+			<MoveSpeed>6.5</MoveSpeed>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<CarryingCapacity>150</CarryingCapacity>
+			<MarketValue>15000</MarketValue>
+			<MeatAmount>300</MeatAmount>
+			<Wildness>0.999</Wildness>
+		</statBases>
+		<tools>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>wings</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>RH_TET_Wings</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>tounge</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>RH_TET_Tounge</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<race>
+			<!-- This is changed in case the base mod isn't present. If it is present, this will be fixed via patches. -->
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<body>RH_TET_JabberslytheBody</body>
+			<leatherDef>RH_TET_Leather_Jabberslythe</leatherDef>
+			<herdAnimal>false</herdAnimal>
+			<predator>true</predator>
+			<maxPreyBodySize>6.0</maxPreyBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+			<baseBodySize>6.0</baseBodySize>
+			<baseHealthScale>21.0</baseHealthScale>
+			<lifeExpectancy>1500</lifeExpectancy>
+			<trainability>Advanced</trainability>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.95</manhunterOnTameFailChance>
+			<lifeStageAges>
+				<li>
+					<def>RH_TET_Young</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>RH_TET_Grown</def>
+					<minAge>200</minAge>
+					<soundCall>RH_TET_Jabberslythe_Call</soundCall>
+				</li>
+				<li>
+					<def>RH_TET_Ancient</def>
+					<minAge>600</minAge>
+				</li>
+			</lifeStageAges>
+			<nameGenerator>NamerAnimalGenericMale</nameGenerator>
+			<nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+			<soundCallIntervalRange>
+				<min>1000</min>
+				<max>2000</max>
+			</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<recipes>
+			<li>Euthanize</li>
+		</recipes>
+	</ThingDef>
+
+</Defs>

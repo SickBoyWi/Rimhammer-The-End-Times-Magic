@@ -30,7 +30,7 @@ namespace TheEndTimes_Magic
         {
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
         }

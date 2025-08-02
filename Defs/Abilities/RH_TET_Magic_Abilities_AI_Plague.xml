@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =================== Plague Lore =================== -->
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_PlagueWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_PlagueWizardAI">
 		<defName>RH_TET_Magic_PlagueWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfPlagueTrait</li>
@@ -33,7 +33,7 @@
 			<li>RH_TET_PlagueCloudOfFlies_WarlockAI</li>
 			<li>RH_TET_PlagueCloudOfFlies_MasterAI</li>
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_PlagueRedPox_MageAI</defName>
@@ -260,7 +260,7 @@
 		</tags>
 	</SickAbilityUserAI.AbilityAIDef>
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_PlagueWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_PlagueWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -463,6 +463,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 </Defs>

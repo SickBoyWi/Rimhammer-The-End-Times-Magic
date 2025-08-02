@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Magic_FaithIdolBase" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<statBases>
+			<Flammability>.7</Flammability>
+			<SellPriceFactor>1.5</SellPriceFactor>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<tradeTags>
+			<li>RH_TET_Magic_Idols</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+			<!--<researchPrerequisite>RH_TET_Empire_Faith</researchPrerequisite> TODO Add by injection, prevent errors. -->
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Magic_FaithIdolBase">
+		<defName>RH_TET_Magic_FaithIdol_Sigmar</defName>
+		<label>Idol of Sigmar</label>
+		<description>An idol of Sigmar. Used by the faithful of Sigmar for praying to, and for using faith ability to generate a relic that will allow them to aqcuire a new faith power. Must be sculpted at an art worktable.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Faith/RH_TET_SigmarIdol</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+		<size>(1,1)</size>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<designationHotKey>Misc1</designationHotKey>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Magic_FaithIdolBase">
+		<defName>RH_TET_Magic_FaithIdol_Shallya</defName>
+		<label>Idol of Shallya</label>
+		<description>An idol of Shallya. Used by the faithful of Shallya for praying to, and for using faith ability to generate a relic that will allow them to aqcuire a new faith power. Must be sculpted at an art worktable.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Faith/RH_TET_ShallyaIdol</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.1,3.1)</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+		<size>(1,1)</size>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<designationHotKey>Misc1</designationHotKey>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Magic_FaithIdolBase">
+		<defName>RH_TET_Magic_FaithIdol_Ulric</defName>
+		<label>Idol of Ulric</label>
+		<description>An idol of Ulric. Used by the faithful of Ulric for praying to, and for using faith ability to generate a relic that will allow them to aqcuire a new faith power. Must be sculpted at an art worktable.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Faith/RH_TET_UlricIdol</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.2,3.2)</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+		<size>(1,1)</size>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<designationHotKey>Misc1</designationHotKey>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+	</ThingDef>
+
+</Defs>

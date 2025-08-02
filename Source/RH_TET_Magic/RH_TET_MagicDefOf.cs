@@ -544,6 +544,11 @@ namespace TheEndTimes_Magic
         public static JobDef RH_TET_Magic_DoBillMagicBench;
         public static JobDef RH_TET_Magic_RepairStuff;
 
+        //// =============== NEEDS ===============
+        public static NeedDef RH_TET_MagicPool;
+        public static NeedDef RH_TET_FaithPool;
+        public static NeedDef RH_TET_AbilityPool;
+
         //// =============== HEDIFFS ===============
         public static HediffDef RH_TET_MagicWielder;
         public static HediffDef RH_TET_FaithWielder;

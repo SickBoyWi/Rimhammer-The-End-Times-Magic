@@ -5,11 +5,19 @@ using Verse;
 
 namespace TheEndTimes_Magic
 {
-    public class MagicTransportPodsArrivalAction_LandInSpecificCell : TransportPodsArrivalAction
+    public class MagicTransportPodsArrivalAction_LandInSpecificCell : TransportersArrivalAction
     {
         public bool draftFlag = false;
         private MapParent mapParent;
         private IntVec3 cell;
+
+        public override bool GeneratesMap
+        {
+            get
+            {
+                return true;
+            }
+        }
 
         public MagicTransportPodsArrivalAction_LandInSpecificCell()
         {
@@ -34,7 +42,7 @@ namespace TheEndTimes_Magic
 
         public override FloatMenuAcceptanceReport StillValid(
           IEnumerable<IThingHolder> pods,
-          int destinationTile)
+          PlanetTile destinationTile)
         {
             FloatMenuAcceptanceReport acceptanceReport = base.StillValid(pods, destinationTile);
             if (!(bool)acceptanceReport)
@@ -42,7 +50,7 @@ namespace TheEndTimes_Magic
             return this.mapParent != null && this.mapParent.Tile != destinationTile ? (FloatMenuAcceptanceReport)false : (FloatMenuAcceptanceReport)MagicTransportPodsArrivalAction_LandInSpecificCell.CanLandInSpecificCell(pods, this.mapParent);
         }
 
-        public override void Arrived(List<ActiveDropPodInfo> pods, int tile)
+        public override void Arrived(List<ActiveTransporterInfo> pods, PlanetTile tile)
         {
             MagicTransportPodUtility.DropTravelingTransportPods(pods, this.cell, this.mapParent.Map, true, this.draftFlag);
         }

@@ -61,7 +61,7 @@ namespace TheEndTimes_Magic
             this.mapComp.PipeComp.RegenGrids();
         }
 
-        public override void PostDeSpawn(Map map)
+        public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
         {
             map.PipeNet().DeregisterPipe(this);
             base.PostDeSpawn(map);

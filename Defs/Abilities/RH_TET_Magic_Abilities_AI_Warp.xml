@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =================== Warp Magic =================== -->
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef ParentName="RH_TET_Magic_WarpWizardAI">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  ParentName="RH_TET_Magic_WarpWizardAI">
 		<defName>RH_TET_Magic_WarpWizardAbilityAI</defName>
 		<matchingTraits>
 			<li>RH_TET_LoreOfWarpTrait</li>
@@ -19,7 +19,7 @@
 			<li>RH_TET_WarpVerminousRuin_MasterAI</li>
 			
 		</abilities>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 
 	<SickAbilityUserAI.AbilityAIDef ParentName="RH_TET_Magic_BaseMagicAbilityAI">
 		<defName>RH_TET_WarpLightning_MageAI</defName>
@@ -111,7 +111,7 @@
 		</tags>
 	</SickAbilityUserAI.AbilityAIDef>
 
-	<SickAbilityUserAI.SickAbilityUserAIProfileDef Name="RH_TET_Magic_WarpWizardAI" Abstract="True">
+	<SickAbilityUserAI.AbilityUserAIProfileDef  Name="RH_TET_Magic_WarpWizardAI" Abstract="True">
 		<compAbilityUserClass>TheEndTimes_Magic.CompMagicUser</compAbilityUserClass>
 		<decisionTree>
 			<subNodes>
@@ -180,6 +180,6 @@
 				</li>
 			</subNodes>
 		</decisionTree>
-	</SickAbilityUserAI.SickAbilityUserAIProfileDef>
+	</SickAbilityUserAI.AbilityUserAIProfileDef>
 	
 </Defs>

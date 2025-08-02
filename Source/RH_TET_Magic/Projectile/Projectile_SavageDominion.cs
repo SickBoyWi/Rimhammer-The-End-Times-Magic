@@ -30,7 +30,7 @@ namespace TheEndTimes_Magic
         {
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (this.summonedPawn != null && (this.summonedPawn.Destroyed || this.summonedPawn.Dead))
