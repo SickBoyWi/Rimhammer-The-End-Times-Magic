@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld.Planet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -47,7 +48,10 @@ namespace TheEndTimes_Magic
             { 
                 foreach (KeyValuePair<int, SteamPipeMapComp> steamPipeComp in SteamPipeMapComp.SteamPipeComps)
                 {
-                    if (steamPipeComp.Value?.map != null && (steamPipeComp.Value?.PipeNets != null &&  steamPipeComp.Value.map.Tile == Tile))
+                    //Log.Error("D:" + (steamPipeComp.Value.map.info is null)); // TODO: THIS IS TRUE AFTER A RELOAD OF THE GAME!!
+
+
+                    if (steamPipeComp.Value?.map != null && (steamPipeComp.Value?.PipeNets != null &&  steamPipeComp.Value?.map?.info?.Tile == Tile))
                     {
                         PlumbingNet[] plumbingNetArray = steamPipeComp.Value.PipeNets;
                         for (int index = 0; index < plumbingNetArray.Length; ++index)

@@ -12,6 +12,9 @@ namespace TheEndTimes_Magic
     {
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
+            if (this.landed)
+                return;
+
             Map map = this.Map;
             base.Impact(hitThing);
             ThingDef def = ((Thing)this).def;
@@ -64,6 +67,8 @@ namespace TheEndTimes_Magic
                     break;
                 }
             }
+
+            this.landed = true;
         }
 
         public void Explosion(

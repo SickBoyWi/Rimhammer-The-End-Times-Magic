@@ -13,6 +13,9 @@ namespace TheEndTimes_Magic
     {
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
+            if (this.landed)
+                return;
+
             Pawn pawnCaster = this.launcher as Pawn;
 
             this.DrawAt(pawnCaster.Position.ToVector3(), false);
@@ -28,6 +31,8 @@ namespace TheEndTimes_Magic
             target.TakeDamage(damageInfo);
 
             target.health.AddHediff(RH_TET_MagicDefOf.RH_TET_NurgleStreamOfCorruptionI);
+
+            this.landed = true;
         }
         
         public Projectile_StreamOfCorruption()

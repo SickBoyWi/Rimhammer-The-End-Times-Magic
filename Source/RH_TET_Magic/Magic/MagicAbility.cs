@@ -54,13 +54,17 @@ namespace TheEndTimes_Magic
         {
             get
             {
+                // TODO - NO MANA COST TAKEN FROM PAWN: DIES HERE SOMEWHERE.
+
                 // If the winds of magic are blowing strong, then the spell costs zero.
-                if (this.Pawn != null && this.Pawn.Map.gameConditionManager.ConditionIsActive(RH_TET_MagicDefOf.RH_TET_Magic_GameCondition_WindsOfMagic))
+                if (this.Pawn != null && this.Pawn.Map != null)
                 {
-                    return 0f;
+                    if (this.Pawn.Map.gameConditionManager != null && this.Pawn.Map.gameConditionManager.ConditionIsActive(RH_TET_MagicDefOf.RH_TET_Magic_GameCondition_WindsOfMagic))
+                        return 0f;
                 }
+
                 // If a belt of Tzeentch is worn, then all spells cost zero magic from the pawn's pool.
-                else if (this.Pawn != null && this.Pawn.apparel != null && this.Pawn.apparel.WornApparel != null)
+                if (this.Pawn != null && this.Pawn.apparel != null && this.Pawn.apparel.WornApparel != null)
                 { 
                     List<Apparel> wornApparel = this.Pawn.apparel.WornApparel;
 
@@ -71,6 +75,12 @@ namespace TheEndTimes_Magic
                             return 0f;
                         }
                     }
+                }
+
+                if (this.MagicDef is null)
+                {
+                    Log.Warning("MagicAbility get ActualMagicCost: Null MagicDef. Returning 50% default value.");
+                    return .5f;
                 }
 
                 return this.MagicDef.magicPoolCost;

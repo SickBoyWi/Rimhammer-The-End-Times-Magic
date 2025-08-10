@@ -28,7 +28,7 @@ namespace TheEndTimes_Magic
             info.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>)things, true, false);
             info.openDelay = 180;
             info.leaveSlag = true;
-            MagicTransportPodUtility.MakeMagicPodAt(intVec3, target, info);
+            MagicTransportPodUtility.MakeMagicTransportPodAt(intVec3, target, info);
             return true;
         }
 

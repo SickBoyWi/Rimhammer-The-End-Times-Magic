@@ -251,9 +251,11 @@
 		</graphicData>
 		<size>(1,1)</size>
 		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<castEdgeShadows>false</castEdgeShadows>
+		
 		<fillPercent>0.5</fillPercent>
 		<building>
 			<expandHomeArea>false</expandHomeArea>
@@ -273,7 +275,7 @@
 			<li Class="CompProperties_Transporter">
 				<massCapacity>600</massCapacity>
 			</li>
-			<li Class="CompProperties_Launchable">
+			<li Class="CompProperties_Launchable_TransportPod">
 				<skyfallerLeaving>RH_TET_MagicPodLeaving</skyfallerLeaving>
 			</li>
 		</comps>
@@ -317,7 +319,7 @@
 			<li Class="CompProperties_Transporter">
 				<massCapacity>1000</massCapacity>
 			</li>
-			<li Class="CompProperties_Launchable">
+			<li Class="CompProperties_Launchable_TransportPod">
 				<skyfallerLeaving>RH_TET_MagicPodLeaving</skyfallerLeaving>
 			</li>
 		</comps>
@@ -361,7 +363,7 @@
 			<li Class="CompProperties_Transporter">
 				<massCapacity>1400</massCapacity>
 			</li>
-			<li Class="CompProperties_Launchable">
+			<li Class="CompProperties_Launchable_TransportPod">
 				<skyfallerLeaving>RH_TET_MagicPodLeaving</skyfallerLeaving>
 			</li>
 		</comps>
@@ -405,7 +407,7 @@
 			<li Class="CompProperties_Transporter">
 				<massCapacity>2000</massCapacity>
 			</li>
-			<li Class="CompProperties_Launchable">
+			<li Class="CompProperties_Launchable_TransportPod">
 				<skyfallerLeaving>RH_TET_MagicPodLeaving</skyfallerLeaving>
 			</li>
 		</comps>

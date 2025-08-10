@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace TheEndTimes_Magic
@@ -19,7 +20,7 @@ namespace TheEndTimes_Magic
             IntVec3 spot;
             if (!DropCellFinder.TryFindRaidDropCenterClose(out spot, map, true, true, true, -1))
                 spot = DropCellFinder.FindRaidDropCenterDistant(map, false);
-            MagicTransportPodUtility.DropTravelingTransportPods(dropPods, spot, map);
+            MagicTransportPodUtility.DropTravellingDropPods(dropPods, spot, map);
         }
 
         public override bool TryResolveRaidSpawnCenter(IncidentParms parms)

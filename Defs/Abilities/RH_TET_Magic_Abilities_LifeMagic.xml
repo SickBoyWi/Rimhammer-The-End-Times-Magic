@@ -741,7 +741,7 @@
 		<defName>RH_TET_LifeLifebloom_Mage</defName>
 		<label>Lifebloom I</label>
 		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
-		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen sown plants immediately, making them ready for harvest.</description>
 		<magicPoolCost>0.30</magicPoolCost>
 		<abilityPoints>2</abilityPoints>
 		<experiencePoints>15</experiencePoints>
@@ -786,7 +786,7 @@
 		<defName>RH_TET_LifeLifebloom_Wizard</defName>
 		<label>Lifebloom II</label>
 		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
-		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen sown plants immediately, making them ready for harvest.</description>
 		<magicPoolCost>0.40</magicPoolCost>
 		<abilityPoints>3</abilityPoints>
 		<experiencePoints>17</experiencePoints>
@@ -831,7 +831,7 @@
 		<defName>RH_TET_LifeLifebloom_Warlock</defName>
 		<label>Lifebloom III</label>
 		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
-		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen sown plants immediately, making them ready for harvest.</description>
 		<magicPoolCost>0.50</magicPoolCost>
 		<abilityPoints>4</abilityPoints>
 		<experiencePoints>19</experiencePoints>
@@ -876,7 +876,7 @@
 		<defName>RH_TET_LifeLifebloom_Master</defName>
 		<label>Lifebloom IV</label>
 		<uiIconPath>UI/Magic/RH_TET_LifeLifeBloom</uiIconPath>
-		<description>The wizard sends the Green Wind flowing into an area. This will ripen plants immediately, making them ready for harvest.</description>
+		<description>The wizard sends the Green Wind flowing into an area. This will ripen sown plants immediately, making them ready for harvest.</description>
 		<magicPoolCost>0.60</magicPoolCost>
 		<abilityPoints>5</abilityPoints>
 		<experiencePoints>21</experiencePoints>

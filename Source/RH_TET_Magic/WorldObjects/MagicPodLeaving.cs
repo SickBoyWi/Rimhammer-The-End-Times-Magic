@@ -32,12 +32,12 @@ namespace TheEndTimes_Magic
             }
             else if (this.groupID < 0)
             {
-                Log.Error("Drop pod left the map, but its group ID is " + (object)this.groupID);
+                Log.Error(string.Format("Magic drop pod left the map, but its group ID is {0}", (object)this.groupID));
                 this.Destroy(DestroyMode.Vanish);
             }
-            else if (this.destinationTile < 0)
+            else if (!this.destinationTile.Valid)
             {
-                Log.Error("Drop pod left the map, but its destination tile is " + (object)this.destinationTile);
+                Log.Error(string.Format("Magic drop pod left the map, but its destination tile is {0}", (object)this.destinationTile));
                 this.Destroy(DestroyMode.Vanish);
             }
             else
@@ -45,23 +45,36 @@ namespace TheEndTimes_Magic
                 Lord lord = TransporterUtility.FindLord(this.groupID, this.Map);
                 if (lord != null)
                     this.Map.lordManager.RemoveLord(lord);
-                TravelingMagicTransportPods travelingTransportPods = (TravelingMagicTransportPods)WorldObjectMaker.MakeWorldObject(RH_TET_MagicDefOf.RH_TET_Magic_TravelingTransportPod);
-                travelingTransportPods.Tile = this.Map.Tile;
-                travelingTransportPods.SetFaction(Faction.OfPlayer);
-                travelingTransportPods.destinationTile = this.destinationTile;
-                travelingTransportPods.arrivalAction = this.arrivalAction;
-                //travelingTransportPods.arrivalAction = new MagicTransportPodsArrivalAction_LandInSpecificCell();
-                Find.WorldObjects.Add((WorldObject)travelingTransportPods);
+
+                TravelingMagicTransportPods travellingTransporters = (TravelingMagicTransportPods)WorldObjectMaker.MakeWorldObject(RH_TET_MagicDefOf.RH_TET_Magic_TravelingTransportPod);
+                travellingTransporters.SetFaction(Faction.OfPlayer);
+                travellingTransporters.destinationTile = this.destinationTile;
+
+                
+
+
+                travellingTransporters.arrivalAction = this.arrivalAction;
+
+
+
+
+                PlanetTile other = this.Map.Tile;
+                if (other.Layer != this.destinationTile.Layer)
+                    other = this.destinationTile.Layer.GetClosestTile(other);
+                travellingTransporters.Tile = other;
+
+                Find.WorldObjects.Add((WorldObject)travellingTransporters);
+
                 MagicPodLeaving.tmpActiveDropPods.Clear();
                 MagicPodLeaving.tmpActiveDropPods.AddRange((IEnumerable<Thing>)this.Map.listerThings.ThingsInGroup(ThingRequestGroup.ActiveTransporter));
                 for (int index = 0; index < MagicPodLeaving.tmpActiveDropPods.Count; ++index)
                 {
-                    if (MagicPodLeaving.tmpActiveDropPods[index] is MagicPodLeaving tmpActiveDropPod && tmpActiveDropPod.groupID == this.groupID)
+                    if (MagicPodLeaving.tmpActiveDropPods[index] is MagicPodLeaving activeTransporter && activeTransporter.groupID == this.groupID)
                     {
-                        tmpActiveDropPod.alreadyLeft = true;
-                        travelingTransportPods.AddPod(tmpActiveDropPod.Contents, true);
-                        tmpActiveDropPod.Contents = (ActiveTransporterInfo)null;
-                        tmpActiveDropPod.Destroy(DestroyMode.Vanish);
+                        activeTransporter.alreadyLeft = true;
+                        travellingTransporters.AddTransporter(activeTransporter.Contents, true);
+                        activeTransporter.Contents = (ActiveTransporterInfo)null;
+                        activeTransporter.Destroy(DestroyMode.Vanish);
                     }
                 }
             }

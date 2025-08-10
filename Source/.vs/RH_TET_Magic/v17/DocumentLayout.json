@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times-magic\\source\\rh_tet_magic\\ability\\compabilityactionuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|solutionrelative:rh_tet_magic\\ability\\compabilityactionuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times-magic\\source\\rh_tet_magic\\magic\\compmagicuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|solutionrelative:rh_tet_magic\\magic\\compmagicuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times-magic\\source\\rh_tet_magic\\faith\\compfaithuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|solutionrelative:rh_tet_magic\\faith\\compfaithuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times-magic\\source\\rh_tet_magic\\magic\\magicability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|RH_TET_Magic\\RH_TET_Magic.csproj|solutionrelative:rh_tet_magic\\magic\\magicability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CompMagicUser.cs",
-              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Magic\\CompMagicUser.cs",
-              "RelativeDocumentMoniker": "RH_TET_Magic\\Magic\\CompMagicUser.cs",
-              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Magic\\CompMagicUser.cs",
-              "RelativeToolTip": "RH_TET_Magic\\Magic\\CompMagicUser.cs",
-              "ViewState": "AgIAAE0EAAAAAAAAAAAAAFUEAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:41:15.099Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CompAbilityActionUser.cs",
-              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Ability\\CompAbilityActionUser.cs",
-              "RelativeDocumentMoniker": "RH_TET_Magic\\Ability\\CompAbilityActionUser.cs",
-              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Ability\\CompAbilityActionUser.cs",
-              "RelativeToolTip": "RH_TET_Magic\\Ability\\CompAbilityActionUser.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAlwOEAAAAZAAAAAAAAAA==",
+              "Title": "MagicAbility.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Magic\\MagicAbility.cs",
+              "RelativeDocumentMoniker": "RH_TET_Magic\\Magic\\MagicAbility.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Magic\\MagicAbility.cs",
+              "RelativeToolTip": "RH_TET_Magic\\Magic\\MagicAbility.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA9wEcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T14:23:00.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CompFaithUser.cs",
-              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Faith\\CompFaithUser.cs",
-              "RelativeDocumentMoniker": "RH_TET_Magic\\Faith\\CompFaithUser.cs",
-              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times-Magic\\Source\\RH_TET_Magic\\Faith\\CompFaithUser.cs",
-              "RelativeToolTip": "RH_TET_Magic\\Faith\\CompFaithUser.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAtwPYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T14:22:27.281Z",
+              "WhenOpened": "2025-08-10T21:47:17.274Z",
               "EditorCaption": ""
             }
           ]

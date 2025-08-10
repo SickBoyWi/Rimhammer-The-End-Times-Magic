@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Verse;
+using KTrie;
 
 namespace TheEndTimes_Magic
 {
@@ -12,6 +13,9 @@ namespace TheEndTimes_Magic
     {
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
+            if (this.landed)
+                return;
+
             int rando = RH_TET_MagicMod.random.Next(0, 10);
             Pawn pawnCaster = this.launcher as Pawn;
             int spellLevel = DetermineSpellLevel(pawnCaster);
@@ -41,6 +45,9 @@ namespace TheEndTimes_Magic
             
             try
             {
+                if (this.landed)
+                    return;
+
                 this.DrawAt(pawnCaster.Position.ToVector3(), false);
 
                 Pawn target = this.intendedTarget.Pawn;
@@ -52,9 +59,12 @@ namespace TheEndTimes_Magic
 
                     Messages.Message("RH_TET_MessageFinalTransmutationSuccess".Translate(pawnCaster.Name, target.Name), sculpture, MessageTypeDefOf.PositiveEvent);
 
-                    target.Destroy(DestroyMode.KillFinalize);
+                    if (!target.Destroyed)
+                        target.Destroy(DestroyMode.KillFinalize);
                     
                     GenSpawn.Spawn(sculpture, pos, pawnCaster.Map);
+
+                    this.landed = true;
                 }
                 else
                 {
@@ -70,6 +80,8 @@ namespace TheEndTimes_Magic
                         sb.Append(" " + "RH_TET_MessageFinalTransmutationHumansOnly".Translate());
 
                     Messages.Message(sb.ToString(), pawnCaster, MessageTypeDefOf.PositiveEvent);
+
+                    this.landed = true;
                 }
             }
             catch

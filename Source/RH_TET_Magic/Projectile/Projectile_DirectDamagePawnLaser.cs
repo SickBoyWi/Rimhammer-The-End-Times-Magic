@@ -12,6 +12,9 @@ namespace TheEndTimes_Magic
     {
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
+            if (this.landed)
+                return;
+
             Pawn pawnCaster = this.launcher as Pawn;
 
             this.DrawAt(pawnCaster.Position.ToVector3(), false);
@@ -25,6 +28,8 @@ namespace TheEndTimes_Magic
             FleckMaker.ThrowMicroSparks(destination, Map);
             FleckMaker.Static(destination, Map, FleckDefOf.ShotHit_Dirt, 1f);
             target.TakeDamage(damageInfo);
+
+            this.landed = true;
         }
         
         public Projectile_DirectDamagePawnLaser()

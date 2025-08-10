@@ -4,6 +4,7 @@ using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 using Verse;
 
@@ -20,56 +21,197 @@ namespace TheEndTimes_Magic
         private float traveledPct;
         private Vector3 startCell;
         private Vector3 endCell;
+        private PlanetTile initialTile = PlanetTile.Invalid;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Collections.Look<ActiveTransporterInfo>(ref this.pods, "podsA", LookMode.Deep, (object[])Array.Empty<object>());
+            Scribe_Values.Look<PlanetTile>(ref this.destinationTile, "destinationTileA", new PlanetTile(), false);
             Scribe_Values.Look<bool>(ref this.arrived, "arrivedA", false, false);
             Scribe_Values.Look<bool>(ref this.draftFlag, "draftFlagA", false, false);
-            Scribe_Values.Look<float>(ref this.traveledPct, "traveledPctA", 0.0f, false);
             Scribe_Values.Look<Vector3>(ref this.startCell, "startCellA", new Vector3(), false);
+            Scribe_Values.Look<PlanetTile>(ref this.initialTile, "initialTileA", new PlanetTile(), false);
+            Scribe_Values.Look<float>(ref this.traveledPct, "traveledPctA", 0.0f, false);
             Scribe_Values.Look<Vector3>(ref this.endCell, "endCellA", new Vector3(), false);
             Scribe_Values.Look<IntVec3>(ref this.destinationCell, "destinationCellA", new IntVec3(), false);
-
+            Scribe_Deep.Look<TransportersArrivalAction>(ref this.arrivalAction, "arrivalActionA", (object[])Array.Empty<object>());
             if (Scribe.mode != LoadSaveMode.PostLoadInit)
                 return;
             for (int index = 0; index < this.pods.Count; ++index)
                 this.pods[index].parent = (IThingHolder)this;
         }
 
-        private float TraveledPctStepPerTick
+        private Vector3 Start
         {
             get
             {
-                Vector3 tileCenter1 = Find.WorldGrid.GetTileCenter(Traverse.Create((object)this).Field("initialTile").GetValue<int>());
-                startCell = tileCenter1;
-                Vector3 tileCenter2 = Find.WorldGrid.GetTileCenter(Traverse.Create((object)this).Field("destinationTile").GetValue<int>());
-                endCell = tileCenter2;
-                if (tileCenter1 == tileCenter2)
-                    return 1f;
-                float num = GenMath.SphericalDistance((tileCenter1).normalized, tileCenter2.normalized);
-                return (double)num == 0.0 ? 1f : this.TravelSpeed / num;
+                return Find.WorldGrid.GetTileCenter(this.initialTile);
             }
         }
 
-        protected override void Tick()
+        private Vector3 End
         {
-            for (int index = 0; index < this.AllComps.Count; ++index)
-                this.AllComps[index].CompTick();
-            this.traveledPct += this.TraveledPctStepPerTick;
-            if ((double)this.traveledPct < 1.0)
-                return;
-            this.traveledPct = 1f;
-            this.Arrived();
+            get
+            {
+                return Find.WorldGrid.GetTileCenter(this.destinationTile);
+            }
         }
 
         public override Vector3 DrawPos
         {
             get
             {
-                return Vector3.Slerp(this.startCell, this.endCell, this.traveledPct);
+                return Vector3.Slerp(this.Start, this.End, this.traveledPct);
             }
+        }
+
+        public override bool ExpandingIconFlipHorizontal
+        {
+            get
+            {
+                return (double)GenWorldUI.WorldToUIPosition(this.Start).x > (double)GenWorldUI.WorldToUIPosition(this.End).x;
+            }
+        }
+
+        public override float ExpandingIconRotation
+        {
+            get
+            {
+                if (!this.def.rotateGraphicWhenTraveling)
+                    return base.ExpandingIconRotation;
+                Vector2 uiPosition1 = GenWorldUI.WorldToUIPosition(this.Start);
+                Vector2 uiPosition2 = GenWorldUI.WorldToUIPosition(this.End);
+                float num = Mathf.Atan2(uiPosition2.y - uiPosition1.y, uiPosition2.x - uiPosition1.x) * 57.29578f;
+                if ((double)num > 180.0)
+                    num -= 180f;
+                return num + 90f;
+            }
+        }
+
+        private float TraveledPctStepPerTick
+        {
+            get
+            {
+                Vector3 start = this.Start;
+                Vector3 end = this.End;
+                if (start == end)
+                    return 1f;
+                float num = GenMath.SphericalDistance(start.normalized, end.normalized);
+                return (double)num == 0.0 ? 1f : 0.00025f / num;
+            }
+        }
+
+        private bool PodsHaveAnyPotentialCaravanOwner
+        {
+            get
+            {
+                for (int index1 = 0; index1 < this.pods.Count; ++index1)
+                {
+                    ThingOwner innerContainer = this.pods[index1].innerContainer;
+                    for (int index2 = 0; index2 < innerContainer.Count; ++index2)
+                    {
+                        if (innerContainer[index2] is Pawn pawn && CaravanUtility.IsOwner(pawn, this.Faction))
+                            return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public new bool PodsHaveAnyFreeColonist
+        {
+            get
+            {
+                for (int index1 = 0; index1 < this.pods.Count; ++index1)
+                {
+                    ThingOwner innerContainer = this.pods[index1].innerContainer;
+                    for (int index2 = 0; index2 < innerContainer.Count; ++index2)
+                    {
+                        if (innerContainer[index2] is Pawn pawn && pawn.IsColonist && pawn.HostFaction == null)
+                            return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public new IEnumerable<Pawn> Pawns
+        {
+            get
+            {
+                for (int i = 0; i < this.pods.Count; ++i)
+                {
+                    ThingOwner things = this.pods[i].innerContainer;
+                    for (int j = 0; j < things.Count; ++j)
+                    {
+                        if (things[j] is Pawn pawn)
+                            yield return pawn;
+                    }
+                    things = (ThingOwner)null;
+                }
+            }
+        }
+        public new bool ContainsPawn(Pawn p)
+        {
+            for (int index = 0; index < this.pods.Count; ++index)
+            {
+                if (this.pods[index].innerContainer.Contains((Thing)p))
+                    return true;
+            }
+            return false;
+        }
+
+        public override void PostAdd()
+        {
+            base.PostAdd();
+            this.initialTile = this.Tile;
+        }
+
+        protected override void TickInterval(int delta)
+        {
+            //base.TickInterval(delta);
+
+            for (int index = 0; index < this.AllComps.Count; ++index)
+                this.AllComps[index].CompTickInterval(delta);
+
+            this.traveledPct += this.TraveledPctStepPerTick * (float)delta;
+            if ((double)this.traveledPct < 1.0)
+                return;
+            this.traveledPct = 1f;
+            this.Arrived();
+        }
+
+        public new void AddTransporter(ActiveTransporterInfo contents, bool justLeftTheMap)
+        {
+            contents.parent = (IThingHolder)this;
+            this.pods.Add(contents);
+            ThingOwner innerContainer = contents.innerContainer;
+            for (int index = 0; index < innerContainer.Count; ++index)
+            {
+                if (innerContainer[index] is Pawn pawn && !pawn.IsWorldPawn())
+                {
+                    if (!this.Spawned)
+                        Log.Warning(string.Format("Passing pawn {0} to world, but the TravelingMagicTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.", (object)pawn));
+                    if (justLeftTheMap)
+                        pawn.ExitMap(false, Rot4.Invalid);
+                    else
+                        Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Decide);
+                }
+            }
+            contents.savePawnsWithReferenceMode = true;
+        }
+
+        public new ThingOwner GetDirectlyHeldThings()
+        {
+            return (ThingOwner)null;
+        }
+
+        public new void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, (IList<Thing>)this.GetDirectlyHeldThings());
+            for (int index = 0; index < this.pods.Count; ++index)
+                outChildren.Add((IThingHolder)this.pods[index]);
         }
 
         private void Arrived()
@@ -100,7 +242,8 @@ namespace TheEndTimes_Magic
                     {
                         if (this.destinationCell != new IntVec3())
                         {
-                            this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(maps[index].Parent, this.destinationCell, this.draftFlag);
+                            // DIFF HERE on PARMS TO Construtor.
+                            this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(maps[index].Parent, DropCellFinder.RandomDropSpot(maps[index], true));
                             break;
                         }
                         this.arrivalAction = (TransportersArrivalAction)new TransportersArrivalAction_LandInSpecificCell(maps[index].Parent, DropCellFinder.RandomDropSpot(maps[index], true));
@@ -131,6 +274,7 @@ namespace TheEndTimes_Magic
             if (this.arrivalAction is TransportersArrivalAction_LandInSpecificCell)
             {
                 List<Map> maps = Find.Maps;
+                Map tempMap = null;
                 MapParent mp = null;
                 for (int index = 0; index < maps.Count; ++index)
                 {
@@ -139,6 +283,7 @@ namespace TheEndTimes_Magic
                         if (this.destinationCell != new IntVec3())
                         {
                             mp = maps[index].Parent;
+                            tempMap = maps[index]; 
                             break;
                         }
                         break;
@@ -146,7 +291,7 @@ namespace TheEndTimes_Magic
                 }
 
                 if (mp != null)
-                    this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(mp, this.destinationCell, this.draftFlag);
+                    this.arrivalAction = (TransportersArrivalAction)new MagicTransportPodsArrivalAction_LandInSpecificCell(mp, DropCellFinder.RandomDropSpot(tempMap, true));
             }
 
             if (setToAttack)
@@ -193,32 +338,39 @@ namespace TheEndTimes_Magic
                             PawnBanishUtility.Banish(pawn, this.destinationTile);
                     }
                 }
+                bool flag = true;
+                if (ModsConfig.BiotechActive)
+                {
+                    flag = false;
+                    for (int index1 = 0; index1 < this.pods.Count && !flag; ++index1)
+                    {
+                        for (int index2 = 0; index2 < this.pods[index1].innerContainer.Count; ++index2)
+                        {
+                            if (this.pods[index1].innerContainer[index2].def != ThingDefOf.Wastepack)
+                            {
+                                flag = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                for (int index1 = 0; index1 < this.pods.Count; ++index1)
+                {
+                    for (int index2 = 0; index2 < this.pods[index1].innerContainer.Count; ++index2)
+                        this.pods[index1].innerContainer[index2].Notify_AbandonedAtTile(this.destinationTile);
+                }
                 for (int index = 0; index < this.pods.Count; ++index)
                     this.pods[index].innerContainer.ClearAndDestroyContentsOrPassToWorld(DestroyMode.Vanish);
-                Messages.Message((string)"MessageTransportPodsArrivedAndLost".Translate(), (LookTargets)new GlobalTargetInfo(this.destinationTile), MessageTypeDefOf.NegativeEvent, true);
+                if (flag)
+                {
+                    string key = "MessageTransportPodsArrivedAndLost";
+                    if (this.def == WorldObjectDefOf.TravelingShuttle)
+                        key = "MessageShuttleArrivedContentsLost";
+                    Messages.Message((string)key.Translate(), (LookTargets)new GlobalTargetInfo(this.destinationTile), MessageTypeDefOf.NegativeEvent, true);
+                }
             }
             this.pods.Clear();
             this.Destroy();
-        }
-
-        public new void AddPod(ActiveTransporterInfo contents, bool justLeftTheMap)
-        {
-            contents.parent = (IThingHolder)this;
-            this.pods.Add(contents);
-            ThingOwner innerContainer = contents.innerContainer;
-            for (int index = 0; index < innerContainer.Count; ++index)
-            {
-                if (innerContainer[index] is Pawn pawn && !pawn.IsWorldPawn())
-                {
-                    if (!this.Spawned)
-                        Log.Warning("Passing pawn " + (object)pawn + " to world, but the TravelingTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.");
-                    if (justLeftTheMap)
-                        pawn.ExitMap(false, Rot4.Invalid);
-                    else
-                        Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Decide);
-                }
-            }
-            contents.savePawnsWithReferenceMode = true;
         }
     }
 }
