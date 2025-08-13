@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- TODO WIP for future.
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>MineInSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>TheEndTimes_Magic.MineInSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+	</ThingDef>
+	-->
+	
+</Defs>
