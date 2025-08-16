@@ -54,6 +54,7 @@
 			<isInert>true</isInert>
 			<isEdifice>false</isEdifice>
 		</building>
+		<drawStyleCategory>Conduits</drawStyleCategory>
 		<altitudeLayer>Conduits</altitudeLayer>
 		<passability>Standable</passability>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
